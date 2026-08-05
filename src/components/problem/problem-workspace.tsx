@@ -20,12 +20,11 @@ type RunCaseResult = {
 };
 
 const languageLabel: Record<LanguageKey, string> = {
-  python: "Python",
   java: "Java",
-  cpp: "C++",
+  python: "Python",
 };
 
-const allLanguages: LanguageKey[] = ["python", "java", "cpp"];
+const allLanguages: LanguageKey[] = ["java", "python"];
 
 export function ProblemWorkspace({
   bundle,
@@ -35,7 +34,7 @@ export function ProblemWorkspace({
   related: ProblemListItem[];
 }) {
   const { problem, templates, editorial, visibleTests } = bundle;
-  const [language, setLanguage] = useState<LanguageKey>("python");
+  const [language, setLanguage] = useState<LanguageKey>("java");
 
   // Load saved code and solved state from localStorage
   const [codeByLanguage, setCodeByLanguage] = useState<Record<LanguageKey, string>>(() => {

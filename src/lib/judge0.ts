@@ -8,9 +8,8 @@ import type { LanguageKey, TestCase } from "@/types/problem";
 const DEFAULT_URL = "https://judge0-ce.p.rapidapi.com";
 
 const languageMap: Record<LanguageKey, number> = {
-  python: 71,
   java: 62,
-  cpp: 54,
+  python: 71,
 };
 
 type Judge0Result = {
@@ -368,9 +367,8 @@ async function execute(sourceCode: string, language: LanguageKey, stdin: string)
 
   // Fallback to Piston API (100% free, no API key required)
   const pistonLangMap: Record<LanguageKey, { language: string; version: string }> = {
-    python: { language: "python", version: "3.10.0" },
     java: { language: "java", version: "15.0.2" },
-    cpp: { language: "c++", version: "10.2.0" },
+    python: { language: "python", version: "3.10.0" },
   };
 
   const pistonLang = pistonLangMap[language];

@@ -4,9 +4,8 @@ import Editor from "@monaco-editor/react";
 import type { LanguageKey } from "@/types/problem";
 
 const monacoLanguageMap: Record<LanguageKey, string> = {
-  python: "python",
   java: "java",
-  cpp: "cpp",
+  python: "python",
 };
 
 export function CodeEditorPanel({

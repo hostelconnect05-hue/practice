@@ -36,7 +36,7 @@ export type TestCase = {
   expectedOutput: string;
 };
 
-export type LanguageKey = "python" | "java" | "cpp";
+export type LanguageKey = "java" | "python";
 
 export type ProblemBundle = {
   problem: ProblemData;
