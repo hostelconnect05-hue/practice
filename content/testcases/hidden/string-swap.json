@@ -1,0 +1,82 @@
+[
+  {
+    "input": "abcdef\n2\n1 2\n",
+    "expectedOutput": "deafbc"
+  },
+  {
+    "input": "abcdefgh\n3\n2 1 2\n",
+    "expectedOutput": "abcedfgh"
+  },
+  {
+    "input": "abcd\n4\n1 1 2 1\n",
+    "expectedOutput": "cbad"
+  },
+  {
+    "input": "ab\n1\n1\n",
+    "expectedOutput": "ba"
+  },
+  {
+    "input": "ab\n1\n2\n",
+    "expectedOutput": "ba"
+  },
+  {
+    "input": "xy\n2\n1 2\n",
+    "expectedOutput": "xy"
+  },
+  {
+    "input": "python\n2\n1 2\n",
+    "expectedOutput": "honpyp"
+  },
+  {
+    "input": "coding\n3\n1 2 1\n",
+    "expectedOutput": "ingcod"
+  },
+  {
+    "input": "leetcode\n2\n2 1\n",
+    "expectedOutput": "eetclode"
+  },
+  {
+    "input": "aabbcc\n4\n1 2 1 2\n",
+    "expectedOutput": "bccaab"
+  },
+  {
+    "input": "virtusa\n1\n1\n",
+    "expectedOutput": "airtusv"
+  },
+  {
+    "input": "helloworld\n3\n1 2 1\n",
+    "expectedOutput": "rldhellowd"
+  },
+  {
+    "input": "abcdefghijkl\n5\n1 2 1 2 1\n",
+    "expectedOutput": "fghijklabcde"
+  },
+  {
+    "input": "programming\n1\n1\n",
+    "expectedOutput": "grogramminp"
+  },
+  {
+    "input": "abababab\n6\n1 2 1 2 1 2\n",
+    "expectedOutput": "abababab"
+  },
+  {
+    "input": "cd\n2\n2 2\n",
+    "expectedOutput": "cd"
+  },
+  {
+    "input": "efgh\n5\n1 1 1 1 1\n",
+    "expectedOutput": "hgfe"
+  },
+  {
+    "input": "12345678\n4\n2 1 2 1\n",
+    "expectedOutput": "86745321"
+  },
+  {
+    "input": "zzzzzz\n3\n1 2 1\n",
+    "expectedOutput": "zzzzzz"
+  },
+  {
+    "input": "abcdefghijklmnopqrst\n4\n1 2 1 2\n",
+    "expectedOutput": "klmnopqrstabcdefghij"
+  }
+]

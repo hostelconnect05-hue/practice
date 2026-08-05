@@ -1,0 +1,39 @@
+{
+  "slug": "string-swap",
+  "title": "String Swap",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Simulation", "Array"],
+  "acceptance": "74.5%",
+  "statement": "You are given an even-length string S and an array A of M integers representing a sequence of operations to be performed on the string.\n\nEach element of the array is either 1 or 2, indicating one of the following operations:\n- Operation 1: Swap the first and last characters of the string.\n- Operation 2: Swap the first half and the second half of the string. If the length of the string is N, then the first N/2 characters are exchanged with the last N/2 characters.\n\nPerform all the operations in the given order and return the final string.\n\n### Input Format\n- The first line contains a string S.\n- The second line contains an integer M, the number of operations.\n- The third line contains M space-separated integers (each integer is either 1 or 2).\n\n### Output Format\n- Print a single line containing the final string after all operations.",
+  "examples": [
+    {
+      "input": "S = \"abcdef\", M = 2, A = [1, 2]",
+      "output": "deafbc",
+      "explanation": "Initial: 'abcdef'. Op 1 (swap first & last): 'fbcdea'. Op 2 (swap halves): 'deafbc'."
+    },
+    {
+      "input": "S = \"abcdefgh\", M = 3, A = [2, 1, 2]",
+      "output": "abcedfgh",
+      "explanation": "Initial: 'abcdefgh'. Op 2 (swap halves): 'efghabcd'. Op 1 (swap first & last): 'dfghabce'. Op 2 (swap halves): 'abcedfgh'."
+    },
+    {
+      "input": "S = \"abcd\", M = 4, A = [1, 1, 2, 1]",
+      "output": "cbad",
+      "explanation": "Initial: 'abcd'. Op 1: 'dbca'. Op 1: 'abcd'. Op 2: 'cdab'. Op 1: 'cbad'."
+    }
+  ],
+  "constraints": [
+    "2 <= |S| <= 2 * 10^5",
+    "|S| is always even.",
+    "1 <= M <= 2 * 10^5",
+    "A[i] in {1, 2}",
+    "S consists of lowercase English letters."
+  ],
+  "hints": [
+    "Maintain a character array or StringBuilder to mutate characters in-place or construct substrings.",
+    "Operation 1: Swap S[0] and S[N-1].",
+    "Operation 2: New String = S[N/2 .. N-1] + S[0 .. N/2 - 1]."
+  ],
+  "relatedProblems": ["string-harmony", "vowel-consonant-rearrange"],
+  "discussion": "Array / StringBuilder manipulation for string swaps."
+}

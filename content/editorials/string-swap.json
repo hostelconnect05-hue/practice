@@ -1,0 +1,10 @@
+{
+  "approach": "Simulate the swap operations sequentially using character array or string manipulation.",
+  "observation": "Operation 1 swaps S[0] and S[N-1]. Operation 2 exchanges the first half S[0..N/2-1] and second half S[N/2..N-1].",
+  "bruteForce": "Convert string to char array, execute operations in order, and output final string.",
+  "optimalSolution": "Execute array swaps for each operation in O(M * N) or optimize with pointers.",
+  "timeComplexity": "O(M * N)",
+  "spaceComplexity": "O(N)",
+  "dryRun": "S = 'abcdef', Op 1: 'fbcdea'. Op 2: 'deafbc'. Final = 'deafbc'.",
+  "edgeCases": ["String length 2 ('ab')", "Identical operations ('1 1 1')", "Even repeated patterns ('abab')"]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "input": "abcdef\n2\n1 2\n",
+    "expectedOutput": "deafbc"
+  },
+  {
+    "input": "abcdefgh\n3\n2 1 2\n",
+    "expectedOutput": "abcedfgh"
+  },
+  {
+    "input": "abcd\n4\n1 1 2 1\n",
+    "expectedOutput": "cbad"
+  },
+  {
+    "input": "ab\n1\n1\n",
+    "expectedOutput": "ba"
+  },
+  {
+    "input": "ab\n1\n2\n",
+    "expectedOutput": "ba"
+  },
+  {
+    "input": "xy\n2\n1 2\n",
+    "expectedOutput": "xy"
+  },
+  {
+    "input": "python\n2\n1 2\n",
+    "expectedOutput": "honpyp"
+  },
+  {
+    "input": "coding\n3\n1 2 1\n",
+    "expectedOutput": "ingcod"
+  },
+  {
+    "input": "leetcode\n2\n2 1\n",
+    "expectedOutput": "eetclode"
+  },
+  {
+    "input": "aabbcc\n4\n1 2 1 2\n",
+    "expectedOutput": "bccaab"
+  }
+]
