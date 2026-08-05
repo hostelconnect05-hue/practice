@@ -43,8 +43,9 @@ export const getProblemList = cache(async (): Promise<ProblemListItem[]> => {
   return problems.sort((a, b) => problemOrder.indexOf(a.slug) - problemOrder.indexOf(b.slug));
 });
 
-export const getProblemBundle = cache(async (slug: string): Promise<ProblemBundle | null> => {
-  const problemPath = path.join(problemDir, `${slug}.json`);
+export const getProblemBundle = cache(async (rawSlug: string): Promise<ProblemBundle | null> => {
+  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
+  const problemPath = path.join(problemDir, `${normalizedSlug}.json`);
 
   try {
     const [problem, editorial, templates, visibleTests] = await Promise.all([
@@ -65,10 +66,12 @@ export const getProblemBundle = cache(async (slug: string): Promise<ProblemBundl
   }
 });
 
-export async function getHiddenTests(slug: string): Promise<TestCase[]> {
-  return loadJson<TestCase[]>(path.join(hiddenTestDir, `${slug}.json`));
+export async function getHiddenTests(rawSlug: string): Promise<TestCase[]> {
+  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
+  return loadJson<TestCase[]>(path.join(hiddenTestDir, `${normalizedSlug}.json`));
 }
 
-export async function getVisibleTests(slug: string): Promise<TestCase[]> {
-  return loadJson<TestCase[]>(path.join(visibleTestDir, `${slug}.json`));
+export async function getVisibleTests(rawSlug: string): Promise<TestCase[]> {
+  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
+  return loadJson<TestCase[]>(path.join(visibleTestDir, `${normalizedSlug}.json`));
 }
