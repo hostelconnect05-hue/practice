@@ -62,6 +62,24 @@ export function ProblemWorkspace({
   const [runResults, setRunResults] = useState<RunCaseResult[]>([]);
   const [submitResults, setSubmitResults] = useState<RunCaseResult[]>([]);
   const [submitVerdict, setSubmitVerdict] = useState<string>("");
+
+  type SubmissionItem = {
+    id: string;
+    timestamp: string;
+    language: LanguageKey;
+    verdict: string;
+    code: string;
+  };
+
+  const [submissionHistory, setSubmissionHistory] = useState<SubmissionItem[]>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem(`submissions_${problem.slug}`);
+      if (saved) {
+        try { return JSON.parse(saved); } catch {}
+      }
+    }
+    return [];
+  });
   const [isRunning, setIsRunning] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [editorialVisible, setEditorialVisible] = useState(false);
@@ -150,6 +168,23 @@ export function ProblemWorkspace({
 
       setSubmitVerdict(body.verdict);
       setSubmitResults(body.results);
+
+      // Save submission entry to history
+      const newSubmission: SubmissionItem = {
+        id: Math.random().toString(36).substring(7),
+        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
+        language,
+        verdict: body.verdict,
+        code: activeCode,
+      };
+
+      setSubmissionHistory((prev) => {
+        const updated = [newSubmission, ...prev];
+        if (typeof window !== "undefined") {
+          localStorage.setItem(`submissions_${problem.slug}`, JSON.stringify(updated));
+        }
+        return updated;
+      });
 
       if (body.verdict === "Accepted") {
         setSolvedSet((prev) => {
@@ -321,14 +356,52 @@ export function ProblemWorkspace({
           )}
         </div>
 
-        <div className="space-y-2 border-t border-zinc-800 pt-3">
-          <h3 className="text-sm font-semibold text-zinc-100">Submission</h3>
-          <p className="text-xs text-zinc-300">Verdict: {submitVerdict || "Not submitted"}</p>
-          {submitResults.map((result, index) => (
-            <p key={`submit-${index}`} className="text-xs text-zinc-400">
-              Hidden Case {index + 1}: {result.verdict} | Time {result.time ?? "N/A"} s | Memory {result.memory ?? "N/A"} KB
-            </p>
-          ))}
+        <div className="space-y-3 border-t border-zinc-800 pt-3">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-zinc-100">Submissions History</h3>
+            <span className="text-xs text-zinc-400">{submissionHistory.length} Submissions</span>
+          </div>
+
+          {submissionHistory.length === 0 ? (
+            <p className="text-xs text-zinc-500">No past submissions yet.</p>
+          ) : (
+            <div className="max-h-60 space-y-2 overflow-y-auto pr-1">
+              {submissionHistory.map((sub) => (
+                <div
+                  key={sub.id}
+                  className="flex items-center justify-between rounded-lg border border-zinc-800 bg-zinc-950 p-2.5 text-xs transition hover:border-zinc-700"
+                >
+                  <div className="space-y-0.5">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className={cn(
+                          "font-semibold",
+                          sub.verdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
+                        )}
+                      >
+                        {sub.verdict}
+                      </span>
+                      <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-300 uppercase">
+                        {sub.language}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-zinc-500">{sub.timestamp}</p>
+                  </div>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="h-7 px-2 text-xs text-zinc-300 hover:text-white"
+                    onClick={() => {
+                      setLanguage(sub.language);
+                      setActiveCode(sub.code);
+                    }}
+                  >
+                    View / Load Code
+                  </Button>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>
