@@ -2,7 +2,7 @@
   "slug": "shopping-cart",
   "title": "Shopping Cart",
   "difficulty": "Easy",
-  "topics": ["Math", "Greedy", "Basic Programming"],
+  "topics": ["Math", "Greedy"],
   "acceptance": "85.2%",
   "statement": "Tony is visiting a supermarket to buy Z cans of coke. The supermarket offers only two types of packs:\n\n- A pack of 2 cans costs X dollars.\n- A pack of 4 cans costs Y dollars.\n\nTony can purchase any number of these packs. He is allowed to buy more than Z cans if necessary, but he cannot buy individual cans.\n\nFor each test case, determine the minimum total cost required to purchase at least Z cans.",
   "examples": [
@@ -19,10 +19,10 @@
     "1 <= Z <= 10^9"
   ],
   "hints": [
-    "Hint 1: Check if buying 4-packs is cheaper per can than buying 2-packs (i.e. Y < 2 * X).",
-    "Hint 2: If Y >= 2 * X, 2-packs are always strictly cheaper or equal per can, so buy ceil(Z / 2) two-packs.",
-    "Hint 3: If Y < 2 * X, buy as many 4-packs as possible (Z // 4). Handle the remainder (0, 1, 2, or 3 cans) by comparing one more 4-pack vs one 2-pack."
+    "Check if buying 4-packs is cheaper per can than buying 2-packs (i.e. Y < 2 * X).",
+    "If Y >= 2 * X, buy ceil(Z / 2) two-packs.",
+    "If Y < 2 * X, buy Z // 4 four-packs and resolve remainder cans efficiently."
   ],
-  "relatedProblems": ["smallest-missing-even-number", "5-days-challenge"],
+  "relatedProblems": ["smallest-missing-even-number", "minimum-index"],
   "discussion": "Compare the cost of full 4-packs and optimal combinations for remaining cans."
 }

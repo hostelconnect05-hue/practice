@@ -2,9 +2,9 @@
   "approach": "Greedy comparison between 2-pack cost per unit and 4-pack cost per unit.",
   "observation": "If Y >= 2*X, buying two 2-packs is cheaper or equal to a 4-pack, so buy ceil(Z/2) two-packs. If Y < 2*X, buy as many 4-packs (Z/4) as possible and greedily resolve remainder cans.",
   "bruteForce": "Try all possible numbers of 2-packs and 4-packs. O(Z) time complexity.",
-  "optimalSolution": "Math / Greedy integer division. O(1) per test case.",
+  "optimalSolution": "Math / Greedy integer division. O(1) per testcase.",
   "timeComplexity": "O(T)",
   "spaceComplexity": "O(1)",
   "dryRun": "T=3, (X=5, Y=8, Z=10). Y < 2*X (8 < 10). 4-packs = 10//4 = 2. Remainder = 2. Cost = 2*8 + min(5, 8) = 16 + 5 = 21.",
-  "edgeCases": ["Z is odd", "Z is very large (10^9)", "Y == 2*X (equal efficiency)", "Z < 4"]
+  "edgeCases": ["Z is odd", "Z is very large (10^9)", "Y == 2*X", "Z < 4"]
 }

@@ -1,41 +1,5 @@
 {
-  "python": "import sys\n\ndef solve():
-    input = sys.stdin.read
-    data = input().split()
-    if not data:
-        return
-    T = int(data[0])
-    results = []
-    idx = 1
-    for _ in range(T):
-        X = int(data[idx])
-        Y = int(data[idx+1])
-        Z = int(data[idx+2])
-        idx += 3
-        
-        # Calculate minimum cost to buy at least Z cans
-        if Y >= 2 * X:
-            # 2-pack is cheaper or equal per can
-            two_packs = (Z + 1) // 2
-            ans = two_packs * X
-        else:
-            # 4-pack is cheaper per can
-            four_packs = Z // 4
-            rem = Z % 4
-            if rem == 0:
-                ans = four_packs * Y
-            elif rem <= 2:
-                # Option 1: remainder with 2-pack vs Option 2: one more 4-pack
-                ans = four_packs * Y + min(X, Y)
-            else: # rem == 3
-                # Remainder 3 cans: buy 2-pack (4 cans total) vs buy one 4-pack
-                ans = four_packs * Y + min(2 * X, Y)
-        results.append(str(ans))
-    print('\\n'.join(results))
-
-if __name__ == '__main__':
-    solve()
-",
+  "python": "import sys\n\ndef solve():\n    input_data = sys.stdin.read().split()\n    if not input_data:\n        return\n    T = int(input_data[0])\n    results = []\n    idx = 1\n    for _ in range(T):\n        X = int(input_data[idx])\n        Y = int(input_data[idx+1])\n        Z = int(input_data[idx+2])\n        idx += 3\n        \n        if Y >= 2 * X:\n            two_packs = (Z + 1) // 2\n            ans = two_packs * X\n        else:\n            four_packs = Z // 4\n            rem = Z % 4\n            if rem == 0:\n                ans = four_packs * Y\n            elif rem <= 2:\n                ans = four_packs * Y + min(X, Y)\n            else:\n                ans = four_packs * Y + min(2 * X, Y)\n        results.append(str(ans))\n    print('\\n'.join(results))\n\nif __name__ == '__main__':\n    solve()\n",
   "java": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        if (!sc.hasNextInt()) return;\n        int T = sc.nextInt();\n        while (T-- > 0) {\n            long X = sc.nextLong();\n            long Y = sc.nextLong();\n            long Z = sc.nextLong();\n            \n            if (Y >= 2 * X) {\n                long twoPacks = (Z + 1) / 2;\n                System.out.println(twoPacks * X);\n            } else {\n                long fourPacks = Z / 4;\n                long rem = Z % 4;\n                if (rem == 0) {\n                    System.out.println(fourPacks * Y);\n                } else if (rem <= 2) {\n                    System.out.println(fourPacks * Y + Math.min(X, Y));\n                } else {\n                    System.out.println(fourPacks * Y + Math.min(2 * X, Y));\n                }\n            }\n        }\n    }\n}\n",
   "cpp": "#include <iostream>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(NULL);\n    int T;\n    if (!(cin >> T)) return 0;\n    while (T--) {\n        long long X, Y, Z;\n        cin >> X >> Y >> Z;\n        if (Y >= 2 * X) {\n            long long twoPacks = (Z + 1) / 2;\n            cout << twoPacks * X << \"\\n\";\n        } else {\n            long long fourPacks = Z / 4;\n            long long rem = Z % 4;\n            if (rem == 0) {\n                cout << fourPacks * Y;\n            } else if (rem <= 2) {\n                cout << fourPacks * Y + min(X, Y);\n            } else {\n                cout << fourPacks * Y + min(2 * X, Y);\n            }\n            cout << \"\\n\";\n        }\n    }\n    return 0;\n}\n"
 }
