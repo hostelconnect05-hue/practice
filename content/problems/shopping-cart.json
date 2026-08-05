@@ -4,12 +4,12 @@
   "difficulty": "Easy",
   "topics": ["Math", "Greedy"],
   "acceptance": "85.2%",
-  "statement": "Tony is visiting a supermarket to buy Z cans of coke. The supermarket offers only two types of packs:\n\n- A pack of 2 cans costs X dollars.\n- A pack of 4 cans costs Y dollars.\n\nTony can purchase any number of these packs. He is allowed to buy more than Z cans if necessary, but he cannot buy individual cans.\n\nFor each test case, determine the minimum total cost required to purchase at least Z cans.",
+  "statement": "Tony is visiting a supermarket to buy **Z** cans of coke. The supermarket offers only two types of packs:\n\n- A pack of **2 cans** costs **X** dollars.\n- A pack of **4 cans** costs **Y** dollars.\n\nTony can purchase any number of these packs. He is allowed to buy **more than Z cans** if necessary, but he cannot buy individual cans.\n\nFor each test case, determine the **minimum total cost** required to purchase **at least Z cans**.\n\n### Input Format\n- The first line contains an integer **T**, the number of test cases.\n- Each of the next **T** lines contains three space-separated integers: **X**, **Y**, and **Z**.\n\n### Output Format\n- For each test case, print a single integer representing the minimum total cost on a new line.",
   "examples": [
     {
       "input": "3\n5 10 10\n5 8 10\n4 7 5",
       "output": "25\n21\n11",
-      "explanation": "Test Case 1: Five 2-packs → 10 cans → Cost = 25.\nTest Case 2: Two 4-packs + One 2-pack → 10 cans → Cost = 21.\nTest Case 3: One 4-pack + One 2-pack → 6 cans → Cost = 11."
+      "explanation": "Test Case 1:\nX = 5, Y = 10, Z = 10\n• Five 2-packs → 10 cans → Cost = 25\n• Two 4-packs + One 2-pack → 10 cans → Cost = 25\n• Three 4-packs → 12 cans → Cost = 30\nMinimum cost = 25.\n\nTest Case 2:\nX = 5, Y = 8, Z = 10\n• Five 2-packs → 10 cans → Cost = 25\n• Two 4-packs + One 2-pack → 10 cans → Cost = 21\n• Three 4-packs → 12 cans → Cost = 24\nMinimum cost = 21.\n\nTest Case 3:\nX = 4, Y = 7, Z = 5\n• Three 2-packs → 6 cans → Cost = 12\n• One 4-pack + One 2-pack → 6 cans → Cost = 11\n• Two 4-packs → 8 cans → Cost = 14\nMinimum cost = 11."
     }
   ],
   "constraints": [
