@@ -56,9 +56,9 @@ export const getProblemBundle = cache(async (rawSlug: string): Promise<ProblemBu
   try {
     const [problem, editorial, templates, visibleTests] = await Promise.all([
       loadJson<ProblemData>(problemPath),
-      loadJson<EditorialData>(path.join(editorialDir, `${slug}.json`)),
-      loadJson<ProblemBundle["templates"]>(path.join(templateDir, `${slug}.json`)),
-      loadJson<TestCase[]>(path.join(visibleTestDir, `${slug}.json`)),
+      loadJson<EditorialData>(path.join(editorialDir, `${normalizedSlug}.json`)),
+      loadJson<ProblemBundle["templates"]>(path.join(templateDir, `${normalizedSlug}.json`)),
+      loadJson<TestCase[]>(path.join(visibleTestDir, `${normalizedSlug}.json`)),
     ]);
 
     return {
