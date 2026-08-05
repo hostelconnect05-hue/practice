@@ -99,17 +99,37 @@ async function localExecute(
 
       let stdout = "";
       let stderr = "";
+      let isTimedOut = false;
+
+      const timer = setTimeout(() => {
+        isTimedOut = true;
+        child.kill("SIGKILL");
+      }, 5000);
 
       child.stdout.on("data", (data) => { stdout += data; });
       child.stderr.on("data", (data) => { stderr += data; });
 
       child.on("close", async (code) => {
+        clearTimeout(timer);
         const endTime = process.hrtime.bigint();
         const durationSec = Number(endTime - startTime) / 1e9;
 
         try {
           await fs.unlink(filePath);
         } catch {}
+
+        if (isTimedOut) {
+          resolve({
+            stdout: null,
+            stderr: "Time Limit Exceeded (5.0s)",
+            compile_output: null,
+            message: "Time Limit Exceeded",
+            time: "5.000",
+            memory: 0,
+            status: { id: 5, description: "Time Limit Exceeded" },
+          });
+          return;
+        }
 
         if (code !== 0 || stderr.length > 0) {
           resolve({
@@ -317,7 +337,8 @@ async function localExecute(
 }
 
 async function execute(sourceCode: string, language: LanguageKey, stdin: string): Promise<Judge0Result> {
-  if (!process.env.JUDGE0_API_KEY) {
+  const apiKey = process.env.JUDGE0_API_KEY?.trim();
+  if (!apiKey) {
     return localExecute(sourceCode, language, stdin);
   }
 
