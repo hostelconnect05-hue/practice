@@ -19,6 +19,11 @@ async function main() {
       title: "5 Days Challenge",
       difficulty: "Medium",
     },
+    {
+      slug: "shopping-cart",
+      title: "Shopping Cart",
+      difficulty: "Easy",
+    },
   ];
 
   for (const problem of problems) {

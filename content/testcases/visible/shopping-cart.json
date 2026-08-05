@@ -1,0 +1,14 @@
+[
+  {
+    "input": "3\n5 10 10\n5 8 10\n4 7 5\n",
+    "expectedOutput": "25\n21\n11"
+  },
+  {
+    "input": "4\n10 20 1\n10 15 1\n5 8 4\n5 8 3\n",
+    "expectedOutput": "10\n10\n8\n8"
+  },
+  {
+    "input": "3\n100 150 100\n50 90 7\n10 12 15\n",
+    "expectedOutput": "3750\n180\n48"
+  }
+]
