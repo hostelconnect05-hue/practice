@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CheckCircle2, Circle } from "lucide-react";
 import { DifficultyPill } from "@/components/problem/difficulty-pill";
@@ -6,19 +9,33 @@ import type { ProblemListItem } from "@/types/problem";
 
 export function ProblemSidebar({
   problems,
-  solved,
+  solved: initialSolved = [],
   currentSlug,
 }: {
   problems: ProblemListItem[];
-  solved: string[];
+  solved?: string[];
   currentSlug?: string;
 }) {
+  const [solvedList, setSolvedList] = useState<string[]>(initialSolved);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("solved_problems");
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored) as string[];
+          const combined = Array.from(new Set([...initialSolved, ...parsed]));
+          setSolvedList(combined);
+        } catch {}
+      }
+    }
+  }, [initialSolved]);
   return (
     <aside className="h-full overflow-y-auto border-r border-zinc-800 bg-zinc-950/90 p-3">
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-300">Problems</h2>
       <div className="space-y-2">
         {problems.map((problem) => {
-          const isSolved = solved.includes(problem.slug);
+          const isSolved = solvedList.includes(problem.slug);
           const isActive = currentSlug === problem.slug;
 
           return (

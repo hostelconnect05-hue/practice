@@ -36,7 +36,28 @@ export function ProblemWorkspace({
 }) {
   const { problem, templates, editorial, visibleTests } = bundle;
   const [language, setLanguage] = useState<LanguageKey>("python");
-  const [codeByLanguage, setCodeByLanguage] = useState<Record<LanguageKey, string>>(templates);
+
+  // Load saved code and solved state from localStorage
+  const [codeByLanguage, setCodeByLanguage] = useState<Record<LanguageKey, string>>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem(`code_${problem.slug}`);
+      if (saved) {
+        try { return JSON.parse(saved); } catch {}
+      }
+    }
+    return templates;
+  });
+
+  const [solvedSet, setSolvedSet] = useState<Set<string>>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("solved_problems");
+      if (saved) {
+        try { return new Set(JSON.parse(saved)); } catch {}
+      }
+    }
+    return new Set();
+  });
+
   const [customInput, setCustomInput] = useState(visibleTests[0]?.input ?? "");
   const [runResults, setRunResults] = useState<RunCaseResult[]>([]);
   const [submitResults, setSubmitResults] = useState<RunCaseResult[]>([]);
@@ -54,7 +75,13 @@ export function ProblemWorkspace({
   }, [hintLevel, problem.hints, editorial.optimalSolution]);
 
   const setActiveCode = (value: string) => {
-    setCodeByLanguage((prev) => ({ ...prev, [language]: value }));
+    setCodeByLanguage((prev) => {
+      const updated = { ...prev, [language]: value };
+      if (typeof window !== "undefined") {
+        localStorage.setItem(`code_${problem.slug}`, JSON.stringify(updated));
+      }
+      return updated;
+    });
   };
 
   const handleRun = async () => {
@@ -123,6 +150,17 @@ export function ProblemWorkspace({
 
       setSubmitVerdict(body.verdict);
       setSubmitResults(body.results);
+
+      if (body.verdict === "Accepted") {
+        setSolvedSet((prev) => {
+          const next = new Set(prev);
+          next.add(problem.slug);
+          if (typeof window !== "undefined") {
+            localStorage.setItem("solved_problems", JSON.stringify(Array.from(next)));
+          }
+          return next;
+        });
+      }
     } catch (error) {
       setSubmitVerdict("Internal Error");
       setSubmitResults([
