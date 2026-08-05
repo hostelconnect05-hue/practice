@@ -246,17 +246,20 @@ export function ProblemWorkspace({
 
           <h3 className="text-base font-semibold text-zinc-100">Examples</h3>
           {problem.examples.map((example, index) => (
-            <Card key={index}>
-              <CardContent className="space-y-2 p-3 text-xs">
-                <p>
-                  <strong>Input:</strong> {example.input}
-                </p>
-                <p>
-                  <strong>Output:</strong> {example.output}
-                </p>
-                <p>
-                  <strong>Explanation:</strong> {example.explanation}
-                </p>
+            <Card key={index} className="border-zinc-800 bg-zinc-950">
+              <CardContent className="space-y-3 p-3.5 text-xs">
+                <div>
+                  <strong className="text-zinc-400 block mb-1">Input:</strong>
+                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">{example.input}</pre>
+                </div>
+                <div>
+                  <strong className="text-zinc-400 block mb-1">Output:</strong>
+                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">{example.output}</pre>
+                </div>
+                <div>
+                  <strong className="text-zinc-400 block mb-1">Explanation:</strong>
+                  <div className="whitespace-pre-wrap rounded bg-zinc-900/60 p-2 text-zinc-300 leading-relaxed">{example.explanation}</div>
+                </div>
               </CardContent>
             </Card>
           ))}
