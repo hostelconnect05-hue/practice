@@ -386,7 +386,12 @@ export function ProblemWorkspace({
                   {submissionHistory.map((sub, idx) => (
                     <div
                       key={sub.id || idx}
-                      className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3 text-xs space-y-2"
+                      onClick={() => {
+                        setLanguage(sub.language);
+                        setActiveCode(sub.code);
+                        setShowHistoryModal(false);
+                      }}
+                      className="group cursor-pointer rounded-lg border border-zinc-800 bg-zinc-900/60 p-3 text-xs space-y-2 transition hover:border-emerald-500/50 hover:bg-zinc-900"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -402,27 +407,17 @@ export function ProblemWorkspace({
                             {sub.language}
                           </span>
                         </div>
-                        <span className="text-[11px] text-zinc-500">{sub.timestamp}</span>
+                        <div className="flex items-center gap-2">
+                          <span className="text-[11px] text-zinc-500">{sub.timestamp}</span>
+                          <span className="text-[11px] font-medium text-emerald-400 opacity-0 transition group-hover:opacity-100">
+                            Click to Open →
+                          </span>
+                        </div>
                       </div>
 
-                      <pre className="max-h-36 overflow-x-auto rounded border border-zinc-800/80 bg-zinc-950 p-2 font-mono text-[11px] text-zinc-300">
+                      <pre className="max-h-36 overflow-x-auto rounded border border-zinc-800/80 bg-zinc-950 p-2 font-mono text-[11px] text-zinc-300 pointer-events-none">
                         {sub.code}
                       </pre>
-
-                      <div className="flex justify-end">
-                        <Button
-                          size="sm"
-                          variant="secondary"
-                          className="h-7 text-xs"
-                          onClick={() => {
-                            setLanguage(sub.language);
-                            setActiveCode(sub.code);
-                            setShowHistoryModal(false);
-                          }}
-                        >
-                          Load into Editor
-                        </Button>
-                      </div>
                     </div>
                   ))}
                 </div>
