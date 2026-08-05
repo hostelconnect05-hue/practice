@@ -1,0 +1,10 @@
+{
+  "approach": "Iterate through the string from left to right while keeping track of the current harmonic substring length.",
+  "observation": "A character S[i] continues the harmonic pattern from S[i-1] if S[i] == S[i-1] or S[i] - S[i-1] == 1.",
+  "bruteForce": "Check all possible substrings for validity in O(N^2) time.",
+  "optimalSolution": "Single pass iteration. Increment current streak if valid, otherwise reset streak to 1. Track max streak length.",
+  "timeComplexity": "O(N)",
+  "spaceComplexity": "O(1)",
+  "dryRun": "S = 'abcabc'. i=1('b'): diff=1 -> len=2. i=2('c'): diff=1 -> len=3. i=3('a'): diff=-2 -> len=4 ('abca'). i=4('b'): diff=1 -> len=5 ('abcab'). i=5('c'): diff=1 -> len=1. Max = 5.",
+  "edgeCases": ["Single character string |S|=1", "All identical characters ('aaaa')", "Strictly decreasing string ('zyx')"]
+}

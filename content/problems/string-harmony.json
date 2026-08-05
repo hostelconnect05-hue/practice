@@ -1,0 +1,36 @@
+{
+  "slug": "string-harmony",
+  "title": "String Harmony",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Two Pointers", "Sliding Window"],
+  "acceptance": "67.8%",
+  "statement": "A harmonic pattern is formed when the characters in a string appear in alphabetical order, with each consecutive character differing by at most one in the English alphabet. The sequence may contain repeated occurrences of the same character, but once the order is broken, the harmonic pattern ends.\n\nGiven a string S consisting of lowercase English letters, determine the length of the longest contiguous substring that forms a harmonic pattern.\n\nA substring is considered harmonic if:\n- Characters appear in non-decreasing alphabetical order.\n- The next distinct character (if any) is exactly the next alphabet character (e.g. 'a' -> 'b').\n- Repeated occurrences of the same character are allowed (e.g. 'a' -> 'a').\n- If the alphabetical order is violated or a character skips one or more letters (e.g. 'a' -> 'c'), the current harmonic substring ends.",
+  "examples": [
+    {
+      "input": "abcabc",
+      "output": "5",
+      "explanation": "The longest harmonic substring is 'abcab' (length 5), which follows the harmonic pattern until the sequence breaks at the last 'c'."
+    },
+    {
+      "input": "aabbcc",
+      "output": "6",
+      "explanation": "The entire string follows the harmonic pattern: repeated characters are allowed and distinct characters appear in order: a -> b -> c. Length = 6."
+    },
+    {
+      "input": "abdc",
+      "output": "2",
+      "explanation": "The valid harmonic substrings are 'ab' and 'dc'. The maximum length is 2."
+    }
+  ],
+  "constraints": [
+    "1 <= |S| <= 2 * 10^5",
+    "S contains only lowercase English letters."
+  ],
+  "hints": [
+    "Iterate through the string maintaining a current harmonic streak counter.",
+    "For consecutive characters S[i-1] and S[i], check if S[i] == S[i-1] OR S[i] - S[i-1] == 1.",
+    "If valid, increment current length; otherwise reset current length to 1. Track maximum length achieved."
+  ],
+  "relatedProblems": ["smallest-missing-even-number", "vowel-consonant-rearrange"],
+  "discussion": "Single pass iteration O(N) checking adjacent character differences."
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "input": "abcabc",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "aabbcc",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "abdc",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "a",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "aaaaa",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "abcdefghijklmnopqrstuvwxyz",
+    "expectedOutput": "26"
+  },
+  {
+    "input": "zyxwvutsrqponmlkjihgfedcba",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "abcdeabcde",
+    "expectedOutput": "9"
+  },
+  {
+    "input": "abacaba",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "abbcccdddd",
+    "expectedOutput": "10"
+  }
+]
