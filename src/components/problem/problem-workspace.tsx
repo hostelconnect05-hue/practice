@@ -426,70 +426,62 @@ export function ProblemWorkspace({
           </div>
         ) : null}
 
+        {/* Submission Verdict Banner */}
+        {submitVerdict ? (
+          <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-3 space-y-2">
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-zinc-100">Submission Result</h3>
+              <span
+                className={cn(
+                  "font-bold text-sm",
+                  submitVerdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
+                )}
+              >
+                {submitVerdict}
+              </span>
+            </div>
+            <div className="max-h-48 overflow-y-auto space-y-1.5 pr-1">
+              {submitResults.map((result, index) => (
+                <div key={`sub-res-${index}`} className="flex items-center justify-between rounded bg-zinc-900/60 p-2 text-xs">
+                  <span className="text-zinc-300 font-medium">Hidden Case {index + 1}</span>
+                  <span className={result.passed ? "text-emerald-400 font-semibold" : "text-rose-400 font-semibold"}>
+                    {result.verdict} {result.time ? `(${result.time}s)` : ""}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <div className="space-y-3">
-          <h3 className="text-sm font-semibold text-zinc-100">Console Output</h3>
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-zinc-100">Console Output</h3>
+            {runResults.length > 0 ? (
+              <span className="text-xs text-zinc-400">{runResults.filter(r => r.passed).length} / {runResults.length} Passed</span>
+            ) : null}
+          </div>
+
           {runResults.length === 0 ? (
             <p className="text-xs text-zinc-400">Run results will appear here.</p>
           ) : (
-            <div className="space-y-2">
+            <div className="max-h-72 space-y-2 overflow-y-auto pr-1">
               {runResults.map((result, index) => (
-                <Card key={`run-${index}`}>
-                  <CardContent className="p-3 text-xs">
-                    <p className="mb-1 font-semibold">Case {index + 1}: {result.verdict}</p>
-                    <p>Expected: {result.expectedOutput || "(custom)"}</p>
-                    <p>Actual: {result.actualOutput}</p>
-                    <p>Execution Time: {result.time ?? "N/A"} s</p>
-                    <p>Memory Used: {result.memory ?? "N/A"} KB</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          )}
-        </div>
-
-        <div className="space-y-3 border-t border-zinc-800 pt-3">
-          <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-zinc-100">Submissions History</h3>
-            <span className="text-xs text-zinc-400">{submissionHistory.length} Submissions</span>
-          </div>
-
-          {submissionHistory.length === 0 ? (
-            <p className="text-xs text-zinc-500">No past submissions yet.</p>
-          ) : (
-            <div className="max-h-60 space-y-2 overflow-y-auto pr-1">
-              {submissionHistory.map((sub) => (
-                <div
-                  key={sub.id}
-                  className="flex items-center justify-between rounded-lg border border-zinc-800 bg-zinc-950 p-2.5 text-xs transition hover:border-zinc-700"
-                >
-                  <div className="space-y-0.5">
-                    <div className="flex items-center gap-2">
-                      <span
-                        className={cn(
-                          "font-semibold",
-                          sub.verdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
-                        )}
-                      >
-                        {sub.verdict}
-                      </span>
-                      <span className="rounded bg-zinc-800 px-1.5 py-0.5 text-[10px] text-zinc-300 uppercase">
-                        {sub.language}
+                <Card key={`run-${index}`} className="border-zinc-800 bg-zinc-950">
+                  <CardContent className="p-3 text-xs space-y-1">
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="font-semibold text-zinc-200">Case {index + 1}</span>
+                      <span className={result.passed ? "text-emerald-400 font-bold" : "text-rose-400 font-bold"}>
+                        {result.verdict}
                       </span>
                     </div>
-                    <p className="text-[11px] text-zinc-500">{sub.timestamp}</p>
-                  </div>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="h-7 px-2 text-xs text-zinc-300 hover:text-white"
-                    onClick={() => {
-                      setLanguage(sub.language);
-                      setActiveCode(sub.code);
-                    }}
-                  >
-                    View / Load Code
-                  </Button>
-                </div>
+                    <p className="text-zinc-400">Expected: <span className="font-mono text-zinc-200">{result.expectedOutput || "(custom)"}</span></p>
+                    <p className="text-zinc-400">Actual: <span className="font-mono text-zinc-200">{result.actualOutput}</span></p>
+                    <div className="flex gap-4 pt-1 text-[11px] text-zinc-500">
+                      <span>Time: {result.time ?? "N/A"} s</span>
+                      <span>Memory: {result.memory ?? "N/A"} KB</span>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           )}
