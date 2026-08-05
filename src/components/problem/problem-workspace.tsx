@@ -1,12 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Brain, Play, Send } from "lucide-react";
+import { Brain, History, Play, Send, X } from "lucide-react";
 import { CodeEditorPanel } from "@/components/problem/code-editor-panel";
 import { DifficultyPill } from "@/components/problem/difficulty-pill";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import type { LanguageKey, ProblemBundle, ProblemListItem } from "@/types/problem";
 
 type RunCaseResult = {
@@ -79,6 +80,8 @@ export function ProblemWorkspace({
     }
     return [];
   });
+
+  const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [editorialVisible, setEditorialVisible] = useState(false);
@@ -338,7 +341,7 @@ export function ProblemWorkspace({
           />
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           <Button onClick={handleRun} disabled={isRunning} variant="secondary">
             <Play className="mr-2 h-4 w-4" />
             {isRunning ? "Running..." : "Run Code"}
@@ -347,7 +350,86 @@ export function ProblemWorkspace({
             <Send className="mr-2 h-4 w-4" />
             {isSubmitting ? "Submitting..." : "Submit"}
           </Button>
+          <Button
+            onClick={() => setShowHistoryModal(true)}
+            variant="outline"
+            className="border-zinc-700 bg-zinc-900/80 hover:bg-zinc-800"
+          >
+            <History className="mr-2 h-4 w-4 text-emerald-400" />
+            Submissions ({submissionHistory.length})
+          </Button>
         </div>
+
+        {/* Submissions Modal / Drawer */}
+        {showHistoryModal ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+            <div className="w-full max-w-2xl rounded-xl border border-zinc-800 bg-zinc-950 p-5 shadow-2xl space-y-4">
+              <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
+                <div className="flex items-center gap-2">
+                  <History className="h-5 w-5 text-emerald-400" />
+                  <h3 className="text-lg font-bold text-zinc-50">Past Submissions ({submissionHistory.length})</h3>
+                </div>
+                <Button
+                  size="sm"
+                  variant="ghost"
+                  onClick={() => setShowHistoryModal(false)}
+                  className="h-8 w-8 p-0"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+
+              {submissionHistory.length === 0 ? (
+                <p className="py-8 text-center text-sm text-zinc-400">No past submitted answers for this problem yet.</p>
+              ) : (
+                <div className="max-h-96 space-y-3 overflow-y-auto pr-2">
+                  {submissionHistory.map((sub, idx) => (
+                    <div
+                      key={sub.id || idx}
+                      className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3 text-xs space-y-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span
+                            className={cn(
+                              "font-bold text-sm",
+                              sub.verdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
+                            )}
+                          >
+                            {sub.verdict}
+                          </span>
+                          <span className="rounded bg-zinc-800 px-2 py-0.5 text-[11px] font-mono text-zinc-300 uppercase">
+                            {sub.language}
+                          </span>
+                        </div>
+                        <span className="text-[11px] text-zinc-500">{sub.timestamp}</span>
+                      </div>
+
+                      <pre className="max-h-36 overflow-x-auto rounded border border-zinc-800/80 bg-zinc-950 p-2 font-mono text-[11px] text-zinc-300">
+                        {sub.code}
+                      </pre>
+
+                      <div className="flex justify-end">
+                        <Button
+                          size="sm"
+                          variant="secondary"
+                          className="h-7 text-xs"
+                          onClick={() => {
+                            setLanguage(sub.language);
+                            setActiveCode(sub.code);
+                            setShowHistoryModal(false);
+                          }}
+                        >
+                          Load into Editor
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ) : null}
 
         <div className="space-y-3">
           <h3 className="text-sm font-semibold text-zinc-100">Console Output</h3>
