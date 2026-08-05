@@ -357,25 +357,23 @@ export async function runAgainstTests(
   language: LanguageKey,
   tests: TestCase[]
 ): Promise<TestRunResult[]> {
-  const results: TestRunResult[] = [];
+  return Promise.all(
+    tests.map(async (testCase) => {
+      const judge0Result = await execute(sourceCode, language, testCase.input);
+      const verdict = getVerdict(judge0Result, testCase.expectedOutput);
+      const actualOutput = normalizeOutput(
+        judge0Result.stdout ?? judge0Result.stderr ?? judge0Result.compile_output ?? ""
+      );
 
-  for (const testCase of tests) {
-    const judge0Result = await execute(sourceCode, language, testCase.input);
-    const verdict = getVerdict(judge0Result, testCase.expectedOutput);
-    const actualOutput = normalizeOutput(
-      judge0Result.stdout ?? judge0Result.stderr ?? judge0Result.compile_output ?? ""
-    );
-
-    results.push({
-      verdict,
-      passed: verdict === "Accepted",
-      actualOutput,
-      expectedOutput: normalizeOutput(testCase.expectedOutput),
-      statusDescription: judge0Result.status?.description ?? "Unknown",
-      time: judge0Result.time,
-      memory: judge0Result.memory,
-    });
-  }
-
-  return results;
+      return {
+        verdict,
+        passed: verdict === "Accepted",
+        actualOutput,
+        expectedOutput: normalizeOutput(testCase.expectedOutput),
+        statusDescription: judge0Result.status?.description ?? "Unknown",
+        time: judge0Result.time,
+        memory: judge0Result.memory,
+      };
+    })
+  );
 }
