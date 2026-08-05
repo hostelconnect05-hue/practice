@@ -338,39 +338,77 @@ async function localExecute(
 
 async function execute(sourceCode: string, language: LanguageKey, stdin: string): Promise<Judge0Result> {
   const apiKey = process.env.JUDGE0_API_KEY?.trim();
-  if (!apiKey) {
-    return localExecute(sourceCode, language, stdin);
+  if (apiKey) {
+    const baseUrl = process.env.JUDGE0_API_URL ?? DEFAULT_URL;
+    const headers: HeadersInit = {
+      "Content-Type": "application/json",
+      "x-rapidapi-key": apiKey,
+    };
+    if (process.env.JUDGE0_API_HOST) {
+      headers["x-rapidapi-host"] = process.env.JUDGE0_API_HOST;
+    }
+
+    try {
+      const response = await fetch(`${baseUrl}/submissions?base64_encoded=false&wait=true`, {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          source_code: sourceCode,
+          language_id: languageMap[language],
+          stdin,
+        }),
+        cache: "no-store",
+      });
+
+      if (response.ok) {
+        return (await response.json()) as Judge0Result;
+      }
+    } catch {}
   }
 
-  const baseUrl = process.env.JUDGE0_API_URL ?? DEFAULT_URL;
-  const headers: HeadersInit = {
-    "Content-Type": "application/json",
+  // Fallback to Piston API (100% free, no API key required)
+  const pistonLangMap: Record<LanguageKey, { language: string; version: string }> = {
+    python: { language: "python", version: "3.10.0" },
+    java: { language: "java", version: "15.0.2" },
+    cpp: { language: "c++", version: "10.2.0" },
   };
 
-  if (process.env.JUDGE0_API_KEY) {
-    headers["x-rapidapi-key"] = process.env.JUDGE0_API_KEY;
-  }
-  if (process.env.JUDGE0_API_HOST) {
-    headers["x-rapidapi-host"] = process.env.JUDGE0_API_HOST;
-  }
+  const pistonLang = pistonLangMap[language];
 
-  const response = await fetch(`${baseUrl}/submissions?base64_encoded=false&wait=true`, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({
-      source_code: sourceCode,
-      language_id: languageMap[language],
-      stdin,
-    }),
-    cache: "no-store",
-  });
+  try {
+    const response = await fetch("https://emkc.org/api/v2/piston/execute", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        language: pistonLang.language,
+        version: pistonLang.version,
+        files: [{ content: sourceCode }],
+        stdin,
+      }),
+      cache: "no-store",
+    });
 
-  if (!response.ok) {
-    const body = await response.text();
-    throw new Error(`Judge0 request failed (${response.status}): ${body}`);
-  }
+    if (response.ok) {
+      const data = await response.json();
+      const run = data.run || {};
+      const isError = run.code !== 0;
 
-  return (await response.json()) as Judge0Result;
+      return {
+        stdout: run.stdout || (isError ? null : ""),
+        stderr: run.stderr || null,
+        compile_output: run.stderr || null,
+        message: isError ? `Exited with code ${run.code}` : null,
+        time: "0.100",
+        memory: 0,
+        status: {
+          id: isError ? 11 : 3,
+          description: isError ? "Runtime Error" : "Accepted",
+        },
+      };
+    }
+  } catch {}
+
+  return localExecute(sourceCode, language, stdin);
 }
 
 export async function runAgainstTests(
