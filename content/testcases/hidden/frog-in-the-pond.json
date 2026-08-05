@@ -1,0 +1,82 @@
+[
+  {
+    "input": "3\n2 3 1\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "4\n1 3 6 2\n",
+    "expectedOutput": "11"
+  },
+  {
+    "input": "3\n10 20 30\n",
+    "expectedOutput": "50"
+  },
+  {
+    "input": "5\n5 1 2 3 4\n",
+    "expectedOutput": "14"
+  },
+  {
+    "input": "4\n100 100 100 100\n",
+    "expectedOutput": "300"
+  },
+  {
+    "input": "3\n1 1 1\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "6\n10 20 30 40 50 60\n",
+    "expectedOutput": "200"
+  },
+  {
+    "input": "5\n9 2 8 3 7\n",
+    "expectedOutput": "27"
+  },
+  {
+    "input": "4\n5 10 15 20\n",
+    "expectedOutput": "45"
+  },
+  {
+    "input": "3\n1000000000 1000000000 1000000000\n",
+    "expectedOutput": "2000000000"
+  },
+  {
+    "input": "5\n10 5 10 5 10\n",
+    "expectedOutput": "35"
+  },
+  {
+    "input": "6\n1 2 3 4 5 100\n",
+    "expectedOutput": "114"
+  },
+  {
+    "input": "4\n4 2 6 8\n",
+    "expectedOutput": "18"
+  },
+  {
+    "input": "5\n100 1 1 1 100\n",
+    "expectedOutput": "103"
+  },
+  {
+    "input": "7\n2 4 6 8 10 12 14\n",
+    "expectedOutput": "54"
+  },
+  {
+    "input": "3\n50 50 50\n",
+    "expectedOutput": "100"
+  },
+  {
+    "input": "4\n99 100 101 102\n",
+    "expectedOutput": "303"
+  },
+  {
+    "input": "5\n1000000 2000000 3000000 4000000 5000000\n",
+    "expectedOutput": "14000000"
+  },
+  {
+    "input": "6\n7 7 7 7 7 7\n",
+    "expectedOutput": "35"
+  },
+  {
+    "input": "5\n12 34 56 78 90\n",
+    "expectedOutput": "258"
+  }
+]

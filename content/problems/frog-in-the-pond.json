@@ -1,0 +1,34 @@
+{
+  "slug": "frog-in-the-pond",
+  "title": "Frog in the Pond",
+  "difficulty": "Easy",
+  "topics": ["Arrays", "Sliding Window", "Greedy"],
+  "acceptance": "79.4%",
+  "statement": "There are N lily pads arranged in a straight line. The i-th lily pad contains A[i] fresh flower petals.\n\nA frog can start from any lily pad. Whenever it lands on a lily pad, it collects all the petals present on that pad.\n\nThe frog can jump only to an adjacent lily pad (left or right) and can make at most N - 2 jumps.\n\nDetermine the maximum number of petals the frog can collect.\n\n### Input Format\n- The first line contains an integer N, the number of lily pads.\n- The second line contains N space-separated integers representing the petals on each pad.\n\n### Output Format\n- Print a single integer representing the maximum number of petals the frog can collect in at most N - 2 jumps.",
+  "examples": [
+    {
+      "input": "N = 3\nA = [2, 3, 1]",
+      "output": "5",
+      "explanation": "Max jumps = 3 - 2 = 1 jump (visits 2 pads). Path: pad 2 -> pad 1. Petals = 3 + 2 = 5."
+    },
+    {
+      "input": "N = 4\nA = [1, 3, 6, 2]",
+      "output": "11",
+      "explanation": "Max jumps = 4 - 2 = 2 jumps (visits 3 pads). Path: pads 2 -> 3 -> 4. Petals = 3 + 6 + 2 = 11."
+    }
+  ],
+  "constraints": [
+    "3 <= N <= 2 * 10^5",
+    "1 <= A[i] <= 10^9",
+    "The frog may start from any lily pad.",
+    "The frog may move only to adjacent lily pads.",
+    "Whenever the frog lands on a lily pad, it collects all petals on that pad."
+  ],
+  "hints": [
+    "At most N - 2 jumps means the frog can visit at most (N - 2) + 1 = N - 1 contiguous lily pads.",
+    "Visiting N - 1 contiguous pads is equivalent to excluding exactly 1 lily pad from the array.",
+    "To maximize the sum of N - 1 elements, subtract the minimum element (or total_sum - min(A[i])) or max subarray of length N - 1."
+  ],
+  "relatedProblems": ["smallest-missing-even-number", "5-days-challenge"],
+  "discussion": "Total sum minus minimum element or sliding window of length N - 1."
+}
