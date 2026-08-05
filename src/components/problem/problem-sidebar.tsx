@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, Circle } from "lucide-react";
+import { CheckCircle2, Circle, XCircle } from "lucide-react";
 import { DifficultyPill } from "@/components/problem/difficulty-pill";
 import { cn } from "@/lib/utils";
 import type { ProblemListItem } from "@/types/problem";
@@ -17,25 +17,32 @@ export function ProblemSidebar({
   currentSlug?: string;
 }) {
   const [solvedList, setSolvedList] = useState<string[]>(initialSolved);
+  const [attemptedList, setAttemptedList] = useState<string[]>([]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("solved_problems");
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored) as string[];
-          const combined = Array.from(new Set([...initialSolved, ...parsed]));
-          setSolvedList(combined);
-        } catch {}
-      }
+      try {
+        const storedSolved = localStorage.getItem("solved_problems");
+        if (storedSolved) {
+          const parsed = JSON.parse(storedSolved) as string[];
+          setSolvedList(Array.from(new Set([...initialSolved, ...parsed])));
+        }
+
+        const storedAttempted = localStorage.getItem("attempted_problems");
+        if (storedAttempted) {
+          setAttemptedList(JSON.parse(storedAttempted) as string[]);
+        }
+      } catch {}
     }
   }, [initialSolved]);
+
   return (
     <aside className="h-full overflow-y-auto border-r border-zinc-800 bg-zinc-950/90 p-3">
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-300">Problems</h2>
       <div className="space-y-2">
         {problems.map((problem) => {
           const isSolved = solvedList.includes(problem.slug);
+          const isAttempted = attemptedList.includes(problem.slug) && !isSolved;
           const isActive = currentSlug === problem.slug;
 
           return (
@@ -52,9 +59,11 @@ export function ProblemSidebar({
               <div className="mb-2 flex items-start justify-between gap-2">
                 <span className="text-sm font-medium text-zinc-100">{problem.title}</span>
                 {isSolved ? (
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
+                  <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
+                ) : isAttempted ? (
+                  <XCircle className="h-4 w-4 shrink-0 text-rose-500" />
                 ) : (
-                  <Circle className="h-4 w-4 text-zinc-500" />
+                  <Circle className="h-4 w-4 shrink-0 text-zinc-500" />
                 )}
               </div>
               <div className="flex items-center justify-between">
