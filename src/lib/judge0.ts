@@ -1,5 +1,6 @@
 import { spawn } from "node:child_process";
 import fs from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import { normalizeOutput } from "@/lib/utils";
 import type { LanguageKey, TestCase } from "@/types/problem";
@@ -84,7 +85,7 @@ async function localExecute(
   language: LanguageKey,
   stdin: string
 ): Promise<Judge0Result> {
-  const tempDir = path.join(process.cwd(), "temp_runs");
+  const tempDir = path.join(os.tmpdir(), "temp_runs");
   await fs.mkdir(tempDir, { recursive: true });
   const runId = Math.random().toString(36).substring(7);
 
