@@ -101,7 +101,21 @@ export function ProblemWorkspace({
     });
   };
 
+  const markProblemAttempted = () => {
+    if (typeof window !== "undefined") {
+      try {
+        const stored = localStorage.getItem("attempted_problems");
+        const list = stored ? (JSON.parse(stored) as string[]) : [];
+        if (!list.includes(problem.slug)) {
+          list.push(problem.slug);
+          localStorage.setItem("attempted_problems", JSON.stringify(list));
+        }
+      } catch {}
+    }
+  };
+
   const handleRun = async () => {
+    markProblemAttempted();
     setIsRunning(true);
     setRunResults([]);
 
@@ -140,6 +154,7 @@ export function ProblemWorkspace({
   };
 
   const handleSubmit = async () => {
+    markProblemAttempted();
     setIsSubmitting(true);
     setSubmitResults([]);
     setSubmitVerdict("");
