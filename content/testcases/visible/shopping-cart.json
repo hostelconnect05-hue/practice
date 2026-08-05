@@ -6,5 +6,17 @@
   {
     "input": "4\n10 20 1\n10 15 1\n5 8 4\n5 8 3\n",
     "expectedOutput": "10\n10\n8\n8"
+  },
+  {
+    "input": "5\n100 150 100\n50 90 7\n10 12 15\n3 5 1\n3 5 2\n",
+    "expectedOutput": "3750\n180\n48\n3\n3"
+  },
+  {
+    "input": "4\n4 7 1\n4 7 2\n4 7 3\n4 7 4\n",
+    "expectedOutput": "4\n4\n7\n7"
+  },
+  {
+    "input": "3\n10 18 10\n10 18 11\n10 18 12\n",
+    "expectedOutput": "46\n54\n54"
   }
 ]
