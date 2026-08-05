@@ -40,7 +40,13 @@ export const getProblemList = cache(async (): Promise<ProblemListItem[]> => {
       })
   );
 
-  return problems.sort((a, b) => problemOrder.indexOf(a.slug) - problemOrder.indexOf(b.slug));
+  return problems.sort((a, b) => {
+    const idxA = problemOrder.indexOf(a.slug);
+    const idxB = problemOrder.indexOf(b.slug);
+    const orderA = idxA === -1 ? 999 : idxA;
+    const orderB = idxB === -1 ? 999 : idxB;
+    return orderA - orderB;
+  });
 });
 
 export const getProblemBundle = cache(async (rawSlug: string): Promise<ProblemBundle | null> => {
