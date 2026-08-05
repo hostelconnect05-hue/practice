@@ -1,0 +1,42 @@
+[
+  {
+    "input": "abcde\nedcba\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "helo\nheol\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "abcd\nabcd\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "abc\ndef\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "a\na\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "ab\nba\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "python\ntyphon\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "algo\ngola\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "abcdefg\ngfedcba\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "react\ntrace\n",
+    "expectedOutput": "5"
+  }
+]

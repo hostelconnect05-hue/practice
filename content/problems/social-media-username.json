@@ -1,0 +1,32 @@
+{
+  "slug": "social-media-username",
+  "title": "Social Media Username",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Hash Table", "Two Pointers"],
+  "acceptance": "82.1%",
+  "statement": "You are analyzing usernames on a social media platform where each username consists of unique lowercase English letters.\n\nGiven two usernames M and N, determine how many distinct characters are present in both usernames but occur at different positions.\n\nA character should be counted only if:\n- It appears in both usernames.\n- Its index (position) in the two usernames is different.\n\nReturn the count of such distinct characters.\n\n### Input Format\n- The first line contains a string M.\n- The second line contains a string N.\n\n### Output Format\n- Print a single integer representing the number of distinct characters present in both usernames at different positions.",
+  "examples": [
+    {
+      "input": "M = \"abcde\"\nN = \"edcba\"",
+      "output": "4",
+      "explanation": "Common chars: 'a'(0!=4), 'b'(1!=3), 'c'(2==2), 'd'(3!=1), 'e'(4!=0). Chars 'a', 'b', 'd', 'e' differ in positions. Count = 4."
+    },
+    {
+      "input": "M = \"helo\"\nN = \"heol\"",
+      "output": "2",
+      "explanation": "Common chars: 'h'(0==0), 'e'(1==1), 'l'(2!=3), 'o'(3!=2). Chars 'l' and 'o' occur at different positions. Count = 2."
+    }
+  ],
+  "constraints": [
+    "1 <= |M|, |N| <= 2 * 10^5",
+    "Both strings contain only lowercase English letters.",
+    "Each username contains unique characters."
+  ],
+  "hints": [
+    "Store the index of each character in string M in a map or array of size 26.",
+    "Iterate through string N: for each char N[j], check if it exists in M.",
+    "If M[N[j]] exists and M[N[j]] != j, increment the answer count."
+  ],
+  "relatedProblems": ["string-harmony", "string-swap"],
+  "discussion": "O(N + M) lookup using array of size 26 for char position mapping."
+}

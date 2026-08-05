@@ -1,0 +1,82 @@
+[
+  {
+    "input": "abcde\nedcba\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "helo\nheol\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "abcd\nabcd\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "abc\ndef\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "a\na\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "ab\nba\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "python\ntyphon\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "algo\ngola\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "abcdefg\ngfedcba\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "react\ntrace\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "user\nresu\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "admin\nminda\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "virtusa\nsaturiv\n",
+    "expectedOutput": "7"
+  },
+  {
+    "input": "superman\nmanperus\n",
+    "expectedOutput": "8"
+  },
+  {
+    "input": "xyz\nxyz\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "p\nq\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "abcdefghijklmnopqrstuvwxyz\nzyxwvutsrqponmlkjihgfedcba\n",
+    "expectedOutput": "26"
+  },
+  {
+    "input": "abcdefghijklmnopqrstuvwxyz\nabcdefghijklmnopqrstuvwxyz\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "algorithm\nlogarithm\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "code\ndeco\n",
+    "expectedOutput": "4"
+  }
+]
