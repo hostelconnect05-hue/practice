@@ -440,13 +440,21 @@ export function ProblemWorkspace({
                 {submitVerdict}
               </span>
             </div>
-            <div className="max-h-48 overflow-y-auto space-y-1.5 pr-1">
+            <div className="max-h-60 overflow-y-auto space-y-2 pr-1">
               {submitResults.map((result, index) => (
-                <div key={`sub-res-${index}`} className="flex items-center justify-between rounded bg-zinc-900/60 p-2 text-xs">
-                  <span className="text-zinc-300 font-medium">Hidden Case {index + 1}</span>
-                  <span className={result.passed ? "text-emerald-400 font-semibold" : "text-rose-400 font-semibold"}>
-                    {result.verdict} {result.time ? `(${result.time}s)` : ""}
-                  </span>
+                <div key={`sub-res-${index}`} className="rounded border border-zinc-800/80 bg-zinc-900/60 p-2 text-xs space-y-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zinc-200 font-medium">Test Case {index + 1}</span>
+                    <span className={result.passed ? "text-emerald-400 font-semibold" : "text-rose-400 font-semibold"}>
+                      {result.verdict} {result.time ? `(${result.time}s)` : ""}
+                    </span>
+                  </div>
+                  {!result.passed ? (
+                    <div className="mt-1.5 rounded bg-zinc-950 p-2 font-mono text-[11px] text-zinc-300 space-y-1">
+                      <p className="text-zinc-400">Expected: <span className="text-emerald-400 font-semibold">{result.expectedOutput}</span></p>
+                      <p className="text-zinc-400">Actual Output: <span className="text-rose-400 font-semibold">{result.actualOutput || "(empty)"}</span></p>
+                    </div>
+                  ) : null}
                 </div>
               ))}
             </div>
