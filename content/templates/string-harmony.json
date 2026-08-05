@@ -1,4 +1,4 @@
 {
-  "java": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        if (!sc.hasNext()) return;\n        String s = sc.next();\n        int maxLen = 1;\n        int currLen = 1;\n        for (int i = 1; i < s.length(); i++) {\n            char prev = s.charAt(i - 1);\n            char curr = s.charAt(i);\n            if (curr == prev || curr - prev == 1) {\n                currLen++;\n            } else {\n                currLen = 1;\n            }\n            maxLen = Math.max(maxLen, currLen);\n        }\n        System.out.println(maxLen);\n    }\n}\n",
-  "python": "import sys\n\ndef main():\n    lines = sys.stdin.read().split()\n    if not lines:\n        return\n    s = lines[0]\n    max_len = 1\n    curr_len = 1\n    for i in range(1, len(s)):\n        diff = ord(s[i]) - ord(s[i-1])\n        if diff == 0 or diff == 1:\n            curr_len += 1\n        else:\n            curr_len = 1\n        max_len = max(max_len, curr_len)\n    print(max_len)\n\nif __name__ == '__main__':\n    main()\n"
+  "java": "",
+  "python": ""
 }
