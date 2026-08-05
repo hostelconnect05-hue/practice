@@ -1,7 +1,7 @@
 {
   "slug": "frog-in-the-pond",
   "title": "Frog in the Pond",
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "topics": ["Arrays", "Sliding Window", "Greedy"],
   "acceptance": "79.4%",
   "statement": "There are N lily pads arranged in a straight line. The i-th lily pad contains A[i] fresh flower petals.\n\nA frog can start from any lily pad. Whenever it lands on a lily pad, it collects all the petals present on that pad.\n\nThe frog can jump only to an adjacent lily pad (left or right) and can make at most N - 2 jumps.\n\nDetermine the maximum number of petals the frog can collect.\n\n### Input Format\n- The first line contains an integer N, the number of lily pads.\n- The second line contains N space-separated integers representing the petals on each pad.\n\n### Output Format\n- Print a single integer representing the maximum number of petals the frog can collect in at most N - 2 jumps.",

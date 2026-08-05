@@ -1,7 +1,7 @@
 {
   "slug": "social-media-username",
   "title": "Social Media Username",
-  "difficulty": "Easy",
+  "difficulty": "Hard",
   "topics": ["Strings", "Hash Table", "Two Pointers"],
   "acceptance": "82.1%",
   "statement": "You are analyzing usernames on a social media platform where each username consists of unique lowercase English letters.\n\nGiven two usernames M and N, determine how many distinct characters are present in both usernames but occur at different positions.\n\nA character should be counted only if:\n- It appears in both usernames.\n- Its index (position) in the two usernames is different.\n\nReturn the count of such distinct characters.\n\n### Input Format\n- The first line contains a string M.\n- The second line contains a string N.\n\n### Output Format\n- Print a single integer representing the number of distinct characters present in both usernames at different positions.",
