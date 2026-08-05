@@ -1,0 +1,36 @@
+{
+  "slug": "smallest-missing-even-number",
+  "title": "Smallest Missing Even Number",
+  "difficulty": "Easy",
+  "topics": ["Arrays", "HashSet", "Math"],
+  "acceptance": "78.6%",
+  "statement": "You are given an integer array nums of length n. Find the smallest positive even integer (2, 4, 6, 8, ...) that is not present in the array. If every positive even integer from 2 up to the largest even number in the array is present, return the next even number after the largest even number.",
+  "examples": [
+    {
+      "input": "nums = [2,6,8]",
+      "output": "4",
+      "explanation": "The positive even numbers present are: 2, 6, 8. The smallest missing positive even number is 4."
+    },
+    {
+      "input": "nums = [2,4,6]",
+      "output": "8",
+      "explanation": "Every positive even number from 2 to 6 is present. The next positive even number is 8."
+    },
+    {
+      "input": "nums = [1,3,5,7]",
+      "output": "2",
+      "explanation": "No positive even numbers are present, so 2 is the smallest missing positive even."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100000",
+    "1 <= nums[i] <= 1000000000"
+  ],
+  "hints": [
+    "Hint 1: Store all positive even numbers in a HashSet for O(1) membership lookups.",
+    "Hint 2: Start searching at candidate = 2 and iterate upward in steps of 2 (2, 4, 6, 8, ...).",
+    "Hint 3: Return the first positive even number that is not in the set."
+  ],
+  "relatedProblems": ["minimum-index", "5-days-challenge"],
+  "discussion": "Consider edge cases like arrays with no positive even numbers, duplicate evens, or single elements."
+}

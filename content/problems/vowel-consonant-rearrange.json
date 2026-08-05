@@ -1,0 +1,43 @@
+{
+  "slug": "vowel-consonant-rearrange",
+  "title": "Vowel Consonant Rearrange",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Two Pointers", "Array"],
+  "acceptance": "82.5%",
+  "statement": "You are given a string S consisting of lowercase English letters. The string contains an equal number of vowels and consonants. Rearrange the string such that consonants are placed at even indices (0, 2, 4, ...), vowels are placed at odd indices (1, 3, 5, ...), the relative order of vowels remains the same, and the relative order of consonants remains the same.",
+  "examples": [
+    {
+      "input": "S = \"beauty\"",
+      "output": "betayu",
+      "explanation": "Vowels in order: e, a, u. Consonants in order: b, t, y. Even indices (0, 2, 4) get b, t, y. Odd indices (1, 3, 5) get e, a, u. Result = betayu."
+    },
+    {
+      "input": "S = \"abab\"",
+      "output": "baba",
+      "explanation": "Vowels in order: a, a. Consonants in order: b, b. Result = baba."
+    },
+    {
+      "input": "S = \"code\"",
+      "output": "code",
+      "explanation": "Vowels in order: o, e. Consonants in order: c, d. Even positions: c, d. Odd positions: o, e. Result = code."
+    },
+    {
+      "input": "S = \"aeiobcdf\"",
+      "output": "bacedifo",
+      "explanation": "Vowels in order: a, e, i, o. Consonants in order: b, c, d, f. Interleaving gives bacedifo."
+    }
+  ],
+  "constraints": [
+    "1 <= |S| <= 2 * 10^5",
+    "S contains only lowercase English letters.",
+    "The number of vowels equals the number of consonants.",
+    "Vowels are: 'a', 'e', 'i', 'o', 'u'."
+  ],
+  "hints": [
+    "Hint 1: Traverse the string once to separate vowels and consonants into two separate lists while preserving their original order.",
+    "Hint 2: Create a result character array of length |S|.",
+    "Hint 3: Fill even indices (0, 2, 4, ...) with consonants in order, and odd indices (1, 3, 5, ...) with vowels in order."
+  ],
+  "relatedProblems": ["minimum-index", "smallest-missing-even-number", "5-days-challenge", "index-sort", "frequency-sync"],
+  "discussion": "Preserving relative order means this is a stable rearrangement process."
+}

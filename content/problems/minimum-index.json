@@ -1,0 +1,42 @@
+{
+  "slug": "minimum-index",
+  "title": "Minimum Index",
+  "difficulty": "Medium",
+  "topics": ["Arrays", "Bit Manipulation", "Prefix XOR"],
+  "acceptance": "54.2%",
+  "statement": "You are given an integer array nums of length n. For every index i (0 <= i < n), leftXor is the bitwise XOR of all elements from index 0 to i (inclusive), and rightXor is the bitwise XOR of all elements from index i + 1 to n - 1. If i is the last index, then rightXor = 0. Return the smallest index i such that leftXor > rightXor. If no such index exists, return -1.",
+  "examples": [
+    {
+      "input": "nums = [4,2,5,7,1,3]",
+      "output": "0",
+      "explanation": "At i = 0, leftXor = 4 and rightXor = 2 XOR 5 XOR 7 XOR 1 XOR 3 = 2. Since 4 > 2, the answer is 0."
+    },
+    {
+      "input": "nums = [1,2,3]",
+      "output": "-1",
+      "explanation": "No index satisfies leftXor > rightXor."
+    },
+    {
+      "input": "nums = [8,1]",
+      "output": "0",
+      "explanation": "At i = 0, leftXor = 8 and rightXor = 1, so 8 > 1."
+    },
+    {
+      "input": "nums = [1,8]",
+      "output": "1",
+      "explanation": "At i = 1, leftXor = 1 XOR 8 = 9 and rightXor = 0, so 9 > 0."
+    }
+  ],
+  "constraints": [
+    "1 <= nums.length <= 100000",
+    "0 <= nums[i] <= 1000000000"
+  ],
+  "hints": [
+    "Hint 1: Precompute total XOR of the full array.",
+    "Hint 2: Sweep left to right while maintaining prefix XOR.",
+    "Hint 3: rightXor at index i can be derived from totalXor XOR leftXor.",
+    "Hint 4: Return immediately when you find the first index satisfying leftXor > rightXor."
+  ],
+  "relatedProblems": ["smallest-missing-even-number", "5-days-challenge"],
+  "discussion": "Try discussing edge cases like single-element arrays and arrays with all zeros."
+}

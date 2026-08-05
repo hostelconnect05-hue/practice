@@ -1,0 +1,36 @@
+{
+  "slug": "index-sort",
+  "title": "Index Sort",
+  "difficulty": "Medium",
+  "topics": ["Arrays", "Graphs", "Union Find", "Cycles"],
+  "acceptance": "62.4%",
+  "statement": "You are given an integer array nums of size n containing a permutation of integers from 1 to n. Your goal is to sort the array in ascending order. You must choose a fixed integer k (1 <= k <= n). Once k is chosen, you can swap any two indices i and j as long as neither i nor j equals k. Return the total number of distinct values of k for which it is possible to sort the array into ascending order.",
+  "examples": [
+    {
+      "input": "n = 3, nums = [1,2,3]",
+      "output": "3",
+      "explanation": "The array is already sorted. Every index k satisfies nums[k-1] == k, so every value of k is valid."
+    },
+    {
+      "input": "n = 3, nums = [2,1,3]",
+      "output": "1",
+      "explanation": "Only k = 3 works (nums[2] = 3). For k = 1 or k = 2, misplaced elements at index k cannot be moved because swaps involving k are forbidden."
+    },
+    {
+      "input": "n = 4, nums = [2,1,4,3]",
+      "output": "0",
+      "explanation": "No index k has nums[k-1] == k, so no value of k allows the array to be sorted."
+    }
+  ],
+  "constraints": [
+    "1 <= n <= 2 * 10^5",
+    "nums is a permutation of integers from 1 to n."
+  ],
+  "hints": [
+    "Hint 1: Index k is forbidden from participating in any swaps, so nums[k-1] can never move.",
+    "Hint 2: For the final array to be sorted, position k must end up with value k.",
+    "Hint 3: Since nums[k-1] cannot move, k is valid if and only if nums[k-1] == k."
+  ],
+  "relatedProblems": ["minimum-index", "smallest-missing-even-number", "5-days-challenge"],
+  "discussion": "Count how many indices i (0-based) satisfy nums[i] == i + 1."
+}

@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: virtusa_oa
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/virtusa_oa?schema=public
+      JUDGE0_API_URL: ${JUDGE0_API_URL:-https://judge0-ce.p.rapidapi.com}
+      JUDGE0_API_KEY: ${JUDGE0_API_KEY:-}
+      JUDGE0_API_HOST: ${JUDGE0_API_HOST:-judge0-ce.p.rapidapi.com}
+
+volumes:
+  pgdata:

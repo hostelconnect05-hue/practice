@@ -1,0 +1,10 @@
+{
+  "approach": "Use prefix XOR and total XOR to derive right side XOR in O(1) at each index.",
+  "observation": "If totalXor is known and prefixXor at i is leftXor, then rightXor = totalXor XOR leftXor.",
+  "bruteForce": "For each i, recompute XOR over left and right ranges. O(n^2).",
+  "optimalSolution": "Single pass with rolling prefix XOR and precomputed total XOR. Return first i where leftXor > rightXor.",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "dryRun": "nums=[9,1,2]. total=10. i=0: left=9 right=3 => answer 0.",
+  "edgeCases": ["n=1", "all values are zero", "no valid index"]
+}

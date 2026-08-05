@@ -1,0 +1,10 @@
+[
+  {"input":"beauty\n","expectedOutput":"betayu"},
+  {"input":"abab\n","expectedOutput":"baba"},
+  {"input":"code\n","expectedOutput":"code"},
+  {"input":"aeiobcdf\n","expectedOutput":"bacedifo"},
+  {"input":"hi\n","expectedOutput":"hi"},
+  {"input":"go\n","expectedOutput":"go"},
+  {"input":"educates\n","expectedOutput":"decutase"},
+  {"input":"leetcode\n","expectedOutput":"letecode"}
+]

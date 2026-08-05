@@ -1,0 +1,10 @@
+{
+  "approach": "Identify the constraint imposed by fixing index k: index k cannot participate in any swap operations.",
+  "observation": "Since index k cannot move, nums[k-1] will remain at index k forever. For the array to be sorted, nums[k-1] must equal k.",
+  "bruteForce": "Simulate swapping for each candidate k.",
+  "optimalSolution": "Iterate through the array and count how many indices i satisfy nums[i] == i + 1.",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(1)",
+  "dryRun": "nums=[2,1,3,4,5]. Matching indices: nums[2]=3, nums[3]=4, nums[4]=5 (3 matches). Answer = 3.",
+  "edgeCases": ["n = 1", "Array already sorted (answer = n)", "Reverse sorted array (answer = 1 if n is odd, 0 if n is even)"]
+}

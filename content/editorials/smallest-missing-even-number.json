@@ -1,0 +1,10 @@
+{
+  "approach": "Insert all even numbers into a hash set and scan from 0 upward in steps of 2.",
+  "observation": "Only even values matter; odd values can be ignored.",
+  "bruteForce": "Sort and then linearly verify missing even values. O(n log n).",
+  "optimalSolution": "Hash set of even values plus monotonic scan from 0 by 2 until a gap appears.",
+  "timeComplexity": "O(n)",
+  "spaceComplexity": "O(n)",
+  "dryRun": "arr=[0,2,6,4]. set={0,2,4,6}. check 0,2,4,6 all present; next is 8.",
+  "edgeCases": ["array has no even number", "negative even values present", "duplicates"]
+}

@@ -1,0 +1,12 @@
+[
+  {"input":"5\n4 10 20 30 40\n","expectedOutput":"20"},
+  {"input":"5\n1 1 1 1 1\n","expectedOutput":"1"},
+  {"input":"1\n5\n","expectedOutput":"1"},
+  {"input":"1\n10\n","expectedOutput":"2"},
+  {"input":"1\n100\n","expectedOutput":"20"},
+  {"input":"2\n10 10\n","expectedOutput":"4"},
+  {"input":"2\n25 25\n","expectedOutput":"10"},
+  {"input":"5\n100 100 100 100 100\n","expectedOutput":"100"},
+  {"input":"2\n2 3\n","expectedOutput":"1"},
+  {"input":"3\n6 6 6\n","expectedOutput":"3"}
+]
