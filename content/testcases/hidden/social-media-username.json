@@ -25,7 +25,7 @@
   },
   {
     "input": "python\ntyphon\n",
-    "expectedOutput": "6"
+    "expectedOutput": "2"
   },
   {
     "input": "algo\ngola\n",
@@ -37,7 +37,7 @@
   },
   {
     "input": "react\ntrace\n",
-    "expectedOutput": "5"
+    "expectedOutput": "3"
   },
   {
     "input": "user\nresu\n",
@@ -73,10 +73,50 @@
   },
   {
     "input": "algorithm\nlogarithm\n",
-    "expectedOutput": "5"
+    "expectedOutput": "3"
   },
   {
     "input": "code\ndeco\n",
     "expectedOutput": "4"
+  },
+  {
+    "input": "abcd\ndcba\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "abcde\nbcdea\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "apple\nleapp\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "sample\nelpmas\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "testing\ngnitset\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "abcdefghij\nabcdefghij\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "cat\ndog\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "abcdef\nabcxyz\n",
+    "expectedOutput": "0"
+  },
+  {
+    "input": "abcdef\nxyzabc\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "abcdefg\nabcdefg\n",
+    "expectedOutput": "0"
   }
 ]

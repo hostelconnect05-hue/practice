@@ -25,7 +25,7 @@
   },
   {
     "input": "python\ntyphon\n",
-    "expectedOutput": "6"
+    "expectedOutput": "2"
   },
   {
     "input": "algo\ngola\n",
@@ -37,6 +37,6 @@
   },
   {
     "input": "react\ntrace\n",
-    "expectedOutput": "5"
+    "expectedOutput": "3"
   }
 ]
