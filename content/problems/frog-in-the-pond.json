@@ -26,9 +26,9 @@
   ],
   "hints": [
     "At most N - 2 jumps means the frog can visit at most (N - 2) + 1 = N - 1 contiguous lily pads.",
-    "Visiting N - 1 contiguous pads is equivalent to excluding exactly 1 lily pad from the array.",
-    "To maximize the sum of N - 1 elements, subtract the minimum element (or total_sum - min(A[i])) or max subarray of length N - 1."
+    "Because jumps can only be made to adjacent pads, the frog must move along a single contiguous path of length N - 1.",
+    "Use a sliding window algorithm of size N - 1 to find the maximum sum of any contiguous subarray of length N - 1."
   ],
   "relatedProblems": ["smallest-missing-even-number", "5-days-challenge"],
-  "discussion": "Total sum minus minimum element or sliding window of length N - 1."
+  "discussion": "Sliding window of fixed size N - 1 to evaluate max contiguous subarray sum."
 }

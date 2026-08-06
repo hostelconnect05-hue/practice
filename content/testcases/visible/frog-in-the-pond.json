@@ -13,7 +13,7 @@
   },
   {
     "input": "5\n5 1 2 3 4\n",
-    "expectedOutput": "14"
+    "expectedOutput": "11"
   },
   {
     "input": "4\n100 100 100 100\n",
@@ -29,7 +29,7 @@
   },
   {
     "input": "5\n9 2 8 3 7\n",
-    "expectedOutput": "27"
+    "expectedOutput": "22"
   },
   {
     "input": "4\n5 10 15 20\n",
