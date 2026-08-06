@@ -1,7 +1,7 @@
 [
   {
     "input": "abcabc",
-    "expectedOutput": "5"
+    "expectedOutput": "3"
   },
   {
     "input": "aabbcc",
@@ -29,11 +29,11 @@
   },
   {
     "input": "abcdeabcde",
-    "expectedOutput": "9"
+    "expectedOutput": "5"
   },
   {
     "input": "abacaba",
-    "expectedOutput": "3"
+    "expectedOutput": "2"
   },
   {
     "input": "abbcccdddd",

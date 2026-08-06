@@ -1,10 +1,34 @@
 [
-  {"input":"beauty\n","expectedOutput":"betayu"},
-  {"input":"abab\n","expectedOutput":"baba"},
-  {"input":"code\n","expectedOutput":"code"},
-  {"input":"aeiobcdf\n","expectedOutput":"bacedifo"},
-  {"input":"hi\n","expectedOutput":"hi"},
-  {"input":"go\n","expectedOutput":"go"},
-  {"input":"educates\n","expectedOutput":"decutase"},
-  {"input":"leetcode\n","expectedOutput":"letecode"}
+  {
+    "input": "beauty\n",
+    "expectedOutput": "eaubty"
+  },
+  {
+    "input": "abab\n",
+    "expectedOutput": "aabb"
+  },
+  {
+    "input": "code\n",
+    "expectedOutput": "oecd"
+  },
+  {
+    "input": "aeiobcdf\n",
+    "expectedOutput": "aeiobcdf"
+  },
+  {
+    "input": "hi\n",
+    "expectedOutput": "ih"
+  },
+  {
+    "input": "go\n",
+    "expectedOutput": "og"
+  },
+  {
+    "input": "educates\n",
+    "expectedOutput": "euaedcts"
+  },
+  {
+    "input": "leetcode\n",
+    "expectedOutput": "eeoeltcd"
+  }
 ]

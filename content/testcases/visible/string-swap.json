@@ -9,7 +9,7 @@
   },
   {
     "input": "abcd\n4\n1 1 2 1\n",
-    "expectedOutput": "cbad"
+    "expectedOutput": "bdac"
   },
   {
     "input": "ab\n1\n1\n",
@@ -25,18 +25,18 @@
   },
   {
     "input": "python\n2\n1 2\n",
-    "expectedOutput": "honpyp"
+    "expectedOutput": "hopnyt"
   },
   {
     "input": "coding\n3\n1 2 1\n",
-    "expectedOutput": "ingcod"
+    "expectedOutput": "dncgoi"
   },
   {
     "input": "leetcode\n2\n2 1\n",
-    "expectedOutput": "eetclode"
+    "expectedOutput": "todeleec"
   },
   {
     "input": "aabbcc\n4\n1 2 1 2\n",
-    "expectedOutput": "bccaab"
+    "expectedOutput": "cabbca"
   }
 ]
