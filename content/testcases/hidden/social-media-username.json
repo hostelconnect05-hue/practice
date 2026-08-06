@@ -88,16 +88,16 @@
     "expectedOutput": "5"
   },
   {
-    "input": "apple\nleapp\n",
-    "expectedOutput": "5"
+    "input": "aple\nleap\n",
+    "expectedOutput": "4"
   },
   {
     "input": "sample\nelpmas\n",
     "expectedOutput": "6"
   },
   {
-    "input": "testing\ngnitset\n",
-    "expectedOutput": "6"
+    "input": "post\nstop\n",
+    "expectedOutput": "4"
   },
   {
     "input": "abcdefghij\nabcdefghij\n",
