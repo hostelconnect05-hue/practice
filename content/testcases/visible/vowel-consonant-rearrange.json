@@ -1,34 +1,34 @@
 [
   {
     "input": "beauty\n",
-    "expectedOutput": "eaubty"
+    "expectedOutput": "betayu"
   },
   {
     "input": "abab\n",
-    "expectedOutput": "aabb"
+    "expectedOutput": "baba"
   },
   {
     "input": "code\n",
-    "expectedOutput": "oecd"
+    "expectedOutput": "code"
   },
   {
     "input": "aeiobcdf\n",
-    "expectedOutput": "aeiobcdf"
+    "expectedOutput": "bacedifo"
   },
   {
     "input": "hi\n",
-    "expectedOutput": "ih"
+    "expectedOutput": "hi"
   },
   {
     "input": "go\n",
-    "expectedOutput": "og"
+    "expectedOutput": "go"
   },
   {
     "input": "educates\n",
-    "expectedOutput": "euaedcts"
+    "expectedOutput": "decutase"
   },
   {
     "input": "leetcode\n",
-    "expectedOutput": "eeoeltcd"
+    "expectedOutput": "letecode"
   }
 ]
