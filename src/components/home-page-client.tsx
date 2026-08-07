@@ -122,7 +122,7 @@ export function HomePageClient({
               <Calculator className="h-4 w-4 text-orange-400" />
               Aptitude
               <span className="ml-1 rounded-full bg-orange-500/20 px-2 py-0.5 text-xs font-bold text-orange-300">
-                17 Qs
+                18 Qs
               </span>
             </button>
 
@@ -137,7 +137,7 @@ export function HomePageClient({
               <Brain className="h-4 w-4 text-pink-400" />
               Analytical Ability
               <span className="ml-1 rounded-full bg-pink-500/20 px-2 py-0.5 text-xs font-bold text-pink-300">
-                12 Qs
+                16 Qs
               </span>
             </button>
           </div>

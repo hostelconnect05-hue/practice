@@ -235,4 +235,17 @@ export const aptitudeQuestions: AptitudeQuestion[] = [
     correctAnswer: "A",
     explanation: "Four multiples of 4 with average 30 are 24, 28, 32, 36. The second multiple is 28. Five consecutive even numbers starting from 28: 28, 30, 32, 34, 36. The largest number is 36.",
   },
+  {
+    id: 18,
+    topic: "Time & Work - Multiplied Workload",
+    question: "An individual can complete 40% of a task in 4 days. How long will it take to complete three times the entire task?",
+    options: [
+      { key: "A", text: "40 days" },
+      { key: "B", text: "32 days" },
+      { key: "C", text: "36 days" },
+      { key: "D", text: "30 days" },
+    ],
+    correctAnswer: "D",
+    explanation: "40% work = 4 days ⇒ 100% work = (4 / 40) × 100 = 10 days. Three times the work = 3 × 10 = 30 days.",
+  },
 ];
