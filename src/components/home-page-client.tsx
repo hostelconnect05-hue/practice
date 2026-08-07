@@ -107,7 +107,7 @@ export function HomePageClient({
               <Terminal className="h-4 w-4 text-amber-400" />
               Technical Skills
               <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
-                49 Qs
+                53 Qs
               </span>
             </button>
 
