@@ -92,7 +92,7 @@ export function HomePageClient({
               <MessageSquare className="h-4 w-4 text-sky-400" />
               Verbal Ability
               <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
-                9 Qs
+                37 Qs
               </span>
             </button>
 
@@ -355,7 +355,7 @@ export function HomePageClient({
                   <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
                     Section 7 • Quantitative Aptitude
                   </Badge>
-                  <span className="text-xs text-orange-400 font-semibold">12 Verified Aptitude Questions</span>
+                  <span className="text-xs text-orange-400 font-semibold">20 Verified Aptitude Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 7: Quantitative Aptitude Assessment
@@ -363,7 +363,7 @@ export function HomePageClient({
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  Practice mathematical problem solving on work & production rates, profit & loss percentages, successive discounts & marked prices, girl-to-boy weight ratio averages, speed-time-distance ratios, and multi-person work completion times.
+                  Practice mathematical problem solving on work & production rates, profit & loss percentages, successive discounts & marked prices, girl-to-boy weight ratio averages, speed-time-distance ratios, boats & streams, partnerships, and multi-person work completion times.
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
                   <span className="flex items-center gap-1.5">
@@ -396,7 +396,7 @@ export function HomePageClient({
                   <Badge className="bg-pink-500/20 text-pink-300 border-pink-500/30">
                     Section 8 • Analytical Ability
                   </Badge>
-                  <span className="text-xs text-pink-400 font-semibold">12 Verified Analytical Questions</span>
+                  <span className="text-xs text-pink-400 font-semibold">22 Verified Analytical Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 8: Analytical Ability Assessment
