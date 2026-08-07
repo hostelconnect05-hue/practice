@@ -355,7 +355,7 @@ export function HomePageClient({
                   <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
                     Section 7 • Quantitative Aptitude
                   </Badge>
-                  <span className="text-xs text-orange-400 font-semibold">6 Verified Aptitude Questions</span>
+                  <span className="text-xs text-orange-400 font-semibold">12 Verified Aptitude Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 7: Quantitative Aptitude Assessment
@@ -396,7 +396,7 @@ export function HomePageClient({
                   <Badge className="bg-pink-500/20 text-pink-300 border-pink-500/30">
                     Section 8 • Analytical Ability
                   </Badge>
-                  <span className="text-xs text-pink-400 font-semibold">6 Verified Analytical Questions</span>
+                  <span className="text-xs text-pink-400 font-semibold">12 Verified Analytical Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 8: Analytical Ability Assessment
