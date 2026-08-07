@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2, Terminal } from "lucide-react";
+import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2, Terminal, Calculator } from "lucide-react";
 import { ProblemCard } from "@/components/problem/problem-card";
 import { ProgressOverview } from "@/components/problem/progress-overview";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -108,6 +108,21 @@ export function HomePageClient({
               Technical Skills
               <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
                 23 Qs
+              </span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab("aptitude" as any)}
+              className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                (activeTab as string) === "aptitude"
+                  ? "bg-orange-500/10 text-orange-400 shadow-sm border border-orange-500/30"
+                  : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
+              }`}
+            >
+              <Calculator className="h-4 w-4 text-orange-400" />
+              Aptitude
+              <span className="ml-1 rounded-full bg-orange-500/20 px-2 py-0.5 text-xs font-bold text-orange-300">
+                6 Qs
               </span>
             </button>
           </div>
@@ -276,7 +291,48 @@ export function HomePageClient({
           </div>
         )}
 
-        {/* Section 4: Coding Problems Grid */}
+        {/* Section 4: Aptitude Card */}
+        {(activeTab === "all" || (activeTab as string) === "aptitude") && (
+          <div className="mb-6">
+            <Card className="border-orange-500/30 bg-orange-950/15 backdrop-blur hover:border-orange-500/50 transition">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+                    Section 7 • Quantitative Aptitude
+                  </Badge>
+                  <span className="text-xs text-orange-400 font-semibold">6 Verified Aptitude Questions</span>
+                </div>
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
+                  Section 7: Quantitative Aptitude Assessment
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Practice mathematical problem solving on work & production rates, profit & loss percentages, successive discounts & marked prices, girl-to-boy weight ratio averages, speed-time-distance ratios, and multi-person work completion times.
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400" /> Mathematically Verified Answers
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400" /> Step-by-Step Derivation & Explanations
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-orange-400" /> Live Scoring & Reattempts
+                  </span>
+                </div>
+                <Link href="/aptitude">
+                  <Button className="w-full sm:w-auto mt-2 justify-between gap-3 bg-orange-600 hover:bg-orange-500 text-white font-semibold px-6">
+                    Start Aptitude Assessment
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {/* Section 5: Coding Problems Grid */}
         {(activeTab === "all" || activeTab === "coding") && (
           <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {problems.map((problem) => (
