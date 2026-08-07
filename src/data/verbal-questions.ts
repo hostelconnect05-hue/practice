@@ -205,23 +205,67 @@ Despite occasional sightings, no scientific evidence has confirmed the monster's
     explanation: "Researchers explain sightings using natural phenomena like floating logs, fish, seals, or weather illusions.",
   },
   {
-    id: 203,
+    id: 204,
     section: "Reading Comprehension",
     passage: {
-      title: "Passage 2: Storr Lochs Monster",
-      text: `A local legend from the Isle of Skye tells of a mysterious creature known as the Storr Lochs Monster. Although many people dismissed the story as folklore, some residents claimed to have seen an unusual creature in the loch. Reports described it as having a long neck and a large body, leading some people to compare it with the famous Loch Ness Monster.
+      title: "Passage 2: Storr Lochs Monster (Fossil Discovery)",
+      text: `A fierce predator named the Storr Lochs Monster, which lived 170 million years ago, has been unveiled for the first time, half a century after it was discovered. The fossilized skeleton of the dolphin-like animal was found on the Isle of Skye, Scotland, in 1966. According to researchers from the University of Edinburgh, it is the most complete skeleton of a sea-living reptile from the age of dinosaurs that has ever been found in Scotland.
 
-Despite occasional sightings, no scientific evidence has confirmed the monster's existence. Researchers believe that many sightings could be explained by floating logs, large fish, seals, or optical illusions created by weather conditions. Nevertheless, the legend continues to attract tourists and remains an important part of the local culture, contributing to the island's tourism industry.`,
+A partnership between the University of Edinburgh, National Museums Scotland, and energy company SSE has enabled the fossil to be extracted from the rock that encased it for millions of years. The fossil has been preserved in National Museums Scotland's storage facility for 50 years. Now, by pooling expertise, the new collaboration will enable experts to form a clearer picture of the fossil. A team of palaeontologists will study the fossil, which belongs to an extinct family of marine reptiles known as ichthyosaurs.
+
+The ancient animals thrived in prehistoric seas at the same time that the dinosaurs were ruling the land. This discovery will help unveil how ichthyosaurs evolved during the Middle Jurassic Period, a part of Earth's history that has long been shrouded in mystery owing to a lack of fossil evidence from the time. The Isle of Skye is one of the few places in the world where fossils from the Middle Jurassic Period can be found. In folklore, the Loch Ness Monster or 'Nessie' is an aquatic being that reputedly inhabits Loch Ness in the Scottish Highlands. Although its description varies, it is similar to other supposed lake monsters in Scotland and elsewhere.`,
     },
-    question: "What role does the legend play today?",
+    question: "How did the partnership between various organizations help?",
     options: [
-      { key: "A", text: "It discourages tourism." },
-      { key: "B", text: "It has been completely forgotten." },
-      { key: "C", text: "It attracts tourists and contributes to the local culture." },
-      { key: "D", text: "It has been scientifically proven." },
+      { key: "A", text: "It helped in preserving the fossil." },
+      { key: "B", text: "It helped the team understand how the creature became extinct." },
+      { key: "C", text: "It helped in the extraction of the fossils from the rock." },
+      { key: "D", text: "It helped in collecting funds for the extraction procedure of the fossil." },
     ],
     correctAnswer: "C",
-    explanation: "The passage notes that the legend remains an important part of local culture and boosts the island's tourism.",
+    explanation: "The passage states that a partnership between the University of Edinburgh, National Museums Scotland, and SSE enabled the fossil to be extracted from the rock that encased it.",
+  },
+  {
+    id: 205,
+    section: "Reading Comprehension",
+    passage: {
+      title: "Passage 2: Storr Lochs Monster (Fossil Discovery)",
+      text: `A fierce predator named the Storr Lochs Monster, which lived 170 million years ago, has been unveiled for the first time, half a century after it was discovered. The fossilized skeleton of the dolphin-like animal was found on the Isle of Skye, Scotland, in 1966. According to researchers from the University of Edinburgh, it is the most complete skeleton of a sea-living reptile from the age of dinosaurs that has ever been found in Scotland.
+
+A partnership between the University of Edinburgh, National Museums Scotland, and energy company SSE has enabled the fossil to be extracted from the rock that encased it for millions of years. The fossil has been preserved in National Museums Scotland's storage facility for 50 years. Now, by pooling expertise, the new collaboration will enable experts to form a clearer picture of the fossil. A team of palaeontologists will study the fossil, which belongs to an extinct family of marine reptiles known as ichthyosaurs.
+
+The ancient animals thrived in prehistoric seas at the same time that the dinosaurs were ruling the land. This discovery will help unveil how ichthyosaurs evolved during the Middle Jurassic Period, a part of Earth's history that has long been shrouded in mystery owing to a lack of fossil evidence from the time. The Isle of Skye is one of the few places in the world where fossils from the Middle Jurassic Period can be found. In folklore, the Loch Ness Monster or 'Nessie' is an aquatic being that reputedly inhabits Loch Ness in the Scottish Highlands. Although its description varies, it is similar to other supposed lake monsters in Scotland and elsewhere.`,
+    },
+    question: "What does the term 'shrouded in mystery' mean?",
+    options: [
+      { key: "A", text: "Covered in historical significance" },
+      { key: "B", text: "Found under mysterious conditions" },
+      { key: "C", text: "Magical attributes or properties" },
+      { key: "D", text: "Lack of clear information" },
+    ],
+    correctAnswer: "D",
+    explanation: "'Shrouded in mystery' refers to something that lacks clear information or is poorly understood due to missing evidence.",
+  },
+  {
+    id: 206,
+    section: "Reading Comprehension",
+    passage: {
+      title: "Passage 2: Storr Lochs Monster (Fossil Discovery)",
+      text: `A fierce predator named the Storr Lochs Monster, which lived 170 million years ago, has been unveiled for the first time, half a century after it was discovered. The fossilized skeleton of the dolphin-like animal was found on the Isle of Skye, Scotland, in 1966. According to researchers from the University of Edinburgh, it is the most complete skeleton of a sea-living reptile from the age of dinosaurs that has ever been found in Scotland.
+
+A partnership between the University of Edinburgh, National Museums Scotland, and energy company SSE has enabled the fossil to be extracted from the rock that encased it for millions of years. The fossil has been preserved in National Museums Scotland's storage facility for 50 years. Now, by pooling expertise, the new collaboration will enable experts to form a clearer picture of the fossil. A team of palaeontologists will study the fossil, which belongs to an extinct family of marine reptiles known as ichthyosaurs.
+
+The ancient animals thrived in prehistoric seas at the same time that the dinosaurs were ruling the land. This discovery will help unveil how ichthyosaurs evolved during the Middle Jurassic Period, a part of Earth's history that has long been shrouded in mystery owing to a lack of fossil evidence from the time. The Isle of Skye is one of the few places in the world where fossils from the Middle Jurassic Period can be found. In folklore, the Loch Ness Monster or 'Nessie' is an aquatic being that reputedly inhabits Loch Ness in the Scottish Highlands. Although its description varies, it is similar to other supposed lake monsters in Scotland and elsewhere.`,
+    },
+    question: "Which family of reptiles does the unveiled fossil in the passage belong to?",
+    options: [
+      { key: "A", text: "Heterodontosaurus" },
+      { key: "B", text: "Syntarsus" },
+      { key: "C", text: "Ichthyosaurs" },
+      { key: "D", text: "Dilophosaurus" },
+    ],
+    correctAnswer: "C",
+    explanation: "The passage explicitly states that the fossil belongs to an extinct family of marine reptiles known as ichthyosaurs.",
   },
 
   // PASSAGE 3: Oral History and Anthropology
