@@ -439,4 +439,358 @@ WHERE EXTRACT(MONTH FROM sale_time)=6;`,
     correctAnswer: "D",
     explanation: "DATE(sale_time) truncates the time portion to display only the YYYY-MM-DD date, and EXTRACT(MONTH FROM sale_time)=6 filters transactions from June across all years.",
   },
+  // NEW QUESTIONS FROM TECHNICAL QUESTIONS WITH ANSWERS PDF SCAN
+  {
+    id: 101,
+    topic: "Java Collections - ArrayList Sorting",
+    question: "Sort a List<Integer> in descending order using the correct Java method.",
+    codeSnippet: `import java.util.*;
+public class Example1 {
+  public static void main(String[] args) {
+    List<Integer> numbers = new ArrayList<>();
+    numbers.add(1); numbers.add(2); numbers.add(3); numbers.add(4);
+    ??? // Replace this line
+    System.out.println(numbers);
+  }
+}`,
+    options: [
+      { key: "A", text: "numbers.sort(Collections.reverseOrder());" },
+      { key: "B", text: "numbers.sort(Comparator.reverseOrder());" },
+      { key: "C", text: "Collections.sort(numbers, Collections.reverseOrder());" },
+      { key: "D", text: "Collections.sort(numbers, Comparator.reverseOrder());" },
+    ],
+    correctAnswer: "C",
+    explanation: "Collections.sort(numbers, Collections.reverseOrder()) is used to sort a List in descending order in standard Java.",
+  },
+  {
+    id: 102,
+    topic: "Java Collections - HashSet Intersection",
+    question: "What is the output of the following HashSet retainAll intersection program?",
+    codeSnippet: `Set<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3, 6, 7));
+Set<Integer> set2 = new HashSet<>(Arrays.asList(2, 3, 4, 6));
+Set<Integer> intersection = new HashSet<>(set1);
+intersection.retainAll(set2);
+System.out.println(intersection);`,
+    options: [
+      { key: "A", text: "[4, 3, 6]" },
+      { key: "B", text: "[2, 3, 6]" },
+      { key: "C", text: "[2, 3, 7]" },
+      { key: "D", text: "[2, 4, 6]" },
+    ],
+    correctAnswer: "B",
+    explanation: "retainAll(set2) retains only elements common to set1 and set2, which are 2, 3, and 6.",
+  },
+  {
+    id: 103,
+    topic: "Java Collections - LinkedList Debugging",
+    question: "The code uses addFirst(), addLast(), removeFirst(), removeLast() — methods not available in ArrayList, only in LinkedList. How do you fix the error?",
+    options: [
+      { key: "A", text: "Use LinkedList, fix import -> Output: [Tony, Jack, Joe]" },
+      { key: "B", text: "Use new <String>() -> Syntax error" },
+      { key: "C", text: "Use LinkedList, fix import -> Output: [Jack, Joe]" },
+      { key: "D", text: "Use List<String> = new List<String>() -> Invalid (List is an interface)" },
+    ],
+    correctAnswer: "C",
+    explanation: "Replace ArrayList with LinkedList, import java.util.LinkedList, and remove invalid index arguments from addFirst().",
+  },
+  {
+    id: 104,
+    topic: "Java Collections - PriorityQueue Output",
+    question: "What is printed by iterating, peeking, and polling elements in PriorityQueue testQueue = new PriorityQueue() with 'Black' and 'White'?",
+    options: [
+      { key: "A", text: "Color: White Color: White Iterating: White Black" },
+      { key: "B", text: "Color: Black Color: White Iterating: Black" },
+      { key: "C", text: "Color: Black Color: Black Iterating the queue elements: Black White" },
+      { key: "D", text: "Color: Black Color: Black Iterating: White Black" },
+    ],
+    correctAnswer: "C",
+    explanation: "PriorityQueue orders strings lexicographically ('Black' < 'White'). element() and peek() return head ('Black').",
+  },
+  {
+    id: 105,
+    topic: "Java Exception Handling - FileNotFoundException",
+    question: "Which snippet correctly handles FileNotFoundException when reading example.txt?",
+    options: [
+      { key: "A", text: "Catches IOException — too broad" },
+      { key: "B", text: "Creates File object, catches FileNotFoundException" },
+      { key: "C", text: "Wraps FileReader constructor in try-catch, catches FileNotFoundException" },
+      { key: "D", text: "Catches IOException during read() — wrong location" },
+    ],
+    correctAnswer: "C",
+    explanation: "FileReader constructor throws FileNotFoundException directly upon instantiation, so it must be enclosed in a try block catching FileNotFoundException.",
+  },
+  {
+    id: 106,
+    topic: "Java Exception Handling - File Reading",
+    question: "Which snippet correctly implements error handling using try-catch for a missing file with Scanner?",
+    codeSnippet: `File inputFile = new File("data.txt");
+try {
+ Scanner scanner = new Scanner(inputFile);
+ while (scanner.hasNextLine()) { ... }
+ scanner.close();
+} catch (FileNotFoundException e) {
+ System.out.println("file not found: " + e.getMessage());
+}`,
+    options: [
+      { key: "A", text: "No error handling -> crashes if file missing" },
+      { key: "B", text: "Uses try-catch with FileNotFoundException" },
+      { key: "C", text: "Checks file.exists() — valid, but does not use try-catch" },
+      { key: "D", text: "Catches NullPointerException" },
+    ],
+    correctAnswer: "B",
+    explanation: "Instantiating Scanner with a File object requires handling FileNotFoundException via try-catch.",
+  },
+  {
+    id: 107,
+    topic: "Java Exception Handling - NumberFormatException",
+    question: "What exception is thrown by Integer.parseInt(\"java\")?",
+    options: [
+      { key: "A", text: "ArithmeticException" },
+      { key: "B", text: "NumberFormatException" },
+      { key: "C", text: "NullPointerException" },
+      { key: "D", text: "ArrayIndexOutOfBoundsException" },
+    ],
+    correctAnswer: "B",
+    explanation: "Integer.parseInt(\"java\") throws NumberFormatException because 'java' is not a valid numeric string.",
+  },
+  {
+    id: 108,
+    topic: "Java Exception Handling - RuntimeException Interface",
+    question: "What is the result of calling obj.eval(0) where eval throws new RuntimeException() without a throws declaration?",
+    codeSnippet: `interface A { void eval(int x); }
+class B implements A {
+ public void eval(int x) {
+  if (x == 0) throw new RuntimeException();
+ }
+}`,
+    options: [
+      { key: "A", text: "A RuntimeException will be thrown at runtime." },
+      { key: "B", text: "Compilation error — overridden method cannot throw." },
+      { key: "C", text: "Compilation error — no throws declaration." },
+      { key: "D", text: "Compilation error — abstract method doesn't declare exception." },
+    ],
+    correctAnswer: "A",
+    explanation: "RuntimeException is an unchecked exception in Java, so no 'throws' clause is required. It compiles cleanly and throws at runtime when x == 0.",
+  },
+  {
+    id: 109,
+    topic: "Java Collections - Vector Manipulation",
+    question: "Trace Vector vec: add Java, Language, Programming, Language, Java; remove(2); set(1, 'Programming'); add(2, 'Language'). What is the final state?",
+    options: [
+      { key: "A", text: "[Java, Programming, Language, Language, Java]" },
+      { key: "B", text: "[Java, Language, Programming, Java]" },
+      { key: "C", text: "[Java, Programming, Language, Java]" },
+      { key: "D", text: "[Java, Language, Language, Programming]" },
+    ],
+    correctAnswer: "A",
+    explanation: "Tracing indices step by step yields final Vector elements: [Java, Programming, Language, Language, Java].",
+  },
+  {
+    id: 110,
+    topic: "Java Collections - Remove Duplicates Order",
+    question: "Which option eliminates duplicates from a collection while preserving insertion order?",
+    options: [
+      { key: "A", text: "For-each loop with list.contains()" },
+      { key: "B", text: "Using LinkedHashSet" },
+      { key: "C", text: "HashSet -> loses original insertion order" },
+      { key: "D", text: "Both A and B preserve insertion order" },
+    ],
+    correctAnswer: "D",
+    explanation: "HashSet loses original insertion order. Utilizing a list contains check or a LinkedHashSet preserves insertion order while deduplicating.",
+  },
+  {
+    id: 111,
+    topic: "Data Structures - Linked List Types",
+    question: "A task system where each node has data + a link to the next node describes which data structure?",
+    options: [
+      { key: "A", text: "Doubly Circular Linked List" },
+      { key: "B", text: "Circular Linked List" },
+      { key: "C", text: "Singly Linked List" },
+      { key: "D", text: "Doubly Linked List" },
+    ],
+    correctAnswer: "C",
+    explanation: "A Singly Linked List node contains data and a single pointer pointing to the next node.",
+  },
+  {
+    id: 112,
+    topic: "Data Structures - User Data Storage",
+    question: "What is the best data structure to store first name, last name, phone number, and email with fast O(1) random retrieval?",
+    options: [
+      { key: "A", text: "Array of tuples" },
+      { key: "B", text: "Two stacks" },
+      { key: "C", text: "Array of objects" },
+      { key: "D", text: "Linked list" },
+    ],
+    correctAnswer: "C",
+    explanation: "An Array of objects groups related fields together and provides O(1) index-based access.",
+  },
+  {
+    id: 113,
+    topic: "Data Structures - Queue Dequeue",
+    question: "Queue elements: (6, 8, 5) with front = 1, rear = 2. After dequeuing the element at front, what is the new front pointer?",
+    options: [
+      { key: "A", text: "front = front - 1" },
+      { key: "B", text: "front = -1" },
+      { key: "C", text: "front = front + 1" },
+      { key: "D", text: "front = rear" },
+    ],
+    correctAnswer: "C",
+    explanation: "Dequeuing an element advances the front pointer by incrementing it: front = front + 1.",
+  },
+  {
+    id: 114,
+    topic: "Algorithms - String Matching",
+    question: "What is the time complexity of the Z Algorithm for pattern matching of pattern length m and text length n?",
+    options: [
+      { key: "A", text: "O(n^2)" },
+      { key: "B", text: "O(m log n)" },
+      { key: "C", text: "O(m + n)" },
+      { key: "D", text: "O(m^2 + n^2)" },
+    ],
+    correctAnswer: "C",
+    explanation: "The Z Algorithm processes the combined pattern and text string in linear O(m + n) time.",
+  },
+  {
+    id: 115,
+    topic: "Operating Systems - Priority Scheduling",
+    question: "In Preemptive Priority Scheduling, what happens to a lower-priority process when a higher-priority process arrives in the ready queue?",
+    options: [
+      { key: "A", text: "Continues until completion" },
+      { key: "B", text: "Terminated immediately" },
+      { key: "C", text: "Suspended until the higher-priority process completes" },
+      { key: "D", text: "Promoted to higher priority" },
+    ],
+    correctAnswer: "C",
+    explanation: "The running lower-priority process is preempted (suspended) and moved back to the ready queue until higher-priority processes finish.",
+  },
+  {
+    id: 116,
+    topic: "Operating Systems - Architecture Layers",
+    question: "Which layer in OS layered architecture handles process creation, setup, and state management?",
+    options: [
+      { key: "A", text: "CPU Scheduling Layer" },
+      { key: "B", text: "Memory Management Layer" },
+      { key: "C", text: "Process Management Layer" },
+      { key: "D", text: "I/O Buffer Layer" },
+    ],
+    correctAnswer: "C",
+    explanation: "The Process Management Layer is responsible for process creation, termination, state management, and inter-process communication.",
+  },
+  {
+    id: 117,
+    topic: "Operating Systems - File Access Control",
+    question: "Which OS feature ensures each department can access only its own files and folders with fine-grained per-user/per-group permissions?",
+    options: [
+      { key: "A", text: "Access Control Lists (ACLs)" },
+      { key: "B", text: "User accounts" },
+      { key: "C", text: "File ownership" },
+      { key: "D", text: "File permissions inheritance" },
+    ],
+    correctAnswer: "A",
+    explanation: "Access Control Lists (ACLs) provide granular access policies specifying permissions for individual users and department groups.",
+  },
+  {
+    id: 118,
+    topic: "Operating Systems - Deadlock Conditions",
+    question: "Processes A, B, C, D hold locks and wait on each other in a closed loop (A waits for B -> B waits for C -> C waits for D -> D waits for A). What deadlock condition is this?",
+    options: [
+      { key: "A", text: "Time slice exhaustion" },
+      { key: "B", text: "Livelock" },
+      { key: "C", text: "Resource depletion" },
+      { key: "D", text: "Circular wait" },
+    ],
+    correctAnswer: "D",
+    explanation: "A closed circular chain of processes waiting for resources held by the next process is the classic Circular Wait condition for deadlock.",
+  },
+  {
+    id: 119,
+    topic: "Pseudocode & Algorithms - Recursive Factorial",
+    question: "What is returned by recursive function F(5) where F(n) = if n<=1 return 1 else return n * F(n-1)?",
+    options: [
+      { key: "A", text: "120" },
+      { key: "B", text: "5.0" },
+      { key: "C", text: "10.0" },
+      { key: "D", text: "100.0" },
+    ],
+    correctAnswer: "A",
+    explanation: "F(5) = 5 * 4 * 3 * 2 * 1 = 120.",
+  },
+  {
+    id: 120,
+    topic: "Pseudocode & Algorithms - Stack Summation",
+    question: "Push numbers 10 down to 1 onto a stack, then pop all and sum them. What is the total sum?",
+    options: [
+      { key: "A", text: "45" },
+      { key: "B", text: "55" },
+      { key: "C", text: "50" },
+      { key: "D", text: "60" },
+    ],
+    correctAnswer: "B",
+    explanation: "The sum of integers from 1 to 10 is (10 * 11) / 2 = 55.",
+  },
+  {
+    id: 121,
+    topic: "Pseudocode & Algorithms - Branching Logic",
+    question: "For function evaluate(a, b): IF both even -> a+b; ELSEIF both odd -> a*b; ELSE -> a-b. What are evaluate(6, 10) and evaluate(7, 9)?",
+    options: [
+      { key: "A", text: "output1 = 16, output2 = 63" },
+      { key: "B", text: "output1 = 60, output2 = 16" },
+      { key: "C", text: "output1 = 16, output2 = 16" },
+      { key: "D", text: "output1 = 63, output2 = 16" },
+    ],
+    correctAnswer: "A",
+    explanation: "evaluate(6, 10) (both even): 6 + 10 = 16. evaluate(7, 9) (both odd): 7 * 9 = 63.",
+  },
+  {
+    id: 122,
+    topic: "Pseudocode & Algorithms - Function Purpose",
+    question: "Why do programmers use modular functions in software design?",
+    options: [
+      { key: "A", text: "Represent program as a whole" },
+      { key: "B", text: "Avoid code reuse" },
+      { key: "C", text: "Make namespace unclean" },
+      { key: "D", text: "Test smaller portions of code by isolating them" },
+    ],
+    correctAnswer: "D",
+    explanation: "Functions support modularity, code reuse, and allow testing/debugging smaller isolated code blocks independently.",
+  },
+  {
+    id: 123,
+    topic: "SQL / DBMS - Number Base Conversion",
+    question: "Which MySQL function converts numbers between different number bases (e.g. hex to decimal)?",
+    options: [
+      { key: "A", text: "con()" },
+      { key: "B", text: "convbase()" },
+      { key: "C", text: "conv()" },
+      { key: "D", text: "base_convert()" },
+    ],
+    correctAnswer: "C",
+    explanation: "MySQL's CONV(N, from_base, to_base) function converts numbers between arbitrary bases (e.g. CONV('a', 16, 10) returns 10).",
+  },
+  {
+    id: 124,
+    topic: "SQL / DBMS - String Trimming",
+    question: "Which MySQL function removes trailing whitespace from a string?",
+    options: [
+      { key: "A", text: "TRIM() — removes both leading and trailing" },
+      { key: "B", text: "LTRIM() — removes leading only" },
+      { key: "C", text: "RTRIM() — removes trailing only" },
+      { key: "D", text: "STRIP() — not a valid MySQL function" },
+    ],
+    correctAnswer: "C",
+    explanation: "RTRIM() specifically strips trailing spaces from the right side of a string.",
+  },
+  {
+    id: 125,
+    topic: "SQL / DBMS - Triggers",
+    question: "Which type of trigger intercepts a DML operation (INSERT, UPDATE, DELETE) and executes alternative logic instead?",
+    options: [
+      { key: "A", text: "Instead of Trigger" },
+      { key: "B", text: "DDL Trigger" },
+      { key: "C", text: "Disable Trigger" },
+      { key: "D", text: "After Trigger" },
+    ],
+    correctAnswer: "A",
+    explanation: "An INSTEAD OF trigger overrides standard DML statement execution, running custom trigger logic in place of the DML command.",
+  },
 ];

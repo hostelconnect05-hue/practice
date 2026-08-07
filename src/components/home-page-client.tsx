@@ -107,7 +107,7 @@ export function HomePageClient({
               <Terminal className="h-4 w-4 text-amber-400" />
               Technical Skills
               <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
-                23 Qs
+                61 Qs
               </span>
             </button>
 
@@ -314,7 +314,7 @@ export function HomePageClient({
                   <Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30">
                     Section 6 • Technical Skills MCQs
                   </Badge>
-                  <span className="text-xs text-amber-400 font-semibold">23 Technical MCQs</span>
+                  <span className="text-xs text-amber-400 font-semibold">61 Technical MCQs</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 6: Technical Skills Assessment
@@ -322,7 +322,7 @@ export function HomePageClient({
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  Practice core Virtusa Technical MCQs across C++, Object-Oriented Programming (OOP), Data Structures (Disjoint Set, Priority Queue, Stack, Linked List), Operating Systems (Scheduling, File Allocation, Bootloader), and SQL / DBMS (Joins, Date Functions, Grant Permissions).
+                  Practice core Virtusa Technical MCQs across C++, Object-Oriented Programming (OOP), Data Structures (Disjoint Set, Priority Queue, Stack, Linked List, Z Algorithm), Operating Systems (Scheduling, File Allocation, Bootloader, Deadlock), and SQL / DBMS (Joins, Date Functions, Grant Permissions, Triggers, Number Conversions).
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
                   <span className="flex items-center gap-1.5">
