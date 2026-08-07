@@ -1,0 +1,36 @@
+{
+  "slug": "reduce-the-bill",
+  "title": "Reduce the Bill",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Greedy", "Bit Manipulation"],
+  "acceptance": "88.6%",
+  "statement": "You are given a binary string S representing a bill.\n\nYou are allowed to flip exactly one bit:\n- '0' -> '1'\n- '1' -> '0'\n\nAfter performing exactly one flip, find the minimum possible decimal value represented by the binary string.\n\nSince the binary string length |S| can be up to 2 * 10^5, print the answer modulo 10^9 + 7 if the numerical value exceeds standard integer bounds, or output the decimal value directly for standard lengths.\n\n### Input Format\n- A single binary string S consisting of characters '0' and '1'.\n\n### Output Format\n- Print a single integer representing the minimum possible decimal value after exactly one flip.",
+  "examples": [
+    {
+      "input": "1011",
+      "output": "3",
+      "explanation": "Flips: 1011 -> 0011 (3), 1111 (15), 1001 (9), 1010 (10). Minimum value is 3."
+    },
+    {
+      "input": "1000",
+      "output": "0",
+      "explanation": "Flip the most significant '1' to '0': 1000 -> 0000. Decimal value = 0."
+    },
+    {
+      "input": "0000",
+      "output": "1",
+      "explanation": "Since all bits are '0', flipping the least significant '0' at the last position gives 0001 = 1."
+    }
+  ],
+  "constraints": [
+    "1 <= |S| <= 2 * 10^5",
+    "String S contains only '0' and '1'."
+  ],
+  "hints": [
+    "To minimize binary numerical value, flipping a '1' to '0' at the highest place value gives the largest reduction.",
+    "Find the first (leftmost) occurrence of '1' and flip it to '0'.",
+    "If no '1' exists (string is all '0's), you must flip one bit to '1'. To minimize the increase, flip the last (least significant) '0' to '1'."
+  ],
+  "relatedProblems": ["count-valid-subarrays", "minimum-length-substring"],
+  "discussion": "Greedy bit flipping: flip leftmost '1' to '0' or last '0' to '1'."
+}

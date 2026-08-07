@@ -1,0 +1,10 @@
+{
+  "approach": "Greedy Bit Flipping based on place values.",
+  "observation": "Binary place values decrease from left (most significant bit) to right (least significant bit). Flipping '1' to '0' reduces value by 2^(N-1-i). The earliest '1' maximizes reduction.",
+  "bruteForce": "Try flipping every bit from 0 to N-1, parse binary strings to numbers and pick the minimum. O(N^2).",
+  "optimalSolution": "Find the first index i where S[i] == '1' and change it to '0'. If no '1' is found (all '0's), change S[N-1] to '1'. Then convert the resulting string to decimal. Time complexity O(N).",
+  "timeComplexity": "O(N) single pass through the string.",
+  "spaceComplexity": "O(N) to store the modified character array.",
+  "dryRun": "S = '1011'. i=0 is '1' -> change S[0]='0' -> '0011' -> decimal 3.",
+  "edgeCases": ["All '0's ('0000') -> output 1", "Single bit '1' -> output 0", "Single bit '0' -> output 1", "All '1's ('1111') -> output 7"]
+}
