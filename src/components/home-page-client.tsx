@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Code2, ArrowRight, BookOpen, Layers } from "lucide-react";
+import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2 } from "lucide-react";
 import { ProblemCard } from "@/components/problem/problem-card";
 import { ProgressOverview } from "@/components/problem/progress-overview";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import type { ProblemListItem } from "@/types/problem";
 
 export function HomePageClient({
@@ -16,7 +18,7 @@ export function HomePageClient({
   problems: ProblemListItem[];
   progress: { solved: number; attempted: number; successRate: number };
 }) {
-  const [activeTab, setActiveTab] = useState<"all" | "coding">("all");
+  const [activeTab, setActiveTab] = useState<"all" | "coding" | "verbal">("all");
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_10%_10%,_rgba(16,185,129,0.15),transparent_35%),radial-gradient(circle_at_80%_20%,_rgba(14,165,233,0.12),transparent_35%),#09090b] px-4 py-8 text-zinc-100">
@@ -28,15 +30,15 @@ export function HomePageClient({
             </p>
             <h1 className="text-4xl font-black tracking-tight text-zinc-50">Virtusa OA Practice</h1>
             <p className="mt-2 max-w-2xl text-sm text-zinc-400">
-              Practice real Virtusa Online Assessment questions with a LeetCode-like interface.
+              Practice real Virtusa Online Assessment questions including Coding Problems & Verbal Ability.
             </p>
           </div>
           <ThemeToggle />
         </header>
 
-        {/* Navigation Tabs (All / Coding Problems) */}
-        <div className="flex items-center justify-between gap-4 border-b border-zinc-800/80 pb-3">
-          <div className="flex items-center gap-2">
+        {/* Navigation Tabs (All / Coding / Verbal Ability) */}
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-zinc-800/80 pb-3">
+          <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={() => setActiveTab("all")}
               className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
@@ -59,14 +61,29 @@ export function HomePageClient({
             >
               <Code2 className="h-4 w-4 text-emerald-400" />
               Coding Problems
-              <span className="ml-1.5 rounded-full bg-emerald-500/20 px-2 py-0.5 text-xs font-bold text-emerald-300">
+              <span className="ml-1 rounded-full bg-emerald-500/20 px-2 py-0.5 text-xs font-bold text-emerald-300">
                 {problems.length}
+              </span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab("verbal")}
+              className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                activeTab === "verbal"
+                  ? "bg-sky-500/10 text-sky-400 shadow-sm border border-sky-500/30"
+                  : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
+              }`}
+            >
+              <MessageSquare className="h-4 w-4 text-sky-400" />
+              Section 3: Verbal Ability
+              <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
+                9 Qs
               </span>
             </button>
           </div>
 
-          <div className="text-xs text-zinc-500 hidden sm:block font-mono">
-            {problems.length} Assessment Questions Available
+          <div className="text-xs text-zinc-500 hidden md:block font-mono">
+            Virtusa OA Assessment Portal
           </div>
         </div>
 
@@ -77,25 +94,76 @@ export function HomePageClient({
           successRate={progress.successRate}
         />
 
-        {/* Tab Content Header */}
+        {/* Section Header */}
         <div className="flex items-center justify-between pt-2">
           <div className="flex items-center gap-2">
-            <Code2 className="h-5 w-5 text-emerald-400" />
+            {activeTab === "verbal" ? (
+              <MessageSquare className="h-5 w-5 text-sky-400" />
+            ) : (
+              <Code2 className="h-5 w-5 text-emerald-400" />
+            )}
             <h2 className="text-xl font-bold text-zinc-100">
-              {activeTab === "coding" ? "Coding Problem Statements" : "All Assessment Problems"}
+              {activeTab === "verbal"
+                ? "Section 3: Verbal Ability Assessment"
+                : activeTab === "coding"
+                ? "Coding Problem Statements"
+                : "Assessment Modules & Coding Problems"}
             </h2>
           </div>
           <span className="text-xs text-zinc-400">
-            Select a problem to open the interactive editor
+            {activeTab === "verbal" ? "9 Practice Questions with Explanations" : "Select a problem to launch the workspace"}
           </span>
         </div>
 
-        {/* Problem Grid List */}
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {problems.map((problem) => (
-            <ProblemCard key={problem.slug} problem={problem} />
-          ))}
-        </section>
+        {/* Tab 1: Verbal Ability Card (when verbal or all tab selected) */}
+        {(activeTab === "all" || activeTab === "verbal") && (
+          <div className="mb-6">
+            <Card className="border-sky-500/30 bg-sky-950/15 backdrop-blur hover:border-sky-500/50 transition">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
+                    Section 3 • MCQ Assessment
+                  </Badge>
+                  <span className="text-xs text-sky-400 font-semibold">10 Questions (9 Verified)</span>
+                </div>
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
+                  Section 3: Verbal Ability
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Test your English grammar, sentence correction, vocabulary, synonyms, and subject-verb agreement with instant right/wrong feedback, detailed explanations, live scoring, and reattempt capabilities.
+                </p>
+                <div className="flex items-center gap-4 text-xs text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" /> Instant Feedback
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" /> Detailed Explanations
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-sky-400" /> Reattempt Enabled
+                  </span>
+                </div>
+                <Link href="/verbal-ability">
+                  <Button className="w-full sm:w-auto mt-2 justify-between gap-3 bg-sky-600 hover:bg-sky-500 text-white font-semibold px-6">
+                    Start Verbal Assessment
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {/* Tab 2: Coding Problems Grid (when coding or all tab selected) */}
+        {(activeTab === "all" || activeTab === "coding") && (
+          <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {problems.map((problem) => (
+              <ProblemCard key={problem.slug} problem={problem} />
+            ))}
+          </section>
+        )}
       </div>
     </main>
   );
