@@ -185,8 +185,8 @@ export function HomePageClient({
 
         {/* Section 0: Coding Problems Module Card */}
         {activeTab === "all" && (
-          <div className="mb-6">
-            <Card className="border-emerald-500/30 bg-emerald-950/15 backdrop-blur hover:border-emerald-500/50 transition">
+          <div className="mb-6 cursor-pointer" onClick={() => setActiveTab("coding")}>
+            <Card className="border-emerald-500/30 bg-emerald-950/15 backdrop-blur hover:border-emerald-500/60 hover:bg-emerald-950/25 transition">
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3">
                   <Badge className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
@@ -194,8 +194,9 @@ export function HomePageClient({
                   </Badge>
                   <span className="text-xs text-emerald-400 font-semibold">11 Algorithmic Coding Questions</span>
                 </div>
-                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
-                  Coding Problem Statements Workspace
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2 flex items-center justify-between">
+                  <span>Coding Problem Statements Workspace</span>
+                  <ArrowRight className="h-5 w-5 text-emerald-400" />
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -213,13 +214,10 @@ export function HomePageClient({
                     <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Java 32-bit Signed Integer Range Verified
                   </span>
                 </div>
-                <button
-                  onClick={() => setActiveTab("coding")}
-                  className="inline-flex items-center justify-between gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition"
-                >
-                  Explore All 11 Coding Problems
+                <div className="inline-flex items-center justify-between gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition">
+                  Open Coding Problems (11 Statements)
                   <ArrowRight className="h-4 w-4" />
-                </button>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -430,8 +428,8 @@ export function HomePageClient({
           </div>
         )}
 
-        {/* Section 6: Coding Problems Grid */}
-        {(activeTab === "all" || activeTab === "coding") && (
+        {/* Section 6: Coding Problems Grid (Visible when Coding Problems tab is selected) */}
+        {activeTab === "coding" && (
           <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {problems.map((problem) => (
               <ProblemCard key={problem.slug} problem={problem} />
