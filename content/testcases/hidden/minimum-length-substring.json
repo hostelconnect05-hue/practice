@@ -1,0 +1,42 @@
+[
+  {
+    "input": "a\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "abcdefghijklmnopqrstuvwxyz\n",
+    "expectedOutput": "26"
+  },
+  {
+    "input": "zzyxxwwvvuuttssrrqqppoonnmmllkkjjiihhggffeeddccbbaa\n",
+    "expectedOutput": "51"
+  },
+  {
+    "input": "abaaab\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "abcabcabc\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "pwwkew\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "bbaaaccccccbbbaaabbbccc\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "xyzzaz\n",
+    "expectedOutput": "5"
+  },
+  {
+    "input": "aab\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "bacba\n",
+    "expectedOutput": "3"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "approach": "Sliding Window (Two Pointers) algorithm to dynamically find the shortest window containing all distinct characters.",
+  "observation": "The set of total distinct characters in S is fixed. Expanding the right pointer adds characters to our window map, while incrementing the left pointer shrinks the window while all distinct characters remain present.",
+  "bruteForce": "Check all possible substrings O(N^2) and check if each contains all distinct characters. Total time complexity O(N^3) or O(N^2).",
+  "optimalSolution": "Use sliding window: maintain left and right pointers. Expand right, update frequency map. Whenever map.size() equals total distinct count, record window size right - left + 1, then increment left and shrink frequency map until valid condition breaks.",
+  "timeComplexity": "O(N) where N is the length of string S.",
+  "spaceComplexity": "O(26) auxiliary space for frequency tracking.",
+  "dryRun": "S = 'aabcbcdbca'. Distinct count = 4 ('a', 'b', 'c', 'd'). Window expands right until 'dbca' at right=9, left=6. map.size() == 4. Min length = 4.",
+  "edgeCases": ["Single character string ('a')", "All identical characters ('aaaa')", "String already has all unique chars ('abcd')", "Distinct characters far apart ('a...b')"]
+}

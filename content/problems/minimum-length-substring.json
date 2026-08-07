@@ -1,0 +1,36 @@
+{
+  "slug": "minimum-length-substring",
+  "title": "Minimum Length Substring",
+  "difficulty": "Medium",
+  "topics": ["Strings", "Two Pointers", "Sliding Window", "Hash Table"],
+  "acceptance": "79.4%",
+  "statement": "You are given a string S consisting of lowercase English letters.\n\nFind the minimum length substring of S that contains all distinct characters present in the original string at least once.\n\nIf multiple substrings have the same minimum length, return the length of any one of them.\n\n### Input Format\n- A single string S consisting of lowercase English letters.\n\n### Output Format\n- Print a single integer representing the minimum length of a substring containing all distinct characters of S.",
+  "examples": [
+    {
+      "input": "aabcbcdbca",
+      "output": "4",
+      "explanation": "The distinct characters in S are 'a', 'b', 'c', 'd'. The smallest substring containing all 4 characters is \"dbca\" of length 4."
+    },
+    {
+      "input": "aaab",
+      "output": "2",
+      "explanation": "The distinct characters are 'a', 'b'. The smallest valid substring is \"ab\" of length 2."
+    },
+    {
+      "input": "aaaa",
+      "output": "1",
+      "explanation": "The distinct character is 'a'. The smallest valid substring is \"a\" of length 1."
+    }
+  ],
+  "constraints": [
+    "1 <= |S| <= 2 * 10^5",
+    "String S contains only lowercase English letters."
+  ],
+  "hints": [
+    "First find the total number of distinct characters in string S.",
+    "Use a sliding window with two pointers (left and right) and a frequency map/array to maintain character counts in the current window.",
+    "Expand right to include characters, and shrink left as long as the window maintains all distinct characters."
+  ],
+  "relatedProblems": ["social-media-username", "string-harmony"],
+  "discussion": "Classic sliding window approach. Time complexity O(N) and Space complexity O(26) ≈ O(1)."
+}

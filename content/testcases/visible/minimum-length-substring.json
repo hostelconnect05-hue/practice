@@ -1,0 +1,22 @@
+[
+  {
+    "input": "aabcbcdbca\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "aaab\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "aaaa\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "abcd\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "abacaba\n",
+    "expectedOutput": "4"
+  }
+]
