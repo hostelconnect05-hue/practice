@@ -23,10 +23,10 @@
     }
   ],
   "constraints": [
-    "1 <= T <= 10^5",
-    "1 <= X <= 10^9",
+    "1 <= T <= 100",
+    "1 <= X <= 10^4",
     "X < Y <= 2 * X",
-    "1 <= Z <= 10^9"
+    "1 <= Z <= 10^4"
   ],
   "hints": [
     "Check if buying 4-packs is cheaper per can than buying 2-packs (i.e. Y < 2 * X).",
