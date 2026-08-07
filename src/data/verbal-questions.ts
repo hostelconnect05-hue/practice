@@ -567,63 +567,57 @@ Authorities say they are studying snake behaviour to address the problem more ef
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
 
-Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
-
-Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
+Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "What is the synonym of 'marshes'?",
+    question: "What is the synonym of the word \"marshes\" as used in the first paragraph of the above passage?",
     options: [
-      { key: "A", text: "Wasteland" },
-      { key: "B", text: "Lake" },
-      { key: "C", text: "Desert" },
-      { key: "D", text: "Swamp" },
+      { key: "A", text: "Swamp" },
+      { key: "B", text: "Desert" },
+      { key: "C", text: "Lake" },
+      { key: "D", text: "Wasteland" },
     ],
-    correctAnswer: "D",
-    explanation: "'Marshes' refers to wetland areas, making 'Swamp' the accurate synonym.",
+    correctAnswer: "A",
+    explanation: "A marsh is a type of wetland with soft, waterlogged land. 'Swamp' is the closest synonym among the given options.",
   },
   {
     id: 902,
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
 
-Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
-
-Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
+Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "Which option is NOT a benefit provided by coastal ecosystems?",
+    question: "Which of the given options is NOT a benefit provided by the coastal ecosystems?",
     options: [
-      { key: "A", text: "Mitigating climate change" },
-      { key: "B", text: "Protection from drought" },
-      { key: "C", text: "Protection from sea storms" },
-      { key: "D", text: "Regulation of coastal water quality" },
+      { key: "A", text: "Protection from sea storms" },
+      { key: "B", text: "Regulation of coastal water quality" },
+      { key: "C", text: "Mitigating climate change with blue carbon" },
+      { key: "D", text: "Protection from drought" },
     ],
-    correctAnswer: "B",
-    explanation: "Coastal ecosystems protect from storms, erosion, and sea-level rise, but 'Protection from drought' is not mentioned.",
+    correctAnswer: "D",
+    explanation: "The passage mentions protection from storms, water quality regulation, and climate change mitigation, but does not mention protection from drought.",
   },
   {
     id: 903,
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
 
-Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
-
-Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
+Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "What is the synonym of 'meadows'?",
+    question: "What is the synonym of the word \"meadows\" as used in the first paragraph of the above passage?",
     options: [
-      { key: "A", text: "Lagoon" },
-      { key: "B", text: "Desert" },
-      { key: "C", text: "Pond" },
-      { key: "D", text: "Pasture" },
+      { key: "A", text: "Pond" },
+      { key: "B", text: "Pasture" },
+      { key: "C", text: "Desert" },
+      { key: "D", text: "Lagoon" },
     ],
-    correctAnswer: "D",
-    explanation: "'Meadows' refers to grassland areas, synonymous with 'Pasture'.",
+    correctAnswer: "B",
+    explanation: "A meadow is an area of grassland, synonymous with 'Pasture'.",
   },
 
   // PASSAGE 10: Vincent van Gogh and Fruit Colour
