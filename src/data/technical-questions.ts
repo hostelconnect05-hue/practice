@@ -372,4 +372,71 @@ head = temp`,
     correctAnswer: "B",
     explanation: "The Bootloader (e.g., GRUB, Windows Boot Manager) executes after POST/BIOS, renders the OS choice menu, and loads the selected OS kernel into memory.",
   },
+  {
+    id: 31,
+    topic: "SQL / DBMS - Permissions",
+    question: "You are tasked with securing the database against malicious attacks while allowing certain users permission to run read queries on it. Which of the given should you use?",
+    options: [
+      { key: "A", text: "Alter GRANT SELECT permissions for specific access privileges" },
+      { key: "B", text: "Create a special group that owns all items in the database" },
+      { key: "C", text: "Change user passwords periodically" },
+      { key: "D", text: "Use secure encryption standards when storing sensitive data" },
+    ],
+    correctAnswer: "A",
+    explanation: "The GRANT SELECT SQL privilege allows specified users read-only access to query tables without granting modification or deletion rights.",
+  },
+  {
+    id: 32,
+    topic: "SQL / DBMS - Self Join",
+    question: "A business wants to list pairs of customers who belong to the same country but have different customer IDs. What does the depicted query do?",
+    codeSnippet: `SELECT A.CustomerName,
+       B.CustomerName,
+       A.City
+FROM Customers A,
+     Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.Country = B.Country;`,
+    options: [
+      { key: "A", text: "Joins the customer table twice" },
+      { key: "B", text: "Lists duplicate city values" },
+      { key: "C", text: "Finds customers in the same city" },
+      { key: "D", text: "Matches the rows using city" },
+    ],
+    correctAnswer: "A",
+    explanation: "The query uses a Self Join, aliasing the Customers table as A and B to compare rows within the same table.",
+  },
+  {
+    id: 34,
+    topic: "SQL / DBMS - Built-in Functions",
+    question: "What is the output of the following SQL query?",
+    codeSnippet: `SELECT
+CHAR(83),
+LOCATE('db','cloud_db_mysql'),
+FORMAT(2499.56789,2);`,
+    options: [
+      { key: "A", text: "'T', 7, '2499.56'" },
+      { key: "B", text: "'S', 6, '2,499.57'" },
+      { key: "C", text: "'S', 7, '2,499.57'" },
+      { key: "D", text: "'C', 8, '2499.57'" },
+    ],
+    correctAnswer: "C",
+    explanation: "CHAR(83) evaluates to 'S'. LOCATE('db', 'cloud_db_mysql') finds 'db' starting at 1-based index 7. FORMAT(2499.56789, 2) formats the number as '2,499.57'.",
+  },
+  {
+    id: 36,
+    topic: "SQL / DBMS - Date Functions",
+    question: "A developer wants to display only the date from a DATETIME column and filter records belonging to June, irrespective of the year. Which query satisfies both conditions?",
+    codeSnippet: `SELECT product_id,
+       DATE(sale_time)
+FROM transactions
+WHERE EXTRACT(MONTH FROM sale_time)=6;`,
+    options: [
+      { key: "A", text: "SELECT product_id, sale_time FROM transactions WHERE MONTH(sale_time)=6;" },
+      { key: "B", text: "SELECT product_id, TIME(sale_time) FROM transactions WHERE EXTRACT(MONTH FROM sale_time)=6;" },
+      { key: "C", text: "SELECT product_id, DATE(sale_time) FROM transactions WHERE DAY(sale_time)=6;" },
+      { key: "D", text: "SELECT product_id, DATE(sale_time) FROM transactions WHERE EXTRACT(MONTH FROM sale_time)=6;" },
+    ],
+    correctAnswer: "D",
+    explanation: "DATE(sale_time) truncates the time portion to display only the YYYY-MM-DD date, and EXTRACT(MONTH FROM sale_time)=6 filters transactions from June across all years.",
+  },
 ];
