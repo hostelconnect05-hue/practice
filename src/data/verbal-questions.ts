@@ -106,7 +106,7 @@ export const verbalAbilityQuestions: QuizQuestion[] = [
   {
     id: 9,
     question: "Rearrange the phrases to form a complete sentence:",
-    sentence: "Rearrange the jumbled phrases to form a coherent sentence.",
+    sentence: "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
     options: [
       { key: "A", text: "CAEFDB" },
       { key: "B", text: "CEAFDB" },
@@ -114,7 +114,7 @@ export const verbalAbilityQuestions: QuizQuestion[] = [
       { key: "D", text: "CAEBFD" },
     ],
     correctAnswer: "A",
-    explanation: "Correct order is CAEFDB: 'Inhospitable as the deserts might have been, they were not impenetrable; evidence shows that they were widely explored and exploited in ancient times for a wide range of materials, from metal ores to building stones.'",
+    explanation: "Correct order is CAEFDB:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n(B) they were widely explored and exploited\n\nFull sentence: 'Inhospitable as the deserts might have been, they were not impenetrable; evidence shows that in ancient times for a wide range of materials, from metal ores to building stones, they were widely explored and exploited.'",
   },
   {
     id: 10,

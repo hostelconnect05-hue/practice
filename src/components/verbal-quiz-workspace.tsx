@@ -120,8 +120,8 @@ export function VerbalQuizWorkspace() {
                     )}
                   </div>
                   {q.sentence && (
-                    <p className="mt-2 rounded-lg bg-zinc-950/80 p-3 font-medium text-zinc-100 border border-zinc-800/80 italic">
-                      "{q.sentence}"
+                    <p className="mt-2 rounded-lg bg-zinc-950/80 p-3 font-medium text-zinc-100 border border-zinc-800/80 whitespace-pre-line font-mono text-xs leading-relaxed">
+                      {q.sentence}
                     </p>
                   )}
                 </CardHeader>
@@ -195,7 +195,7 @@ export function VerbalQuizWorkspace() {
                           </>
                         )}
                       </div>
-                      <p className="text-xs opacity-90 leading-relaxed mt-1">
+                      <p className="text-xs opacity-90 leading-relaxed mt-1 whitespace-pre-line">
                         <strong>Explanation:</strong> {q.explanation}
                       </p>
                     </div>
