@@ -1,0 +1,10 @@
+{
+  "approach": "Sliding Window using two Monotonic Deques (Max Deque and Min Deque) to track the dynamic window maximum and minimum in O(1) amortized time per element.",
+  "observation": "If a window [left, right] is valid (max - min <= K), then all sub-windows ending at 'right' and starting between 'left' and 'right' are also valid. Thus, the window contributes (right - left + 1) valid subarrays.",
+  "bruteForce": "Check all O(N^2) subarrays. For each, compute max and min in O(N) or O(1) using sparse tables. Total time O(N^2).",
+  "optimalSolution": "Maintain maxDeque (decreasing) and minDeque (increasing) storing indices. For each right pointer, update deques. While arr[maxDeque.first] - arr[minDeque.first] > K, shrink left pointer and pop deque front if it equals left. Add (right - left + 1) to answer.",
+  "timeComplexity": "O(N) since each index is pushed and popped at most once per deque.",
+  "spaceComplexity": "O(N) for storing indices in deques.",
+  "dryRun": "N=4, K=2, arr=[1, 3, 2, 5]. right=0: left=0, ans+=1 (1). right=1: left=0, ans+=2 (3). right=2: left=0, max=3, min=1, diff=2<=2, ans+=3 (6). right=3: diff=5-2=3>2, shrink left to 3. ans+=1 (7). Total = 7.",
+  "edgeCases": ["N = 1", "K = 0 with identical elements", "K = 0 with distinct elements", "Very large values (arr[i] = 10^9) requiring 64-bit integer sum (long)"]
+}

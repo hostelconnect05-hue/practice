@@ -1,0 +1,38 @@
+{
+  "slug": "count-valid-subarrays",
+  "title": "Count Valid Subarrays",
+  "difficulty": "Hard",
+  "topics": ["Arrays", "Sliding Window", "Monotonic Queue", "Two Pointers", "Queue"],
+  "acceptance": "74.8%",
+  "statement": "You are given an integer array arr of size N and an integer K.\n\nA subarray is called valid if the difference between the maximum and minimum element in that subarray is less than or equal to K.\n\nYour task is to count the total number of valid subarrays.\n\n### Input Format\n- The first line contains two space-separated integers N and K.\n- The second line contains N space-separated integers representing the array arr.\n\n### Output Format\n- Print a single long integer representing the total count of valid subarrays.",
+  "examples": [
+    {
+      "input": "4 2\n1 3 2 5",
+      "output": "7",
+      "explanation": "Valid subarrays are [1], [1,3], [1,3,2], [3], [3,2], [2], and [5]. Total valid subarrays = 7."
+    },
+    {
+      "input": "3 0\n2 2 2",
+      "output": "6",
+      "explanation": "All possible subarrays are valid because every element is equal (max - min = 0 <= 0). Total = 3*(3+1)/2 = 6."
+    },
+    {
+      "input": "5 1\n1 2 3 4 5",
+      "output": "9",
+      "explanation": "Valid subarrays of length 1 (5) + valid subarrays of length 2 (4): [1,2], [2,3], [3,4], [4,5]. Total = 5 + 4 = 9."
+    }
+  ],
+  "constraints": [
+    "1 <= N <= 2 * 10^5",
+    "1 <= arr[i] <= 10^9",
+    "0 <= K <= 10^9"
+  ],
+  "hints": [
+    "Use a sliding window with two pointers (left and right).",
+    "Maintain a monotonic decreasing deque for tracking maximums and a monotonic increasing deque for tracking minimums in the current window.",
+    "When max - min > K, increment the left pointer and evict out-of-window indices from the deques.",
+    "For each valid right pointer, add (right - left + 1) to your answer."
+  ],
+  "relatedProblems": ["minimum-length-substring", "social-media-username"],
+  "discussion": "Optimal O(N) solution using two monotonic deques for tracking window max and min."
+}
