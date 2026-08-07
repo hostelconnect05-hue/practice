@@ -509,55 +509,53 @@ System.out.println(intersection);`,
   {
     id: 29,
     topic: "Java Exception Handling - File Reading",
-    question: "Which snippet correctly implements error handling using try-catch for a missing file with Scanner?",
-    codeSnippet: `File inputFile = new File("data.txt");
-try {
- Scanner scanner = new Scanner(inputFile);
- while (scanner.hasNextLine()) { ... }
- scanner.close();
-} catch (FileNotFoundException e) {
- System.out.println("file not found: " + e.getMessage());
+    question: "Consider the following code: try { FileReader file = new FileReader('input.txt'); BufferedReader br = new BufferedReader(file); System.out.println(br.readLine()); } catch (________ e) { System.out.println('File Error'); }. Which exception type correctly replaces the blank?",
+    codeSnippet: `try {
+    FileReader file = new FileReader("input.txt");
+    BufferedReader br = new BufferedReader(file);
+    System.out.println(br.readLine());
+}
+catch (________ e) {
+    System.out.println("File Error");
 }`,
     options: [
-      { key: "A", text: "No error handling -> crashes if file missing" },
-      { key: "B", text: "Uses try-catch with FileNotFoundException" },
-      { key: "C", text: "Checks file.exists() — valid, but does not use try-catch" },
-      { key: "D", text: "Catches NullPointerException" },
+      { key: "A", text: "NullPointerException" },
+      { key: "B", text: "ArithmeticException" },
+      { key: "C", text: "IOException" },
+      { key: "D", text: "ArrayIndexOutOfBoundsException" },
     ],
-    correctAnswer: "B",
-    explanation: "Instantiating Scanner with a File object requires handling FileNotFoundException via try-catch.",
+    correctAnswer: "C",
+    explanation: "Methods such as readLine() can throw an IOException. Therefore, catch(IOException e) handles errors while reading the file.",
   },
   {
     id: 30,
     topic: "Java Exception Handling - NumberFormatException",
-    question: "What exception is thrown by Integer.parseInt(\"java\")?",
+    question: "What will happen when the following code is executed? String s = 'ABC'; int x = Integer.parseInt(s);",
+    codeSnippet: `String s = "ABC";
+int x = Integer.parseInt(s);`,
     options: [
-      { key: "A", text: "ArithmeticException" },
-      { key: "B", text: "NumberFormatException" },
-      { key: "C", text: "NullPointerException" },
-      { key: "D", text: "ArrayIndexOutOfBoundsException" },
+      { key: "A", text: "Prints 0" },
+      { key: "B", text: "Compilation Error" },
+      { key: "C", text: "NumberFormatException" },
+      { key: "D", text: "NullPointerException" },
     ],
-    correctAnswer: "B",
-    explanation: "Integer.parseInt(\"java\") throws NumberFormatException because 'java' is not a valid numeric string.",
+    correctAnswer: "C",
+    explanation: "Integer.parseInt('ABC') attempts to convert non-numeric letters into a number, which throws a NumberFormatException.",
   },
   {
     id: 31,
-    topic: "Java Exception Handling - RuntimeException Interface",
-    question: "What is the result of calling obj.eval(0) where eval throws new RuntimeException() without a throws declaration?",
-    codeSnippet: `interface A { void eval(int x); }
-class B implements A {
- public void eval(int x) {
-  if (x == 0) throw new RuntimeException();
- }
-}`,
+    topic: "Java Exception Handling - Interface Methods",
+    question: "A class implements an interface but does not override all its abstract methods. What happens?",
+    codeSnippet: `interface Test { void display(); }
+class Demo implements Test { }`,
     options: [
-      { key: "A", text: "A RuntimeException will be thrown at runtime." },
-      { key: "B", text: "Compilation error — overridden method cannot throw." },
-      { key: "C", text: "Compilation error — no throws declaration." },
-      { key: "D", text: "Compilation error — abstract method doesn't declare exception." },
+      { key: "A", text: "Program executes normally." },
+      { key: "B", text: "Compilation Error." },
+      { key: "C", text: "Runtime Exception." },
+      { key: "D", text: "NullPointerException." },
     ],
-    correctAnswer: "A",
-    explanation: "RuntimeException is an unchecked exception in Java, so no 'throws' clause is required. It compiles cleanly and throws at runtime when x == 0.",
+    correctAnswer: "B",
+    explanation: "If a class implements an interface, it must implement every abstract method declared in that interface or be declared abstract, otherwise it results in a compilation error.",
   },
   {
     id: 32,
