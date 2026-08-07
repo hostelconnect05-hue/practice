@@ -1421,4 +1421,150 @@ ROLLBACK TO A;`,
     correctAnswer: "C",
     explanation: "DMA enables hardware subsystems to access main memory independently of the central processing unit.",
   },
+  {
+    id: 89,
+    topic: "Operating Systems - Access Control Models",
+    question: "A government organization wants to implement a security model in which users cannot change access permissions, and all permissions are enforced by the system administrator. Which model should be used?",
+    options: [
+      { key: "A", text: "Discretionary Access Control (DAC)" },
+      { key: "B", text: "Mandatory Access Control (MAC)" },
+      { key: "C", text: "Role-Based Access Control (RBAC)" },
+      { key: "D", text: "Access Control List (ACL)" },
+    ],
+    correctAnswer: "B",
+    explanation: "Mandatory Access Control (MAC) enforces system-wide security policies set strictly by administrators, preventing users from altering permissions.",
+  },
+  {
+    id: 90,
+    topic: "Data Structures - Large Dataset Sorting",
+    question: "A company needs to sort millions of employee records stored in an array. Which sorting algorithm is the most suitable?",
+    options: [
+      { key: "A", text: "Bubble Sort" },
+      { key: "B", text: "Selection Sort" },
+      { key: "C", text: "Merge Sort" },
+      { key: "D", text: "Insertion Sort" },
+    ],
+    correctAnswer: "C",
+    explanation: "Merge Sort guarantees optimal O(n log n) worst-case time complexity, making it ideal for sorting large datasets.",
+  },
+  {
+    id: 91,
+    topic: "Data Structures - Linked List Front Insertion",
+    question: "What is the time complexity for inserting a node at the beginning of a singly linked list (newNode.next = head; head = newNode)?",
+    codeSnippet: `newNode.next = head
+head = newNode`,
+    options: [
+      { key: "A", text: "O(n)" },
+      { key: "B", text: "O(log n)" },
+      { key: "C", text: "O(1)" },
+      { key: "D", text: "O(n log n)" },
+    ],
+    correctAnswer: "C",
+    explanation: "Prepending a node requires only constant-time O(1) pointer updates without traversing the list.",
+  },
+  {
+    id: 92,
+    topic: "Algorithms - Bubble Sort First Pass",
+    question: "Consider Bubble Sort applied to array [5, 1, 4, 2]. After the first pass, what is the resulting array state?",
+    codeSnippet: `Input: 5 1 4 2`,
+    options: [
+      { key: "A", text: "1 2 4 5" },
+      { key: "B", text: "1 4 2 5" },
+      { key: "C", text: "5 1 2 4" },
+      { key: "D", text: "4 2 1 5" },
+    ],
+    correctAnswer: "B",
+    explanation: "Swapping 5 & 1 -> 1 5 4 2; Swapping 5 & 4 -> 1 4 5 2; Swapping 5 & 2 -> 1 4 2 5. Largest element (5) bubbles to the end.",
+  },
+  {
+    id: 93,
+    topic: "Programming - Matrix Element Sum",
+    question: "Given a 2x2 matrix [[1, 2], [3, 4]], what is the sum of all its elements?",
+    codeSnippet: `1 2
+3 4`,
+    options: [
+      { key: "A", text: "8" },
+      { key: "B", text: "9" },
+      { key: "C", text: "10" },
+      { key: "D", text: "12" },
+    ],
+    correctAnswer: "C",
+    explanation: "1 + 2 + 3 + 4 = 10.",
+  },
+  {
+    id: 94,
+    topic: "Graphs - Minimum Spanning Tree",
+    question: "Which algorithm is commonly used to find the Minimum Spanning Tree (MST) of a weighted graph?",
+    options: [
+      { key: "A", text: "Breadth First Search" },
+      { key: "B", text: "Dijkstra's Algorithm" },
+      { key: "C", text: "Prim's Algorithm" },
+      { key: "D", text: "Binary Search" },
+    ],
+    correctAnswer: "C",
+    explanation: "Prim's Algorithm (along with Kruskal's) constructs a Minimum Spanning Tree connecting all vertices with minimum total edge weight.",
+  },
+  {
+    id: 95,
+    topic: "Graphs - Dijkstra Disconnected Vertices",
+    question: "What happens when Dijkstra's Algorithm is executed on a graph containing disconnected vertices?",
+    options: [
+      { key: "A", text: "It visits every vertex." },
+      { key: "B", text: "It reports infinite distance for unreachable vertices." },
+      { key: "C", text: "It throws an exception." },
+      { key: "D", text: "It automatically connects the graph." },
+    ],
+    correctAnswer: "B",
+    explanation: "Unreachable vertices retain an initial distance value of infinity (∞) because no path exists from the source.",
+  },
+  {
+    id: 96,
+    topic: "C++ / OOP - Compile-Time Polymorphism",
+    question: "Which of the following demonstrates Compile-Time Polymorphism in C++?",
+    options: [
+      { key: "A", text: "Function Overloading" },
+      { key: "B", text: "Method Overriding" },
+      { key: "C", text: "Virtual Functions" },
+      { key: "D", text: "Dynamic Binding" },
+    ],
+    correctAnswer: "A",
+    explanation: "Function overloading and operator overloading are resolved by the compiler at compile time (static polymorphism).",
+  },
+  {
+    id: 97,
+    topic: "C++ / OOP - Object Member Access Operator",
+    question: "How are public data members of a C++ object accessed?",
+    options: [
+      { key: "A", text: "::" },
+      { key: "B", text: "->" },
+      { key: "C", text: "." },
+      { key: "D", text: "*" },
+    ],
+    correctAnswer: "C",
+    explanation: "The dot operator (.) is used to access public data members and methods on object instances (e.g. s.rollNo).",
+  },
+  {
+    id: 98,
+    topic: "C++ / OOP - Public Inheritance Call",
+    question: "For class Car : public Vehicle, what is the output of Car c; c.start(); if Vehicle defines public void start() { cout << 'Started'; }?",
+    codeSnippet: `class Vehicle {
+public:
+    void start() {
+        cout << "Started";
+    }
+};
+
+class Car : public Vehicle {};
+
+Car c;
+c.start();`,
+    options: [
+      { key: "A", text: "Compilation Error" },
+      { key: "B", text: "Started" },
+      { key: "C", text: "Vehicle" },
+      { key: "D", text: "Runtime Error" },
+    ],
+    correctAnswer: "B",
+    explanation: "Public inheritance allows derived class Car to inherit public base methods like start(), printing 'Started'.",
+  },
 ];
