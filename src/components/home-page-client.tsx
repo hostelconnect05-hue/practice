@@ -77,7 +77,7 @@ export function HomePageClient({
               <MessageSquare className="h-4 w-4 text-sky-400" />
               Section 3: Verbal Ability
               <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
-                9 Qs
+                18 Qs
               </span>
             </button>
           </div>
@@ -104,14 +104,14 @@ export function HomePageClient({
             )}
             <h2 className="text-xl font-bold text-zinc-100">
               {activeTab === "verbal"
-                ? "Section 3: Verbal Ability Assessment"
+                ? "Section 3: Verbal Ability & Reading Comprehension"
                 : activeTab === "coding"
                 ? "Coding Problem Statements"
                 : "Assessment Modules & Coding Problems"}
             </h2>
           </div>
           <span className="text-xs text-zinc-400">
-            {activeTab === "verbal" ? "9 Practice Questions with Explanations" : "Select a problem to launch the workspace"}
+            {activeTab === "verbal" ? "18 Practice Questions with Passages & Explanations" : "Select a problem to launch the workspace"}
           </span>
         </div>
 
@@ -122,17 +122,17 @@ export function HomePageClient({
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3">
                   <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
-                    Section 3 • MCQ Assessment
+                    Section 3 • Reading Comprehension & MCQ
                   </Badge>
-                  <span className="text-xs text-sky-400 font-semibold">10 Questions (9 Verified)</span>
+                  <span className="text-xs text-sky-400 font-semibold">18 Questions (Passages + Grammar)</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
-                  Section 3: Verbal Ability
+                  Section 3: Verbal Ability & Reading Comprehension
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  Test your English grammar, sentence correction, vocabulary, synonyms, and subject-verb agreement with instant right/wrong feedback, detailed explanations, live scoring, and reattempt capabilities.
+                  Practice Reading Comprehension passages (Gift-Giving, Storr Lochs Monster) alongside English grammar, sentence correction, vocabulary, synonyms, and subject-verb agreement. Includes instant right/wrong feedback, detailed explanations, live scoring, and reattempts.
                 </p>
                 <div className="flex items-center gap-4 text-xs text-zinc-400 pt-1">
                   <span className="flex items-center gap-1.5">

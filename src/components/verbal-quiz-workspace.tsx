@@ -117,8 +117,20 @@ export function VerbalQuizWorkspace() {
                       >
                         {userSelection === q.correctAnswer ? "Correct" : "Incorrect"}
                       </Badge>
-                    )}
-                  </div>
+                  {q.passage && (
+                    <div className="mt-3 rounded-xl border border-sky-500/30 bg-sky-950/20 p-4 text-zinc-200">
+                      <div className="flex items-center gap-2 mb-2">
+                        <BookOpen className="h-4 w-4 text-sky-400" />
+                        <span className="text-xs font-bold uppercase tracking-wider text-sky-300">
+                          {q.passage.title}
+                        </span>
+                      </div>
+                      <p className="text-xs leading-relaxed text-zinc-300 whitespace-pre-line">
+                        {q.passage.text}
+                      </p>
+                    </div>
+                  )}
+
                   {q.sentence && (
                     <p className="mt-2 rounded-lg bg-zinc-950/80 p-3 font-medium text-zinc-100 border border-zinc-800/80 whitespace-pre-line font-mono text-xs leading-relaxed">
                       {q.sentence}
