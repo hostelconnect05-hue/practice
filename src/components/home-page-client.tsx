@@ -137,7 +137,7 @@ export function HomePageClient({
               <Brain className="h-4 w-4 text-pink-400" />
               Analytical Ability
               <span className="ml-1 rounded-full bg-pink-500/20 px-2 py-0.5 text-xs font-bold text-pink-300">
-                6 Qs
+                12 Qs
               </span>
             </button>
           </div>
