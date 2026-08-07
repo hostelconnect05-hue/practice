@@ -129,7 +129,7 @@ export function AptitudeQuizWorkspace() {
                   </div>
 
                   <div className="mt-1">
-                    <Badge variant="outline" className="border-zinc-700 text-zinc-400 text-[10px]">
+                    <Badge className="border border-zinc-700 bg-transparent text-zinc-400 text-[10px]">
                       {q.topic}
                     </Badge>
                   </div>

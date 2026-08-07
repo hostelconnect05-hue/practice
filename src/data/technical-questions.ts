@@ -359,6 +359,8 @@ head = temp`,
     correctAnswer: "D",
     explanation: "Mandatory Access Control (MAC) enforces system-wide security policies set by administrators (e.g. SELinux), restricting user permission overrides against both insider and outsider threats.",
   },
+  {
+    id: 16,
     topic: "SQL / DBMS - Permissions",
     question: "Which SQL command is used to grant specific database permissions to a user?",
     options: [
