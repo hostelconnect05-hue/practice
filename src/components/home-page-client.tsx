@@ -183,6 +183,48 @@ export function HomePageClient({
           </span>
         </div>
 
+        {/* Section 0: Coding Problems Module Card */}
+        {activeTab === "all" && (
+          <div className="mb-6">
+            <Card className="border-emerald-500/30 bg-emerald-950/15 backdrop-blur hover:border-emerald-500/50 transition">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="bg-emerald-500/20 text-emerald-300 border-emerald-500/30">
+                    Hands-on Coding • 11 Problems
+                  </Badge>
+                  <span className="text-xs text-emerald-400 font-semibold">11 Algorithmic Coding Questions</span>
+                </div>
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
+                  Coding Problem Statements Workspace
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Practice hands-on coding problems from Virtusa technical online assessments including Social Media Username, Vowel Consonant Rearrange, Frequency Sync, Shopping Cart, Coke Pack Purchase, Index Sort, Minimum Index, and more. Features Monaco code editor, testcase execution, verified 32-bit Java integer constraints, and real-time pass/fail evaluation.
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Real-time Code Execution & Compiler
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Visible & Hidden Test Case Verification
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" /> Java 32-bit Signed Integer Range Verified
+                  </span>
+                </div>
+                <button
+                  onClick={() => setActiveTab("coding")}
+                  className="inline-flex items-center justify-between gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-2.5 rounded-lg text-sm transition"
+                >
+                  Explore All 11 Coding Problems
+                  <ArrowRight className="h-4 w-4" />
+                </button>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
         {/* Section 1: Reading Comprehension Card */}
         {(activeTab === "all" || activeTab === "rc") && (
           <div className="mb-4">
