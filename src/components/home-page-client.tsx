@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2 } from "lucide-react";
+import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2, Terminal } from "lucide-react";
 import { ProblemCard } from "@/components/problem/problem-card";
 import { ProgressOverview } from "@/components/problem/progress-overview";
 import { ThemeToggle } from "@/components/theme-toggle";
