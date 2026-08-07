@@ -360,7 +360,7 @@ head = temp`,
     explanation: "Mandatory Access Control (MAC) enforces system-wide security policies set by administrators (e.g. SELinux), restricting user permission overrides against both insider and outsider threats.",
   },
   {
-    id: 16,
+    id: 20,
     topic: "SQL / DBMS - Permissions",
     question: "Which SQL command is used to grant specific database permissions to a user?",
     options: [
@@ -373,7 +373,7 @@ head = temp`,
     explanation: "The GRANT statement gives administrative and access privileges to database users.",
   },
   {
-    id: 17,
+    id: 21,
     topic: "SQL / DBMS - Self Join",
     question: "A business wants to list pairs of customers who belong to the same country but have different customer IDs. What does the depicted query do?",
     codeSnippet: `SELECT A.CustomerName,
@@ -393,7 +393,7 @@ AND A.Country = B.Country;`,
     explanation: "The query uses a Self Join, aliasing the Customers table as A and B to compare rows within the same table.",
   },
   {
-    id: 18,
+    id: 22,
     topic: "SQL / DBMS - Built-in Functions",
     question: "What is the output of the following SQL query?",
     codeSnippet: `SELECT
@@ -410,7 +410,7 @@ FORMAT(2499.56789,2);`,
     explanation: "CHAR(83) evaluates to 'S'. LOCATE('db', 'cloud_db_mysql') finds 'db' starting at 1-based index 7. FORMAT(2499.56789, 2) formats the number as '2,499.57'.",
   },
   {
-    id: 19,
+    id: 23,
     topic: "SQL / DBMS - Date Functions",
     question: "A developer wants to display only the date from a DATETIME column and filter records belonging to June, irrespective of the year. Which query satisfies both conditions?",
     codeSnippet: `SELECT product_id,
@@ -427,7 +427,7 @@ WHERE EXTRACT(MONTH FROM sale_time)=6;`,
     explanation: "DATE(sale_time) truncates the time portion to display only the YYYY-MM-DD date, and EXTRACT(MONTH FROM sale_time)=6 filters transactions from June across all years.",
   },
   {
-    id: 20,
+    id: 24,
     topic: "Java Collections - ArrayList Sorting",
     question: "Sort a List<Integer> in descending order using the correct Java method.",
     codeSnippet: `import java.util.*;
@@ -449,7 +449,7 @@ public class Example1 {
     explanation: "Collections.sort(numbers, Collections.reverseOrder()) is used to sort a List in descending order in standard Java.",
   },
   {
-    id: 21,
+    id: 25,
     topic: "Java Collections - HashSet Intersection",
     question: "What is the output of the following HashSet retainAll intersection program?",
     codeSnippet: `Set<Integer> set1 = new HashSet<>(Arrays.asList(1, 2, 3, 6, 7));
@@ -467,7 +467,7 @@ System.out.println(intersection);`,
     explanation: "retainAll(set2) retains only elements common to set1 and set2, which are 2, 3, and 6.",
   },
   {
-    id: 22,
+    id: 26,
     topic: "Java Collections - LinkedList Debugging",
     question: "The code uses addFirst(), addLast(), removeFirst(), removeLast() — methods not available in ArrayList, only in LinkedList. How do you fix the error?",
     options: [
@@ -480,7 +480,7 @@ System.out.println(intersection);`,
     explanation: "Replace ArrayList with LinkedList, import java.util.LinkedList, and remove invalid index arguments from addFirst().",
   },
   {
-    id: 23,
+    id: 27,
     topic: "Java Collections - PriorityQueue Output",
     question: "What is printed by iterating, peeking, and polling elements in PriorityQueue testQueue = new PriorityQueue() with 'Black' and 'White'?",
     options: [
@@ -493,7 +493,7 @@ System.out.println(intersection);`,
     explanation: "PriorityQueue orders strings lexicographically ('Black' < 'White'). element() and peek() return head ('Black').",
   },
   {
-    id: 24,
+    id: 28,
     topic: "Java Exception Handling - FileNotFoundException",
     question: "A Java program attempts to read a file that does not exist. Which exception should be caught?",
     codeSnippet: `FileReader fr = new FileReader("abc.txt");`,
@@ -507,7 +507,7 @@ System.out.println(intersection);`,
     explanation: "FileNotFoundException is thrown when attempting to open a file that does not exist on the file system.",
   },
   {
-    id: 25,
+    id: 29,
     topic: "Java Exception Handling - File Reading",
     question: "Which snippet correctly implements error handling using try-catch for a missing file with Scanner?",
     codeSnippet: `File inputFile = new File("data.txt");
@@ -528,7 +528,7 @@ try {
     explanation: "Instantiating Scanner with a File object requires handling FileNotFoundException via try-catch.",
   },
   {
-    id: 26,
+    id: 30,
     topic: "Java Exception Handling - NumberFormatException",
     question: "What exception is thrown by Integer.parseInt(\"java\")?",
     options: [
@@ -541,7 +541,7 @@ try {
     explanation: "Integer.parseInt(\"java\") throws NumberFormatException because 'java' is not a valid numeric string.",
   },
   {
-    id: 27,
+    id: 31,
     topic: "Java Exception Handling - RuntimeException Interface",
     question: "What is the result of calling obj.eval(0) where eval throws new RuntimeException() without a throws declaration?",
     codeSnippet: `interface A { void eval(int x); }
@@ -560,7 +560,7 @@ class B implements A {
     explanation: "RuntimeException is an unchecked exception in Java, so no 'throws' clause is required. It compiles cleanly and throws at runtime when x == 0.",
   },
   {
-    id: 28,
+    id: 32,
     topic: "Java Collections - Vector Manipulation",
     question: "What is the output of the following Vector removal program?",
     codeSnippet: `Vector<Integer> v = new Vector<>();
@@ -579,7 +579,7 @@ System.out.println(v);`,
     explanation: "remove(1) removes the element at index 1 (which is 20), leaving [10, 30].",
   },
   {
-    id: 29,
+    id: 33,
     topic: "Java Collections - HashSet Duplication",
     question: "Which Java Collection can be used to remove duplicate elements from an array?",
     options: [
@@ -592,7 +592,7 @@ System.out.println(v);`,
     explanation: "A HashSet stores unique elements only, automatically deduplicating arrays.",
   },
   {
-    id: 30,
+    id: 34,
     topic: "Data Structures - Linked List Traversal",
     question: "Which type of linked list allows traversal in both forward and backward directions?",
     options: [
@@ -605,7 +605,7 @@ System.out.println(v);`,
     explanation: "A Doubly Linked List has links to both previous and next nodes, enabling bidirectional traversal.",
   },
   {
-    id: 31,
+    id: 35,
     topic: "Data Structures - Fast Searching",
     question: "A company wants to store customer records where fast searching is more important than maintaining insertion order. Which data structure is the most suitable?",
     options: [
@@ -618,7 +618,7 @@ System.out.println(v);`,
     explanation: "Hash Tables map keys to values, achieving constant time O(1) average search complexity.",
   },
   {
-    id: 32,
+    id: 36,
     topic: "Data Structures - Queue Dequeue Front",
     question: "A queue currently contains: Front → 15 25 35 45 ← Rear. After performing one dequeue operation, which element becomes the front of the queue?",
     options: [
@@ -631,7 +631,7 @@ System.out.println(v);`,
     explanation: "Queue is FIFO. Dequeuing removes the front element (15), so 25 becomes the new front element.",
   },
   {
-    id: 33,
+    id: 37,
     topic: "Algorithms - Z Algorithm Complexity",
     question: "What is the time complexity of the Z Algorithm used for pattern matching?",
     options: [
@@ -644,7 +644,7 @@ System.out.println(v);`,
     explanation: "The Z Algorithm matches patterns linearly in O(n) time.",
   },
   {
-    id: 34,
+    id: 38,
     topic: "Operating Systems - Priority Scheduling",
     question: "A system uses Preemptive Priority Scheduling. Four processes arrive at time 0 ms: P1(Priority 3, Burst 6ms), P2(Priority 1, Burst 4ms), P3(Priority 2, Burst 5ms), P4(Priority 4, Burst 3ms). Lower priority number means higher priority. Which process executes first?",
     options: [
@@ -657,7 +657,7 @@ System.out.println(v);`,
     explanation: "Priority 1 is the highest priority among all processes, so P2 executes first.",
   },
   {
-    id: 35,
+    id: 39,
     topic: "Operating Systems - Layered Architecture",
     question: "Which operating system architecture organizes the system into multiple layers, where each layer performs a specific function and communicates only with its adjacent layers?",
     options: [
@@ -670,7 +670,7 @@ System.out.println(v);`,
     explanation: "Layered Architecture organizes the OS into hierarchical layers communicating strictly with adjacent layers.",
   },
   {
-    id: 36,
+    id: 40,
     topic: "Operating Systems - Access Control",
     question: "A company wants to restrict file access so that employees can access only files belonging to their own department. Which operating system security mechanism is most appropriate?",
     options: [
@@ -683,7 +683,7 @@ System.out.println(v);`,
     explanation: "Access Control Lists (ACLs) define explicit per-user and per-group permissions for files and folders.",
   },
   {
-    id: 37,
+    id: 41,
     topic: "Operating Systems - Deadlock Definition",
     question: "Which of the following situations can lead to a deadlock in an operating system?",
     options: [
@@ -696,7 +696,7 @@ System.out.println(v);`,
     explanation: "Deadlock occurs when processes are blocked waiting indefinitely for resources held by each other.",
   },
   {
-    id: 38,
+    id: 42,
     topic: "Operating Systems - Round Robin Scheduling",
     question: "In Round Robin Scheduling, three processes have burst times P1=4ms, P2=5ms, P3=6ms. The time quantum is 2ms. Which process completes last?",
     options: [
@@ -709,7 +709,7 @@ System.out.println(v);`,
     explanation: "Execution order: P1(2ms)->P2(2ms)->P3(2ms)->P1(2ms done)->P2(2ms)->P3(2ms)->P2(1ms done)->P3(2ms done). P3 finishes last.",
   },
   {
-    id: 39,
+    id: 43,
     topic: "Pseudocode & Algorithms - Recursive Factorial",
     question: "What is returned by recursive function F(5) where F(n) = if n<=1 return 1 else return n * F(n-1)?",
     options: [
@@ -722,7 +722,7 @@ System.out.println(v);`,
     explanation: "F(5) = 5 * 4 * 3 * 2 * 1 = 120.",
   },
   {
-    id: 40,
+    id: 44,
     topic: "Pseudocode & Algorithms - Stack Summation",
     question: "Push numbers 10 down to 1 onto a stack, then pop all and sum them. What is the total sum?",
     options: [
@@ -735,7 +735,7 @@ System.out.println(v);`,
     explanation: "The sum of integers from 1 to 10 is (10 * 11) / 2 = 55.",
   },
   {
-    id: 41,
+    id: 45,
     topic: "Pseudocode & Algorithms - Branching Logic",
     question: "For function evaluate(a, b): IF both even -> a+b; ELSEIF both odd -> a*b; ELSE -> a-b. What are evaluate(6, 10) and evaluate(7, 9)?",
     options: [
@@ -748,7 +748,7 @@ System.out.println(v);`,
     explanation: "evaluate(6, 10) (both even): 6 + 10 = 16. evaluate(7, 9) (both odd): 7 * 9 = 63.",
   },
   {
-    id: 42,
+    id: 46,
     topic: "Pseudocode & Algorithms - Function Purpose",
     question: "Why do programmers use modular functions in software design?",
     options: [
@@ -761,7 +761,7 @@ System.out.println(v);`,
     explanation: "Functions support modularity, code reuse, and allow testing/debugging smaller isolated code blocks independently.",
   },
   {
-    id: 43,
+    id: 47,
     topic: "SQL / DBMS - Number Base Conversion",
     question: "Which MySQL function converts numbers between different number bases (e.g. hex to decimal)?",
     options: [
@@ -774,7 +774,7 @@ System.out.println(v);`,
     explanation: "MySQL's CONV(N, from_base, to_base) function converts numbers between arbitrary bases (e.g. CONV('a', 16, 10) returns 10).",
   },
   {
-    id: 44,
+    id: 48,
     topic: "SQL / DBMS - String Trimming",
     question: "Which MySQL function removes trailing whitespace from a string?",
     options: [
@@ -787,7 +787,7 @@ System.out.println(v);`,
     explanation: "RTRIM() specifically strips trailing spaces from the right side of a string.",
   },
   {
-    id: 45,
+    id: 49,
     topic: "SQL / DBMS - Triggers",
     question: "Which type of trigger intercepts a DML operation (INSERT, UPDATE, DELETE) and executes alternative logic instead?",
     options: [
