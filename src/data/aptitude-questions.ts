@@ -261,4 +261,17 @@ export const aptitudeQuestions: AptitudeQuestion[] = [
     correctAnswer: "A",
     explanation: "Downstream speed = 5 + 1 = 6 km/h, Upstream speed = 5 - 1 = 4 km/h. Equation: x/6 + x/4 = 5 ⇒ 5x/12 = 5 ⇒ x = 12 km.",
   },
+  {
+    id: 20,
+    topic: "Profit & Loss - Cost Price Equilibrium",
+    question: "The profit earned by selling an article for ₹120 is equal to the loss incurred by selling it for ₹80. Find the Cost Price.",
+    options: [
+      { key: "A", text: "₹100" },
+      { key: "B", text: "₹110" },
+      { key: "C", text: "₹80" },
+      { key: "D", text: "₹120" },
+    ],
+    correctAnswer: "A",
+    explanation: "Let CP be x. Profit = 120 - x, Loss = x - 80. Given Profit = Loss ⇒ 120 - x = x - 80 ⇒ 2x = 200 ⇒ x = ₹100.",
+  },
 ];

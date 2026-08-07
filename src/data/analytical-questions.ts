@@ -271,4 +271,29 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
     correctAnswer: "C",
     explanation: "Circular arrangement clockwise: G, I, J, K, L, H. Comparing with G, H, I, J, K, L clockwise starting from G: G and H remain in their positions (2 people).",
   },
+  {
+    id: 33,
+    topic: "Logical Height Comparison",
+    question: "There are five people A, B, C, D and E. Statements: I. C is taller than A, and A is taller than B. II. E is shorter than B. III. D is taller than E. IV. C is the tallest. If statements I-III are true, what can be said about statement IV?",
+    options: [
+      { key: "A", text: "Uncertain" },
+      { key: "B", text: "True" },
+      { key: "C", text: "False" },
+    ],
+    correctAnswer: "A",
+    explanation: "From I-III: C > A > B > E and D > E. Since the relative height between D and C is not established, statement IV cannot be determined with certainty.",
+  },
+  {
+    id: 34,
+    topic: "Letter-Number Pattern Analogy",
+    question: "Find the next letter-number cluster in the series: BDF 2, FHJ 5, LJN 8, NPR 11, ?",
+    options: [
+      { key: "A", text: "STV 14" },
+      { key: "B", text: "RTV 14" },
+      { key: "C", text: "RUV 14" },
+      { key: "D", text: "SVX 14" },
+    ],
+    correctAnswer: "B",
+    explanation: "Number sequence increases by +3 (2, 5, 8, 11 -> 14). Letter clusters shift while maintaining 2-step letter gaps: BDF -> FHJ -> LJN -> NPR -> RTV. Combined cluster: RTV 14.",
+  },
 ];
