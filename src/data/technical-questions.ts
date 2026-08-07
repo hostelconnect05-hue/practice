@@ -953,4 +953,160 @@ SELECT name FROM Graduate_Students;`,
     correctAnswer: "A",
     explanation: "UNION combines distinct rows from both queries, automatically discarding duplicates.",
   },
+  {
+    id: 61,
+    topic: "C++ / OOP - Protected Inheritance",
+    question: "What is the output of class B : public A { public: void printData() { cout << 'Data: ' << data; } } where protected int data = 42 in class A?",
+    codeSnippet: `class A {
+protected:
+    int data = 42;
+};
+
+class B : public A {
+public:
+    void printData() {
+        cout << "Data: " << data << endl;
+    }
+};
+
+int main() {
+    B obj;
+    obj.printData();
+    return 0;
+}`,
+    options: [
+      { key: "A", text: "Compilation error – protected access" },
+      { key: "B", text: "Output: Data: 42" },
+      { key: "C", text: "Output: Data: 0" },
+      { key: "D", text: "Data is inaccessible" },
+    ],
+    correctAnswer: "B",
+    explanation: "Protected members can be accessed inside derived classes like B via printData().",
+  },
+  {
+    id: 62,
+    topic: "C++ / OOP - Purpose of Access Specifiers",
+    question: "What is the purpose of access specifiers in C++?",
+    options: [
+      { key: "A", text: "Define the size of data members" },
+      { key: "B", text: "Automatically generate constructors" },
+      { key: "C", text: "Control the visibility and accessibility of class members" },
+      { key: "D", text: "Increase program execution speed" },
+    ],
+    correctAnswer: "C",
+    explanation: "Access specifiers (public, protected, private) control member visibility and enforce encapsulation.",
+  },
+  {
+    id: 63,
+    topic: "C++ / OOP - Protected Access Specifier",
+    question: "Which access specifier allows a derived class to access a member while preventing direct access from outside the class?",
+    options: [
+      { key: "A", text: "private" },
+      { key: "B", text: "protected" },
+      { key: "C", text: "public" },
+      { key: "D", text: "Default (private in C++)" },
+    ],
+    correctAnswer: "B",
+    explanation: "Protected members are accessible inside derived classes but inaccessible directly outside the class.",
+  },
+  {
+    id: 64,
+    topic: "Java / OOP - Arrays.sort Import Error",
+    question: "Why does the program fail to compile when Arrays.sort(args) is called without an import statement?",
+    codeSnippet: `public class Sample {
+    public static void main(String args[]) {
+        try {
+            args = new String[3];
+            args[0] = "2";
+            Arrays.sort(args);
+            System.out.println(args[0]);
+        } catch(Exception e) {
+            System.out.println("Exception Occurred");
+        }
+    }
+}`,
+    options: [
+      { key: "A", text: "Arrays.sort() cannot sort strings." },
+      { key: "B", text: "args cannot be reassigned." },
+      { key: "C", text: "Arrays class is not imported." },
+      { key: "D", text: "sort() requires two arguments." },
+    ],
+    correctAnswer: "C",
+    explanation: "Arrays belongs to java.util.Arrays. Without import java.util.Arrays, compilation fails.",
+  },
+  {
+    id: 65,
+    topic: "C++ / OOP - Scope Resolution Operator",
+    question: "In C++ code void Box::setLength(int l), what is the purpose of the :: operator?",
+    codeSnippet: `class Box {
+    int length;
+public:
+    void setLength(int l);
+    int getLength();
+};
+
+void Box::setLength(int l) {
+    length = l;
+}
+
+int Box::getLength() {
+    return length;
+}`,
+    options: [
+      { key: "A", text: "Access private members" },
+      { key: "B", text: "Create objects" },
+      { key: "C", text: "Define member functions outside the class" },
+      { key: "D", text: "Inherit classes" },
+    ],
+    correctAnswer: "C",
+    explanation: "The scope resolution operator (::) links member function definitions back to their class when defined outside.",
+  },
+  {
+    id: 66,
+    topic: "C++ / OOP - BankAccount Encapsulation",
+    question: "A BankAccount class has a private balance and methods deposit() and getBalance(). Which approach best maintains encapsulation?",
+    options: [
+      { key: "A", text: "Make balance public." },
+      { key: "B", text: "Add a withdraw() method while keeping balance private." },
+      { key: "C", text: "Remove getBalance()." },
+      { key: "D", text: "Make all members public." },
+    ],
+    correctAnswer: "B",
+    explanation: "Keeping balance private while exposing controlled methods like withdraw() maintains proper encapsulation.",
+  },
+  {
+    id: 67,
+    topic: "C++ / OOP - Hierarchical Inheritance",
+    question: "Class Dog : public Animal and Class Cat : public Animal demonstrate which type of inheritance?",
+    codeSnippet: `class Animal {
+public:
+    void sound() {
+        cout << "Some sound";
+    }
+};
+
+class Dog : public Animal {};
+class Cat : public Animal {};`,
+    options: [
+      { key: "A", text: "Single Inheritance" },
+      { key: "B", text: "Multiple Inheritance" },
+      { key: "C", text: "Hierarchical Inheritance" },
+      { key: "D", text: "Multilevel Inheritance" },
+    ],
+    correctAnswer: "C",
+    explanation: "Hierarchical inheritance occurs when multiple derived classes inherit from a single base class.",
+  },
+  {
+    id: 68,
+    topic: "C++ / OOP - Inheritance of Members",
+    question: "When a class Car inherits from Vehicle, which members of Vehicle are directly accessible in Car?",
+    options: [
+      { key: "A", text: "Only private members" },
+      { key: "B", text: "Only public members" },
+      { key: "C", text: "Public and protected members" },
+      { key: "D", text: "All members" },
+    ],
+    correctAnswer: "C",
+    explanation: "Public and protected members of a base class are directly accessible in derived classes, while private members are not.",
+  },
 ];
