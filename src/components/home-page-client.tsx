@@ -95,6 +95,21 @@ export function HomePageClient({
                 8 Qs
               </span>
             </button>
+
+            <button
+              onClick={() => setActiveTab("tech" as any)}
+              className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                (activeTab as string) === "tech"
+                  ? "bg-amber-500/10 text-amber-400 shadow-sm border border-amber-500/30"
+                  : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
+              }`}
+            >
+              <Terminal className="h-4 w-4 text-amber-400" />
+              Technical Skills
+              <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
+                19 Qs
+              </span>
+            </button>
           </div>
 
           <div className="text-xs text-zinc-500 hidden md:block font-mono">
