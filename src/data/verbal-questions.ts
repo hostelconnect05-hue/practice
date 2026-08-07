@@ -567,57 +567,63 @@ Authorities say they are studying snake behaviour to address the problem more ef
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
 
-Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
+Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
+
+Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
     },
-    question: "What is the synonym of the word \"marshes\" as used in the first paragraph of the above passage?",
+    question: "What is the synonym of 'marshes'?",
     options: [
-      { key: "A", text: "Swamp" },
-      { key: "B", text: "Desert" },
-      { key: "C", text: "Lake" },
-      { key: "D", text: "Wasteland" },
+      { key: "A", text: "Wasteland" },
+      { key: "B", text: "Lake" },
+      { key: "C", text: "Desert" },
+      { key: "D", text: "Swamp" },
     ],
-    correctAnswer: "A",
-    explanation: "A marsh is a type of wetland with soft, waterlogged land. A swamp is the closest synonym among the given options.",
+    correctAnswer: "D",
+    explanation: "'Marshes' refers to wetland areas, making 'Swamp' the accurate synonym.",
   },
   {
     id: 902,
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
 
-Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
+Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
+
+Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
     },
-    question: "Which of the given options is NOT a benefit provided by the coastal ecosystems?",
+    question: "Which option is NOT a benefit provided by coastal ecosystems?",
     options: [
-      { key: "A", text: "Protection from sea storms" },
-      { key: "B", text: "Regulation of coastal water quality" },
-      { key: "C", text: "Mitigating climate change with blue carbon" },
-      { key: "D", text: "Protection from drought" },
+      { key: "A", text: "Mitigating climate change" },
+      { key: "B", text: "Protection from drought" },
+      { key: "C", text: "Protection from sea storms" },
+      { key: "D", text: "Regulation of coastal water quality" },
     ],
-    correctAnswer: "D",
-    explanation: "The passage mentions protection from storms, water quality regulation, and blue carbon storage, but does NOT mention protection from drought.",
+    correctAnswer: "B",
+    explanation: "Coastal ecosystems protect from storms, erosion, and sea-level rise, but 'Protection from drought' is not mentioned.",
   },
   {
     id: 903,
     section: "Reading Comprehension",
     passage: {
       title: "Passage 9: Coastal Blue-Carbon Ecosystems",
-      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits and services that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities. Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognized for their role in mitigating climate change.
+      text: `The coastal ecosystems of mangroves, tidal marshes, and seagrass meadows provide numerous benefits that are essential for climate change adaptation along coasts globally. These include protection from storms and sea-level rise, prevention of shoreline erosion, regulation of coastal water quality, provision of habitat for commercially important fisheries and endangered marine species, and food security for many coastal communities.
 
-Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
+Additionally, these ecosystems sequester and store significant amounts of coastal blue carbon from the atmosphere and ocean and are recognised for mitigating climate change.
+
+Despite these benefits, they are among the most threatened ecosystems on Earth, with 340,000 to 980,000 hectares being destroyed annually.`,
     },
-    question: "What is the synonym of the word \"meadows\" as used in the first paragraph of the above passage?",
+    question: "What is the synonym of 'meadows'?",
     options: [
-      { key: "A", text: "Pond" },
-      { key: "B", text: "Pasture" },
-      { key: "C", text: "Desert" },
-      { key: "D", text: "Lagoon" },
+      { key: "A", text: "Lagoon" },
+      { key: "B", text: "Desert" },
+      { key: "C", text: "Pond" },
+      { key: "D", text: "Pasture" },
     ],
-    correctAnswer: "B",
-    explanation: "A meadow is an area of grassland, synonymous with a pasture.",
+    correctAnswer: "D",
+    explanation: "'Meadows' refers to grassland areas, synonymous with 'Pasture'.",
   },
 
   // PASSAGE 10: Vincent van Gogh and Fruit Colour
@@ -722,9 +728,136 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "The study concluded that colorful fruits improve seed dispersal success because they are more easily located by animals.",
   },
 
-  // GRAMMAR & VOCABULARY (Virtusa OA Stage 1 PDF)
+  // GRAMMAR & VOCABULARY
   {
     id: 1,
+    section: "Grammar & Vocabulary",
+    question: "Sentence Correction:",
+    sentence: "We wish there was a easy route to take from here.",
+    options: [
+      { key: "A", text: "is a easy" },
+      { key: "B", text: "was an easy" },
+      { key: "C", text: "were a easy" },
+      { key: "D", text: "is a easier" },
+      { key: "E", text: "No error" },
+    ],
+    correctAnswer: "B",
+    explanation: "'Easy' begins with a vowel sound, so 'an' should be used instead of 'a'.",
+  },
+  {
+    id: 2,
+    section: "Grammar & Vocabulary",
+    question: "Fill in the blank:",
+    sentence: "Joanne _______ for a driving test at this moment.",
+    options: [
+      { key: "A", text: "had appeared" },
+      { key: "B", text: "appeared" },
+      { key: "C", text: "is appearing" },
+      { key: "D", text: "have been appearing" },
+    ],
+    correctAnswer: "C",
+    explanation: "'At this moment' indicates the present continuous tense ('is appearing').",
+  },
+  {
+    id: 3,
+    section: "Grammar & Vocabulary",
+    question: "Identify the error in the sentence:",
+    sentence: "For who are you waiting so late at night, by the side of the road?",
+    options: [
+      { key: "A", text: "For who" },
+      { key: "B", text: "waiting" },
+      { key: "C", text: "at night" },
+      { key: "D", text: "by the side" },
+    ],
+    correctAnswer: "A",
+    explanation: "After the preposition 'for', the correct objective pronoun is 'whom', not 'who'.",
+  },
+  {
+    id: 4,
+    section: "Grammar & Vocabulary",
+    question: "Fill in the blank:",
+    sentence: "The Parkers were not fond of following the crowd; none of them hesitated to be _______.",
+    options: [
+      { key: "A", text: "unique" },
+      { key: "B", text: "ordinary" },
+      { key: "C", text: "impolite" },
+      { key: "D", text: "mediocre" },
+    ],
+    correctAnswer: "A",
+    explanation: "Since they did not like following the crowd, they preferred to be 'unique'.",
+  },
+  {
+    id: 5,
+    section: "Grammar & Vocabulary",
+    question: "Choose the correct synonym:",
+    sentence: "What is the correct synonym for 'Educational'?",
+    options: [
+      { key: "A", text: "Impractical" },
+      { key: "B", text: "Didactic" },
+      { key: "C", text: "Ribaldry" },
+      { key: "D", text: "Ancon" },
+    ],
+    correctAnswer: "B",
+    explanation: "'Didactic' means intended to teach or educate.",
+  },
+  {
+    id: 6,
+    section: "Grammar & Vocabulary",
+    question: "Choose the correct articles:",
+    sentence: "In a world where dreams could become reality, _______ idea could become _______ art.",
+    options: [
+      { key: "A", text: "no article, an" },
+      { key: "B", text: "an, no article" },
+      { key: "C", text: "the, no article" },
+      { key: "D", text: "an, an" },
+    ],
+    correctAnswer: "B",
+    explanation: "We say 'an idea' (vowel sound) and 'become art' (art is an uncountable noun here).",
+  },
+  {
+    id: 7,
+    section: "Grammar & Vocabulary",
+    question: "Fill in the blanks:",
+    sentence: "It was good fortune that Emily _______ a seatbelt when her car collided last month; she _______ serious injury in that accident.",
+    options: [
+      { key: "A", text: "wore, escaped" },
+      { key: "B", text: "was wearing, escaped" },
+      { key: "C", text: "had worn, had escaped" },
+      { key: "D", text: "wears, escaped" },
+    ],
+    correctAnswer: "B",
+    explanation: "The collision occurred while Emily 'was wearing' a seatbelt (past continuous). The second action is simple past ('escaped').",
+  },
+  {
+    id: 8,
+    section: "Grammar & Vocabulary",
+    question: "Rearrange the phrases to form a complete sentence:",
+    sentence: "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
+    options: [
+      { key: "A", text: "CAEFDB" },
+      { key: "B", text: "CEAFDB" },
+      { key: "C", text: "CAEDBF" },
+      { key: "D", text: "CAEBFD" },
+    ],
+    correctAnswer: "A",
+    explanation: "Correct order is CAEFDB:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n(B) they were widely explored and exploited",
+  },
+  {
+    id: 9,
+    section: "Grammar & Vocabulary",
+    question: "Subject-Verb Agreement:",
+    sentence: "The best two things about the party _______ the food and the music.",
+    options: [
+      { key: "A", text: "was" },
+      { key: "B", text: "were" },
+      { key: "C", text: "have been" },
+      { key: "D", text: "has been" },
+    ],
+    correctAnswer: "B",
+    explanation: "The subject 'two things' is plural, so the correct past tense verb is 'were'.",
+  },
+  {
+    id: 10,
     section: "Grammar & Vocabulary",
     question: "Sentence Correction:",
     sentence: "The speaker had been left the stage before the awards were handed out.",
@@ -736,10 +869,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "No error" },
     ],
     correctAnswer: "C",
-    explanation: "The correct simple past tense is 'left'. 'Had been left' is grammatically incorrect in this context.",
+    explanation: "'The speaker left the stage before the awards were handed out.' 'Had been left' is passive/grammatically incorrect here.",
   },
   {
-    id: 2,
+    id: 11,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "Though these two cups are _______, they are not the perfect match for my tea set.",
@@ -750,10 +883,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "similar" },
     ],
     correctAnswer: "D",
-    explanation: "'Similar' means alike in appearance or nature, but not an exact/perfect match.",
+    explanation: "'Similar' means alike in appearance but not an exact or perfect match.",
   },
   {
-    id: 3,
+    id: 12,
     section: "Grammar & Vocabulary",
     question: "Identify the error in the sentence:",
     sentence: "When we hear the news, we were devastated by the tragedy.",
@@ -764,10 +897,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "by" },
     ],
     correctAnswer: "A",
-    explanation: "The main clause uses past tense ('were devastated'), so 'we hear' must be past tense ('we heard').",
+    explanation: "The sentence is in the past tense ('were devastated'), so 'we hear' should be 'we heard'.",
   },
   {
-    id: 4,
+    id: 13,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "No one noticed the treasure hidden _______ the cobwebs.",
@@ -778,10 +911,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "across" },
     ],
     correctAnswer: "C",
-    explanation: "'Beneath' means directly under or underneath the cobwebs.",
+    explanation: "'Beneath' means directly under or covered by the cobwebs.",
   },
   {
-    id: 5,
+    id: 14,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "The mansion was decorated in a/an _______ manner, with gold-plated fixtures and extravagant artwork.",
@@ -792,10 +925,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "penurious" },
     ],
     correctAnswer: "A",
-    explanation: "'Ostentatious' means characterized by vulgar or pretentious display designed to impress or show off wealth.",
+    explanation: "'Ostentatious' means showy, luxurious, or intended to impress.",
   },
   {
-    id: 6,
+    id: 15,
     section: "Grammar & Vocabulary",
     question: "Choose the correct synonym for 'Excerpt':",
     options: [
@@ -805,10 +938,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Augmentation" },
     ],
     correctAnswer: "A",
-    explanation: "An 'Excerpt' is a short extract or passage taken from a piece of writing.",
+    explanation: "An excerpt is a short extract or portion taken from a text.",
   },
   {
-    id: 7,
+    id: 16,
     section: "Grammar & Vocabulary",
     question: "Choose the correct articles:",
     sentence: "She had prepared diligently for her _______ exams and was delighted to have achieved _______ excellent grades.",
@@ -819,10 +952,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "no article, no article" },
     ],
     correctAnswer: "D",
-    explanation: "'Her' acts as a possessive determiner before 'exams', and 'excellent grades' is plural indefinite, so no articles are required.",
+    explanation: "Possessive pronoun 'her' precedes exams, and 'excellent grades' is plural indefinite, so no articles are required.",
   },
   {
-    id: 8,
+    id: 17,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "I _______ enough money to go on my dream vacation by next winter.",
@@ -833,13 +966,12 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "am saved" },
     ],
     correctAnswer: "B",
-    explanation: "'By next winter' signals an action that will be completed prior to a specific future point, requiring Future Perfect ('will have saved').",
+    explanation: "'By next winter' signals future completion, which requires the Future Perfect tense ('will have saved').",
   },
   {
-    id: 9,
+    id: 18,
     section: "Grammar & Vocabulary",
-    question: "Rearrange the phrases to form a complete sentence:",
-    sentence: "Fixed start: 'No sooner had I'\n(A) join in for a delightful visit\n(B) than the guest came.\n(C) arrived at the house,\n(D) knocking at the door, excited to",
+    question: "Rearrange the phrases to form a complete sentence: Fixed: 'No sooner had I' (A) join in for a delightful visit (B) than the guest came. (C) arrived at the house, (D) knocking at the door, excited to",
     options: [
       { key: "A", text: "A B C D" },
       { key: "B", text: "B C D A" },
@@ -847,10 +979,10 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "D A B C" },
     ],
     correctAnswer: "C",
-    explanation: "The correct sequence is C D A B: 'No sooner had I arrived at the house, knocking at the door, excited to join in for a delightful visit, than the guest came.'",
+    explanation: "Correct order is C D A B: 'No sooner had I arrived at the house, knocking at the door, excited to join in for a delightful visit, than the guest came.'",
   },
   {
-    id: 10,
+    id: 19,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "The mother grieved _______ her child's disappearance.",
@@ -861,6 +993,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "at" },
     ],
     correctAnswer: "A",
-    explanation: "The standard preposition after 'grieved' when expressing sorrow over a situation or loss is 'over'.",
+    explanation: "The standard English prepositional phrase is 'grieve over' a loss or tragedy.",
   },
+];
 ];
