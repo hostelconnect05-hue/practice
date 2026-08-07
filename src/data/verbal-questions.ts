@@ -773,7 +773,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "After the preposition 'for', the correct objective pronoun is 'whom', not 'who'.",
   },
   {
-    id: 5,
+    id: 4,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
     sentence: "The Parkers were not fond of following the crowd; none of them hesitated to be _______.",
@@ -787,7 +787,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "Since they did not like following the crowd, they preferred to be 'unique'.",
   },
   {
-    id: 6,
+    id: 5,
     section: "Grammar & Vocabulary",
     question: "Choose the correct synonym:",
     sentence: "What is the correct synonym for 'Educational'?",
@@ -801,7 +801,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "'Didactic' means intended to teach or educate.",
   },
   {
-    id: 7,
+    id: 6,
     section: "Grammar & Vocabulary",
     question: "Choose the correct articles:",
     sentence: "In a world where dreams could become reality, _______ idea could become _______ art.",
@@ -815,7 +815,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "We say 'an idea' (vowel sound) and 'become art' (art is an uncountable noun here).",
   },
   {
-    id: 8,
+    id: 7,
     section: "Grammar & Vocabulary",
     question: "Fill in the blanks:",
     sentence: "It was good fortune that Emily _______ a seatbelt when her car collided last month; she _______ serious injury in that accident.",
@@ -829,7 +829,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "The collision occurred while Emily 'was wearing' a seatbelt (past continuous). The second action is simple past ('escaped').",
   },
   {
-    id: 9,
+    id: 8,
     section: "Grammar & Vocabulary",
     question: "Rearrange the phrases to form a complete sentence:",
     sentence: "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
@@ -843,7 +843,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     explanation: "Correct order is CAEFDB:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n(B) they were widely explored and exploited",
   },
   {
-    id: 10,
+    id: 9,
     section: "Grammar & Vocabulary",
     question: "Subject-Verb Agreement:",
     sentence: "The best two things about the party _______ the food and the music.",

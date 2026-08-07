@@ -92,7 +92,7 @@ export function HomePageClient({
               <MessageSquare className="h-4 w-4 text-sky-400" />
               Verbal Ability
               <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
-                8 Qs
+                9 Qs
               </span>
             </button>
 
@@ -107,7 +107,7 @@ export function HomePageClient({
               <Terminal className="h-4 w-4 text-amber-400" />
               Technical Skills
               <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
-                68 Qs
+                67 Qs
               </span>
             </button>
 
@@ -273,7 +273,7 @@ export function HomePageClient({
                   <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
                     Section 3 • Grammar & Vocabulary
                   </Badge>
-                  <span className="text-xs text-sky-400 font-semibold">8 Questions</span>
+                  <span className="text-xs text-sky-400 font-semibold">9 Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 3: Verbal Ability
@@ -314,7 +314,7 @@ export function HomePageClient({
                   <Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30">
                     Section 6 • Technical Skills MCQs
                   </Badge>
-                  <span className="text-xs text-amber-400 font-semibold">68 Technical MCQs</span>
+                  <span className="text-xs text-amber-400 font-semibold">67 Technical MCQs</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 6: Technical Skills Assessment
