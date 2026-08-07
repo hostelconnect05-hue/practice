@@ -1,19 +1,19 @@
 [
   {
     "input": "3\n1 2 3\nabc\n",
-    "expectedOutput": "1 2 3"
+    "expectedOutput": "9"
   },
   {
     "input": "4\n1 1 2 2\naabb\n",
-    "expectedOutput": "1 1 2 2"
+    "expectedOutput": "4"
   },
   {
     "input": "4\n1 2 2 3\naaab\n",
-    "expectedOutput": "2 2 1 3"
+    "expectedOutput": "2"
   },
   {
     "input": "3\n5 5 5\nabc\n",
-    "expectedOutput": "5 5 5"
+    "expectedOutput": "0"
   },
   {
     "input": "1\n1\na\n",
@@ -21,14 +21,14 @@
   },
   {
     "input": "4\n1 2 3 4\naaaa\n",
-    "expectedOutput": "1 2 3 4"
+    "expectedOutput": "0"
   },
   {
     "input": "6\n7 7 8 8 9 9\naabbcc\n",
-    "expectedOutput": "7 7 8 8 9 9"
+    "expectedOutput": "9"
   },
   {
     "input": "6\n1 1 1 2 2 3\naaabbc\n",
-    "expectedOutput": "1 1 1 2 2 3"
+    "expectedOutput": "3"
   }
 ]
