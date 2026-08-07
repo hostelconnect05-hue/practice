@@ -1,0 +1,30 @@
+[
+  {
+    "input": "aab\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "aabbcc\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "xyzxyzxyz\n",
+    "expectedOutput": "7"
+  },
+  {
+    "input": "pwwkew\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "bbaaaccccccbbbaaabbbccc\n",
+    "expectedOutput": "12"
+  },
+  {
+    "input": "xyzzaz\n",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "bacba\n",
+    "expectedOutput": "4"
+  }
+]

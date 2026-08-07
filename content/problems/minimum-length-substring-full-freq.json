@@ -1,0 +1,31 @@
+{
+  "slug": "minimum-length-substring-full-freq",
+  "title": "Minimum Length Substring (Full Frequency Match)",
+  "difficulty": "Medium",
+  "topics": ["Strings", "Hash Table", "Sliding Window"],
+  "acceptance": "76.3%",
+  "statement": "You are given a string S.\n\nFind the minimum-length substring such that at least one character has the exact same frequency in the substring as its total frequency in the entire string S.\n\nIn other words:\n- Count the total frequency of every character in the original string S.\n- Find the smallest substring where at least one character appears exactly as many times as it appears in the original string.\n\n### Input Format\n- A single string S.\n\n### Output Format\n- Print a single integer representing the minimum length of such a substring.",
+  "examples": [
+    {
+      "input": "abcadbcd",
+      "output": "4",
+      "explanation": "Original frequencies: a:2, b:2, c:2, d:2. Substring \"abca\" has length 4 with 'a' appearing 2 times (matches original frequency of 'a'). Minimum length = 4."
+    },
+    {
+      "input": "xxxy",
+      "output": "2",
+      "explanation": "Original frequencies: x:3, y:1. Substring \"xy\" has length 2 with 'y' appearing 1 time (matches original frequency of 'y'). Minimum length = 2."
+    }
+  ],
+  "constraints": [
+    "1 <= |S| <= 10^4",
+    "String S consists of lowercase/uppercase characters."
+  ],
+  "hints": [
+    "First compute the frequency of all characters in the original string S using a map/hash array.",
+    "Generate or scan substrings starting at each index and maintain character counts.",
+    "As soon as any character count inside a substring equals its total frequency in S, update the minimum length answer."
+  ],
+  "relatedProblems": ["minimum-length-substring", "reduce-the-bill"],
+  "discussion": "Full frequency matching variant of minimum length substring problem."
+}

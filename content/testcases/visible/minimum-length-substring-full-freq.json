@@ -1,0 +1,22 @@
+[
+  {
+    "input": "abcadbcd\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "xxxy\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "aaaa\n",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "abcde\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "a\n",
+    "expectedOutput": "1"
+  }
+]
