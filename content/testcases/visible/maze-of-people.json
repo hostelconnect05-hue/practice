@@ -1,0 +1,22 @@
+[
+  {
+    "input": "5\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "8\n",
+    "expectedOutput": "-1"
+  },
+  {
+    "input": "1\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "3\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "7\n",
+    "expectedOutput": "3"
+  }
+]

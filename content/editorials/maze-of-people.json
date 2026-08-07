@@ -1,0 +1,10 @@
+{
+  "approach": "Direct simulation subtracting 2 from position per second.",
+  "observation": "Each second, 2 people ahead of any position greater than 3 leave the queue (position 1 and position 3). Thus your effective 1-based queue index drops by 2.",
+  "bruteForce": "Simulate queue array removal element by element. O(N) space and time.",
+  "optimalSolution": "Loop while position > 0: increment seconds. If position == 1 or position == 3, return seconds. Subtract 2 from position. If position <= 0, return -1. Time complexity O(N).",
+  "timeComplexity": "O(N) operations.",
+  "spaceComplexity": "O(1) auxiliary space.",
+  "dryRun": "N = 5. sec 1: pos 5!=1,3 -> pos=3. sec 2: pos=3 -> return 2.",
+  "edgeCases": ["N = 1 -> output 1", "N = 3 -> output 1", "N = 5 -> output 2", "Even positions like N = 8 -> output -1"]
+}
