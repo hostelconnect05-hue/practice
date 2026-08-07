@@ -314,7 +314,7 @@ export function HomePageClient({
                   <Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30">
                     Section 6 • Technical Skills MCQs
                   </Badge>
-                  <span className="text-xs text-amber-400 font-semibold">68 Technical MCQs</span>
+                  <span className="text-xs text-amber-400 font-semibold">67 Technical MCQs</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 6: Technical Skills Assessment
