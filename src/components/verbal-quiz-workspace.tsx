@@ -8,12 +8,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { verbalAbilityQuestions } from "@/data/verbal-questions";
 
-export function VerbalQuizWorkspace() {
+export function VerbalQuizWorkspace({
+  sectionFilter,
+  title = "Verbal Ability Assessment",
+  subtitle = "Select an option for each question to see immediate feedback. Click Submit Assessment at the bottom to view your final score.",
+  badgeText = "Section 3: Verbal Ability",
+}: {
+  sectionFilter?: "Reading Comprehension" | "Grammar & Vocabulary";
+  title?: string;
+  subtitle?: string;
+  badgeText?: string;
+}) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
+  const questionsToDisplay = sectionFilter
+    ? verbalAbilityQuestions.filter((q) => q.section === sectionFilter)
+    : verbalAbilityQuestions;
+
   const handleSelectOption = (questionId: number, optionKey: string) => {
-    // Immediate feedback allowed prior to submission or live
     setSelectedAnswers((prev) => ({
       ...prev,
       [questionId]: optionKey,
@@ -22,7 +35,7 @@ export function VerbalQuizWorkspace() {
 
   const calculateScore = () => {
     let score = 0;
-    verbalAbilityQuestions.forEach((q) => {
+    questionsToDisplay.forEach((q) => {
       if (selectedAnswers[q.id] === q.correctAnswer) {
         score++;
       }
@@ -31,8 +44,8 @@ export function VerbalQuizWorkspace() {
   };
 
   const score = calculateScore();
-  const total = verbalAbilityQuestions.length;
-  const percentage = Math.round((score / total) * 100);
+  const total = questionsToDisplay.length;
+  const percentage = total === 0 ? 0 : Math.round((score / total) * 100);
 
   const handleReattempt = () => {
     setSelectedAnswers({});
@@ -52,16 +65,16 @@ export function VerbalQuizWorkspace() {
             </Button>
           </Link>
           <Badge className="bg-emerald-500/10 text-emerald-400 border-emerald-500/30 px-3 py-1">
-            Section 3: Verbal Ability
+            {badgeText}
           </Badge>
         </div>
 
         <div className="space-y-2">
           <h1 className="text-3xl font-black tracking-tight text-zinc-50">
-            Verbal Ability Assessment
+            {title}
           </h1>
           <p className="text-sm text-zinc-400">
-            Select an option for each question to see immediate feedback. Click <strong>Submit Assessment</strong> at the bottom to view your final score.
+            {subtitle}
           </p>
         </div>
 
@@ -92,7 +105,7 @@ export function VerbalQuizWorkspace() {
 
         {/* Question List */}
         <div className="space-y-6">
-          {verbalAbilityQuestions.map((q, idx) => {
+          {questionsToDisplay.map((q, idx) => {
             const userSelection = selectedAnswers[q.id];
 
             return (

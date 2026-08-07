@@ -6,5 +6,12 @@ export const metadata = {
 };
 
 export default function VerbalAbilityPage() {
-  return <VerbalQuizWorkspace />;
+  return (
+    <VerbalQuizWorkspace
+      sectionFilter="Grammar & Vocabulary"
+      title="Section 3: Verbal Ability Assessment"
+      subtitle="Practice English grammar, sentence correction, vocabulary, synonyms, and subject-verb agreement with instant feedback and detailed explanations."
+      badgeText="Section 3: Grammar & Vocabulary"
+    />
+  );
 }
