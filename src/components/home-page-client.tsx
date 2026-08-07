@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2, Terminal, Calculator } from "lucide-react";
+import { Code2, ArrowRight, BookOpen, Layers, MessageSquare, CheckCircle2, Terminal, Calculator, Brain } from "lucide-react";
 import { ProblemCard } from "@/components/problem/problem-card";
 import { ProgressOverview } from "@/components/problem/progress-overview";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -123,6 +123,21 @@ export function HomePageClient({
               Aptitude
               <span className="ml-1 rounded-full bg-orange-500/20 px-2 py-0.5 text-xs font-bold text-orange-300">
                 12 Qs
+              </span>
+            </button>
+
+            <button
+              onClick={() => setActiveTab("analytical" as any)}
+              className={`flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                (activeTab as string) === "analytical"
+                  ? "bg-pink-500/10 text-pink-400 shadow-sm border border-pink-500/30"
+                  : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200"
+              }`}
+            >
+              <Brain className="h-4 w-4 text-pink-400" />
+              Analytical Ability
+              <span className="ml-1 rounded-full bg-pink-500/20 px-2 py-0.5 text-xs font-bold text-pink-300">
+                6 Qs
               </span>
             </button>
           </div>
@@ -332,7 +347,48 @@ export function HomePageClient({
           </div>
         )}
 
-        {/* Section 5: Coding Problems Grid */}
+        {/* Section 5: Analytical Ability Card */}
+        {(activeTab === "all" || (activeTab as string) === "analytical") && (
+          <div className="mb-6">
+            <Card className="border-pink-500/30 bg-pink-950/15 backdrop-blur hover:border-pink-500/50 transition">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="bg-pink-500/20 text-pink-300 border-pink-500/30">
+                    Section 8 • Analytical Ability
+                  </Badge>
+                  <span className="text-xs text-pink-400 font-semibold">6 Verified Analytical Questions</span>
+                </div>
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
+                  Section 8: Analytical Ability Assessment
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Practice logical and analytical reasoning on row seating arrangements, letter-word coding-decoding, blood relation family trees, queue order & ranking, and logical syllogism conclusions.
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-pink-400" /> Linear Seating & Position Mapping
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-pink-400" /> Word Coding & Pattern Deduction
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-pink-400" /> Family Trees & Syllogism Rules
+                  </span>
+                </div>
+                <Link href="/analytical-ability">
+                  <Button className="w-full sm:w-auto mt-2 justify-between gap-3 bg-pink-600 hover:bg-pink-500 text-white font-semibold px-6">
+                    Start Analytical Assessment
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {/* Section 6: Coding Problems Grid */}
         {(activeTab === "all" || activeTab === "coding") && (
           <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {problems.map((problem) => (
