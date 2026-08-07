@@ -147,12 +147,14 @@ export function HomePageClient({
           </div>
         </div>
 
-        {/* Progress Overview Statistics */}
-        <ProgressOverview
-          solved={progress.solved}
-          attempted={progress.attempted}
-          successRate={progress.successRate}
-        />
+        {/* Progress Overview Statistics (Visible only in Coding Problems) */}
+        {activeTab === "coding" && (
+          <ProgressOverview
+            solved={progress.solved}
+            attempted={progress.attempted}
+            successRate={progress.successRate}
+          />
+        )}
 
         {/* Section Header */}
         <div className="flex items-center justify-between pt-2">
