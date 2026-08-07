@@ -235,7 +235,48 @@ export function HomePageClient({
           </div>
         )}
 
-        {/* Section 3: Coding Problems Grid */}
+        {/* Section 3: Technical Skills Card */}
+        {(activeTab === "all" || (activeTab as string) === "tech") && (
+          <div className="mb-6">
+            <Card className="border-amber-500/30 bg-amber-950/15 backdrop-blur hover:border-amber-500/50 transition">
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between gap-3">
+                  <Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30">
+                    Section 6 • Technical Skills MCQs
+                  </Badge>
+                  <span className="text-xs text-amber-400 font-semibold">23 Technical MCQs</span>
+                </div>
+                <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
+                  Section 6: Technical Skills Assessment
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Practice core Virtusa Technical MCQs across C++, Object-Oriented Programming (OOP), Data Structures (Disjoint Set, Priority Queue, Stack, Linked List), Operating Systems (Scheduling, File Allocation, Bootloader), and SQL / DBMS (Joins, Date Functions, Grant Permissions).
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-xs text-zinc-400 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-amber-400" /> C++ Access Specifiers & OOP
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-amber-400" /> Data Structures & OS Kernels
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="h-3.5 w-3.5 text-amber-400" /> SQL Queries & Permissions
+                  </span>
+                </div>
+                <Link href="/technical-skills">
+                  <Button className="w-full sm:w-auto mt-2 justify-between gap-3 bg-amber-600 hover:bg-amber-500 text-white font-semibold px-6">
+                    Start Technical Assessment
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {/* Section 4: Coding Problems Grid */}
         {(activeTab === "all" || activeTab === "coding") && (
           <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {problems.map((problem) => (
