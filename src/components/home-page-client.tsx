@@ -92,7 +92,7 @@ export function HomePageClient({
               <MessageSquare className="h-4 w-4 text-sky-400" />
               Verbal Ability
               <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
-                9 Qs
+                10 Qs
               </span>
             </button>
 
@@ -273,7 +273,7 @@ export function HomePageClient({
                   <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
                     Section 3 • Grammar & Vocabulary
                   </Badge>
-                  <span className="text-xs text-sky-400 font-semibold">9 Questions</span>
+                  <span className="text-xs text-sky-400 font-semibold">10 Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 3: Verbal Ability
