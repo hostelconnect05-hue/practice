@@ -273,7 +273,7 @@ export function HomePageClient({
                   <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
                     Section 3 • Grammar & Vocabulary
                   </Badge>
-                  <span className="text-xs text-sky-400 font-semibold">19 Questions</span>
+                  <span className="text-xs text-sky-400 font-semibold">24 Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 3: Verbal Ability
