@@ -117,6 +117,9 @@ export function VerbalQuizWorkspace() {
                       >
                         {userSelection === q.correctAnswer ? "Correct" : "Incorrect"}
                       </Badge>
+                    )}
+                  </div>
+
                   {q.passage && (
                     <div className="mt-3 rounded-xl border border-sky-500/30 bg-sky-950/20 p-4 text-zinc-200">
                       <div className="flex items-center gap-2 mb-2">
