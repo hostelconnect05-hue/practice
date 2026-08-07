@@ -954,7 +954,7 @@ SELECT name FROM Graduate_Students;`,
     explanation: "UNION combines distinct rows from both queries, automatically discarding duplicates.",
   },
   {
-    id: 60,
+    id: 61,
     topic: "C++ / OOP - Protected Inheritance",
     question: "What is the output of class B : public A { public: void printData() { cout << 'Data: ' << data; } } where protected int data = 42 in class A?",
     codeSnippet: `class A {
@@ -984,7 +984,7 @@ int main() {
     explanation: "Protected members can be accessed inside derived classes like B via printData().",
   },
   {
-    id: 61,
+    id: 62,
     topic: "C++ / OOP - Purpose of Access Specifiers",
     question: "What is the purpose of access specifiers in C++?",
     options: [
@@ -997,7 +997,7 @@ int main() {
     explanation: "Access specifiers (public, protected, private) control member visibility and enforce encapsulation.",
   },
   {
-    id: 62,
+    id: 63,
     topic: "C++ / OOP - Protected Access Specifier",
     question: "Which access specifier allows a derived class to access a member while preventing direct access from outside the class?",
     options: [
@@ -1010,7 +1010,7 @@ int main() {
     explanation: "Protected members are accessible inside derived classes but inaccessible directly outside the class.",
   },
   {
-    id: 63,
+    id: 64,
     topic: "Java / OOP - Arrays.sort Import Error",
     question: "Why does the program fail to compile when Arrays.sort(args) is called without an import statement?",
     codeSnippet: `public class Sample {
@@ -1035,7 +1035,7 @@ int main() {
     explanation: "Arrays belongs to java.util.Arrays. Without import java.util.Arrays, compilation fails.",
   },
   {
-    id: 64,
+    id: 65,
     topic: "C++ / OOP - Scope Resolution Operator",
     question: "In C++ code void Box::setLength(int l), what is the purpose of the :: operator?",
     codeSnippet: `class Box {
@@ -1062,7 +1062,7 @@ int Box::getLength() {
     explanation: "The scope resolution operator (::) links member function definitions back to their class when defined outside.",
   },
   {
-    id: 65,
+    id: 66,
     topic: "C++ / OOP - BankAccount Encapsulation",
     question: "A BankAccount class has a private balance and methods deposit() and getBalance(). Which approach best maintains encapsulation?",
     options: [
@@ -1075,7 +1075,7 @@ int Box::getLength() {
     explanation: "Keeping balance private while exposing controlled methods like withdraw() maintains proper encapsulation.",
   },
   {
-    id: 66,
+    id: 67,
     topic: "C++ / OOP - Hierarchical Inheritance",
     question: "Class Dog : public Animal and Class Cat : public Animal demonstrate which type of inheritance?",
     codeSnippet: `class Animal {
@@ -1097,7 +1097,7 @@ class Cat : public Animal {};`,
     explanation: "Hierarchical inheritance occurs when multiple derived classes inherit from a single base class.",
   },
   {
-    id: 67,
+    id: 68,
     topic: "C++ / OOP - Inheritance of Members",
     question: "When a class Car inherits from Vehicle, which members of Vehicle are directly accessible in Car?",
     options: [
