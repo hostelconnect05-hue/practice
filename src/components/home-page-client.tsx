@@ -77,7 +77,7 @@ export function HomePageClient({
               <BookOpen className="h-4 w-4 text-purple-400" />
               Reading Comprehension
               <span className="ml-1 rounded-full bg-purple-500/20 px-2 py-0.5 text-xs font-bold text-purple-300">
-                19 Qs
+                23 Qs
               </span>
             </button>
 
