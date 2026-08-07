@@ -133,6 +133,27 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
+    question: "What ambivalent feelings might the giver experience when giving gifts? (Variant)",
+    options: [
+      { key: "A", text: "Sadness and excitement" },
+      { key: "B", text: "Excitement and satisfaction" },
+      { key: "C", text: "Happiness and anxiety" },
+      { key: "D", text: "Joy and laughter" },
+    ],
+    correctAnswer: "C",
+    explanation: "The giver feels happy about strengthening the relationship, but anxious about choosing the wrong gift.",
+  },
+  {
+    id: 107,
+    section: "Reading Comprehension",
+    passage: {
+      title: "Passage 1: Gift-Giving",
+      text: `According to statistics, people spend more than a billion dollars every month to find the perfect gift. While giving gifts is usually a joyful thing, it can leave the giver with ambivalent feelings. On the one hand, they might feel happy about finding a great gift to strengthen their relationship with the person receiving it. But on the other hand, they might feel anxious because they don't want to choose the wrong gift and disappoint the person.
+
+Social psychologists view giving gifts as a positive social tradition, while economists hold a different opinion. Economists often see gift-giving as a waste of resources without much benefit. This is because people tend to buy gifts that the person receiving the gift wouldn't buy for themselves or find too expensive (a phenomenon called "deadweight loss"). For example, someone might spend $200 on a gift when the recipient would only spend $100 on it if they were buying it themselves. This "deadweight loss" shows that people often struggle to choose gifts that the recipient truly likes.
+
+Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
+    },
     question: "What does the passage suggest about the relationship between social psychologists and economists regarding gift-giving?",
     options: [
       { key: "A", text: "They collaborate to analyze the cultural impact of gift-giving traditions." },

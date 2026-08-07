@@ -131,7 +131,7 @@ export function HomePageClient({
           </div>
           <span className="text-xs text-zinc-400">
             {activeTab === "rc"
-              ? "10 Virtusa Passages (19 Questions)"
+              ? "10 Virtusa Passages (20 Questions)"
               : activeTab === "verbal"
               ? "Grammar & Vocabulary Questions"
               : "Select a module to launch practice"}
@@ -147,7 +147,7 @@ export function HomePageClient({
                   <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
                     Section 3 • Reading Comprehension
                   </Badge>
-                  <span className="text-xs text-purple-400 font-semibold">10 Passages • 19 Questions</span>
+                  <span className="text-xs text-purple-400 font-semibold">10 Passages • 20 Questions</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Reading Comprehension Passages
