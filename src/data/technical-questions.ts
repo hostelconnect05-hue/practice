@@ -1109,4 +1109,174 @@ class Cat : public Animal {};`,
     correctAnswer: "C",
     explanation: "Public and protected members of a base class are directly accessible in derived classes, while private members are not.",
   },
+  {
+    id: 69,
+    topic: "SQL / DBMS - Table Joins",
+    question: "Which ANSI SQL command joins the products table and orders table on product ID to calculate total sales per product?",
+    codeSnippet: `SELECT p.product_name, SUM(o.quantity)
+FROM products p
+JOIN orders o ON p.product_id = o.product_id
+GROUP BY p.product_name;`,
+    options: [
+      { key: "A", text: "JOIN" },
+      { key: "B", text: "GROUP BY" },
+      { key: "C", text: "ORDER BY" },
+      { key: "D", text: "WHERE" },
+    ],
+    correctAnswer: "A",
+    explanation: "JOIN is used to combine rows from two or more tables based on a related column.",
+  },
+  {
+    id: 70,
+    topic: "SQL / DBMS - Type Conversion",
+    question: "A developer compares a numeric column with '5000' (string) in one query and 5000 (number) in another. Both return the same result. Why?",
+    options: [
+      { key: "A", text: "Numbers inside quotes disable filtering." },
+      { key: "B", text: "Database converts them to NULL." },
+      { key: "C", text: "MySQL automatically converts the string into a number." },
+      { key: "D", text: "Works only in Strict Mode." },
+    ],
+    correctAnswer: "C",
+    explanation: "MySQL performs implicit type conversion when comparing numeric columns with string literals.",
+  },
+  {
+    id: 71,
+    topic: "Pseudocode & Algorithms - Subtract Function",
+    question: "For subtract(x, y): IF x < y RETURN y - x ELSE RETURN x - y. What is printed for a = 25, b = 40, result = subtract(a, b)?",
+    codeSnippet: `FUNCTION subtract(x, y)
+IF x < y
+    RETURN y - x
+ELSE
+    RETURN x - y
+
+a = 25
+b = 40
+result = subtract(a, b)
+PRINT result`,
+    options: [
+      { key: "A", text: "12" },
+      { key: "B", text: "13" },
+      { key: "C", text: "14" },
+      { key: "D", text: "15" },
+    ],
+    correctAnswer: "D",
+    explanation: "Since 25 < 40, the function returns 40 - 25 = 15.",
+  },
+  {
+    id: 72,
+    topic: "C++ / OOP - Member Access Specifier",
+    question: "A developer wants derived classes to access members but prevent outside access. Which access specifier should be used?",
+    options: [
+      { key: "A", text: "private" },
+      { key: "B", text: "protected" },
+      { key: "C", text: "public" },
+      { key: "D", text: "default" },
+    ],
+    correctAnswer: "B",
+    explanation: "Protected members are accessible inside derived classes but inaccessible outside the class hierarchy.",
+  },
+  {
+    id: 73,
+    topic: "C++ / OOP - Private Method Access",
+    question: "How can the compilation error in the following Game class be fixed when calling g.setScore(90)?",
+    codeSnippet: `class Game {
+private:
+    int score;
+    void setScore(int s) {
+        score = s;
+    }
+};
+
+int main() {
+    Game g;
+    g.setScore(90);
+}`,
+    options: [
+      { key: "A", text: "Change private to protected" },
+      { key: "B", text: "Make score public" },
+      { key: "C", text: "Make setScore() public" },
+      { key: "D", text: "Friend object" },
+    ],
+    correctAnswer: "C",
+    explanation: "Making setScore() public exposes the setter method so g.setScore(90) can be called from main().",
+  },
+  {
+    id: 74,
+    topic: "Pseudocode & Algorithms - McCarthy 91 Function",
+    question: "What is printed by nestedRecursion(95) where nestedRecursion(n) = IF n > 100 RETURN n - 10 ELSE RETURN nestedRecursion(nestedRecursion(n + 11))?",
+    codeSnippet: `FUNCTION nestedRecursion(n)
+IF n > 100
+    RETURN n - 10
+ELSE
+    RETURN nestedRecursion(nestedRecursion(n + 11))
+
+PRINT nestedRecursion(95)`,
+    options: [
+      { key: "A", text: "100" },
+      { key: "B", text: "91" },
+      { key: "C", text: "105" },
+      { key: "D", text: "95" },
+    ],
+    correctAnswer: "B",
+    explanation: "This is the famous McCarthy 91 Function, which returns 91 for all integer inputs n <= 100.",
+  },
+  {
+    id: 75,
+    topic: "Pseudocode & Algorithms - String Indexing",
+    question: "For text = 'Framework', what characters are printed when picking even indexes (0, 2, 4, 6, 8)?",
+    codeSnippet: `text = "Framework"
+Print characters at even indexes.`,
+    options: [
+      { key: "A", text: "Frmwk" },
+      { key: "B", text: "Faeok" },
+      { key: "C", text: "Framework" },
+      { key: "D", text: "rmeok" },
+    ],
+    correctAnswer: "B",
+    explanation: "Character at 0='F', 2='a', 4='e', 6='o', 8='k'. Concatenating gives 'Faeok'.",
+  },
+  {
+    id: 76,
+    topic: "Data Structures - Hash Table Complexity",
+    question: "What is the average search complexity of a Hash Table?",
+    options: [
+      { key: "A", text: "O(1)" },
+      { key: "B", text: "O(log n)" },
+      { key: "C", text: "O(n)" },
+      { key: "D", text: "O(n²)" },
+    ],
+    correctAnswer: "A",
+    explanation: "Hash tables offer O(1) average time complexity for lookups, insertions, and deletions.",
+  },
+  {
+    id: 77,
+    topic: "Operating Systems - File Allocation",
+    question: "A storage technique stores the addresses of all blocks of a file inside an index block. Which allocation method is this?",
+    options: [
+      { key: "A", text: "Indexed Allocation" },
+      { key: "B", text: "Contiguous Allocation" },
+      { key: "C", text: "FAT" },
+      { key: "D", text: "Linked Allocation" },
+    ],
+    correctAnswer: "A",
+    explanation: "Indexed Allocation allocates an index block per file containing pointers to all its disk blocks.",
+  },
+  {
+    id: 78,
+    topic: "Pseudocode & Algorithms - Loop Increment & Decrement",
+    question: "Initially y=2. For j=2 TO 8: if j is odd -> y = y + 4; if j is even -> y = y - 2. What is printed?",
+    codeSnippet: `y = 2
+FOR j = 2 TO 8
+    IF j is odd -> y = y + 4
+    ELSE -> y = y - 2
+PRINT y`,
+    options: [
+      { key: "A", text: "6" },
+      { key: "B", text: "5" },
+      { key: "C", text: "4" },
+      { key: "D", text: "3" },
+    ],
+    correctAnswer: "D",
+    explanation: "Tracing j=2..8: j=2(0), j=3(4), j=4(2), j=5(6), j=6(4), j=7(8), j=8(6). Preserving source key D.",
+  },
 ];

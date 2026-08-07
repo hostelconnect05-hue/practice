@@ -107,7 +107,7 @@ export function HomePageClient({
               <Terminal className="h-4 w-4 text-amber-400" />
               Technical Skills
               <span className="ml-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-xs font-bold text-amber-300">
-                67 Qs
+                77 Qs
               </span>
             </button>
 
@@ -255,7 +255,7 @@ export function HomePageClient({
                 </div>
                 <Link href="/reading-comprehension">
                   <Button className="w-full sm:w-auto mt-2 justify-between gap-3 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6">
-                    Start Reading Comprehension
+                    Start Reading Comprehension Assessment
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
@@ -314,7 +314,7 @@ export function HomePageClient({
                   <Badge className="bg-amber-500/20 text-amber-300 border-amber-500/30">
                     Section 6 • Technical Skills MCQs
                   </Badge>
-                  <span className="text-xs text-amber-400 font-semibold">67 Technical MCQs</span>
+                  <span className="text-xs text-amber-400 font-semibold">77 Technical MCQs</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 6: Technical Skills Assessment
