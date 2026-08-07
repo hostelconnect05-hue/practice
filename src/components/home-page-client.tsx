@@ -77,7 +77,7 @@ export function HomePageClient({
               <MessageSquare className="h-4 w-4 text-sky-400" />
               Section 3: Verbal Ability
               <span className="ml-1 rounded-full bg-sky-500/20 px-2 py-0.5 text-xs font-bold text-sky-300">
-                18 Qs
+                27 Qs
               </span>
             </button>
           </div>
@@ -111,7 +111,7 @@ export function HomePageClient({
             </h2>
           </div>
           <span className="text-xs text-zinc-400">
-            {activeTab === "verbal" ? "18 Practice Questions with Passages & Explanations" : "Select a problem to launch the workspace"}
+            {activeTab === "verbal" ? "27 Practice Questions with 10 Reading Comprehension Passages" : "Select a problem to launch the workspace"}
           </span>
         </div>
 
@@ -122,9 +122,9 @@ export function HomePageClient({
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between gap-3">
                   <Badge className="bg-sky-500/20 text-sky-300 border-sky-500/30">
-                    Section 3 • Reading Comprehension & MCQ
+                    Section 3 • Reading Comprehension & Grammar
                   </Badge>
-                  <span className="text-xs text-sky-400 font-semibold">18 Questions (Passages + Grammar)</span>
+                  <span className="text-xs text-sky-400 font-semibold">27 Questions (10 Passages + Grammar)</span>
                 </div>
                 <CardTitle className="text-xl font-bold text-zinc-50 mt-2">
                   Section 3: Verbal Ability & Reading Comprehension
@@ -132,7 +132,7 @@ export function HomePageClient({
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-sm text-zinc-300 leading-relaxed">
-                  Practice Reading Comprehension passages (Gift-Giving, Storr Lochs Monster) alongside English grammar, sentence correction, vocabulary, synonyms, and subject-verb agreement. Includes instant right/wrong feedback, detailed explanations, live scoring, and reattempts.
+                  Complete collection of all 10 Virtusa Reading Comprehension Passages (Gift-Giving, Storr Lochs Monster, Oral History, Carbon Dioxide, Bird Flight, Body Fat, Light Spectrum, Guam Snakes, Coastal Blue-Carbon, Van Gogh) along with grammar, vocabulary, sentence correction, and subject-verb agreement questions.
                 </p>
                 <div className="flex items-center gap-4 text-xs text-zinc-400 pt-1">
                   <span className="flex items-center gap-1.5">
