@@ -248,4 +248,17 @@ export const aptitudeQuestions: AptitudeQuestion[] = [
     correctAnswer: "D",
     explanation: "40% work = 4 days ⇒ 100% work = (4 / 40) × 100 = 10 days. Three times the work = 3 × 10 = 30 days.",
   },
+  {
+    id: 19,
+    topic: "Boats & Streams - Distance Calculation",
+    question: "Mia swims at 5 km/h in still water. She swims from A to B and back in a river in 5 hours. The river speed is 1 km/h. Find the distance between A and B.",
+    options: [
+      { key: "A", text: "12 km" },
+      { key: "B", text: "10 km" },
+      { key: "C", text: "12.5 km" },
+      { key: "D", text: "11.5 km" },
+    ],
+    correctAnswer: "A",
+    explanation: "Downstream speed = 5 + 1 = 6 km/h, Upstream speed = 5 - 1 = 4 km/h. Equation: x/6 + x/4 = 5 ⇒ 5x/12 = 5 ⇒ x = 12 km.",
+  },
 ];
