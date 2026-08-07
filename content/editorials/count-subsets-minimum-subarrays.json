@@ -1,0 +1,10 @@
+{
+  "approach": "Greedy sorting and sequential index tracking.",
+  "observation": "Sorting the array allows smaller numbers to fulfill early index requirements (1, 2, 3...) as early as possible. Whenever a number is smaller than the required 1-based index, it cannot extend the current subarray and must start a new one at index 1.",
+  "bruteForce": "Try all permutations and partitions of the array. Exponential time complexity O(N!).",
+  "optimalSolution": "Sort array arr. Initialize count = 0, targetIndex = 1. Iterate through sorted arr: if arr[i] >= targetIndex, targetIndex++. Else, count++, targetIndex = 1, i-- (recheck current element as 1st element of new subarray). Return count + 1.",
+  "timeComplexity": "O(N log N) for sorting plus O(N) for linear scan.",
+  "spaceComplexity": "O(1) auxiliary space (ignoring sorting overhead).",
+  "dryRun": "arr = [6, 1, 6, 1, 3, 2, 6, 1]. Sorted = [1, 1, 1, 2, 3, 6, 6, 6]. 1>=1 (idx=2), 1<2 -> count=1, idx=1. 1>=1 (idx=2), 2>=2 (idx=3), 3>=3 (idx=4), 6>=4 (idx=5), 6>=5 (idx=6), 6>=6 (idx=7). Finish -> 1 + 2 = 3 subarrays.",
+  "edgeCases": ["N = 1", "All elements identical (e.g. [1, 1, 1])", "Large numbers (e.g. [10^9, 10^9])", "Array where all arr[i] >= N"]
+}
