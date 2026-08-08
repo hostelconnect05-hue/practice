@@ -16,7 +16,7 @@ const editorialDir = path.join(root, "content", "editorials");
 const templateDir = path.join(root, "content", "templates");
 const visibleTestDir = path.join(root, "content", "testcases", "visible");
 const hiddenTestDir = path.join(root, "content", "testcases", "hidden");
-const problemOrder = ["minimum-index", "smallest-missing-even-number", "5-days-challenge", "shopping-cart", "index-sort", "frequency-sync", "vowel-consonant-rearrange"];
+const problemOrder = ["minimum-index", "smallest-missing-even-number", "5-days-challenge", "shopping-cart", "index-sort", "frequency-sync", "vowel-consonant-rearrange", "river-current"];
 
 async function loadJson<T>(filePath: string): Promise<T> {
   const raw = await fs.readFile(filePath, "utf8");

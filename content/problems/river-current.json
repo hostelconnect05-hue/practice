@@ -1,0 +1,31 @@
+{
+  "slug": "river-current",
+  "title": "River Current",
+  "difficulty": "Medium",
+  "topics": ["Arrays", "Two Pointers", "Prefix & Suffix"],
+  "acceptance": "84.5%",
+  "statement": "You are given an integer array C of size N, representing the current strength at different sections of a river.\n\n- A positive value (> 0) represents a current flowing to the right.\n- A negative value (< 0) represents a current flowing to the left.\n- A value of 0 represents a stagnant section.\n\nYour task is to replace every 0 in the array with the net current strength based on the nearest non-zero currents on its left and right.\n\n### Rules\n1. If both the left and right non-zero currents exist:\n   - Compare their absolute values (strengths).\n   - The current with the greater absolute value influences the stagnant section.\n   - Copy that value (including its sign) into the zero position.\n   - If both left and right non-zero currents have equal absolute strength, copy the left current's value.\n2. If only one non-zero current exists (either on the left or on the right), copy that value.\n3. If multiple consecutive zeros appear, each zero should consider the nearest non-zero current on both sides (ignoring all intermediate zeros).\n4. If there is no non-zero current on either side (i.e., the entire array consists of zeros), leave the value as 0.\n\n### Input Format\n- The first line contains an integer N, representing the number of river sections.\n- The second line contains N space-separated integers representing the array C.\n\n### Output Format\n- Print N space-separated integers representing the modified array after replacing all stagnant sections.",
+  "examples": [
+    {
+      "input": "5\n2 0 -3 0 5",
+      "output": "2 -3 -3 5 5",
+      "explanation": "Index 1: Left = 2, Right = -3. |-3| > |2|, so replaced with -3.\nIndex 3: Left = -3, Right = 5. |5| > |-3|, so replaced with 5.\nFinal array: [2, -3, -3, 5, 5]."
+    },
+    {
+      "input": "5\n0 4 0 0 -6",
+      "output": "4 4 -6 -6 -6",
+      "explanation": "Index 0: Only right current (4) exists -> 4.\nIndex 2 & 3: Left = 4, Right = -6. |-6| > |4|, so replaced with -6.\nFinal array: [4, 4, -6, -6, -6]."
+    }
+  ],
+  "constraints": [
+    "1 <= N <= 2 * 10^5",
+    "-10^9 <= C[i] <= 10^9"
+  ],
+  "hints": [
+    "Precompute the nearest non-zero element to the left for every index in a left-to-right pass.",
+    "Precompute the nearest non-zero element to the right for every index in a right-to-left pass.",
+    "For each 0 at index i, compare precomputed left and right values using Math.abs() to determine the replacement."
+  ],
+  "relatedProblems": ["frog-in-the-pond", "minimum-length-substring"],
+  "discussion": "Two-pass prefix and suffix precomputation approach in O(N) time and O(N) space."
+}

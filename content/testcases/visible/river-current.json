@@ -1,0 +1,22 @@
+[
+  {
+    "input": "5\n2 0 -3 0 5\n",
+    "expectedOutput": "2 -3 -3 5 5"
+  },
+  {
+    "input": "5\n0 4 0 0 -6\n",
+    "expectedOutput": "4 4 -6 -6 -6"
+  },
+  {
+    "input": "4\n0 0 0 0\n",
+    "expectedOutput": "0 0 0 0"
+  },
+  {
+    "input": "5\n10 -20 30 -40 50\n",
+    "expectedOutput": "10 -20 30 -40 50"
+  },
+  {
+    "input": "3\n4 0 -4\n",
+    "expectedOutput": "4 4 -4"
+  }
+]

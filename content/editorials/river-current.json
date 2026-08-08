@@ -1,0 +1,10 @@
+{
+  "approach": "Precompute the nearest non-zero values on both sides using left-to-right and right-to-left passes.",
+  "observation": "Every stagnant section (0) relies solely on the nearest non-zero element to its left and right, regardless of how many 0s lie between them.",
+  "bruteForce": "For each 0, scan left and right dynamically to locate nearest non-zero elements. Worst case O(N^2).",
+  "optimalSolution": "1. Perform a left-to-right pass to maintain the last seen non-zero value in leftNonZero[i].\n2. Perform a right-to-left pass to maintain the last seen non-zero value in rightNonZero[i].\n3. Iterate i from 0 to N-1: if C[i] == 0, compare |leftNonZero[i]| and |rightNonZero[i]| and copy the dominant value.",
+  "timeComplexity": "O(N) single linear passes.",
+  "spaceComplexity": "O(N) for storing precomputed arrays.",
+  "dryRun": "N = 5, C = [2, 0, -3, 0, 5].\nleftNonZero = [null, 2, 2, -3, -3]\nrightNonZero = [-3, -3, 5, 5, null]\nFor i=1: left=2, right=-3. |-3| > |2| => -3.\nFor i=3: left=-3, right=5. |5| > |-3| => 5.",
+  "edgeCases": ["All elements are 0", "Only 1 non-zero element", "No zeros present", "Equal absolute values on left and right"]
+}
