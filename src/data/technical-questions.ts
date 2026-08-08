@@ -1272,9 +1272,6 @@ print y`,
     id: 79,
     topic: "SQL / DBMS - UPDATE Statement",
     question: "Which SQL statement updates the bonus to 5000 for all employees whose salary is greater than 50000?",
-    codeSnippet: `UPDATE employees
-SET bonus = 5000
-WHERE salary > 50000;`,
     options: [
       { key: "A", text: "UPDATE employees SET bonus = 5000 WHERE salary > 50000;" },
       { key: "B", text: "ALTER TABLE employees SET bonus = 5000;" },
@@ -1288,12 +1285,11 @@ WHERE salary > 50000;`,
     id: 80,
     topic: "SQL / DBMS - String Occurrence Counting",
     question: "Which MySQL expression counts the number of times the word 'fail' appears in a string using LENGTH() and REPLACE()?",
-    codeSnippet: `(LENGTH(str) - LENGTH(REPLACE(str, 'fail', ''))) / 4`,
     options: [
-      { key: "A", text: "(LENGTH(str)-LENGTH(REPLACE(str,'fail','')))/4" },
+      { key: "A", text: "(LENGTH(str) - LENGTH(REPLACE(str, 'fail', ''))) / 4" },
       { key: "B", text: "COUNT(fail)" },
       { key: "C", text: "FIND('fail')" },
-      { key: "D", text: "REPLACE(str,'fail')" },
+      { key: "D", text: "REPLACE(str, 'fail')" },
     ],
     correctAnswer: "A",
     explanation: "REPLACE removes all occurrences of 'fail'. Dividing the length reduction by 4 (length of 'fail') gives the exact occurrence count.",
@@ -1315,10 +1311,6 @@ WHERE salary > 50000;`,
     id: 82,
     topic: "SQL / DBMS - GROUP BY HAVING",
     question: "Which clause filters groups whose average resolution time is greater than 5 hours?",
-    codeSnippet: `SELECT team, AVG(resolution_time)
-FROM tickets
-GROUP BY team
-HAVING AVG(resolution_time) > 5;`,
     options: [
       { key: "A", text: "WHERE AVG(resolution_time)>5" },
       { key: "B", text: "HAVING AVG(resolution_time)>5" },
@@ -1332,8 +1324,6 @@ HAVING AVG(resolution_time) > 5;`,
     id: 83,
     topic: "SQL / DBMS - CREATE VIEW",
     question: "Which SQL statement creates a view named MumbaiPatients containing patients whose City is 'Mumbai'?",
-    codeSnippet: `CREATE VIEW MumbaiPatients AS
-SELECT * FROM Patients WHERE City='Mumbai';`,
     options: [
       { key: "A", text: "CREATE VIEW MumbaiPatients AS SELECT * FROM Patients WHERE City='Mumbai';" },
       { key: "B", text: "CREATE TABLE MumbaiPatients SELECT * FROM Patients;" },
