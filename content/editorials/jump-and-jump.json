@@ -1,0 +1,15 @@
+{
+  "approach": "Evaluate net movement (2*k - X) * L for all k from 0 to X.",
+  "observation": "Let k be the number of forward jumps. The remaining (X - k) jumps are backward. The net position change is (k - (X - k)) * L = (2*k - X) * L.",
+  "bruteForce": "Loop k from 0 to X, compute final position P + (2*k - X) * L, and find the minimum absolute value |P + (2*k - X) * L|.",
+  "optimalSolution": "1. Initialize min_abs = infinity.\n2. For k from 0 to X:\n   - position = P + (2*k - X) * L\n   - min_abs = min(min_abs, abs(position))\n3. Return min_abs.",
+  "timeComplexity": "O(X) time complexity.",
+  "spaceComplexity": "O(1) auxiliary space.",
+  "dryRun": "P = 7, X = 4, L = 3.\nk=0: 7 + (-4)*3 = -5 -> abs=5\nk=1: 7 + (-2)*3 = 1 -> abs=1\nk=2: 7 + (0)*3 = 7 -> abs=7\nk=3: 7 + (2)*3 = 13 -> abs=13\nk=4: 7 + (4)*3 = 19 -> abs=19\nMinimum absolute value = 1.",
+  "edgeCases": [
+    "X = 0 (final pos = P)",
+    "L = 0 (final pos = P)",
+    "P = 0 (minimum is 0 or parity offset)",
+    "Negative P values"
+  ]
+}

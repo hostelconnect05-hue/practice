@@ -30,6 +30,7 @@ const problemOrder = [
   "knight-ranking-parade",
   "classroom",
   "geometric-progression-series",
+  "jump-and-jump",
 ];
 
 async function loadJson<T>(filePath: string): Promise<T> {
