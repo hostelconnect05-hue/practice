@@ -123,7 +123,7 @@ export function TechnicalQuizWorkspace() {
         </div>
 
         {/* Score Banner */}
-        {submitted && (
+        {isLoaded && submitted && (
           <Card className="border-emerald-500/40 bg-emerald-950/20 backdrop-blur">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">

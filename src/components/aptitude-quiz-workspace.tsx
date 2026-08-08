@@ -121,7 +121,7 @@ export function AptitudeQuizWorkspace() {
         </div>
 
         {/* Score Banner */}
-        {submitted && (
+        {isLoaded && submitted && (
           <Card className="border-amber-500/40 bg-amber-950/20 backdrop-blur">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">

@@ -122,7 +122,7 @@ export function AnalyticalQuizWorkspace() {
         </div>
 
         {/* Score Banner */}
-        {submitted && (
+        {isLoaded && submitted && (
           <Card className="border-purple-500/40 bg-purple-950/20 backdrop-blur">
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">
