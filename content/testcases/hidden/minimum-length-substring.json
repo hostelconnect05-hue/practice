@@ -9,7 +9,7 @@
   },
   {
     "input": "zzyxxwwvvuuttssrrqqppoonnmmllkkjjiihhggffeeddccbbaa\n",
-    "expectedOutput": "51"
+    "expectedOutput": "49"
   },
   {
     "input": "abaaab\n",
@@ -21,11 +21,11 @@
   },
   {
     "input": "pwwkew\n",
-    "expectedOutput": "4"
+    "expectedOutput": "5"
   },
   {
     "input": "bbaaaccccccbbbaaabbbccc\n",
-    "expectedOutput": "3"
+    "expectedOutput": "5"
   },
   {
     "input": "xyzzaz\n",
