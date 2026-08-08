@@ -204,8 +204,8 @@ export const aptitudeQuestions: AptitudeQuestion[] = [
       { key: "C", text: "48 minutes" },
       { key: "D", text: "42 minutes" },
     ],
-    correctAnswer: "D",
-    explanation: "Driving time = (10 / 50) × 60 = 12 minutes. Number of stops = 15 stops (excluding destination stop). Total stopping time = 15 × 2 = 30 minutes. Total journey time = 12 + 30 = 42 minutes.",
+    correctAnswer: "A",
+    explanation: "Driving time = (10 km / 50 km/hr) × 60 minutes = 12 minutes. Total stops = (10,000 m / 500 m) - 1 (destination stop) = 20 - 1 = 19 stops. Total stopping time = 19 stops × 2 minutes = 38 minutes. Total journey time = 12 minutes driving + 38 minutes stopping = 50 minutes.",
   },
   {
     id: 16,
