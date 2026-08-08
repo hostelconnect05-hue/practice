@@ -168,8 +168,8 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
   },
   {
     id: 25,
-    topic: "Syllogism - Days & Weeks",
-    question: "Statements: No day is a week. Some months are days. No week is a day. Conclusions: I. No day is a year. II. Some months are not weeks.",
+    topic: "Syllogism - Days, Months, Weeks & Years",
+    question: "Statements: No day is a week. Some months are days. No week is a day. No week is a year. Conclusions: I. No day is a year. II. Some months are not weeks.",
     options: [
       { key: "A", text: "Only Conclusion I follows" },
       { key: "B", text: "Both conclusions follow" },
@@ -178,7 +178,7 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "E", text: "If only Conclusion II follows" },
     ],
     correctAnswer: "C",
-    explanation: "Since some months are days and no day is a week, those months cannot be weeks (Conclusion II follows). No information is given about years, so Conclusion I does not follow.",
+    explanation: "Evaluation: 1. Conclusion I (No day is a year): We know 'No day is a week' and 'No week is a year'. Disjoint relationships with 'week' do NOT imply disjoint relationship between 'day' and 'year' (days and years could still overlap). Hence, Conclusion I does NOT follow. 2. Conclusion II (Some months are not weeks): Since 'Some months are days' and 'No day is a week', those specific months that are days can NEVER be weeks. Hence, Conclusion II DOES follow. Therefore, Only Conclusion II follows.",
   },
   {
     id: 26,
