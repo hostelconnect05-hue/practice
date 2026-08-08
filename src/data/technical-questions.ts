@@ -851,9 +851,6 @@ end for`,
     id: 54,
     topic: "SQL / DBMS - ORDER BY Salary DESC",
     question: "Which SQL query correctly displays the employee names and salaries in descending order of salary?",
-    codeSnippet: `SELECT Name, Salary
-FROM Employees
-ORDER BY Salary DESC;`,
     options: [
       { key: "A", text: "SELECT Name, Salary FROM Employees ORDER BY Salary DESC;" },
       { key: "B", text: "SELECT Name, Salary ORDER BY Salary DESC;" },
