@@ -1,0 +1,15 @@
+{
+  "approach": "Disjoint Set Union (DSU / Union-Find) with path compression to achieve O(N * alpha(N)) time complexity.",
+  "observation": "Each occupied seat can point directly to the next unvisited seat using DSU parent pointers. When seat S is taken, its next unvisited pointer updates to find(S + 1). If find(S) > N, wrap around to find(1).",
+  "bruteForce": "Simulate linearly for each student by incrementing seat numbers mod N until an empty seat is found. O(N^2) time complexity, which TLEs for N = 2 * 10^5.",
+  "optimalSolution": "1. Initialize DSU parent array of size N + 2 where parent[i] = i.\n2. For each student preferred seat P:\n   - Let avail = find(P).\n   - If avail > N, set avail = find(1).\n   - Record avail as occupied seat.\n   - Update parent[avail] = find(avail + 1).",
+  "timeComplexity": "O(N * alpha(N)) which is virtually linear O(N).",
+  "spaceComplexity": "O(N) for DSU parent array.",
+  "dryRun": "N = 5, A = [2, 2, 4, 2, 4].\nStudent 1 (pref 2) -> avail = 2. parent[2] = 3.\nStudent 2 (pref 2) -> find(2) = 3 -> avail = 3. parent[3] = 4.\nStudent 3 (pref 4) -> avail = 4. parent[4] = 5.\nStudent 4 (pref 2) -> find(2) = 5 -> avail = 5. parent[5] = 6.\nStudent 5 (pref 4) -> find(4) = 6 > 5 -> find(1) = 1 -> avail = 1. parent[1] = 2.\nOutput: [2, 3, 4, 5, 1].",
+  "edgeCases": [
+    "N = 1",
+    "All students prefer seat 1 [1,1,1...]",
+    "All students prefer seat N [N,N,N...]",
+    "All preferred seats distinct [1,2,3...N]"
+  ]
+}
