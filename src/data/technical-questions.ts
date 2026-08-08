@@ -738,7 +738,15 @@ System.out.println(v);`,
   {
     id: 46,
     topic: "Pseudocode & Algorithms - Loop Trace",
-    question: "Initially a=1, b=2. The loop runs for j=2 to 6 with operations: j=2: b=2*2=4; j=3: b=4*3=12; j=4: a=1+3=4; j=5: b=12*5=60; j=6: b=60*6=360. What are the final values of a and b?",
+    question: "Analyze the following pseudocode. What are the final values of variables a and b after the loop finishes?",
+    codeSnippet: `integer a = 1, b = 2
+for j = 2 to 6
+    if j == 4 then
+        a = a + 3
+    else
+        b = b * j
+    end if
+end for`,
     options: [
       { key: "A", text: "a = 4, b = 360" },
       { key: "B", text: "a = 5, b = 120" },
@@ -746,7 +754,7 @@ System.out.println(v);`,
       { key: "D", text: "a = 5, b = 360" },
     ],
     correctAnswer: "A",
-    explanation: "Tracing the loop step-by-step yields final values a = 4 and b = 360.",
+    explanation: "Tracing the loop for j = 2 to 6:\n- j = 2: b = 2 * 2 = 4\n- j = 3: b = 4 * 3 = 12\n- j = 4: j == 4 is true -> a = 1 + 3 = 4\n- j = 5: b = 12 * 5 = 60\n- j = 6: b = 60 * 6 = 360\n\nFinal values: a = 4, b = 360.",
   },
   {
     id: 47,
