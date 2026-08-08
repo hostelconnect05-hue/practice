@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, RefreshCw, Trophy, ArrowLeft, Brain } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,15 +8,41 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { analyticalQuestions } from "@/data/analytical-questions";
 
+const STORAGE_KEY_ANSWERS = "virtusa_analytical_answers";
+const STORAGE_KEY_SUBMITTED = "virtusa_analytical_submitted";
+
 export function AnalyticalQuizWorkspace() {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(() => {
+    try {
+      const savedAnswers = localStorage.getItem(STORAGE_KEY_ANSWERS);
+      const savedSubmitted = localStorage.getItem(STORAGE_KEY_SUBMITTED);
+      if (savedAnswers) {
+        setSelectedAnswers(JSON.parse(savedAnswers));
+      }
+      if (savedSubmitted) {
+        setSubmitted(JSON.parse(savedSubmitted));
+      }
+    } catch (e) {
+      console.error("Failed to load saved analytical state", e);
+    }
+  }, []);
+
   const handleSelectOption = (questionId: number, optionKey: string) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [questionId]: optionKey,
-    }));
+    setSelectedAnswers((prev) => {
+      const updated = {
+        ...prev,
+        [questionId]: optionKey,
+      };
+      try {
+        localStorage.setItem(STORAGE_KEY_ANSWERS, JSON.stringify(updated));
+      } catch (e) {
+        console.error("Failed to save answer", e);
+      }
+      return updated;
+    });
   };
 
   const calculateScore = () => {
@@ -33,9 +59,25 @@ export function AnalyticalQuizWorkspace() {
   const total = analyticalQuestions.length;
   const percentage = total === 0 ? 0 : Math.round((score / total) * 100);
 
+  const handleSubmit = () => {
+    setSubmitted(true);
+    try {
+      localStorage.setItem(STORAGE_KEY_SUBMITTED, JSON.stringify(true));
+    } catch (e) {
+      console.error("Failed to save submitted state", e);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleReattempt = () => {
     setSelectedAnswers({});
     setSubmitted(false);
+    try {
+      localStorage.removeItem(STORAGE_KEY_ANSWERS);
+      localStorage.removeItem(STORAGE_KEY_SUBMITTED);
+    } catch (e) {
+      console.error("Failed to clear state", e);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -205,10 +247,7 @@ export function AnalyticalQuizWorkspace() {
         {!submitted && (
           <div className="pt-4 text-center">
             <Button
-              onClick={() => {
-                setSubmitted(true);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              onClick={handleSubmit}
               className="w-full sm:w-auto bg-purple-600 hover:bg-purple-500 text-white font-bold px-8 py-6 text-base shadow-lg shadow-purple-900/30"
             >
               Submit Analytical Assessment

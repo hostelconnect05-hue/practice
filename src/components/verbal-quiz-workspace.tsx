@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { CheckCircle2, XCircle, RefreshCw, Trophy, ArrowLeft, HelpCircle, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,18 +19,44 @@ export function VerbalQuizWorkspace({
   subtitle?: string;
   badgeText?: string;
 }) {
+  const storageKeyAnswers = `virtusa_verbal_${sectionFilter || "all"}_answers`;
+  const storageKeySubmitted = `virtusa_verbal_${sectionFilter || "all"}_submitted`;
+
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    try {
+      const savedAnswers = localStorage.getItem(storageKeyAnswers);
+      const savedSubmitted = localStorage.getItem(storageKeySubmitted);
+      if (savedAnswers) {
+        setSelectedAnswers(JSON.parse(savedAnswers));
+      }
+      if (savedSubmitted) {
+        setSubmitted(JSON.parse(savedSubmitted));
+      }
+    } catch (e) {
+      console.error("Failed to load saved verbal state", e);
+    }
+  }, [storageKeyAnswers, storageKeySubmitted]);
 
   const questionsToDisplay = sectionFilter
     ? verbalAbilityQuestions.filter((q) => q.section === sectionFilter)
     : verbalAbilityQuestions;
 
   const handleSelectOption = (questionId: number, optionKey: string) => {
-    setSelectedAnswers((prev) => ({
-      ...prev,
-      [questionId]: optionKey,
-    }));
+    setSelectedAnswers((prev) => {
+      const updated = {
+        ...prev,
+        [questionId]: optionKey,
+      };
+      try {
+        localStorage.setItem(storageKeyAnswers, JSON.stringify(updated));
+      } catch (e) {
+        console.error("Failed to save answer", e);
+      }
+      return updated;
+    });
   };
 
   const calculateScore = () => {
@@ -47,9 +73,25 @@ export function VerbalQuizWorkspace({
   const total = questionsToDisplay.length;
   const percentage = total === 0 ? 0 : Math.round((score / total) * 100);
 
+  const handleSubmit = () => {
+    setSubmitted(true);
+    try {
+      localStorage.setItem(storageKeySubmitted, JSON.stringify(true));
+    } catch (e) {
+      console.error("Failed to save submitted state", e);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleReattempt = () => {
     setSelectedAnswers({});
     setSubmitted(false);
+    try {
+      localStorage.removeItem(storageKeyAnswers);
+      localStorage.removeItem(storageKeySubmitted);
+    } catch (e) {
+      console.error("Failed to clear state", e);
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -234,14 +276,11 @@ export function VerbalQuizWorkspace({
           })}
         </div>
 
-        {/* Submit Button Section */}
-        <div className="flex items-center justify-center pt-4">
+        {/* Submit / Reattempt Assessment Button */}
+        <div className="pt-4 text-center">
           {!submitted ? (
             <Button
-              onClick={() => {
-                setSubmitted(true);
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+              onClick={handleSubmit}
               className="w-full sm:w-auto min-w-[240px] bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-6 text-base shadow-lg shadow-emerald-950/50"
             >
               Submit Assessment
