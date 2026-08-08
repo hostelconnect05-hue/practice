@@ -275,7 +275,7 @@ export function ProblemWorkspace({
           <h2 className="text-lg font-semibold text-zinc-100">
             Problem Statement
           </h2>
-          <p>{problem.statement}</p>
+          <div className="whitespace-pre-wrap leading-relaxed">{problem.statement}</div>
 
           <h3 className="text-base font-semibold text-zinc-100">Examples</h3>
           {problem.examples.map((example, index) => (
