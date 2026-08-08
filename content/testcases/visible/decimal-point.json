@@ -1,0 +1,22 @@
+[
+  {
+    "input": "123\n",
+    "expectedOutput": "0.123 1.23 12.3 123.0"
+  },
+  {
+    "input": "5\n",
+    "expectedOutput": "0.5 5.0"
+  },
+  {
+    "input": "99\n",
+    "expectedOutput": "0.99 9.9 99.0"
+  },
+  {
+    "input": "100\n",
+    "expectedOutput": "0.100 1.00 10.0 100.0"
+  },
+  {
+    "input": "2026\n",
+    "expectedOutput": "0.2026 2.026 20.26 202.6 2026.0"
+  }
+]

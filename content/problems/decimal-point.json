@@ -1,0 +1,29 @@
+{
+  "slug": "decimal-point",
+  "title": "Decimal Point",
+  "difficulty": "Easy",
+  "topics": ["Strings", "Parsing"],
+  "acceptance": "89.2%",
+  "statement": "You are given a positive integer S. Consider its decimal representation as a string of digits.\n\nYour task is to generate all possible valid decimal representations by inserting exactly one decimal point (.) at every possible position.\n\nThe decimal point can be placed:\n\n1. Before the first digit, in which case prefix the number with 0.\n   - Example: 123 -> 0.123\n\n2. Between any two consecutive digits.\n   - Example: 123 -> 1.23, 12.3\n\n3. After the last digit, in which case append .0.\n   - Example: 123 -> 123.0\n\nReturn all generated decimal representations as a single space-separated string, in the above order.\n\nInput Format:\n- input1: A positive integer S.\n\nOutput Format:\n- Print a single string containing all possible decimal representations separated by a single space.",
+  "examples": [
+    {
+      "input": "123",
+      "output": "0.123 1.23 12.3 123.0",
+      "explanation": "Possible positions of decimal point:\n- Before first digit -> 0.123\n- Between 1 and 2 -> 1.23\n- Between 2 and 3 -> 12.3\n- After last digit -> 123.0"
+    },
+    {
+      "input": "5",
+      "output": "0.5 5.0",
+      "explanation": "Since there is only one digit, there is no position between digits.\nPossible representations are:\n- Before the digit -> 0.5\n- After the digit -> 5.0"
+    }
+  ],
+  "constraints": ["1 <= S <= 10^18", "S contains only decimal digits."],
+  "hints": [
+    "Convert integer S to its string representation str.",
+    "First append '0.' + str.",
+    "Then loop i from 1 to str.length() - 1, slicing substring(0, i) + '.' + substring(i).",
+    "Finally append str + '.0'."
+  ],
+  "relatedProblems": ["river-current", "string-harmony"],
+  "discussion": "Simple string manipulation problem generating all 1-point insertions in O(|S|) time."
+}

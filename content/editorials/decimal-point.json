@@ -1,0 +1,14 @@
+{
+  "approach": "Treat S as a string of digits and systematically insert '.' at all valid split positions.",
+  "observation": "For a string of length L, there is 1 prefix position (before index 0), L - 1 internal positions (between index i-1 and i for 1 <= i < L), and 1 suffix position (after index L-1).",
+  "bruteForce": "Iterate through all split points from index 0 to L. Construct each formatted representation and collect them into a space-separated string.",
+  "optimalSolution": "1. Convert S to string str.\n2. Output '0.' + str.\n3. For i = 1 to str.length - 1, output str[0...i-1] + '.' + str[i...end].\n4. Output str + '.0'.",
+  "timeComplexity": "O(L^2) where L is the number of digits in S (L <= 19).",
+  "spaceComplexity": "O(L^2) to store output strings.",
+  "dryRun": "S = 123, str = '123'. L = 3.\n1. '0.123'\n2. i=1 -> '1.23', i=2 -> '12.3'\n3. '123.0'\nResult: '0.123 1.23 12.3 123.0'",
+  "edgeCases": [
+    "S has a single digit (e.g. S = 5)",
+    "S contains trailing zeros (e.g. S = 100)",
+    "Large 64-bit integer S up to 10^18"
+  ]
+}
