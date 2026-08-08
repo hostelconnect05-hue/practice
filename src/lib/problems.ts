@@ -29,6 +29,7 @@ const problemOrder = [
   "flip-div-game",
   "knight-ranking-parade",
   "classroom",
+  "geometric-progression-series",
 ];
 
 async function loadJson<T>(filePath: string): Promise<T> {

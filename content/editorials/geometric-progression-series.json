@@ -1,0 +1,15 @@
+{
+  "approach": "Iterative term multiplication starting at A1 until the term exceeds Z.",
+  "observation": "Each term in a Geometric Progression is defined as T(i) = T(i-1) * R with T(1) = A1. Since R >= 2, the terms grow exponentially, so the number of terms is at most log_R(Z) <= 60.",
+  "bruteForce": "Iterate term by term, multiplying by R until current_term > Z. If R = 1, append A1 once and break.",
+  "optimalSolution": "1. Initialize current_term = A1.\n2. While current_term <= Z:\n   - Add current_term to the result list.\n   - If R == 1, break.\n   - Check if current_term > Z / R to avoid 64-bit overflow, then current_term *= R.\n3. Output the result list space-separated.",
+  "timeComplexity": "O(log_R(Z)) time complexity.",
+  "spaceComplexity": "O(log_R(Z)) auxiliary space.",
+  "dryRun": "A1 = 2, R = 3, Z = 100.\n1. curr = 2 <= 100 -> add 2, curr = 6\n2. curr = 6 <= 100 -> add 6, curr = 18\n3. curr = 18 <= 100 -> add 18, curr = 54\n4. curr = 54 <= 100 -> add 54, curr = 162 > 100 (loop ends)\nResult: [2, 6, 18, 54].",
+  "edgeCases": [
+    "R = 1 (single term [A1])",
+    "A1 > Z (empty output / empty array)",
+    "A1 = Z (single term [A1])",
+    "Large Z up to 10^18"
+  ]
+}

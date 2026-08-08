@@ -1,0 +1,22 @@
+[
+  {
+    "input": "2\n3\n100\n",
+    "expectedOutput": "2 6 18 54"
+  },
+  {
+    "input": "5\n2\n100\n",
+    "expectedOutput": "5 10 20 40 80"
+  },
+  {
+    "input": "3\n4\n200\n",
+    "expectedOutput": "3 12 48 192"
+  },
+  {
+    "input": "1\n2\n32\n",
+    "expectedOutput": "1 2 4 8 16 32"
+  },
+  {
+    "input": "10\n5\n1000\n",
+    "expectedOutput": "10 50 250"
+  }
+]
