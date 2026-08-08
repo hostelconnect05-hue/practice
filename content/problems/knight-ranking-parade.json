@@ -1,0 +1,37 @@
+{
+  "slug": "knight-ranking-parade",
+  "title": "Knight Ranking Parade",
+  "difficulty": "Medium",
+  "topics": ["Arrays", "Fenwick Tree", "Merge Sort", "Two Pointers"],
+  "acceptance": "78.9%",
+  "statement": "You are given an array A of N distinct integers representing the power levels of N knights standing in a row.\n\nA knight at index i is called special if the number of knights with a greater power level on its left is strictly greater than the number of knights with a greater power level on its right.\n\nYour task is to determine the total number of special knights.\n\nDefinition:\nFor each knight at index i:\n- Left Count = Number of knights to the left of index i whose power is greater than A[i].\n- Right Count = Number of knights to the right of index i whose power is greater than A[i].\n\nThe knight is special if:\n  Left Count > Right Count\n\nInput Format:\n- input1: An integer N, representing the number of knights.\n- input2: An integer array A of size N, representing the power levels of the knights.\n\nOutput Format:\n- Print a single integer representing the number of special knights.",
+  "examples": [
+    {
+      "input": "5\n4 3 5 2 1",
+      "output": "2",
+      "explanation": "Knight 4: Left=0, Right=1 -> No\nKnight 3: Left=1, Right=1 -> No\nKnight 5: Left=0, Right=0 -> No\nKnight 2: Left=3, Right=0 -> Yes\nKnight 1: Left=4, Right=0 -> Yes\nTotal special knights = 2."
+    },
+    {
+      "input": "4\n1 2 3 4",
+      "output": "0",
+      "explanation": "For every knight, Left Count is 0 while Right Count is equal to the number of larger elements to the right. No knight satisfies Left > Right. Total = 0."
+    },
+    {
+      "input": "5\n5 4 3 2 1",
+      "output": "4",
+      "explanation": "Knight 5: Left=0, Right=0 -> No\nKnight 4: Left=1, Right=0 -> Yes\nKnight 3: Left=2, Right=0 -> Yes\nKnight 2: Left=3, Right=0 -> Yes\nKnight 1: Left=4, Right=0 -> Yes\nTotal special knights = 4."
+    }
+  ],
+  "constraints": [
+    "1 <= N <= 2 * 10^5",
+    "1 <= A[i] <= 10^9",
+    "All elements in A are distinct."
+  ],
+  "hints": [
+    "Since all elements in A are distinct, total elements greater than A[i] is fixed: TotalGreater = N - Rank(A[i]).",
+    "If you know LeftGreater (number of elements to the left of i greater than A[i]), then RightGreater = TotalGreater - LeftGreater.",
+    "Use a Fenwick Tree (Binary Indexed Tree) or Segment Tree after coordinate compression to count LeftGreater in O(N log N) time."
+  ],
+  "relatedProblems": ["river-current", "flip-div-game"],
+  "discussion": "Coordinate compression with Fenwick Tree to count strictly greater elements on the left in O(N log N) time and O(N) space."
+}

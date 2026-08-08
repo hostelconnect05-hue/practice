@@ -1,0 +1,14 @@
+{
+  "approach": "Coordinate compression + Binary Indexed Tree (Fenwick Tree) to count elements to the left greater than A[i].",
+  "observation": "For distinct elements, TotalGreater[i] = N - Rank(A[i]). Therefore, if we find LeftGreater[i], then RightGreater[i] = TotalGreater[i] - LeftGreater[i]. A knight is special if LeftGreater[i] > RightGreater[i].",
+  "bruteForce": "For each element i, count elements j < i with A[j] > A[i] and j > i with A[j] > A[i]. O(N^2) time.",
+  "optimalSolution": "1. Compress array values into 1-based ranks [1...N].\n2. Maintain a Fenwick Tree storing frequencies of processed elements.\n3. For index i, LeftSmaller = BIT.query(Rank - 1).\n4. LeftGreater = i - LeftSmaller.\n5. RightGreater = (N - Rank) - LeftGreater.\n6. If LeftGreater > RightGreater, increment result count.\n7. Update BIT: add 1 at Rank.",
+  "timeComplexity": "O(N log N) for sorting and Fenwick Tree operations.",
+  "spaceComplexity": "O(N) for coordinate compression arrays and Fenwick Tree.",
+  "dryRun": "A = [4, 3, 5, 2, 1]. Ranks = [4, 3, 5, 2, 1].\ni=0 (val=4, rank=4): LeftGr=0, RightGr=1 -> No\ni=1 (val=3, rank=3): LeftGr=1, RightGr=1 -> No\ni=2 (val=5, rank=5): LeftGr=0, RightGr=0 -> No\ni=3 (val=2, rank=2): LeftGr=3, RightGr=0 -> Yes\ni=4 (val=1, rank=1): LeftGr=4, RightGr=0 -> Yes\nResult: 2 special knights.",
+  "edgeCases": [
+    "N = 1 (always 0)",
+    "Strictly increasing array [1..N] (always 0)",
+    "Strictly decreasing array [N..1] (N-1 special knights)"
+  ]
+}
