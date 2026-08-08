@@ -4,7 +4,7 @@
   "difficulty": "Easy",
   "topics": ["Math", "Greedy"],
   "acceptance": "85.2%",
-  "statement": "Tony is visiting a supermarket to buy Z cans of coke. The supermarket offers only two types of packs:\n\n- A pack of 2 cans costs X dollars.\n- A pack of 4 cans costs Y dollars.\n\nTony can purchase any number of these packs. He is allowed to buy more than Z cans if necessary, but he cannot buy individual cans.\n\nFor each test case, determine the minimum total cost required to purchase at least Z cans.",
+  "statement": "Tony is visiting a supermarket to buy Z cans of coke. The supermarket offers only two types of packs:\n\n- A pack of 2 cans costs X dollars.\n- A pack of 4 cans costs Y dollars.\n\nTony can purchase any number of these packs. He is allowed to buy more than Z cans if necessary, but he cannot buy individual cans.\n\nInput Format:\n- input1 (X): Cost of a pack of 2 cans.\n- input2 (Y): Cost of a pack of 4 cans.\n- input3 (Z): Minimum number of cans to buy.\n\nOutput Format:\n- Print a single integer representing the minimum total cost.",
   "examples": [
     {
       "input": "X = 5, Y = 10, Z = 10",

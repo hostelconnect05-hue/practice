@@ -23,6 +23,7 @@ export function AnalyticalQuizWorkspace() {
     Record<number, string>
   >({});
   const [submitted, setSubmitted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     try {
@@ -37,6 +38,7 @@ export function AnalyticalQuizWorkspace() {
     } catch (e) {
       console.error("Failed to load saved analytical state", e);
     }
+    setIsLoaded(true);
   }, []);
 
   const handleSelectOption = (questionId: number, optionKey: string) => {

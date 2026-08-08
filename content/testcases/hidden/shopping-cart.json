@@ -1,122 +1,234 @@
 [
   {
-    "input": "1\n3 4 1\n",
+    "input": "3 4 1",
     "expectedOutput": "3"
   },
   {
-    "input": "1\n3 5 2\n",
+    "input": "3 5 2",
     "expectedOutput": "3"
   },
   {
-    "input": "1\n3 6 3\n",
+    "input": "3 6 3",
     "expectedOutput": "6"
   },
   {
-    "input": "1\n3 4 4\n",
+    "input": "3 4 4",
     "expectedOutput": "4"
   },
   {
-    "input": "1\n3 5 5\n",
+    "input": "3 5 5",
     "expectedOutput": "8"
   },
   {
-    "input": "1\n5 6 1\n",
+    "input": "5 6 1",
     "expectedOutput": "5"
   },
   {
-    "input": "1\n5 7 2\n",
+    "input": "5 7 2",
     "expectedOutput": "5"
   },
   {
-    "input": "1\n5 8 3\n",
+    "input": "5 8 3",
     "expectedOutput": "8"
   },
   {
-    "input": "1\n5 9 4\n",
+    "input": "5 9 4",
     "expectedOutput": "9"
   },
   {
-    "input": "1\n5 10 5\n",
+    "input": "5 10 5",
     "expectedOutput": "15"
   },
   {
-    "input": "1\n7 8 1\n",
+    "input": "7 8 1",
     "expectedOutput": "7"
   },
   {
-    "input": "1\n7 9 2\n",
+    "input": "7 9 2",
     "expectedOutput": "7"
   },
   {
-    "input": "1\n7 10 3\n",
+    "input": "7 10 3",
     "expectedOutput": "10"
   },
   {
-    "input": "1\n7 11 4\n",
+    "input": "7 11 4",
     "expectedOutput": "11"
   },
   {
-    "input": "1\n7 12 5\n",
+    "input": "7 12 5",
     "expectedOutput": "19"
   },
   {
-    "input": "1\n100 150 100\n",
+    "input": "100 150 100",
     "expectedOutput": "3750"
   },
   {
-    "input": "1\n250 450 1000\n",
+    "input": "250 450 1000",
     "expectedOutput": "112500"
   },
   {
-    "input": "1\n500 900 2500\n",
+    "input": "500 900 2500",
     "expectedOutput": "562500"
   },
   {
-    "input": "1\n1000 1800 5000\n",
+    "input": "1000 1800 5000",
     "expectedOutput": "2250000"
   },
   {
-    "input": "1\n10000 19999 10000\n",
+    "input": "10000 19999 10000",
     "expectedOutput": "49997500"
   },
   {
-    "input": "3\n5 10 10\n5 8 10\n4 7 5\n",
-    "expectedOutput": "25 21 11"
+    "input": "5 10 10",
+    "expectedOutput": "25"
   },
   {
-    "input": "5\n3 4 1\n3 5 2\n3 6 3\n3 4 4\n3 5 5\n",
-    "expectedOutput": "3 3 6 4 8"
+    "input": "5 8 10",
+    "expectedOutput": "21"
   },
   {
-    "input": "4\n10 20 1\n10 15 1\n5 8 4\n5 8 3\n",
-    "expectedOutput": "10 10 8 8"
+    "input": "4 7 5",
+    "expectedOutput": "11"
   },
   {
-    "input": "5\n100 150 100\n50 90 7\n10 12 15\n3 5 1\n3 5 2\n",
-    "expectedOutput": "3750 180 48 3 3"
+    "input": "3 4 1",
+    "expectedOutput": "3"
   },
   {
-    "input": "4\n4 7 1\n4 7 2\n4 7 3\n4 7 4\n",
-    "expectedOutput": "4 4 7 7"
+    "input": "3 5 2",
+    "expectedOutput": "3"
   },
   {
-    "input": "3\n10 18 10\n10 18 11\n10 18 12\n",
-    "expectedOutput": "46 54 54"
+    "input": "3 6 3",
+    "expectedOutput": "6"
   },
   {
-    "input": "4\n12 24 18\n15 17 37\n18 22 56\n21 27 75\n",
-    "expectedOutput": "108 168 308 513"
+    "input": "3 4 4",
+    "expectedOutput": "4"
   },
   {
-    "input": "4\n19 23 35\n22 28 54\n25 33 73\n28 38 92\n",
-    "expectedOutput": "207 386 619 874"
+    "input": "3 5 5",
+    "expectedOutput": "8"
   },
   {
-    "input": "3\n33 45 69\n36 50 88\n39 55 7\n",
-    "expectedOutput": "798 1100 110"
+    "input": "10 20 1",
+    "expectedOutput": "10"
   },
   {
-    "input": "3\n1000 1800 5000\n2000 3500 8000\n5000 9500 10000\n",
-    "expectedOutput": "2250000 7000000 23750000"
+    "input": "10 15 1",
+    "expectedOutput": "10"
+  },
+  {
+    "input": "5 8 4",
+    "expectedOutput": "8"
+  },
+  {
+    "input": "5 8 3",
+    "expectedOutput": "8"
+  },
+  {
+    "input": "100 150 100",
+    "expectedOutput": "3750"
+  },
+  {
+    "input": "50 90 7",
+    "expectedOutput": "180"
+  },
+  {
+    "input": "10 12 15",
+    "expectedOutput": "48"
+  },
+  {
+    "input": "3 5 1",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "3 5 2",
+    "expectedOutput": "3"
+  },
+  {
+    "input": "4 7 1",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "4 7 2",
+    "expectedOutput": "4"
+  },
+  {
+    "input": "4 7 3",
+    "expectedOutput": "7"
+  },
+  {
+    "input": "4 7 4",
+    "expectedOutput": "7"
+  },
+  {
+    "input": "10 18 10",
+    "expectedOutput": "46"
+  },
+  {
+    "input": "10 18 11",
+    "expectedOutput": "54"
+  },
+  {
+    "input": "10 18 12",
+    "expectedOutput": "54"
+  },
+  {
+    "input": "12 24 18",
+    "expectedOutput": "108"
+  },
+  {
+    "input": "15 17 37",
+    "expectedOutput": "168"
+  },
+  {
+    "input": "18 22 56",
+    "expectedOutput": "308"
+  },
+  {
+    "input": "21 27 75",
+    "expectedOutput": "513"
+  },
+  {
+    "input": "19 23 35",
+    "expectedOutput": "207"
+  },
+  {
+    "input": "22 28 54",
+    "expectedOutput": "386"
+  },
+  {
+    "input": "25 33 73",
+    "expectedOutput": "619"
+  },
+  {
+    "input": "28 38 92",
+    "expectedOutput": "874"
+  },
+  {
+    "input": "33 45 69",
+    "expectedOutput": "798"
+  },
+  {
+    "input": "36 50 88",
+    "expectedOutput": "1100"
+  },
+  {
+    "input": "39 55 7",
+    "expectedOutput": "110"
+  },
+  {
+    "input": "1000 1800 5000",
+    "expectedOutput": "2250000"
+  },
+  {
+    "input": "2000 3500 8000",
+    "expectedOutput": "7000000"
+  },
+  {
+    "input": "5000 9500 10000",
+    "expectedOutput": "23750000"
   }
 ]
