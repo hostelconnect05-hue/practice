@@ -248,15 +248,15 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
   {
     id: 31,
     topic: "Linear Seating Arrangement - 7 People",
-    question: "Seven people R, B, Y, J, E, F and N sit in a row facing north. Y sits third from right end. Three people sit between B and Y. N sits immediately right of E. J sits second to right of E. How many people sit between R and J?",
+    question: "Seven people R, B, Y, J, E, F and N sit in a row facing north. Y sits third from right end. Three people sit between B and Y. N sits immediately neighbour of E and J. F sits second to right of E. How many people sit between R and J?",
     options: [
       { key: "A", text: "Two" },
       { key: "B", text: "Three" },
       { key: "C", text: "Five" },
       { key: "D", text: "Four" },
     ],
-    correctAnswer: "A",
-    explanation: "Row arrangement from left to right: B, R, E, N, J, Y, F. Between R and J are E and N (2 people).",
+    correctAnswer: "D",
+    explanation: "Seating Arrangement (Positions 1 to 7 from Left to Right):\n1. Y sits 3rd from right end ⇒ Position 5 is Y.\n2. Three people sit between B and Y ⇒ Position 1 is B.\n3. N is an immediate neighbour of E and J ⇒ N must sit between E and J (Cluster: J - N - E or E - N - J).\n4. F sits 2nd to the right of E ⇒ E must be at Position 4 and F at Position 6.\n5. Therefore, N is at Position 3 and J is at Position 2.\n6. Remaining person R takes Position 7.\n\nFinal Row Order: [1: B, 2: J, 3: N, 4: E, 5: Y, 6: F, 7: R]\n\nPeople sitting between R (Position 7) and J (Position 2) are N, E, Y, and F (4 people).",
   },
   {
     id: 32,
