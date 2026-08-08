@@ -293,19 +293,14 @@ public:
     id: 15,
     topic: "Data Structures - Linked List",
     question: "Which pseudocode correctly inserts an element at the beginning of a singly linked list?",
-    codeSnippet: `insert(element):
-temp = new Node
-temp.data = element
-temp.next = head
-head = temp`,
     options: [
-      { key: "A", text: "temp.next = head; head = temp;" },
-      { key: "B", text: "head.next = temp; head = temp;" },
-      { key: "C", text: "temp.next = null; head = temp;" },
-      { key: "D", text: "head = temp.next; temp.data = element;" },
+      { key: "A", text: "insert(element):\n  temp = new Node\n  temp.data = element\n  temp.next = head\n  head = temp" },
+      { key: "B", text: "insert(element):\n  temp = new Node\n  temp.data = element\n  head.next = temp\n  head = temp" },
+      { key: "C", text: "insert(element):\n  temp = new Node\n  temp.data = element\n  temp.next = null\n  head = temp" },
+      { key: "D", text: "insert(element):\n  temp = new Node\n  head = temp.next\n  temp.data = element" },
     ],
     correctAnswer: "A",
-    explanation: "To insert at the beginning in O(1) time: allocate temp, set temp.data, point temp.next to the current head, then update head = temp.",
+    explanation: "To insert at the beginning of a singly linked list in O(1) time: create temp node, assign temp.data = element, set temp.next = head, and update head = temp.",
   },
   {
     id: 16,
