@@ -408,10 +408,6 @@ FORMAT(2499.56789,2);`,
     id: 23,
     topic: "SQL / DBMS - Date Functions",
     question: "A developer wants to display only the date from a DATETIME column and filter records belonging to June, irrespective of the year. Which query satisfies both conditions?",
-    codeSnippet: `SELECT product_id,
-       DATE(sale_time)
-FROM transactions
-WHERE EXTRACT(MONTH FROM sale_time)=6;`,
     options: [
       { key: "A", text: "SELECT product_id, sale_time FROM transactions WHERE MONTH(sale_time)=6;" },
       { key: "B", text: "SELECT product_id, TIME(sale_time) FROM transactions WHERE EXTRACT(MONTH FROM sale_time)=6;" },
@@ -430,8 +426,7 @@ public class Example1 {
   public static void main(String[] args) {
     List<Integer> numbers = new ArrayList<>();
     numbers.add(1); numbers.add(2); numbers.add(3); numbers.add(4);
-    Collections.sort(numbers, Collections.reverseOrder());
-    System.out.println(numbers);
+    // Which statement sorts numbers in descending order?
   }
 }`,
     options: [
