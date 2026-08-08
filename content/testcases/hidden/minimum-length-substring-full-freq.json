@@ -1,11 +1,11 @@
 [
   {
     "input": "aab\n",
-    "expectedOutput": "2"
+    "expectedOutput": "1"
   },
   {
     "input": "aabbcc\n",
-    "expectedOutput": "3"
+    "expectedOutput": "2"
   },
   {
     "input": "xyzxyzxyz\n",
@@ -13,18 +13,18 @@
   },
   {
     "input": "pwwkew\n",
-    "expectedOutput": "3"
+    "expectedOutput": "1"
   },
   {
     "input": "bbaaaccccccbbbaaabbbccc\n",
-    "expectedOutput": "12"
+    "expectedOutput": "15"
   },
   {
     "input": "xyzzaz\n",
-    "expectedOutput": "3"
+    "expectedOutput": "1"
   },
   {
     "input": "bacba\n",
-    "expectedOutput": "4"
+    "expectedOutput": "1"
   }
 ]

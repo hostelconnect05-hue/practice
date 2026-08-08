@@ -5,7 +5,7 @@
   },
   {
     "input": "xxxy\n",
-    "expectedOutput": "2"
+    "expectedOutput": "1"
   },
   {
     "input": "aaaa\n",

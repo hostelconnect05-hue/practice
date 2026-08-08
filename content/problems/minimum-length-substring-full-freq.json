@@ -13,8 +13,8 @@
     },
     {
       "input": "xxxy",
-      "output": "2",
-      "explanation": "Original frequencies: x:3, y:1. Substring \"xy\" has length 2 with 'y' appearing 1 time (matches original frequency of 'y'). Minimum length = 2."
+      "output": "1",
+      "explanation": "Original frequencies: x:3, y:1. Substring \"y\" of length 1 has 'y' appearing 1 time (matches original frequency of 'y'). Minimum length = 1."
     }
   ],
   "constraints": [
