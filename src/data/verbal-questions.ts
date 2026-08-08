@@ -1229,14 +1229,14 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
   {
     id: 37,
     section: "Grammar & Vocabulary",
-    question: "Rearrange the phrases to form a meaningful sentence: Fixed Start: 'There were quite' (1), Fixed End: 'the gray elephant' (6). Phrases: (A) in the end she settled (B) to choose from but (C) on the speckled giraffe and (D) the gray elephant",
+    question: "Rearrange the phrases to form a complete sentence:\nFixed Start (1): There were quite\n(A) to choose from but\n(B) a lot of options\n(C) on the speckled giraffe and\n(D) in the end she settled\nFixed End (6): the grey elephant",
     options: [
-      { key: "A", text: "BACD" },
-      { key: "B", text: "BCDA" },
-      { key: "C", text: "CDBA" },
-      { key: "D", text: "BADC" },
+      { key: "A", text: "BAADC" },
+      { key: "B", text: "BADAC" },
+      { key: "C", text: "BADC" },
+      { key: "D", text: "ABDAC" },
     ],
-    correctAnswer: "A",
-    explanation: "Logical sequence is BACD: 'There were quite to choose from but in the end she settled on the speckled giraffe and the gray elephant.'",
+    correctAnswer: "C",
+    explanation: "Logical sequence is B - A - D - C (BADC):\n(1) There were quite\n(B) a lot of options\n(A) to choose from but\n(D) in the end she settled\n(C) on the speckled giraffe and\n(6) the grey elephant\n\nComplete Sentence: \"There were quite a lot of options to choose from but in the end she settled on the speckled giraffe and the grey elephant.\"",
   },
 ];
