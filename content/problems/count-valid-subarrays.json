@@ -2,7 +2,13 @@
   "slug": "count-valid-subarrays",
   "title": "Count Valid Subarrays",
   "difficulty": "Hard",
-  "topics": ["Arrays", "Sliding Window", "Monotonic Queue", "Two Pointers", "Queue"],
+  "topics": [
+    "Arrays",
+    "Sliding Window",
+    "Monotonic Queue",
+    "Two Pointers",
+    "Queue"
+  ],
   "acceptance": "74.8%",
   "statement": "You are given an integer array arr of size N and an integer K.\n\nA subarray is called valid if the difference between the maximum and minimum element in that subarray is less than or equal to K.\n\nYour task is to count the total number of valid subarrays.\n\n### Input Format\n- The first line contains two space-separated integers N and K.\n- The second line contains N space-separated integers representing the array arr.\n\n### Output Format\n- Print a single long integer representing the total count of valid subarrays.",
   "examples": [

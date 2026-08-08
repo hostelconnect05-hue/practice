@@ -22,16 +22,26 @@ export function ProgressOverview({
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {
-        const solvedArr = JSON.parse(localStorage.getItem("solved_problems") || "[]") as string[];
-        const attemptedArr = JSON.parse(localStorage.getItem("attempted_problems") || "[]") as string[];
-        
+        const solvedArr = JSON.parse(
+          localStorage.getItem("solved_problems") || "[]",
+        ) as string[];
+        const attemptedArr = JSON.parse(
+          localStorage.getItem("attempted_problems") || "[]",
+        ) as string[];
+
         // Combine solved into attempted set to ensure solved is a subset of attempted
-        const uniqueAttempted = Array.from(new Set([...attemptedArr, ...solvedArr]));
+        const uniqueAttempted = Array.from(
+          new Set([...attemptedArr, ...solvedArr]),
+        );
         const uniqueSolved = Array.from(new Set(solvedArr));
 
         const solvedCount = Math.max(initialSolved, uniqueSolved.length);
-        const attemptedCount = Math.max(initialAttempted, uniqueAttempted.length);
-        const rate = attemptedCount === 0 ? 0 : (solvedCount / attemptedCount) * 100;
+        const attemptedCount = Math.max(
+          initialAttempted,
+          uniqueAttempted.length,
+        );
+        const rate =
+          attemptedCount === 0 ? 0 : (solvedCount / attemptedCount) * 100;
 
         setStats({
           solved: solvedCount,
@@ -49,7 +59,9 @@ export function ProgressOverview({
           <CheckCircle2 className="h-5 w-5 text-emerald-400" />
           <div>
             <p className="text-xs text-zinc-400">Solved</p>
-            <p className="text-xl font-semibold text-zinc-100">{stats.solved}</p>
+            <p className="text-xl font-semibold text-zinc-100">
+              {stats.solved}
+            </p>
           </div>
         </CardContent>
       </Card>
@@ -58,7 +70,9 @@ export function ProgressOverview({
           <ClipboardList className="h-5 w-5 text-orange-300" />
           <div>
             <p className="text-xs text-zinc-400">Attempted</p>
-            <p className="text-xl font-semibold text-zinc-100">{stats.attempted}</p>
+            <p className="text-xl font-semibold text-zinc-100">
+              {stats.attempted}
+            </p>
           </div>
         </CardContent>
       </Card>
@@ -67,7 +81,9 @@ export function ProgressOverview({
           <BarChart3 className="h-5 w-5 text-sky-300" />
           <div>
             <p className="text-xs text-zinc-400">Success Rate</p>
-            <p className="text-xl font-semibold text-zinc-100">{stats.successRate.toFixed(1)}%</p>
+            <p className="text-xl font-semibold text-zinc-100">
+              {stats.successRate.toFixed(1)}%
+            </p>
           </div>
         </CardContent>
       </Card>

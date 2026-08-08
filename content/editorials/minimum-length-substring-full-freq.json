@@ -6,5 +6,9 @@
   "timeComplexity": "O(N^2 * 26) auxiliary time complexity.",
   "spaceComplexity": "O(26) for frequency maps.",
   "dryRun": "S = 'abcadbcd'. fullFreq: a=2, b=2, c=2, d=2. Substring 'abca' (len 4) has subFreq['a']=2 == fullFreq['a']=2. minLength = 4.",
-  "edgeCases": ["Single character string ('a')", "All identical characters ('aaaa')", "String with unique character appearing once ('xxxy' -> 'xy' has 'y' appearing 1 time)"]
+  "edgeCases": [
+    "Single character string ('a')",
+    "All identical characters ('aaaa')",
+    "String with unique character appearing once ('xxxy' -> 'xy' has 'y' appearing 1 time)"
+  ]
 }

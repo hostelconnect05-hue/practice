@@ -14,7 +14,10 @@ export async function POST(request: Request) {
   try {
     const body = (await request.json()) as RequestBody;
     if (!body.slug || !body.language || !body.sourceCode) {
-      return NextResponse.json({ error: "slug, language, and sourceCode are required" }, { status: 400 });
+      return NextResponse.json(
+        { error: "slug, language, and sourceCode are required" },
+        { status: 400 },
+      );
     }
 
     const visibleTests = await getVisibleTests(body.slug);
@@ -22,7 +25,11 @@ export async function POST(request: Request) {
       ? [{ input: body.customInput, expectedOutput: "" }, ...visibleTests]
       : visibleTests;
 
-    const results = await runAgainstTests(body.sourceCode, body.language, tests);
+    const results = await runAgainstTests(
+      body.sourceCode,
+      body.language,
+      tests,
+    );
 
     const normalized = body.customInput?.trim()
       ? [
@@ -38,7 +45,7 @@ export async function POST(request: Request) {
   } catch (error) {
     return NextResponse.json(
       { error: error instanceof Error ? error.message : "Failed to run code" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

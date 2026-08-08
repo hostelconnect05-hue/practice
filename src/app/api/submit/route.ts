@@ -15,11 +15,18 @@ export async function POST(request: Request) {
   try {
     const body = (await request.json()) as RequestBody;
     if (!body.slug || !body.language || !body.sourceCode) {
-      return NextResponse.json({ error: "slug, language, and sourceCode are required" }, { status: 400 });
+      return NextResponse.json(
+        { error: "slug, language, and sourceCode are required" },
+        { status: 400 },
+      );
     }
 
     const tests = await getHiddenTests(body.slug);
-    const results = await runAgainstTests(body.sourceCode, body.language, tests);
+    const results = await runAgainstTests(
+      body.sourceCode,
+      body.language,
+      tests,
+    );
     const firstFailure = results.find((result) => !result.passed);
     const verdict = firstFailure?.verdict ?? "Accepted";
 
@@ -47,8 +54,10 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Failed to submit code" },
-      { status: 500 }
+      {
+        error: error instanceof Error ? error.message : "Failed to submit code",
+      },
+      { status: 500 },
     );
   }
 }

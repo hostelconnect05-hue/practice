@@ -38,7 +38,9 @@ export function ProblemSidebar({
 
   return (
     <aside className="h-full overflow-y-auto border-r border-zinc-800 bg-zinc-950/90 p-3">
-      <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-300">Problems</h2>
+      <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-300">
+        Problems
+      </h2>
       <div className="space-y-2">
         {problems.map((problem) => {
           const isSolved = solvedList.includes(problem.slug);
@@ -53,11 +55,13 @@ export function ProblemSidebar({
                 "block rounded-lg border p-3 transition",
                 isActive
                   ? "border-emerald-500/40 bg-emerald-500/10"
-                  : "border-zinc-800 bg-zinc-900/40 hover:border-zinc-700"
+                  : "border-zinc-800 bg-zinc-900/40 hover:border-zinc-700",
               )}
             >
               <div className="mb-2 flex items-start justify-between gap-2">
-                <span className="text-sm font-medium text-zinc-100">{problem.title}</span>
+                <span className="text-sm font-medium text-zinc-100">
+                  {problem.title}
+                </span>
                 {isSolved ? (
                   <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-400" />
                 ) : isAttempted ? (
@@ -68,7 +72,9 @@ export function ProblemSidebar({
               </div>
               <div className="flex items-center justify-between">
                 <DifficultyPill difficulty={problem.difficulty} />
-                <span className="text-xs text-zinc-500">{problem.acceptance}</span>
+                <span className="text-xs text-zinc-500">
+                  {problem.acceptance}
+                </span>
               </div>
             </Link>
           );

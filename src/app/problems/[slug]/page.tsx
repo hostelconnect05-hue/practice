@@ -8,7 +8,11 @@ import { Button } from "@/components/ui/button";
 import { getProblemBundle, getProblemList } from "@/lib/problems";
 import { getProgress } from "@/lib/progress";
 
-export default async function ProblemPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ProblemPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const [problemList, progress, bundle] = await Promise.all([
     getProblemList(),
@@ -20,12 +24,18 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const relatedProblems = problemList.filter((item) => bundle.problem.relatedProblems.includes(item.slug));
+  const relatedProblems = problemList.filter((item) =>
+    bundle.problem.relatedProblems.includes(item.slug),
+  );
 
   return (
     <main className="min-h-screen bg-[#09090b] text-zinc-100">
       <div className="mx-auto grid min-h-screen max-w-[1600px] grid-cols-1 lg:grid-cols-[280px_1fr]">
-        <ProblemSidebar problems={problemList} solved={progress.solvedSlugs} currentSlug={slug} />
+        <ProblemSidebar
+          problems={problemList}
+          solved={progress.solvedSlugs}
+          currentSlug={slug}
+        />
 
         <div className="flex min-h-screen flex-col">
           <header className="flex items-center justify-between border-b border-zinc-800 p-3">

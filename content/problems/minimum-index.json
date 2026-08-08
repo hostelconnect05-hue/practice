@@ -27,10 +27,7 @@
       "explanation": "At i = 1, leftXor = 1 XOR 8 = 9 and rightXor = 0, so 9 > 0."
     }
   ],
-  "constraints": [
-    "1 <= nums.length <= 100000",
-    "0 <= nums[i] <= 1000000000"
-  ],
+  "constraints": ["1 <= nums.length <= 100000", "0 <= nums[i] <= 1000000000"],
   "hints": [
     "Hint 1: Precompute total XOR of the full array.",
     "Hint 2: Sweep left to right while maintaining prefix XOR.",

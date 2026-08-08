@@ -2,7 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CheckCircle2, XCircle, RefreshCw, Trophy, ArrowLeft, HelpCircle, BookOpen } from "lucide-react";
+import {
+  CheckCircle2,
+  XCircle,
+  RefreshCw,
+  Trophy,
+  ArrowLeft,
+  HelpCircle,
+  BookOpen,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +30,9 @@ export function VerbalQuizWorkspace({
   const storageKeyAnswers = `virtusa_verbal_${sectionFilter || "all"}_answers`;
   const storageKeySubmitted = `virtusa_verbal_${sectionFilter || "all"}_submitted`;
 
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<number, string>
+  >({});
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -101,7 +111,10 @@ export function VerbalQuizWorkspace({
         {/* Navigation & Header */}
         <div className="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4">
           <Link href="/">
-            <Button variant="ghost" className="gap-2 text-zinc-300 hover:text-zinc-100">
+            <Button
+              variant="ghost"
+              className="gap-2 text-zinc-300 hover:text-zinc-100"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Dashboard
             </Button>
@@ -115,9 +128,7 @@ export function VerbalQuizWorkspace({
           <h1 className="text-3xl font-black tracking-tight text-zinc-50">
             {title}
           </h1>
-          <p className="text-sm text-zinc-400">
-            {subtitle}
-          </p>
+          <p className="text-sm text-zinc-400">{subtitle}</p>
         </div>
 
         {/* Quiz Submission Score Banner */}
@@ -130,13 +141,22 @@ export function VerbalQuizWorkspace({
                     <Trophy className="h-8 w-8" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-zinc-50">Assessment Results</h2>
+                    <h2 className="text-2xl font-bold text-zinc-50">
+                      Assessment Results
+                    </h2>
                     <p className="text-sm text-zinc-300 mt-1">
-                      You scored <strong className="text-emerald-400 text-lg">{score}</strong> / {total} ({percentage}%)
+                      You scored{" "}
+                      <strong className="text-emerald-400 text-lg">
+                        {score}
+                      </strong>{" "}
+                      / {total} ({percentage}%)
                     </p>
                   </div>
                 </div>
-                <Button onClick={handleReattempt} className="gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-5">
+                <Button
+                  onClick={handleReattempt}
+                  className="gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-5"
+                >
                   <RefreshCw className="h-4 w-4" />
                   Reattempt Quiz
                 </Button>
@@ -151,7 +171,10 @@ export function VerbalQuizWorkspace({
             const userSelection = selectedAnswers[q.id];
 
             return (
-              <Card key={q.id} className="border-zinc-800 bg-zinc-900/70 backdrop-blur">
+              <Card
+                key={q.id}
+                className="border-zinc-800 bg-zinc-900/70 backdrop-blur"
+              >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-2">
@@ -170,7 +193,9 @@ export function VerbalQuizWorkspace({
                             : "bg-rose-500/20 text-rose-300 border-rose-500/30"
                         }
                       >
-                        {userSelection === q.correctAnswer ? "Correct" : "Incorrect"}
+                        {userSelection === q.correctAnswer
+                          ? "Correct"
+                          : "Incorrect"}
                       </Badge>
                     )}
                   </div>
@@ -202,17 +227,21 @@ export function VerbalQuizWorkspace({
                       const isSelected = userSelection === opt.key;
                       const isCorrect = opt.key === q.correctAnswer;
 
-                      let btnStyle = "border-zinc-800 bg-zinc-900/90 text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800";
+                      let btnStyle =
+                        "border-zinc-800 bg-zinc-900/90 text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800";
 
                       if (userSelection) {
                         if (isSelected) {
                           if (isCorrect) {
-                            btnStyle = "border-emerald-500/60 bg-emerald-950/40 text-emerald-200 font-semibold ring-1 ring-emerald-500/50";
+                            btnStyle =
+                              "border-emerald-500/60 bg-emerald-950/40 text-emerald-200 font-semibold ring-1 ring-emerald-500/50";
                           } else {
-                            btnStyle = "border-rose-500/60 bg-rose-950/40 text-rose-200 font-semibold ring-1 ring-rose-500/50";
+                            btnStyle =
+                              "border-rose-500/60 bg-rose-950/40 text-rose-200 font-semibold ring-1 ring-rose-500/50";
                           }
                         } else if (isCorrect) {
-                          btnStyle = "border-emerald-500/40 bg-emerald-950/20 text-emerald-300 font-medium";
+                          btnStyle =
+                            "border-emerald-500/40 bg-emerald-950/20 text-emerald-300 font-medium";
                         }
                       }
 
@@ -261,7 +290,8 @@ export function VerbalQuizWorkspace({
                         ) : (
                           <>
                             <XCircle className="h-4 w-4 text-rose-400" />
-                            Wrong Answer (Correct Answer: Option {q.correctAnswer})
+                            Wrong Answer (Correct Answer: Option{" "}
+                            {q.correctAnswer})
                           </>
                         )}
                       </div>

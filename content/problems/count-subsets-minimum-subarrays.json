@@ -17,10 +17,7 @@
       "explanation": "After sorting: [1, 1, 1, 2, 3, 6, 6, 6]. Greedy partitioning creates 3 subarrays: [1], [1, 2, 3, 6], [1, 6, 6]. Total minimum subarrays = 3."
     }
   ],
-  "constraints": [
-    "1 <= N <= 2 * 10^5",
-    "1 <= arr[i] <= 10^9"
-  ],
+  "constraints": ["1 <= N <= 2 * 10^5", "1 <= arr[i] <= 10^9"],
   "hints": [
     "Sort the array first to place smaller numbers at the beginning.",
     "Maintain a 1-based target index starting at 1 for the current subarray.",

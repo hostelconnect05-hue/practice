@@ -12,7 +12,9 @@ export function ProblemCard({ problem }: { problem: ProblemListItem }) {
       <CardHeader>
         <div className="mb-2 flex items-center justify-between gap-3">
           <DifficultyPill difficulty={problem.difficulty} />
-          <span className="text-xs text-zinc-400">Acceptance {problem.acceptance}</span>
+          <span className="text-xs text-zinc-400">
+            Acceptance {problem.acceptance}
+          </span>
         </div>
         <CardTitle className="text-zinc-100">{problem.title}</CardTitle>
       </CardHeader>

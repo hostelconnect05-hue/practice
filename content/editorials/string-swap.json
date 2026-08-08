@@ -6,5 +6,9 @@
   "timeComplexity": "O(M * N)",
   "spaceComplexity": "O(N)",
   "dryRun": "S = 'abcdef', Op 1: 'fbcdea'. Op 2: 'deafbc'. Final = 'deafbc'.",
-  "edgeCases": ["String length 2 ('ab')", "Identical operations ('1 1 1')", "Even repeated patterns ('abab')"]
+  "edgeCases": [
+    "String length 2 ('ab')",
+    "Identical operations ('1 1 1')",
+    "Even repeated patterns ('abab')"
+  ]
 }

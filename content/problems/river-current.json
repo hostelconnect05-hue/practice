@@ -17,10 +17,7 @@
       "explanation": "Index 0: Only right current (4) exists -> 4.\nIndex 2 & 3: Left = 4, Right = -6. |-6| > |4|, so replaced with -6.\nFinal array: [4, 4, -6, -6, -6]."
     }
   ],
-  "constraints": [
-    "1 <= N <= 2 * 10^5",
-    "-10^9 <= C[i] <= 10^9"
-  ],
+  "constraints": ["1 <= N <= 2 * 10^5", "-10^9 <= C[i] <= 10^9"],
   "hints": [
     "Precompute the nearest non-zero element to the left for every index in a left-to-right pass.",
     "Precompute the nearest non-zero element to the right for every index in a right-to-left pass.",

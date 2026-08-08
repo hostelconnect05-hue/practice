@@ -6,5 +6,10 @@
   "timeComplexity": "O(N) where N is the length of string S.",
   "spaceComplexity": "O(26) auxiliary space for frequency tracking.",
   "dryRun": "S = 'aabcbcdbca'. Distinct count = 4 ('a', 'b', 'c', 'd'). Window expands right until 'dbca' at right=9, left=6. map.size() == 4. Min length = 4.",
-  "edgeCases": ["Single character string ('a')", "All identical characters ('aaaa')", "String already has all unique chars ('abcd')", "Distinct characters far apart ('a...b')"]
+  "edgeCases": [
+    "Single character string ('a')",
+    "All identical characters ('aaaa')",
+    "String already has all unique chars ('abcd')",
+    "Distinct characters far apart ('a...b')"
+  ]
 }

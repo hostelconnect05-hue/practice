@@ -31,6 +31,10 @@
     "Hint 2: For the final array to be sorted, position k must end up with value k.",
     "Hint 3: Since nums[k-1] cannot move, k is valid if and only if nums[k-1] == k."
   ],
-  "relatedProblems": ["minimum-index", "smallest-missing-even-number", "5-days-challenge"],
+  "relatedProblems": [
+    "minimum-index",
+    "smallest-missing-even-number",
+    "5-days-challenge"
+  ],
   "discussion": "Count how many indices i (0-based) satisfy nums[i] == i + 1."
 }

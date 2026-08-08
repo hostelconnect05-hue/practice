@@ -31,6 +31,9 @@
     "For consecutive characters S[i-1] and S[i], check if S[i] == S[i-1] OR S[i] - S[i-1] == 1.",
     "If valid, increment current length; otherwise reset current length to 1. Track maximum length achieved."
   ],
-  "relatedProblems": ["smallest-missing-even-number", "vowel-consonant-rearrange"],
+  "relatedProblems": [
+    "smallest-missing-even-number",
+    "vowel-consonant-rearrange"
+  ],
   "discussion": "Single pass iteration O(N) checking adjacent character differences."
 }

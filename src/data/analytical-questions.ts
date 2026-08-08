@@ -14,7 +14,8 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
   {
     id: 13,
     topic: "Seating Arrangement",
-    question: "Five people—Finn, Gibb, Henry, Ian, and Jack—are sitting in a row facing East. Gibb and Jack are immediate neighbors. Gibb is second to the right of Henry. Henry is third to the left of Ian. Ian is not sitting at either end. How many people are sitting between Finn and Jack?",
+    question:
+      "Five people—Finn, Gibb, Henry, Ian, and Jack—are sitting in a row facing East. Gibb and Jack are immediate neighbors. Gibb is second to the right of Henry. Henry is third to the left of Ian. Ian is not sitting at either end. How many people are sitting between Finn and Jack?",
     options: [
       { key: "A", text: "None" },
       { key: "B", text: "3 people" },
@@ -22,12 +23,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "1 person" },
     ],
     correctAnswer: "C",
-    explanation: "Positions (1 to 5): Ian is not at either end, so Ian = 4. Henry is 3rd to left of Ian ⇒ Henry = 1. Gibb is 2nd right of Henry ⇒ Gibb = 3. Jack is adjacent to Gibb ⇒ Jack = 2. Remaining Finn = 5. Row order: 1:Henry, 2:Jack, 3:Gibb, 4:Ian, 5:Finn. People between Finn (5) and Jack (2) are Gibb (3) and Ian (4), which is 2 people.",
+    explanation:
+      "Positions (1 to 5): Ian is not at either end, so Ian = 4. Henry is 3rd to left of Ian ⇒ Henry = 1. Gibb is 2nd right of Henry ⇒ Gibb = 3. Jack is adjacent to Gibb ⇒ Jack = 2. Remaining Finn = 5. Row order: 1:Henry, 2:Jack, 3:Gibb, 4:Ian, 5:Finn. People between Finn (5) and Jack (2) are Gibb (3) and Ian (4), which is 2 people.",
   },
   {
     id: 14,
     topic: "Coding & Decoding",
-    question: "In a certain code language, GREAT is coded as 10, and GENUINE is coded as 14. How is MONETARY coded in that language?",
+    question:
+      "In a certain code language, GREAT is coded as 10, and GENUINE is coded as 14. How is MONETARY coded in that language?",
     options: [
       { key: "A", text: "20" },
       { key: "B", text: "16" },
@@ -35,12 +38,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "18" },
     ],
     correctAnswer: "B",
-    explanation: "Pattern: Number of letters × 2. GREAT (5 letters) × 2 = 10. GENUINE (7 letters) × 2 = 14. MONETARY has 8 letters, so 8 × 2 = 16.",
+    explanation:
+      "Pattern: Number of letters × 2. GREAT (5 letters) × 2 = 10. GENUINE (7 letters) × 2 = 14. MONETARY has 8 letters, so 8 × 2 = 16.",
   },
   {
     id: 15,
     topic: "Letter Substitution Coding",
-    question: "In a certain code language, SHARK is coded as AHAIB and TANGO is coded as BAEGF. What is the code for JUNGLE?",
+    question:
+      "In a certain code language, SHARK is coded as AHAIB and TANGO is coded as BAEGF. What is the code for JUNGLE?",
     options: [
       { key: "A", text: "PUNELE" },
       { key: "B", text: "KUNGLE" },
@@ -48,12 +53,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "QUINHME" },
     ],
     correctAnswer: "C",
-    explanation: "Each letter is substituted according to the positional shift mapping defined by the language rules. Applying the transformation to JUNGLE yields QUMGOE.",
+    explanation:
+      "Each letter is substituted according to the positional shift mapping defined by the language rules. Applying the transformation to JUNGLE yields QUMGOE.",
   },
   {
     id: 16,
     topic: "Blood Relations",
-    question: "In a family, A is the sister of B. F is the brother of B's husband. C is the father of F. How is B related to C?",
+    question:
+      "In a family, A is the sister of B. F is the brother of B's husband. C is the father of F. How is B related to C?",
     options: [
       { key: "A", text: "Daughter-in-law" },
       { key: "B", text: "Sister-in-law" },
@@ -61,12 +68,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Daughter" },
     ],
     correctAnswer: "A",
-    explanation: "F is the brother of B's husband, so F and B's husband are brothers. C is the father of F, which makes C also the father of B's husband. Therefore, B is C's Daughter-in-law.",
+    explanation:
+      "F is the brother of B's husband, so F and B's husband are brothers. C is the father of F, which makes C also the father of B's husband. Therefore, B is C's Daughter-in-law.",
   },
   {
     id: 17,
     topic: "Order & Ranking",
-    question: "In a queue of 35 people facing the ticket counter, Mathew has 14 people in front of him. Ron is standing in the middle of the queue. How many people are standing between Mathew and Ron?",
+    question:
+      "In a queue of 35 people facing the ticket counter, Mathew has 14 people in front of him. Ron is standing in the middle of the queue. How many people are standing between Mathew and Ron?",
     options: [
       { key: "A", text: "2" },
       { key: "B", text: "1" },
@@ -74,12 +83,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "3" },
     ],
     correctAnswer: "A",
-    explanation: "Middle position of 35 people = (35 + 1) / 2 = 18th position (Ron). Mathew has 14 people in front of him, so Mathew is in the 15th position. The people between 15th (Mathew) and 18th (Ron) are at 16th and 17th positions = 2 people.",
+    explanation:
+      "Middle position of 35 people = (35 + 1) / 2 = 18th position (Ron). Mathew has 14 people in front of him, so Mathew is in the 15th position. The people between 15th (Mathew) and 18th (Ron) are at 16th and 17th positions = 2 people.",
   },
   {
     id: 18,
     topic: "Syllogism",
-    question: "Statements: I. All apples are fruits. II. No fruits are vegetables. Conclusions: I. No apples are vegetables. II. All fruits are vegetables. Choose the correct option.",
+    question:
+      "Statements: I. All apples are fruits. II. No fruits are vegetables. Conclusions: I. No apples are vegetables. II. All fruits are vegetables. Choose the correct option.",
     options: [
       { key: "A", text: "Only Conclusion II follows" },
       { key: "B", text: "Both I and II follow" },
@@ -87,24 +98,28 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Only Conclusion I follows" },
     ],
     correctAnswer: "D",
-    explanation: "All apples belong to fruits, and no fruits belong to vegetables. Therefore, no apples can be vegetables (Conclusion I follows). Conclusion II directly contradicts Statement II.",
+    explanation:
+      "All apples belong to fruits, and no fruits belong to vegetables. Therefore, no apples can be vegetables (Conclusion I follows). Conclusion II directly contradicts Statement II.",
   },
   {
     id: 19,
     topic: "Logical Evaluation & Inequalities",
-    question: "Mr. Ben purchased four pens—E, F, G, and H—at different prices. Statement 1: The price of F and H is less than E. Statement 2: The price of G is less than F. Statement 3: The price of H is more than G. If the first two statements are true, what can be said about the third statement?",
+    question:
+      "Mr. Ben purchased four pens—E, F, G, and H—at different prices. Statement 1: The price of F and H is less than E. Statement 2: The price of G is less than F. Statement 3: The price of H is more than G. If the first two statements are true, what can be said about the third statement?",
     options: [
       { key: "A", text: "Uncertain" },
       { key: "B", text: "False" },
       { key: "C", text: "True" },
     ],
     correctAnswer: "A",
-    explanation: "From Statement 1 & 2: G < F < E and H < E. There is no given relationship between H and G (H can be greater than, equal to, or less than G). Therefore, Statement 3 cannot be determined with certainty.",
+    explanation:
+      "From Statement 1 & 2: G < F < E and H < E. There is no given relationship between H and G (H can be greater than, equal to, or less than G). Therefore, Statement 3 cannot be determined with certainty.",
   },
   {
     id: 20,
     topic: "Direction Sense Test",
-    question: "On a map, Point A is 20 m West of B. Point B is 12 m North of C. Point C is 30 m East of D. Point E is 20 m North of D. In which direction is C with respect to E?",
+    question:
+      "On a map, Point A is 20 m West of B. Point B is 12 m North of C. Point C is 30 m East of D. Point E is 20 m North of D. In which direction is C with respect to E?",
     options: [
       { key: "A", text: "North-West" },
       { key: "B", text: "South-East" },
@@ -112,12 +127,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "North-East" },
     ],
     correctAnswer: "B",
-    explanation: "Let D = (0,0). C is 30 m East of D ⇒ C = (30, 0). E is 20 m North of D ⇒ E = (0, 20). Vector from E to C = (30 - 0, 0 - 20) = (+30, -20), which points East and South ⇒ South-East.",
+    explanation:
+      "Let D = (0,0). C is 30 m East of D ⇒ C = (30, 0). E is 20 m North of D ⇒ E = (0, 20). Vector from E to C = (30 - 0, 0 - 20) = (+30, -20), which points East and South ⇒ South-East.",
   },
   {
     id: 21,
     topic: "Letter Series",
-    question: "Select the correct option that can replace the question marks (?) in the series: A, C, B, D, D, F, G, I, ?, ?",
+    question:
+      "Select the correct option that can replace the question marks (?) in the series: A, C, B, D, D, F, G, I, ?, ?",
     options: [
       { key: "A", text: "K, L" },
       { key: "B", text: "L, M" },
@@ -125,12 +142,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "M, L" },
     ],
     correctAnswer: "C",
-    explanation: "Two alternating series: Odd positions: A(1), B(2), D(4), G(7), ? (+1, +2, +3, +4) ⇒ 7 + 4 = 11 (K). Even positions: C(3), D(4), F(6), I(9), ? (+1, +2, +3, +4) ⇒ 9 + 4 = 13 (M). The missing pair is K, M.",
+    explanation:
+      "Two alternating series: Odd positions: A(1), B(2), D(4), G(7), ? (+1, +2, +3, +4) ⇒ 7 + 4 = 11 (K). Even positions: C(3), D(4), F(6), I(9), ? (+1, +2, +3, +4) ⇒ 9 + 4 = 13 (M). The missing pair is K, M.",
   },
   {
     id: 22,
     topic: "Blood Relations & Family Tree",
-    question: "There are five members in a family: P, Q, R, S, and T. P is Q's sister. R is the husband of S. R is the father of P. How is P related to R's brother T?",
+    question:
+      "There are five members in a family: P, Q, R, S, and T. P is Q's sister. R is the husband of S. R is the father of P. How is P related to R's brother T?",
     options: [
       { key: "A", text: "Daughter" },
       { key: "B", text: "Sister" },
@@ -138,7 +157,8 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Cousin" },
     ],
     correctAnswer: "C",
-    explanation: "P is the daughter of R. T is R's brother. The daughter of a person's brother is their Niece. Thus, P is T's Niece.",
+    explanation:
+      "P is the daughter of R. T is R's brother. The daughter of a person's brother is their Niece. Thus, P is T's Niece.",
   },
   {
     id: 23,
@@ -151,12 +171,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "45" },
     ],
     correctAnswer: "B",
-    explanation: "Differences between consecutive terms: 6-1=5, 13-6=7, 22-13=9, 33-22=11. The differences increase by +2 (consecutive odd numbers: 5, 7, 9, 11). Next difference = 13. Missing number = 33 + 13 = 46.",
+    explanation:
+      "Differences between consecutive terms: 6-1=5, 13-6=7, 22-13=9, 33-22=11. The differences increase by +2 (consecutive odd numbers: 5, 7, 9, 11). Next difference = 13. Missing number = 33 + 13 = 46.",
   },
   {
     id: 24,
     topic: "Seating & Orientation (Carrom Game)",
-    question: "P, R, Q, and S are playing a game of Carrom. P and R are partners. S and Q are partners. S is to the left of P. P is facing East. In which direction does Q face?",
+    question:
+      "P, R, Q, and S are playing a game of Carrom. P and R are partners. S and Q are partners. S is to the left of P. P is facing East. In which direction does Q face?",
     options: [
       { key: "A", text: "West" },
       { key: "B", text: "South" },
@@ -164,12 +186,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "East" },
     ],
     correctAnswer: "C",
-    explanation: "P faces East (sitting on West side). P's left is North side, so S sits on North side facing South. S's partner Q sits opposite S on South side, facing North.",
+    explanation:
+      "P faces East (sitting on West side). P's left is North side, so S sits on North side facing South. S's partner Q sits opposite S on South side, facing North.",
   },
   {
     id: 25,
     topic: "Syllogism - Days, Months, Weeks & Years",
-    question: "Statements: No day is a week. Some months are days. No week is a day. No week is a year. Conclusions: I. No day is a year. II. Some months are not weeks.",
+    question:
+      "Statements: No day is a week. Some months are days. No week is a day. No week is a year. Conclusions: I. No day is a year. II. Some months are not weeks.",
     options: [
       { key: "A", text: "Only Conclusion I follows" },
       { key: "B", text: "Both conclusions follow" },
@@ -178,12 +202,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "E", text: "If only Conclusion II follows" },
     ],
     correctAnswer: "C",
-    explanation: "Evaluation: 1. Conclusion I (No day is a year): We know 'No day is a week' and 'No week is a year'. Disjoint relationships with 'week' do NOT imply disjoint relationship between 'day' and 'year' (days and years could still overlap). Hence, Conclusion I does NOT follow. 2. Conclusion II (Some months are not weeks): Since 'Some months are days' and 'No day is a week', those specific months that are days can NEVER be weeks. Hence, Conclusion II DOES follow. Therefore, Only Conclusion II follows.",
+    explanation:
+      "Evaluation: 1. Conclusion I (No day is a year): We know 'No day is a week' and 'No week is a year'. Disjoint relationships with 'week' do NOT imply disjoint relationship between 'day' and 'year' (days and years could still overlap). Hence, Conclusion I does NOT follow. 2. Conclusion II (Some months are not weeks): Since 'Some months are days' and 'No day is a week', those specific months that are days can NEVER be weeks. Hence, Conclusion II DOES follow. Therefore, Only Conclusion II follows.",
   },
   {
     id: 26,
     topic: "Linear Seating Arrangement",
-    question: "Five friends A, B, C, D and E are sitting in a row. A is immediately left of B. B is somewhere to the right of C. D is somewhere to the right of B. E is between B and D. Who is immediately to the right of E?",
+    question:
+      "Five friends A, B, C, D and E are sitting in a row. A is immediately left of B. B is somewhere to the right of C. D is somewhere to the right of B. E is between B and D. Who is immediately to the right of E?",
     options: [
       { key: "A", text: "B" },
       { key: "B", text: "A" },
@@ -191,12 +217,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "C" },
     ],
     correctAnswer: "C",
-    explanation: "Row arrangement from left to right: C, A, B, E, D. Person immediately to the right of E is D.",
+    explanation:
+      "Row arrangement from left to right: C, A, B, E, D. Person immediately to the right of E is D.",
   },
   {
     id: 27,
     topic: "Coded Blood Relations",
-    question: "In a certain code language: A - B (A is wife of B), A ≥ B (A is brother of B), A @ B (A is father of B), A £ B (A is daughter of B). Expression: P £ D - M @ L ≥ U. How is P related to U?",
+    question:
+      "In a certain code language: A - B (A is wife of B), A ≥ B (A is brother of B), A @ B (A is father of B), A £ B (A is daughter of B). Expression: P £ D - M @ L ≥ U. How is P related to U?",
     options: [
       { key: "A", text: "Daughter" },
       { key: "B", text: "Mother" },
@@ -204,12 +232,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Wife" },
     ],
     correctAnswer: "C",
-    explanation: "P is daughter of D, D is wife of M, M is father of L, L is brother of U. D & M are parents of P, L, and U. Since P is female, P is Sister to U (Correct relation is Sister).",
+    explanation:
+      "P is daughter of D, D is wife of M, M is father of L, L is brother of U. D & M are parents of P, L, and U. Since P is female, P is Sister to U (Correct relation is Sister).",
   },
   {
     id: 28,
     topic: "Syllogism - Vans & Buses",
-    question: "Statements: No vans are buses. No buses are cars. Conclusions: I. All vans are cars. II. Some cars are vans.",
+    question:
+      "Statements: No vans are buses. No buses are cars. Conclusions: I. All vans are cars. II. Some cars are vans.",
     options: [
       { key: "A", text: "Only I follows" },
       { key: "B", text: "Only II follows" },
@@ -217,12 +247,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Both follow" },
     ],
     correctAnswer: "C",
-    explanation: "No direct relationship is established between vans and cars from the premises, so neither conclusion follows.",
+    explanation:
+      "No direct relationship is established between vans and cars from the premises, so neither conclusion follows.",
   },
   {
     id: 29,
     topic: "Blood Relations - Photograph",
-    question: "Pointing to a photograph, a woman says: 'This man's daughter's only brother is my father.' How is the woman's father related to the man in the photograph?",
+    question:
+      "Pointing to a photograph, a woman says: 'This man's daughter's only brother is my father.' How is the woman's father related to the man in the photograph?",
     options: [
       { key: "A", text: "Grandson" },
       { key: "B", text: "Brother" },
@@ -230,12 +262,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Son" },
     ],
     correctAnswer: "D",
-    explanation: "The man's daughter's only brother is the woman's father. Thus, the woman's father is the Son of the man in the photograph.",
+    explanation:
+      "The man's daughter's only brother is the woman's father. Thus, the woman's father is the Son of the man in the photograph.",
   },
   {
     id: 30,
     topic: "Direction Sense Test - Multi-Turn Path",
-    question: "Rishi starts from point A: 23 km North, turns left and goes 8 km, turns left and goes 28 km, turns left and goes 17 km, turns left and goes 5 km to reach P. Find the shortest distance and direction from P to A.",
+    question:
+      "Rishi starts from point A: 23 km North, turns left and goes 8 km, turns left and goes 28 km, turns left and goes 17 km, turns left and goes 5 km to reach P. Find the shortest distance and direction from P to A.",
     options: [
       { key: "A", text: "8 km West" },
       { key: "B", text: "9 km West" },
@@ -243,12 +277,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "9 km East" },
     ],
     correctAnswer: "B",
-    explanation: "Coordinates after path: A(0,0) -> (0,23) -> (-8,23) -> (-8,-5) -> (9,-5) -> P(9,0). P is at (9,0), so direction from P to A (0,0) is 9 km West.",
+    explanation:
+      "Coordinates after path: A(0,0) -> (0,23) -> (-8,23) -> (-8,-5) -> (9,-5) -> P(9,0). P is at (9,0), so direction from P to A (0,0) is 9 km West.",
   },
   {
     id: 31,
     topic: "Linear Seating Arrangement - 7 People",
-    question: "Seven people R, B, Y, J, E, F and N sit in a row facing north. Y sits third from right end. Three people sit between B and Y. N sits immediately neighbour of E and J. F sits second to right of E. How many people sit between R and J?",
+    question:
+      "Seven people R, B, Y, J, E, F and N sit in a row facing north. Y sits third from right end. Three people sit between B and Y. N sits immediately neighbour of E and J. F sits second to right of E. How many people sit between R and J?",
     options: [
       { key: "A", text: "Two" },
       { key: "B", text: "Three" },
@@ -256,12 +292,14 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Four" },
     ],
     correctAnswer: "D",
-    explanation: "Seating Arrangement (Positions 1 to 7 from Left to Right):\n1. Y sits 3rd from right end ⇒ Position 5 is Y.\n2. Three people sit between B and Y ⇒ Position 1 is B.\n3. N is an immediate neighbour of E and J ⇒ N must sit between E and J (Cluster: J - N - E or E - N - J).\n4. F sits 2nd to the right of E ⇒ E must be at Position 4 and F at Position 6.\n5. Therefore, N is at Position 3 and J is at Position 2.\n6. Remaining person R takes Position 7.\n\nFinal Row Order: [1: B, 2: J, 3: N, 4: E, 5: Y, 6: F, 7: R]\n\nPeople sitting between R (Position 7) and J (Position 2) are N, E, Y, and F (4 people).",
+    explanation:
+      "Seating Arrangement (Positions 1 to 7 from Left to Right):\n1. Y sits 3rd from right end ⇒ Position 5 is Y.\n2. Three people sit between B and Y ⇒ Position 1 is B.\n3. N is an immediate neighbour of E and J ⇒ N must sit between E and J (Cluster: J - N - E or E - N - J).\n4. F sits 2nd to the right of E ⇒ E must be at Position 4 and F at Position 6.\n5. Therefore, N is at Position 3 and J is at Position 2.\n6. Remaining person R takes Position 7.\n\nFinal Row Order: [1: B, 2: J, 3: N, 4: E, 5: Y, 6: F, 7: R]\n\nPeople sitting between R (Position 7) and J (Position 2) are N, E, Y, and F (4 people).",
   },
   {
     id: 32,
     topic: "Circular Seating & Alphabetical Position",
-    question: "Six students sit around a circular table facing center. I is adjacent to J and H. H is second to left of J. K is third to right of H. G is adjacent to I and H. How many people remain in their alphabetical positions if arranged clockwise starting from G?",
+    question:
+      "Six students sit around a circular table facing center. I is adjacent to J and H. H is second to left of J. K is third to right of H. G is adjacent to I and H. How many people remain in their alphabetical positions if arranged clockwise starting from G?",
     options: [
       { key: "A", text: "Four" },
       { key: "B", text: "One" },
@@ -269,24 +307,28 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "Three" },
     ],
     correctAnswer: "C",
-    explanation: "Circular arrangement clockwise: G, I, J, K, L, H. Comparing with G, H, I, J, K, L clockwise starting from G: G and H remain in their positions (2 people).",
+    explanation:
+      "Circular arrangement clockwise: G, I, J, K, L, H. Comparing with G, H, I, J, K, L clockwise starting from G: G and H remain in their positions (2 people).",
   },
   {
     id: 33,
     topic: "Logical Height Comparison",
-    question: "There are five people A, B, C, D and E. Statements: I. C is taller than A, and A is taller than B. II. E is shorter than B. III. D is taller than E. IV. C is the tallest. If statements I-III are true, what can be said about statement IV?",
+    question:
+      "There are five people A, B, C, D and E. Statements: I. C is taller than A, and A is taller than B. II. E is shorter than B. III. D is taller than E. IV. C is the tallest. If statements I-III are true, what can be said about statement IV?",
     options: [
       { key: "A", text: "Uncertain" },
       { key: "B", text: "True" },
       { key: "C", text: "False" },
     ],
     correctAnswer: "A",
-    explanation: "From I-III: C > A > B > E and D > E. Since the relative height between D and C is not established, statement IV cannot be determined with certainty.",
+    explanation:
+      "From I-III: C > A > B > E and D > E. Since the relative height between D and C is not established, statement IV cannot be determined with certainty.",
   },
   {
     id: 34,
     topic: "Letter-Number Pattern Analogy",
-    question: "Find the next letter-number cluster in the series: BDF 2, FHJ 5, LJN 8, NPR 11, ?",
+    question:
+      "Find the next letter-number cluster in the series: BDF 2, FHJ 5, LJN 8, NPR 11, ?",
     options: [
       { key: "A", text: "STV 14" },
       { key: "B", text: "RTV 14" },
@@ -294,6 +336,7 @@ export const analyticalQuestions: AnalyticalQuestion[] = [
       { key: "D", text: "SVX 14" },
     ],
     correctAnswer: "B",
-    explanation: "Number sequence increases by +3 (2, 5, 8, 11 -> 14). Letter clusters shift while maintaining 2-step letter gaps: BDF -> FHJ -> LJN -> NPR -> RTV. Combined cluster: RTV 14.",
+    explanation:
+      "Number sequence increases by +3 (2, 5, 8, 11 -> 14). Letter clusters shift while maintaining 2-step letter gaps: BDF -> FHJ -> LJN -> NPR -> RTV. Combined cluster: RTV 14.",
   },
 ];

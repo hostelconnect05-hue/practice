@@ -22,10 +22,7 @@
       "explanation": "No positive even numbers are present, so 2 is the smallest missing positive even."
     }
   ],
-  "constraints": [
-    "1 <= nums.length <= 100000",
-    "1 <= nums[i] <= 1000000000"
-  ],
+  "constraints": ["1 <= nums.length <= 100000", "1 <= nums[i] <= 1000000000"],
   "hints": [
     "Hint 1: Store all positive even numbers in a HashSet for O(1) membership lookups.",
     "Hint 2: Start searching at candidate = 2 and iterate upward in steps of 2 (2, 4, 6, 8, ...).",

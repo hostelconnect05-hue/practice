@@ -6,5 +6,9 @@
   "timeComplexity": "O(N)",
   "spaceComplexity": "O(1)",
   "dryRun": "S = 'abcabc'. i=1('b'): diff=1 -> len=2. i=2('c'): diff=1 -> len=3. i=3('a'): diff=-2 -> len=4 ('abca'). i=4('b'): diff=1 -> len=5 ('abcab'). i=5('c'): diff=1 -> len=1. Max = 5.",
-  "edgeCases": ["Single character string |S|=1", "All identical characters ('aaaa')", "Strictly decreasing string ('zyx')"]
+  "edgeCases": [
+    "Single character string |S|=1",
+    "All identical characters ('aaaa')",
+    "Strictly decreasing string ('zyx')"
+  ]
 }

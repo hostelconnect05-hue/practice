@@ -33,6 +33,11 @@
     "Hint 2: Group characters and numbers by their frequency values into frequency maps C_freq and N_freq.",
     "Hint 3: For each frequency F, add C_freq[F] * N_freq[F] to the total count."
   ],
-  "relatedProblems": ["minimum-index", "smallest-missing-even-number", "5-days-challenge", "index-sort"],
+  "relatedProblems": [
+    "minimum-index",
+    "smallest-missing-even-number",
+    "5-days-challenge",
+    "index-sort"
+  ],
   "discussion": "Notice that since s contains lowercase letters, there are at most 26 distinct character frequencies."
 }

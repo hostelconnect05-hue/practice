@@ -16,7 +16,16 @@ const editorialDir = path.join(root, "content", "editorials");
 const templateDir = path.join(root, "content", "templates");
 const visibleTestDir = path.join(root, "content", "testcases", "visible");
 const hiddenTestDir = path.join(root, "content", "testcases", "hidden");
-const problemOrder = ["minimum-index", "smallest-missing-even-number", "5-days-challenge", "shopping-cart", "index-sort", "frequency-sync", "vowel-consonant-rearrange", "river-current"];
+const problemOrder = [
+  "minimum-index",
+  "smallest-missing-even-number",
+  "5-days-challenge",
+  "shopping-cart",
+  "index-sort",
+  "frequency-sync",
+  "vowel-consonant-rearrange",
+  "river-current",
+];
 
 async function loadJson<T>(filePath: string): Promise<T> {
   const raw = await fs.readFile(filePath, "utf8");
@@ -29,7 +38,9 @@ export const getProblemList = cache(async (): Promise<ProblemListItem[]> => {
     files
       .filter((file) => file.endsWith(".json"))
       .map(async (file) => {
-        const problem = await loadJson<ProblemData>(path.join(problemDir, file));
+        const problem = await loadJson<ProblemData>(
+          path.join(problemDir, file),
+        );
         return {
           slug: problem.slug,
           title: problem.title,
@@ -37,7 +48,7 @@ export const getProblemList = cache(async (): Promise<ProblemListItem[]> => {
           topics: problem.topics,
           acceptance: problem.acceptance,
         };
-      })
+      }),
   );
 
   return problems.sort((a, b) => {
@@ -49,35 +60,56 @@ export const getProblemList = cache(async (): Promise<ProblemListItem[]> => {
   });
 });
 
-export const getProblemBundle = cache(async (rawSlug: string): Promise<ProblemBundle | null> => {
-  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
-  const problemPath = path.join(problemDir, `${normalizedSlug}.json`);
+export const getProblemBundle = cache(
+  async (rawSlug: string): Promise<ProblemBundle | null> => {
+    const normalizedSlug = decodeURIComponent(rawSlug)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
+    const problemPath = path.join(problemDir, `${normalizedSlug}.json`);
 
-  try {
-    const [problem, editorial, templates, visibleTests] = await Promise.all([
-      loadJson<ProblemData>(problemPath),
-      loadJson<EditorialData>(path.join(editorialDir, `${normalizedSlug}.json`)),
-      loadJson<ProblemBundle["templates"]>(path.join(templateDir, `${normalizedSlug}.json`)),
-      loadJson<TestCase[]>(path.join(visibleTestDir, `${normalizedSlug}.json`)),
-    ]);
+    try {
+      const [problem, editorial, templates, visibleTests] = await Promise.all([
+        loadJson<ProblemData>(problemPath),
+        loadJson<EditorialData>(
+          path.join(editorialDir, `${normalizedSlug}.json`),
+        ),
+        loadJson<ProblemBundle["templates"]>(
+          path.join(templateDir, `${normalizedSlug}.json`),
+        ),
+        loadJson<TestCase[]>(
+          path.join(visibleTestDir, `${normalizedSlug}.json`),
+        ),
+      ]);
 
-    return {
-      problem,
-      editorial,
-      templates,
-      visibleTests,
-    };
-  } catch {
-    return null;
-  }
-});
+      return {
+        problem,
+        editorial,
+        templates,
+        visibleTests,
+      };
+    } catch {
+      return null;
+    }
+  },
+);
 
 export async function getHiddenTests(rawSlug: string): Promise<TestCase[]> {
-  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
-  return loadJson<TestCase[]>(path.join(hiddenTestDir, `${normalizedSlug}.json`));
+  const normalizedSlug = decodeURIComponent(rawSlug)
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+  return loadJson<TestCase[]>(
+    path.join(hiddenTestDir, `${normalizedSlug}.json`),
+  );
 }
 
 export async function getVisibleTests(rawSlug: string): Promise<TestCase[]> {
-  const normalizedSlug = decodeURIComponent(rawSlug).trim().toLowerCase().replace(/\s+/g, "-");
-  return loadJson<TestCase[]>(path.join(visibleTestDir, `${normalizedSlug}.json`));
+  const normalizedSlug = decodeURIComponent(rawSlug)
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-");
+  return loadJson<TestCase[]>(
+    path.join(visibleTestDir, `${normalizedSlug}.json`),
+  );
 }

@@ -6,5 +6,10 @@
   "timeComplexity": "O(N) single linear passes.",
   "spaceComplexity": "O(N) for storing precomputed arrays.",
   "dryRun": "N = 5, C = [2, 0, -3, 0, 5].\nleftNonZero = [null, 2, 2, -3, -3]\nrightNonZero = [-3, -3, 5, 5, null]\nFor i=1: left=2, right=-3. |-3| > |2| => -3.\nFor i=3: left=-3, right=5. |5| > |-3| => 5.",
-  "edgeCases": ["All elements are 0", "Only 1 non-zero element", "No zeros present", "Equal absolute values on left and right"]
+  "edgeCases": [
+    "All elements are 0",
+    "Only 1 non-zero element",
+    "No zeros present",
+    "Equal absolute values on left and right"
+  ]
 }

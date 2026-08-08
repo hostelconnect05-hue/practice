@@ -6,5 +6,9 @@
   "timeComplexity": "O(n)",
   "spaceComplexity": "O(1)",
   "dryRun": "pages=[4,10,20,30,40]. total=104. answer = 104 / 5 = 20.",
-  "edgeCases": ["Single element arrays", "Total pages < 5", "Very large sums requiring 64-bit integer"]
+  "edgeCases": [
+    "Single element arrays",
+    "Total pages < 5",
+    "Very large sums requiring 64-bit integer"
+  ]
 }

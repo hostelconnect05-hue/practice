@@ -82,7 +82,7 @@ function getVerdict(result: Judge0Result, expectedOutput: string): Verdict {
 async function localExecute(
   sourceCode: string,
   language: LanguageKey,
-  stdin: string
+  stdin: string,
 ): Promise<Judge0Result> {
   const tempDir = path.join(os.tmpdir(), "temp_runs");
   await fs.mkdir(tempDir, { recursive: true });
@@ -105,8 +105,12 @@ async function localExecute(
         child.kill("SIGKILL");
       }, 5000);
 
-      child.stdout.on("data", (data) => { stdout += data; });
-      child.stderr.on("data", (data) => { stderr += data; });
+      child.stdout.on("data", (data) => {
+        stdout += data;
+      });
+      child.stderr.on("data", (data) => {
+        stderr += data;
+      });
 
       child.on("close", async (code) => {
         clearTimeout(timer);
@@ -173,7 +177,9 @@ async function localExecute(
     return new Promise((resolve) => {
       const javac = spawn("javac", ["Main.java"], { cwd: javaDir });
       let compileOutput = "";
-      javac.stderr.on("data", (data) => { compileOutput += data; });
+      javac.stderr.on("data", (data) => {
+        compileOutput += data;
+      });
       javac.on("close", (code) => {
         if (code !== 0) {
           fs.rm(javaDir, { recursive: true, force: true }).catch(() => {});
@@ -197,8 +203,12 @@ async function localExecute(
         let stdout = "";
         let stderr = "";
 
-        child.stdout.on("data", (data) => { stdout += data; });
-        child.stderr.on("data", (data) => { stderr += data; });
+        child.stdout.on("data", (data) => {
+          stdout += data;
+        });
+        child.stderr.on("data", (data) => {
+          stderr += data;
+        });
 
         child.on("close", async (runCode) => {
           const endTime = process.hrtime.bigint();
@@ -244,20 +254,27 @@ async function localExecute(
   if (language === "cpp") {
     const isWindows = process.platform === "win32";
     const filePath = path.join(tempDir, `run_${runId}.cpp`);
-    const exePath = path.join(tempDir, isWindows ? `run_${runId}.exe` : `run_${runId}`);
+    const exePath = path.join(
+      tempDir,
+      isWindows ? `run_${runId}.exe` : `run_${runId}`,
+    );
     await fs.writeFile(filePath, sourceCode, "utf8");
 
     return new Promise((resolve) => {
       const gpp = spawn("g++", [filePath, "-o", exePath]);
       let compileOutput = "";
-      gpp.stderr.on("data", (data) => { compileOutput += data; });
+      gpp.stderr.on("data", (data) => {
+        compileOutput += data;
+      });
       gpp.on("close", (code) => {
         if (code !== 0) {
           fs.unlink(filePath).catch(() => {});
           resolve({
             stdout: null,
             stderr: compileOutput || "g++ compiler not found or failed.",
-            compile_output: compileOutput || "g++ is not installed on this system. Local C++ compilation requires g++.",
+            compile_output:
+              compileOutput ||
+              "g++ is not installed on this system. Local C++ compilation requires g++.",
             message: "Compilation Failed",
             time: "0.000",
             memory: 0,
@@ -274,8 +291,12 @@ async function localExecute(
         let stdout = "";
         let stderr = "";
 
-        child.stdout.on("data", (data) => { stdout += data; });
-        child.stderr.on("data", (data) => { stderr += data; });
+        child.stdout.on("data", (data) => {
+          stdout += data;
+        });
+        child.stderr.on("data", (data) => {
+          stderr += data;
+        });
 
         child.on("close", async (runCode) => {
           const endTime = process.hrtime.bigint();
@@ -335,7 +356,11 @@ async function localExecute(
   };
 }
 
-async function execute(sourceCode: string, language: LanguageKey, stdin: string): Promise<Judge0Result> {
+async function execute(
+  sourceCode: string,
+  language: LanguageKey,
+  stdin: string,
+): Promise<Judge0Result> {
   const apiKey = process.env.JUDGE0_API_KEY?.trim();
   if (apiKey) {
     const baseUrl = process.env.JUDGE0_API_URL ?? DEFAULT_URL;
@@ -348,16 +373,19 @@ async function execute(sourceCode: string, language: LanguageKey, stdin: string)
     }
 
     try {
-      const response = await fetch(`${baseUrl}/submissions?base64_encoded=false&wait=true`, {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          source_code: sourceCode,
-          language_id: languageMap[language],
-          stdin,
-        }),
-        cache: "no-store",
-      });
+      const response = await fetch(
+        `${baseUrl}/submissions?base64_encoded=false&wait=true`,
+        {
+          method: "POST",
+          headers,
+          body: JSON.stringify({
+            source_code: sourceCode,
+            language_id: languageMap[language],
+            stdin,
+          }),
+          cache: "no-store",
+        },
+      );
 
       if (response.ok) {
         return (await response.json()) as Judge0Result;
@@ -366,7 +394,10 @@ async function execute(sourceCode: string, language: LanguageKey, stdin: string)
   }
 
   // Fallback to Piston API (100% free, no API key required)
-  const pistonLangMap: Record<LanguageKey, { language: string; version: string }> = {
+  const pistonLangMap: Record<
+    LanguageKey,
+    { language: string; version: string }
+  > = {
     java: { language: "java", version: "15.0.2" },
     python: { language: "python", version: "3.10.0" },
   };
@@ -412,14 +443,17 @@ async function execute(sourceCode: string, language: LanguageKey, stdin: string)
 export async function runAgainstTests(
   sourceCode: string,
   language: LanguageKey,
-  tests: TestCase[]
+  tests: TestCase[],
 ): Promise<TestRunResult[]> {
   return Promise.all(
     tests.map(async (testCase) => {
       const judge0Result = await execute(sourceCode, language, testCase.input);
       const verdict = getVerdict(judge0Result, testCase.expectedOutput);
       const actualOutput = normalizeOutput(
-        judge0Result.stdout ?? judge0Result.stderr ?? judge0Result.compile_output ?? ""
+        judge0Result.stdout ??
+          judge0Result.stderr ??
+          judge0Result.compile_output ??
+          "",
       );
 
       return {
@@ -431,6 +465,6 @@ export async function runAgainstTests(
         time: judge0Result.time,
         memory: judge0Result.memory,
       };
-    })
+    }),
   );
 }

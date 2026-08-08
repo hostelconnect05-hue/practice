@@ -17,10 +17,7 @@
       "explanation": "Total pages = 5. Distribution across 5 days is 1, 1, 1, 1, 1. Minimum pages in a day = 1."
     }
   ],
-  "constraints": [
-    "1 <= n <= 2 * 10^5",
-    "1 <= pages[i] <= 10^9"
-  ],
+  "constraints": ["1 <= n <= 2 * 10^5", "1 <= pages[i] <= 10^9"],
   "hints": [
     "Hint 1: Since pages can be distributed freely across days, only the total number of pages matters.",
     "Hint 2: To distribute total pages as evenly as possible across 5 days, calculate total = sum(pages).",

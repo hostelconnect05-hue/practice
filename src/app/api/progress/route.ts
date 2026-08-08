@@ -7,8 +7,11 @@ export async function GET() {
     return NextResponse.json(progress);
   } catch (error) {
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Failed to load progress" },
-      { status: 500 }
+      {
+        error:
+          error instanceof Error ? error.message : "Failed to load progress",
+      },
+      { status: 500 },
     );
   }
 }

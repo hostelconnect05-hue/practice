@@ -50,7 +50,10 @@ export async function getProgress(): Promise<ProgressSummary> {
   }
 }
 
-export async function markAttempt(slug: string, accepted: boolean): Promise<void> {
+export async function markAttempt(
+  slug: string,
+  accepted: boolean,
+): Promise<void> {
   if (!process.env.DATABASE_URL) {
     return;
   }

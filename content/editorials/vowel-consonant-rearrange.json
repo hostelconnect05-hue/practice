@@ -6,5 +6,9 @@
   "timeComplexity": "O(N)",
   "spaceComplexity": "O(N)",
   "dryRun": "S='beauty'. Consonants=[b,t,y], Vowels=[e,a,u]. Result[0]=b, Result[1]=e, Result[2]=t, Result[3]=a, Result[4]=y, Result[5]=u -> 'betayu'.",
-  "edgeCases": ["String of length 2", "All vowels and consonants interspersed", "Large strings up to 200,000 chars"]
+  "edgeCases": [
+    "String of length 2",
+    "All vowels and consonants interspersed",
+    "Large strings up to 200,000 chars"
+  ]
 }

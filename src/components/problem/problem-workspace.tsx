@@ -8,7 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
-import type { LanguageKey, ProblemBundle, ProblemListItem } from "@/types/problem";
+import type {
+  LanguageKey,
+  ProblemBundle,
+  ProblemListItem,
+} from "@/types/problem";
 
 type RunCaseResult = {
   verdict: string;
@@ -38,11 +42,15 @@ export function ProblemWorkspace({
   const [language, setLanguage] = useState<LanguageKey>("java");
 
   // Load saved code and solved state from localStorage
-  const [codeByLanguage, setCodeByLanguage] = useState<Record<LanguageKey, string>>(() => {
+  const [codeByLanguage, setCodeByLanguage] = useState<
+    Record<LanguageKey, string>
+  >(() => {
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem(`code_${problem.slug}`);
       if (saved) {
-        try { return JSON.parse(saved); } catch {}
+        try {
+          return JSON.parse(saved);
+        } catch {}
       }
     }
     return templates;
@@ -52,7 +60,9 @@ export function ProblemWorkspace({
     if (typeof window !== "undefined") {
       const saved = localStorage.getItem("solved_problems");
       if (saved) {
-        try { return new Set(JSON.parse(saved)); } catch {}
+        try {
+          return new Set(JSON.parse(saved));
+        } catch {}
       }
     }
     return new Set();
@@ -71,15 +81,19 @@ export function ProblemWorkspace({
     code: string;
   };
 
-  const [submissionHistory, setSubmissionHistory] = useState<SubmissionItem[]>(() => {
-    if (typeof window !== "undefined") {
-      const saved = localStorage.getItem(`submissions_${problem.slug}`);
-      if (saved) {
-        try { return JSON.parse(saved); } catch {}
+  const [submissionHistory, setSubmissionHistory] = useState<SubmissionItem[]>(
+    () => {
+      if (typeof window !== "undefined") {
+        const saved = localStorage.getItem(`submissions_${problem.slug}`);
+        if (saved) {
+          try {
+            return JSON.parse(saved);
+          } catch {}
+        }
       }
-    }
-    return [];
-  });
+      return [];
+    },
+  );
 
   const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
@@ -134,7 +148,10 @@ export function ProblemWorkspace({
         }),
       });
 
-      const body = (await response.json()) as { results: RunCaseResult[]; error?: string };
+      const body = (await response.json()) as {
+        results: RunCaseResult[];
+        error?: string;
+      };
       if (!response.ok) {
         throw new Error(body.error ?? "Run failed");
       }
@@ -144,7 +161,8 @@ export function ProblemWorkspace({
         {
           verdict: "Internal Error",
           passed: false,
-          actualOutput: error instanceof Error ? error.message : "Unknown error",
+          actualOutput:
+            error instanceof Error ? error.message : "Unknown error",
           expectedOutput: "",
           statusDescription: "Failed to execute",
           time: null,
@@ -189,7 +207,11 @@ export function ProblemWorkspace({
       // Save submission entry to history
       const newSubmission: SubmissionItem = {
         id: Math.random().toString(36).substring(7),
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }),
+        timestamp: new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
         language,
         verdict: body.verdict,
         code: activeCode,
@@ -198,7 +220,10 @@ export function ProblemWorkspace({
       setSubmissionHistory((prev) => {
         const updated = [newSubmission, ...prev];
         if (typeof window !== "undefined") {
-          localStorage.setItem(`submissions_${problem.slug}`, JSON.stringify(updated));
+          localStorage.setItem(
+            `submissions_${problem.slug}`,
+            JSON.stringify(updated),
+          );
         }
         return updated;
       });
@@ -208,7 +233,10 @@ export function ProblemWorkspace({
           const next = new Set(prev);
           next.add(problem.slug);
           if (typeof window !== "undefined") {
-            localStorage.setItem("solved_problems", JSON.stringify(Array.from(next)));
+            localStorage.setItem(
+              "solved_problems",
+              JSON.stringify(Array.from(next)),
+            );
           }
           return next;
         });
@@ -219,7 +247,8 @@ export function ProblemWorkspace({
         {
           verdict: "Internal Error",
           passed: false,
-          actualOutput: error instanceof Error ? error.message : "Unknown error",
+          actualOutput:
+            error instanceof Error ? error.message : "Unknown error",
           expectedOutput: "",
           statusDescription: "Failed to submit",
           time: null,
@@ -237,11 +266,15 @@ export function ProblemWorkspace({
         <div className="flex flex-wrap items-center gap-3">
           <DifficultyPill difficulty={problem.difficulty} />
           <h1 className="text-2xl font-bold text-zinc-50">{problem.title}</h1>
-          <span className="text-xs text-zinc-400">Acceptance {problem.acceptance}</span>
+          <span className="text-xs text-zinc-400">
+            Acceptance {problem.acceptance}
+          </span>
         </div>
 
         <article className="space-y-4 text-sm text-zinc-200">
-          <h2 className="text-lg font-semibold text-zinc-100">Problem Statement</h2>
+          <h2 className="text-lg font-semibold text-zinc-100">
+            Problem Statement
+          </h2>
           <p>{problem.statement}</p>
 
           <h3 className="text-base font-semibold text-zinc-100">Examples</h3>
@@ -250,15 +283,23 @@ export function ProblemWorkspace({
               <CardContent className="space-y-3 p-3.5 text-xs">
                 <div>
                   <strong className="text-zinc-400 block mb-1">Input:</strong>
-                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">{example.input}</pre>
+                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">
+                    {example.input}
+                  </pre>
                 </div>
                 <div>
                   <strong className="text-zinc-400 block mb-1">Output:</strong>
-                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">{example.output}</pre>
+                  <pre className="rounded bg-zinc-900 p-2 font-mono text-zinc-200 whitespace-pre-wrap">
+                    {example.output}
+                  </pre>
                 </div>
                 <div>
-                  <strong className="text-zinc-400 block mb-1">Explanation:</strong>
-                  <div className="whitespace-pre-wrap rounded bg-zinc-900/60 p-2 text-zinc-300 leading-relaxed">{example.explanation}</div>
+                  <strong className="text-zinc-400 block mb-1">
+                    Explanation:
+                  </strong>
+                  <div className="whitespace-pre-wrap rounded bg-zinc-900/60 p-2 text-zinc-300 leading-relaxed">
+                    {example.explanation}
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -272,44 +313,78 @@ export function ProblemWorkspace({
           </ul>
 
           <div>
-            <h3 className="mb-2 text-base font-semibold text-zinc-100">Hints</h3>
+            <h3 className="mb-2 text-base font-semibold text-zinc-100">
+              Hints
+            </h3>
             <Button
               variant="outline"
               size="sm"
-              onClick={() => setHintLevel((v) => Math.min(v + 1, problem.hints.length + 1))}
+              onClick={() =>
+                setHintLevel((v) => Math.min(v + 1, problem.hints.length + 1))
+              }
             >
               <Brain className="mr-2 h-4 w-4" />
               AI Hint
             </Button>
-            {currentHint ? <p className="mt-2 rounded-lg bg-zinc-950 p-3 text-xs">{currentHint}</p> : null}
+            {currentHint ? (
+              <p className="mt-2 rounded-lg bg-zinc-950 p-3 text-xs">
+                {currentHint}
+              </p>
+            ) : null}
           </div>
 
           <div>
-            <h3 className="mb-2 text-base font-semibold text-zinc-100">Editorial</h3>
-            <Button variant="ghost" size="sm" onClick={() => setEditorialVisible((v) => !v)}>
+            <h3 className="mb-2 text-base font-semibold text-zinc-100">
+              Editorial
+            </h3>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setEditorialVisible((v) => !v)}
+            >
               {editorialVisible ? "Hide Editorial" : "Show Editorial"}
             </Button>
             {editorialVisible ? (
               <div className="mt-3 space-y-2 rounded-lg border border-zinc-800 bg-zinc-950 p-3 text-xs">
-                <p><strong>Approach:</strong> {editorial.approach}</p>
-                <p><strong>Observation:</strong> {editorial.observation}</p>
-                <p><strong>Brute Force:</strong> {editorial.bruteForce}</p>
-                <p><strong>Optimal Solution:</strong> {editorial.optimalSolution}</p>
-                <p><strong>Time Complexity:</strong> {editorial.timeComplexity}</p>
-                <p><strong>Space Complexity:</strong> {editorial.spaceComplexity}</p>
-                <p><strong>Dry Run:</strong> {editorial.dryRun}</p>
-                <p><strong>Edge Cases:</strong> {editorial.edgeCases.join(", ")}</p>
+                <p>
+                  <strong>Approach:</strong> {editorial.approach}
+                </p>
+                <p>
+                  <strong>Observation:</strong> {editorial.observation}
+                </p>
+                <p>
+                  <strong>Brute Force:</strong> {editorial.bruteForce}
+                </p>
+                <p>
+                  <strong>Optimal Solution:</strong> {editorial.optimalSolution}
+                </p>
+                <p>
+                  <strong>Time Complexity:</strong> {editorial.timeComplexity}
+                </p>
+                <p>
+                  <strong>Space Complexity:</strong> {editorial.spaceComplexity}
+                </p>
+                <p>
+                  <strong>Dry Run:</strong> {editorial.dryRun}
+                </p>
+                <p>
+                  <strong>Edge Cases:</strong> {editorial.edgeCases.join(", ")}
+                </p>
               </div>
             ) : null}
           </div>
 
           <div>
-            <h3 className="mb-2 text-base font-semibold text-zinc-100">Discussion</h3>
+            <h3 className="mb-2 text-base font-semibold text-zinc-100">
+              Discussion
+            </h3>
             <p>{problem.discussion}</p>
           </div>
 
           <div>
-            <h3 className="mb-2 text-base font-semibold text-zinc-100">Related Problems</h3>
+            <h3 className="mb-2 text-base font-semibold text-zinc-100">
+              Related Problems
+            </h3>
             <div className="flex flex-wrap gap-2">
               {related.map((item) => (
                 <Badge key={item.slug}>{item.title}</Badge>
@@ -333,10 +408,16 @@ export function ProblemWorkspace({
           ))}
         </div>
 
-        <CodeEditorPanel language={language} code={activeCode} onChange={setActiveCode} />
+        <CodeEditorPanel
+          language={language}
+          code={activeCode}
+          onChange={setActiveCode}
+        />
 
         <div>
-          <h3 className="mb-2 text-sm font-semibold text-zinc-100">Custom Input</h3>
+          <h3 className="mb-2 text-sm font-semibold text-zinc-100">
+            Custom Input
+          </h3>
           <textarea
             value={customInput}
             onChange={(event) => setCustomInput(event.target.value)}
@@ -370,7 +451,9 @@ export function ProblemWorkspace({
               <div className="flex items-center justify-between border-b border-zinc-800 pb-3">
                 <div className="flex items-center gap-2">
                   <History className="h-5 w-5 text-emerald-400" />
-                  <h3 className="text-lg font-bold text-zinc-50">Past Submissions ({submissionHistory.length})</h3>
+                  <h3 className="text-lg font-bold text-zinc-50">
+                    Past Submissions ({submissionHistory.length})
+                  </h3>
                 </div>
                 <Button
                   size="sm"
@@ -383,7 +466,9 @@ export function ProblemWorkspace({
               </div>
 
               {submissionHistory.length === 0 ? (
-                <p className="py-8 text-center text-sm text-zinc-400">No past submitted answers for this problem yet.</p>
+                <p className="py-8 text-center text-sm text-zinc-400">
+                  No past submitted answers for this problem yet.
+                </p>
               ) : (
                 <div className="max-h-96 space-y-3 overflow-y-auto pr-2">
                   {submissionHistory.map((sub, idx) => (
@@ -401,7 +486,9 @@ export function ProblemWorkspace({
                           <span
                             className={cn(
                               "font-bold text-sm",
-                              sub.verdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
+                              sub.verdict === "Accepted"
+                                ? "text-emerald-400"
+                                : "text-rose-400",
                             )}
                           >
                             {sub.verdict}
@@ -411,7 +498,9 @@ export function ProblemWorkspace({
                           </span>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="text-[11px] text-zinc-500">{sub.timestamp}</span>
+                          <span className="text-[11px] text-zinc-500">
+                            {sub.timestamp}
+                          </span>
                           <span className="text-[11px] font-medium text-emerald-400 opacity-0 transition group-hover:opacity-100">
                             Click to Open →
                           </span>
@@ -433,11 +522,15 @@ export function ProblemWorkspace({
         {submitVerdict ? (
           <div className="rounded-lg border border-zinc-800 bg-zinc-950 p-3 space-y-2">
             <div className="flex items-center justify-between">
-              <h3 className="text-sm font-semibold text-zinc-100">Submission Result</h3>
+              <h3 className="text-sm font-semibold text-zinc-100">
+                Submission Result
+              </h3>
               <span
                 className={cn(
                   "font-bold text-sm",
-                  submitVerdict === "Accepted" ? "text-emerald-400" : "text-rose-400"
+                  submitVerdict === "Accepted"
+                    ? "text-emerald-400"
+                    : "text-rose-400",
                 )}
               >
                 {submitVerdict}
@@ -445,17 +538,38 @@ export function ProblemWorkspace({
             </div>
             <div className="max-h-60 overflow-y-auto space-y-2 pr-1">
               {submitResults.map((result, index) => (
-                <div key={`sub-res-${index}`} className="rounded border border-zinc-800/80 bg-zinc-900/60 p-2 text-xs space-y-1">
+                <div
+                  key={`sub-res-${index}`}
+                  className="rounded border border-zinc-800/80 bg-zinc-900/60 p-2 text-xs space-y-1"
+                >
                   <div className="flex items-center justify-between">
-                    <span className="text-zinc-200 font-medium">Test Case {index + 1}</span>
-                    <span className={result.passed ? "text-emerald-400 font-semibold" : "text-rose-400 font-semibold"}>
+                    <span className="text-zinc-200 font-medium">
+                      Test Case {index + 1}
+                    </span>
+                    <span
+                      className={
+                        result.passed
+                          ? "text-emerald-400 font-semibold"
+                          : "text-rose-400 font-semibold"
+                      }
+                    >
                       {result.verdict} {result.time ? `(${result.time}s)` : ""}
                     </span>
                   </div>
                   {!result.passed ? (
                     <div className="mt-1.5 rounded bg-zinc-950 p-2 font-mono text-[11px] text-zinc-300 space-y-1">
-                      <p className="text-zinc-400">Expected: <span className="text-emerald-400 font-semibold">{result.expectedOutput}</span></p>
-                      <p className="text-zinc-400">Actual Output: <span className="text-rose-400 font-semibold">{result.actualOutput || "(empty)"}</span></p>
+                      <p className="text-zinc-400">
+                        Expected:{" "}
+                        <span className="text-emerald-400 font-semibold">
+                          {result.expectedOutput}
+                        </span>
+                      </p>
+                      <p className="text-zinc-400">
+                        Actual Output:{" "}
+                        <span className="text-rose-400 font-semibold">
+                          {result.actualOutput || "(empty)"}
+                        </span>
+                      </p>
                     </div>
                   ) : null}
                 </div>
@@ -466,27 +580,55 @@ export function ProblemWorkspace({
 
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h3 className="text-sm font-semibold text-zinc-100">Console Output</h3>
+            <h3 className="text-sm font-semibold text-zinc-100">
+              Console Output
+            </h3>
             {runResults.length > 0 ? (
-              <span className="text-xs text-zinc-400">{runResults.filter(r => r.passed).length} / {runResults.length} Passed</span>
+              <span className="text-xs text-zinc-400">
+                {runResults.filter((r) => r.passed).length} /{" "}
+                {runResults.length} Passed
+              </span>
             ) : null}
           </div>
 
           {runResults.length === 0 ? (
-            <p className="text-xs text-zinc-400">Run results will appear here.</p>
+            <p className="text-xs text-zinc-400">
+              Run results will appear here.
+            </p>
           ) : (
             <div className="max-h-72 space-y-2 overflow-y-auto pr-1">
               {runResults.map((result, index) => (
-                <Card key={`run-${index}`} className="border-zinc-800 bg-zinc-950">
+                <Card
+                  key={`run-${index}`}
+                  className="border-zinc-800 bg-zinc-950"
+                >
                   <CardContent className="p-3 text-xs space-y-1">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="font-semibold text-zinc-200">Case {index + 1}</span>
-                      <span className={result.passed ? "text-emerald-400 font-bold" : "text-rose-400 font-bold"}>
+                      <span className="font-semibold text-zinc-200">
+                        Case {index + 1}
+                      </span>
+                      <span
+                        className={
+                          result.passed
+                            ? "text-emerald-400 font-bold"
+                            : "text-rose-400 font-bold"
+                        }
+                      >
                         {result.verdict}
                       </span>
                     </div>
-                    <p className="text-zinc-400">Expected: <span className="font-mono text-zinc-200">{result.expectedOutput || "(custom)"}</span></p>
-                    <p className="text-zinc-400">Actual: <span className="font-mono text-zinc-200">{result.actualOutput}</span></p>
+                    <p className="text-zinc-400">
+                      Expected:{" "}
+                      <span className="font-mono text-zinc-200">
+                        {result.expectedOutput || "(custom)"}
+                      </span>
+                    </p>
+                    <p className="text-zinc-400">
+                      Actual:{" "}
+                      <span className="font-mono text-zinc-200">
+                        {result.actualOutput}
+                      </span>
+                    </p>
                     <div className="flex gap-4 pt-1 text-[11px] text-zinc-500">
                       <span>Time: {result.time ?? "N/A"} s</span>
                       <span>Memory: {result.memory ?? "N/A"} KB</span>

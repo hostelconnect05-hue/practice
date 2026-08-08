@@ -16,7 +16,8 @@ const monoFont = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Virtusa OA Practice",
-  description: "LeetCode-style practice platform for three Virtusa OA problems.",
+  description:
+    "LeetCode-style practice platform for three Virtusa OA problems.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

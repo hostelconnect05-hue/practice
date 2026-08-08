@@ -28,7 +28,8 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "According to statistics, how much do people spend every month to find the perfect gift?",
+    question:
+      "According to statistics, how much do people spend every month to find the perfect gift?",
     options: [
       { key: "A", text: "More than a trillion dollars" },
       { key: "B", text: "Less than a dollar" },
@@ -36,7 +37,8 @@ Social psychologists aren't surprised by this because, typically, gift choices a
       { key: "D", text: "Half a million dollars" },
     ],
     correctAnswer: "C",
-    explanation: "The first sentence states that people spend more than a billion dollars every month to find the perfect gift.",
+    explanation:
+      "The first sentence states that people spend more than a billion dollars every month to find the perfect gift.",
   },
   {
     id: 102,
@@ -49,7 +51,8 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "What ambivalent feelings might the giver experience when giving gifts?",
+    question:
+      "What ambivalent feelings might the giver experience when giving gifts?",
     options: [
       { key: "A", text: "Excitement and satisfaction" },
       { key: "B", text: "Sadness and excitement" },
@@ -57,7 +60,8 @@ Social psychologists aren't surprised by this because, typically, gift choices a
       { key: "D", text: "Happiness and anxiety" },
     ],
     correctAnswer: "D",
-    explanation: "The giver feels happy about strengthening the relationship, but anxious about choosing the wrong gift.",
+    explanation:
+      "The giver feels happy about strengthening the relationship, but anxious about choosing the wrong gift.",
   },
   {
     id: 103,
@@ -70,15 +74,20 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "The above passage indicates that people value gift-giving because they feel it:",
+    question:
+      "The above passage indicates that people value gift-giving because they feel it:",
     options: [
       { key: "A", text: "Strengthens their relationship with the recipient" },
-      { key: "B", text: "Eliminates the concept of \"deadweight loss\"" },
+      { key: "B", text: 'Eliminates the concept of "deadweight loss"' },
       { key: "C", text: "Enhances their economic knowledge" },
-      { key: "D", text: "Is the perfect way to express their feelings towards themselves" },
+      {
+        key: "D",
+        text: "Is the perfect way to express their feelings towards themselves",
+      },
     ],
     correctAnswer: "A",
-    explanation: "The passage states that people give gifts because they believe it strengthens their relationship with the recipient.",
+    explanation:
+      "The passage states that people give gifts because they believe it strengthens their relationship with the recipient.",
   },
   {
     id: 104,
@@ -99,7 +108,8 @@ Social psychologists aren't surprised by this because, typically, gift choices a
       { key: "D", text: "Critical and skeptical" },
     ],
     correctAnswer: "B",
-    explanation: "The author neutrally presents both the psychological and economic perspectives without taking a personal side.",
+    explanation:
+      "The author neutrally presents both the psychological and economic perspectives without taking a personal side.",
   },
   {
     id: 105,
@@ -112,7 +122,8 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "What term is used to describe the situation when people buy gifts that the recipient wouldn't buy for themselves?",
+    question:
+      "What term is used to describe the situation when people buy gifts that the recipient wouldn't buy for themselves?",
     options: [
       { key: "A", text: "Gift paradox" },
       { key: "B", text: "Recipient's conundrum" },
@@ -120,7 +131,8 @@ Social psychologists aren't surprised by this because, typically, gift choices a
       { key: "D", text: "Deadweight loss" },
     ],
     correctAnswer: "D",
-    explanation: "Economists call this situation 'deadweight loss', where the recipient values the gift less than its cost.",
+    explanation:
+      "Economists call this situation 'deadweight loss', where the recipient values the gift less than its cost.",
   },
   {
     id: 106,
@@ -133,7 +145,8 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "What ambivalent feelings might the giver experience when giving gifts? (Variant)",
+    question:
+      "What ambivalent feelings might the giver experience when giving gifts? (Variant)",
     options: [
       { key: "A", text: "Sadness and excitement" },
       { key: "B", text: "Excitement and satisfaction" },
@@ -141,7 +154,8 @@ Social psychologists aren't surprised by this because, typically, gift choices a
       { key: "D", text: "Joy and laughter" },
     ],
     correctAnswer: "C",
-    explanation: "The giver feels happy about strengthening the relationship, but anxious about choosing the wrong gift.",
+    explanation:
+      "The giver feels happy about strengthening the relationship, but anxious about choosing the wrong gift.",
   },
   {
     id: 107,
@@ -154,15 +168,29 @@ Social psychologists view giving gifts as a positive social tradition, while eco
 
 Social psychologists aren't surprised by this because, typically, gift choices are influenced by our feelings of importance, what we think others like, and mistakes in understanding what the recipient wants.`,
     },
-    question: "What does the passage suggest about the relationship between social psychologists and economists regarding gift-giving?",
+    question:
+      "What does the passage suggest about the relationship between social psychologists and economists regarding gift-giving?",
     options: [
-      { key: "A", text: "They collaborate to analyze the cultural impact of gift-giving traditions." },
-      { key: "B", text: "They unanimously agree on the adverse effects of gift-giving." },
-      { key: "C", text: "They jointly advocate stricter regulations on gift spending." },
-      { key: "D", text: "They diverge in their viewpoints, with social psychologists viewing it positively and economists embracing doubt." },
+      {
+        key: "A",
+        text: "They collaborate to analyze the cultural impact of gift-giving traditions.",
+      },
+      {
+        key: "B",
+        text: "They unanimously agree on the adverse effects of gift-giving.",
+      },
+      {
+        key: "C",
+        text: "They jointly advocate stricter regulations on gift spending.",
+      },
+      {
+        key: "D",
+        text: "They diverge in their viewpoints, with social psychologists viewing it positively and economists embracing doubt.",
+      },
     ],
     correctAnswer: "D",
-    explanation: "Social psychologists view gift-giving as a positive social tradition, whereas economists view it as an inefficient waste of resources ('deadweight loss').",
+    explanation:
+      "Social psychologists view gift-giving as a positive social tradition, whereas economists view it as an inefficient waste of resources ('deadweight loss').",
   },
 
   // PASSAGE 2: Storr Lochs Monster
@@ -178,12 +206,19 @@ Despite occasional sightings, no scientific evidence has confirmed the monster's
     question: "What is the primary purpose of the passage?",
     options: [
       { key: "A", text: "To prove that the Storr Lochs Monster exists" },
-      { key: "B", text: "To describe a local legend and discuss the lack of scientific evidence supporting it" },
+      {
+        key: "B",
+        text: "To describe a local legend and discuss the lack of scientific evidence supporting it",
+      },
       { key: "C", text: "To explain how tourism harms the Isle of Skye" },
-      { key: "D", text: "To compare the Storr Lochs Monster with marine animals" },
+      {
+        key: "D",
+        text: "To compare the Storr Lochs Monster with marine animals",
+      },
     ],
     correctAnswer: "B",
-    explanation: "The passage introduces the local legend, reported sightings, and explains that no scientific evidence supports its existence.",
+    explanation:
+      "The passage introduces the local legend, reported sightings, and explains that no scientific evidence supports its existence.",
   },
   {
     id: 202,
@@ -194,15 +229,20 @@ Despite occasional sightings, no scientific evidence has confirmed the monster's
 
 Despite occasional sightings, no scientific evidence has confirmed the monster's existence. Researchers believe that many sightings could be explained by floating logs, large fish, seals, or optical illusions created by weather conditions. Nevertheless, the legend continues to attract tourists and remains an important part of the local culture, contributing to the island's tourism industry.`,
     },
-    question: "According to the passage, why do researchers doubt the existence of the monster?",
+    question:
+      "According to the passage, why do researchers doubt the existence of the monster?",
     options: [
       { key: "A", text: "Because nobody has visited the loch" },
-      { key: "B", text: "Because scientific evidence has not confirmed its existence, and sightings may have natural explanations" },
+      {
+        key: "B",
+        text: "Because scientific evidence has not confirmed its existence, and sightings may have natural explanations",
+      },
       { key: "C", text: "Because the monster is too small to observe" },
       { key: "D", text: "Because the government banned research" },
     ],
     correctAnswer: "B",
-    explanation: "Researchers explain sightings using natural phenomena like floating logs, fish, seals, or weather illusions.",
+    explanation:
+      "Researchers explain sightings using natural phenomena like floating logs, fish, seals, or weather illusions.",
   },
   {
     id: 204,
@@ -218,12 +258,22 @@ The ancient animals thrived in prehistoric seas at the same time that the dinosa
     question: "How did the partnership between various organizations help?",
     options: [
       { key: "A", text: "It helped in preserving the fossil." },
-      { key: "B", text: "It helped the team understand how the creature became extinct." },
-      { key: "C", text: "It helped in the extraction of the fossils from the rock." },
-      { key: "D", text: "It helped in collecting funds for the extraction procedure of the fossil." },
+      {
+        key: "B",
+        text: "It helped the team understand how the creature became extinct.",
+      },
+      {
+        key: "C",
+        text: "It helped in the extraction of the fossils from the rock.",
+      },
+      {
+        key: "D",
+        text: "It helped in collecting funds for the extraction procedure of the fossil.",
+      },
     ],
     correctAnswer: "C",
-    explanation: "The passage states that a partnership between the University of Edinburgh, National Museums Scotland, and SSE enabled the fossil to be extracted from the rock that encased it.",
+    explanation:
+      "The passage states that a partnership between the University of Edinburgh, National Museums Scotland, and SSE enabled the fossil to be extracted from the rock that encased it.",
   },
   {
     id: 205,
@@ -244,7 +294,8 @@ The ancient animals thrived in prehistoric seas at the same time that the dinosa
       { key: "D", text: "Lack of clear information" },
     ],
     correctAnswer: "D",
-    explanation: "'Shrouded in mystery' refers to something that lacks clear information or is poorly understood due to missing evidence.",
+    explanation:
+      "'Shrouded in mystery' refers to something that lacks clear information or is poorly understood due to missing evidence.",
   },
   {
     id: 206,
@@ -257,7 +308,8 @@ A partnership between the University of Edinburgh, National Museums Scotland, an
 
 The ancient animals thrived in prehistoric seas at the same time that the dinosaurs were ruling the land. This discovery will help unveil how ichthyosaurs evolved during the Middle Jurassic Period, a part of Earth's history that has long been shrouded in mystery owing to a lack of fossil evidence from the time. The Isle of Skye is one of the few places in the world where fossils from the Middle Jurassic Period can be found. In folklore, the Loch Ness Monster or 'Nessie' is an aquatic being that reputedly inhabits Loch Ness in the Scottish Highlands. Although its description varies, it is similar to other supposed lake monsters in Scotland and elsewhere.`,
     },
-    question: "Which family of reptiles does the unveiled fossil in the passage belong to?",
+    question:
+      "Which family of reptiles does the unveiled fossil in the passage belong to?",
     options: [
       { key: "A", text: "Heterodontosaurus" },
       { key: "B", text: "Syntarsus" },
@@ -265,7 +317,8 @@ The ancient animals thrived in prehistoric seas at the same time that the dinosa
       { key: "D", text: "Dilophosaurus" },
     ],
     correctAnswer: "C",
-    explanation: "The passage explicitly states that the fossil belongs to an extinct family of marine reptiles known as ichthyosaurs.",
+    explanation:
+      "The passage explicitly states that the fossil belongs to an extinct family of marine reptiles known as ichthyosaurs.",
   },
 
   // PASSAGE 3: Oral History and Anthropology
@@ -282,7 +335,8 @@ Furthermore, the process of transcribing these stories from oral to written form
 
 Notwithstanding these shortcomings, oral history remains a crucial tool for ethnologists. Investigating cultural conventions through personal impressions, imperfect as they are, provides more insight into the workings of minds and emotions than theories developed by many ethnologists.`,
     },
-    question: "Fill in the blank(s). The primary purpose of the passage is to _______.",
+    question:
+      "Fill in the blank(s). The primary purpose of the passage is to _______.",
     options: [
       { key: "A", text: "assess a methodology" },
       { key: "B", text: "correct a theory" },
@@ -290,7 +344,8 @@ Notwithstanding these shortcomings, oral history remains a crucial tool for ethn
       { key: "D", text: "question an explanation" },
     ],
     correctAnswer: "A",
-    explanation: "The passage evaluates oral history as a research methodology by analyzing its benefits, drawbacks, and ultimate value.",
+    explanation:
+      "The passage evaluates oral history as a research methodology by analyzing its benefits, drawbacks, and ultimate value.",
   },
   {
     id: 302,
@@ -305,15 +360,29 @@ Furthermore, the process of transcribing these stories from oral to written form
 
 Notwithstanding these shortcomings, oral history remains a crucial tool for ethnologists. Investigating cultural conventions through personal impressions, imperfect as they are, provides more insight into the workings of minds and emotions than theories developed by many ethnologists.`,
     },
-    question: "Which of the given statements best describes the organisation of the passage?",
+    question:
+      "Which of the given statements best describes the organisation of the passage?",
     options: [
-      { key: "A", text: "It presents arguments against the use of oral history in anthropological research." },
-      { key: "B", text: "It provides an overview of a research method, its benefits, and its critiques." },
-      { key: "C", text: "It describes the challenges faced by ethnologists in studying Aboriginal culture." },
-      { key: "D", text: "It primarily focuses on the limitations of translating oral stories to written formats." },
+      {
+        key: "A",
+        text: "It presents arguments against the use of oral history in anthropological research.",
+      },
+      {
+        key: "B",
+        text: "It provides an overview of a research method, its benefits, and its critiques.",
+      },
+      {
+        key: "C",
+        text: "It describes the challenges faced by ethnologists in studying Aboriginal culture.",
+      },
+      {
+        key: "D",
+        text: "It primarily focuses on the limitations of translating oral stories to written formats.",
+      },
     ],
     correctAnswer: "B",
-    explanation: "The passage introduces the research method, outlines its advantages, discusses its limitations and criticisms, and concludes with its significance.",
+    explanation:
+      "The passage introduces the research method, outlines its advantages, discusses its limitations and criticisms, and concludes with its significance.",
   },
 
   // PASSAGE 4: Carbon Dioxide and Climate
@@ -328,15 +397,26 @@ Today, however, excessive burning of fossil fuels and deforestation have steeply
 
 The model assumes that the atmospheric temperature decreases by 6°C per kilometre above the Earth's surface and that the atmosphere's relative humidity is constant. However, the relative humidity can remain constant only if water vapour increases. The temperature rises because water vapour also absorbs infrared radiation. With greater absorption of infrared radiation and the resulting warming of the Earth's surface, more ice from the polar regions would melt, reducing the Earth's reflective capacity. More radiation would, in turn, be absorbed, raising the temperature even further.`,
     },
-    question: "Fill in the blank(s). The primary purpose of the passage is to _______.",
+    question:
+      "Fill in the blank(s). The primary purpose of the passage is to _______.",
     options: [
-      { key: "A", text: "Elaborate on the significance of increasing carbon dioxide in the atmosphere" },
-      { key: "B", text: "Warn about the advantages of excessive burning of fossil fuels" },
+      {
+        key: "A",
+        text: "Elaborate on the significance of increasing carbon dioxide in the atmosphere",
+      },
+      {
+        key: "B",
+        text: "Warn about the advantages of excessive burning of fossil fuels",
+      },
       { key: "C", text: "Recommend the usage of alternative fuels" },
-      { key: "D", text: "Illustrate the usefulness of mathematical models in predicting temperature" },
+      {
+        key: "D",
+        text: "Illustrate the usefulness of mathematical models in predicting temperature",
+      },
     ],
     correctAnswer: "A",
-    explanation: "The passage focuses on carbon dioxide's role in the heat balance and the global consequences of its increasing levels in the atmosphere.",
+    explanation:
+      "The passage focuses on carbon dioxide's role in the heat balance and the global consequences of its increasing levels in the atmosphere.",
   },
   {
     id: 402,
@@ -349,15 +429,29 @@ Today, however, excessive burning of fossil fuels and deforestation have steeply
 
 The model assumes that the atmospheric temperature decreases by 6°C per kilometre above the Earth's surface and that the atmosphere's relative humidity is constant. However, the relative humidity can remain constant only if water vapour increases. The temperature rises because water vapour also absorbs infrared radiation. With greater absorption of infrared radiation and the resulting warming of the Earth's surface, more ice from the polar regions would melt, reducing the Earth's reflective capacity. More radiation would, in turn, be absorbed, raising the temperature even further.`,
     },
-    question: "According to the above passage, which of the given statements has been true for the last fifty years?",
+    question:
+      "According to the above passage, which of the given statements has been true for the last fifty years?",
     options: [
-      { key: "A", text: "More forests were saved than during any other previous period." },
-      { key: "B", text: "The average temperature of the Earth's surface has decreased by 2.5°C." },
-      { key: "C", text: "The level of atmospheric carbon dioxide has significantly increased." },
-      { key: "D", text: "The Earth's atmosphere was more humid than it is today." },
+      {
+        key: "A",
+        text: "More forests were saved than during any other previous period.",
+      },
+      {
+        key: "B",
+        text: "The average temperature of the Earth's surface has decreased by 2.5°C.",
+      },
+      {
+        key: "C",
+        text: "The level of atmospheric carbon dioxide has significantly increased.",
+      },
+      {
+        key: "D",
+        text: "The Earth's atmosphere was more humid than it is today.",
+      },
     ],
     correctAnswer: "C",
-    explanation: "The passage notes that excessive burning of fossil fuels and deforestation have steeply increased atmospheric carbon dioxide levels.",
+    explanation:
+      "The passage notes that excessive burning of fossil fuels and deforestation have steeply increased atmospheric carbon dioxide levels.",
   },
 
   // PASSAGE 5: Bird Flight Evolution
@@ -374,15 +468,26 @@ While many flying birds share similar adaptations for flight, such as wings and 
 
 Further research into the genetic and anatomical features of flying birds will help scientists understand how flight evolved independently in different groups of birds.`,
     },
-    question: "Which of the given statements accurately reflects the current understanding of bird flight evolution?",
+    question:
+      "Which of the given statements accurately reflects the current understanding of bird flight evolution?",
     options: [
-      { key: "A", text: "All flying birds share identical genetic and anatomical features." },
-      { key: "B", text: "Flight in birds evolved only once in a single common ancestor." },
+      {
+        key: "A",
+        text: "All flying birds share identical genetic and anatomical features.",
+      },
+      {
+        key: "B",
+        text: "Flight in birds evolved only once in a single common ancestor.",
+      },
       { key: "C", text: "Pigeons and hummingbirds evolved together." },
-      { key: "D", text: "Flight in birds evolved independently in different groups." },
+      {
+        key: "D",
+        text: "Flight in birds evolved independently in different groups.",
+      },
     ],
     correctAnswer: "D",
-    explanation: "Recent studies indicate that flight in birds evolved independently in different groups rather than once in a single common ancestor.",
+    explanation:
+      "Recent studies indicate that flight in birds evolved independently in different groups rather than once in a single common ancestor.",
   },
   {
     id: 502,
@@ -397,7 +502,8 @@ While many flying birds share similar adaptations for flight, such as wings and 
 
 Further research into the genetic and anatomical features of flying birds will help scientists understand how flight evolved independently in different groups of birds.`,
     },
-    question: "According to the above passage, how many species of birds are capable of flight?",
+    question:
+      "According to the above passage, how many species of birds are capable of flight?",
     options: [
       { key: "A", text: "Over 5,000" },
       { key: "B", text: "Over 10,000" },
@@ -405,7 +511,8 @@ Further research into the genetic and anatomical features of flying birds will h
       { key: "D", text: "Less than 5,000" },
     ],
     correctAnswer: "A",
-    explanation: "With over 10,000 bird species and around half capable of flight, the total is over 5,000 species.",
+    explanation:
+      "With over 10,000 bird species and around half capable of flight, the total is over 5,000 species.",
   },
 
   // PASSAGE 6: Body Fat and Cognitive Function
@@ -420,7 +527,8 @@ In the study, 9,166 participants were measured using bioelectrical impedance ana
 
 "Our results suggest that strategies to prevent or reduce having too much body fat may preserve cognitive function," said lead author Sonia Anand. She added that "the effect of increased body fat persisted even after adjusting for its effect on increasing cardiovascular risk factors, which should prompt researchers to investigate which other pathways may link excess fat to reduced cognitive function."`,
     },
-    question: "What is the opposite of the word 'persisted' as used in the passage?",
+    question:
+      "What is the opposite of the word 'persisted' as used in the passage?",
     options: [
       { key: "A", text: "Survived" },
       { key: "B", text: "Abandoned" },
@@ -428,7 +536,8 @@ In the study, 9,166 participants were measured using bioelectrical impedance ana
       { key: "D", text: "Diligence" },
     ],
     correctAnswer: "B",
-    explanation: "'Persisted' means continued; its direct antonym is 'abandoned' (discontinued or stopped).",
+    explanation:
+      "'Persisted' means continued; its direct antonym is 'abandoned' (discontinued or stopped).",
   },
   {
     id: 602,
@@ -470,7 +579,8 @@ In the study, 9,166 participants were measured using bioelectrical impedance ana
       { key: "D", text: "High blood pressure" },
     ],
     correctAnswer: "A",
-    explanation: "The study evaluated diabetes, high blood pressure, and vascular brain injury; arthritis was not included.",
+    explanation:
+      "The study evaluated diabetes, high blood pressure, and vascular brain injury; arthritis was not included.",
   },
 
   // PASSAGE 7: Human Eye and Light Spectrum
@@ -485,15 +595,23 @@ Red is a type of pure color. It is created from a single wavelength. Colors such
 
 Another type of cell found mostly in our retinas can detect every dry dim light. These are called rod cells and are used almost entirely for night vision and peripheral vision. Scientists have been able to use wavelengths of light despite not being able to see them. One example is infrared light, which has wavelengths longer than those found in visible light. Infrared light has been used to improve our night vision, forecast the weather, and diagnose illnesses.`,
     },
-    question: "Which of the following can be logically deduced about the human eye?",
+    question:
+      "Which of the following can be logically deduced about the human eye?",
     options: [
       { key: "A", text: "Rod cells detect colours." },
-      { key: "B", text: "Humans' ability to see colours depends on the reaction of cone cells to different wavelengths." },
-      { key: "C", text: "Different people perceive colours differently, creating infinite colour options." },
+      {
+        key: "B",
+        text: "Humans' ability to see colours depends on the reaction of cone cells to different wavelengths.",
+      },
+      {
+        key: "C",
+        text: "Different people perceive colours differently, creating infinite colour options.",
+      },
       { key: "D", text: "Cone cells detect only dim light." },
     ],
     correctAnswer: "B",
-    explanation: "The text states that three types of cone cells react to different wavelengths, giving humans perception of color.",
+    explanation:
+      "The text states that three types of cone cells react to different wavelengths, giving humans perception of color.",
   },
   {
     id: 702,
@@ -508,13 +626,26 @@ Another type of cell found mostly in our retinas can detect every dry dim light.
     },
     question: "Which statement CANNOT be inferred from the passage?",
     options: [
-      { key: "A", text: "Only 25% of the light spectrum is visible to humans." },
-      { key: "B", text: "Infrared light has wavelengths longer than visible light." },
-      { key: "C", text: "Humans recognise colours when specific wavelengths are emitted." },
-      { key: "D", text: "Humans can only see some colours in the light spectrum." },
+      {
+        key: "A",
+        text: "Only 25% of the light spectrum is visible to humans.",
+      },
+      {
+        key: "B",
+        text: "Infrared light has wavelengths longer than visible light.",
+      },
+      {
+        key: "C",
+        text: "Humans recognise colours when specific wavelengths are emitted.",
+      },
+      {
+        key: "D",
+        text: "Humans can only see some colours in the light spectrum.",
+      },
     ],
     correctAnswer: "A",
-    explanation: "The passage notes that humans see 'a tiny fraction' of the light spectrum, but never mentions a 25% statistic.",
+    explanation:
+      "The passage notes that humans see 'a tiny fraction' of the light spectrum, but never mentions a 25% statistic.",
   },
   {
     id: 703,
@@ -532,10 +663,14 @@ Another type of cell found mostly in our retinas can detect every dry dim light.
       { key: "A", text: "Different colours emit different wavelengths." },
       { key: "B", text: "Pink is created by mixing two colours." },
       { key: "C", text: "Higher-intensity colours have longer wavelengths." },
-      { key: "D", text: "Pure colours are found only at the extreme end of the spectrum." },
+      {
+        key: "D",
+        text: "Pure colours are found only at the extreme end of the spectrum.",
+      },
     ],
     correctAnswer: "A",
-    explanation: "The passage explicitly states that humans perceive a color when a specific type of wavelength is emitted.",
+    explanation:
+      "The passage explicitly states that humans perceive a color when a specific type of wavelength is emitted.",
   },
 
   // PASSAGE 8: Guam Snakes
@@ -550,15 +685,20 @@ The government's main task is now to keep these snakes off nearby islands, where
 
 Authorities say they are studying snake behaviour to address the problem more effectively while gathering information that could help if Hawaii ever becomes overpopulated with snakes.`,
     },
-    question: "What is the significance behind the authorities' claim of learning the snakes' behavior?",
+    question:
+      "What is the significance behind the authorities' claim of learning the snakes' behavior?",
     options: [
-      { key: "A", text: "To gather information for potential snake control in Hawaii" },
+      {
+        key: "A",
+        text: "To gather information for potential snake control in Hawaii",
+      },
       { key: "B", text: "To understand how snakes reproduce" },
       { key: "C", text: "To develop a new medicine for snake bites" },
       { key: "D", text: "To relocate the snakes to nearby islands" },
     ],
     correctAnswer: "A",
-    explanation: "The passage states that studying snake behavior helps gather information that could assist if Hawaii ever faces an overpopulation of snakes.",
+    explanation:
+      "The passage states that studying snake behavior helps gather information that could assist if Hawaii ever faces an overpopulation of snakes.",
   },
 
   // PASSAGE 9: Coastal Blue-Carbon Ecosystems
@@ -571,7 +711,8 @@ Authorities say they are studying snake behaviour to address the problem more ef
 
 Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "What is the synonym of the word \"marshes\" as used in the first paragraph of the above passage?",
+    question:
+      'What is the synonym of the word "marshes" as used in the first paragraph of the above passage?',
     options: [
       { key: "A", text: "Swamp" },
       { key: "B", text: "Desert" },
@@ -579,7 +720,8 @@ Despite these benefits, coastal blue-carbon ecosystems are among the most threat
       { key: "D", text: "Wasteland" },
     ],
     correctAnswer: "A",
-    explanation: "A marsh is a type of wetland with soft, waterlogged land. 'Swamp' is the closest synonym among the given options.",
+    explanation:
+      "A marsh is a type of wetland with soft, waterlogged land. 'Swamp' is the closest synonym among the given options.",
   },
   {
     id: 902,
@@ -590,7 +732,8 @@ Despite these benefits, coastal blue-carbon ecosystems are among the most threat
 
 Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "Which of the given options is NOT a benefit provided by the coastal ecosystems?",
+    question:
+      "Which of the given options is NOT a benefit provided by the coastal ecosystems?",
     options: [
       { key: "A", text: "Protection from sea storms" },
       { key: "B", text: "Regulation of coastal water quality" },
@@ -598,7 +741,8 @@ Despite these benefits, coastal blue-carbon ecosystems are among the most threat
       { key: "D", text: "Protection from drought" },
     ],
     correctAnswer: "D",
-    explanation: "The passage mentions protection from storms, water quality regulation, and climate change mitigation, but does not mention protection from drought.",
+    explanation:
+      "The passage mentions protection from storms, water quality regulation, and climate change mitigation, but does not mention protection from drought.",
   },
   {
     id: 903,
@@ -609,7 +753,8 @@ Despite these benefits, coastal blue-carbon ecosystems are among the most threat
 
 Despite these benefits, coastal blue-carbon ecosystems are among the most threatened ecosystems on Earth. It is estimated that 340,000 to 980,000 hectares are destroyed each year. Approximately 67% of at least 35% of the global coverage of mangroves, 29% of tidal marshes, and 29% of seagrass meadows have been lost. If current destruction rates continue, a further 30–40% of tidal marshes and seagrasses, along with nearly all unprotected mangroves, could disappear within the next 100 years. When degraded or destroyed, these ecosystems can become significant sources of greenhouse gases such as carbon dioxide.`,
     },
-    question: "What is the synonym of the word \"meadows\" as used in the first paragraph of the above passage?",
+    question:
+      'What is the synonym of the word "meadows" as used in the first paragraph of the above passage?',
     options: [
       { key: "A", text: "Pond" },
       { key: "B", text: "Pasture" },
@@ -644,7 +789,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Suspicion" },
     ],
     correctAnswer: "B",
-    explanation: "'Affinity' refers to a natural liking or attraction toward something.",
+    explanation:
+      "'Affinity' refers to a natural liking or attraction toward something.",
   },
   {
     id: 1002,
@@ -669,7 +815,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Illustrate how it influenced The Starry Night." },
     ],
     correctAnswer: "D",
-    explanation: "The text connects pattern recognition associated with autism to the complex mathematical turbulence depicted in The Starry Night.",
+    explanation:
+      "The text connects pattern recognition associated with autism to the complex mathematical turbulence depicted in The Starry Night.",
   },
   {
     id: 1003,
@@ -686,7 +833,8 @@ His famous painting The Starry Night has been linked to retinal swelling, halluc
 Part B: Fruit Colour and Seed Dispersal
 Fruit colour helps fruits attract animals that eat them and disperse their seeds. A study of 383 tropical plant species in Costa Rica and Peru found that black was the most common fruit colour eaten by birds, followed by red. The study concluded that colourful fruits improve the chances of successful seed dispersal because they are easier for animals to locate.`,
     },
-    question: "Which method did Van Gogh use to relieve anxiety and depression?",
+    question:
+      "Which method did Van Gogh use to relieve anxiety and depression?",
     options: [
       { key: "A", text: "Consuming absinthe" },
       { key: "B", text: "Prescription drugs" },
@@ -694,7 +842,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Drinking kerosene" },
     ],
     correctAnswer: "A",
-    explanation: "The passage explicitly states that he consumed absinthe to relieve anxiety and depression.",
+    explanation:
+      "The passage explicitly states that he consumed absinthe to relieve anxiety and depression.",
   },
   {
     id: 1004,
@@ -711,15 +860,26 @@ His famous painting The Starry Night has been linked to retinal swelling, halluc
 Part B: Fruit Colour and Seed Dispersal
 Fruit colour helps fruits attract animals that eat them and disperse their seeds. A study of 383 tropical plant species in Costa Rica and Peru found that black was the most common fruit colour eaten by birds, followed by red. The study concluded that colourful fruits improve the chances of successful seed dispersal because they are easier for animals to locate.`,
     },
-    question: "What can be concluded about the relationship between fruit colour and seed dispersal?",
+    question:
+      "What can be concluded about the relationship between fruit colour and seed dispersal?",
     options: [
       { key: "A", text: "Bright colours reduce seed dispersal." },
-      { key: "B", text: "Plants with colourful fruits have a higher chance of successful seed dispersal." },
-      { key: "C", text: "Seed dispersal is more effective when fruits are difficult to find." },
-      { key: "D", text: "Fruit colour does not significantly impact seed dispersal." },
+      {
+        key: "B",
+        text: "Plants with colourful fruits have a higher chance of successful seed dispersal.",
+      },
+      {
+        key: "C",
+        text: "Seed dispersal is more effective when fruits are difficult to find.",
+      },
+      {
+        key: "D",
+        text: "Fruit colour does not significantly impact seed dispersal.",
+      },
     ],
     correctAnswer: "B",
-    explanation: "The study concluded that colorful fruits improve seed dispersal success because they are more easily located by animals.",
+    explanation:
+      "The study concluded that colorful fruits improve seed dispersal success because they are more easily located by animals.",
   },
 
   // GRAMMAR & VOCABULARY
@@ -736,7 +896,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "No error" },
     ],
     correctAnswer: "B",
-    explanation: "'Easy' begins with a vowel sound, so 'an' should be used instead of 'a'.",
+    explanation:
+      "'Easy' begins with a vowel sound, so 'an' should be used instead of 'a'.",
   },
   {
     id: 2,
@@ -750,13 +911,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "have been appearing" },
     ],
     correctAnswer: "C",
-    explanation: "'At this moment' indicates the present continuous tense ('is appearing').",
+    explanation:
+      "'At this moment' indicates the present continuous tense ('is appearing').",
   },
   {
     id: 3,
     section: "Grammar & Vocabulary",
     question: "Identify the error in the sentence:",
-    sentence: "For who are you waiting so late at night, by the side of the road?",
+    sentence:
+      "For who are you waiting so late at night, by the side of the road?",
     options: [
       { key: "A", text: "For who" },
       { key: "B", text: "waiting" },
@@ -764,13 +927,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "by the side" },
     ],
     correctAnswer: "A",
-    explanation: "After the preposition 'for', the correct objective pronoun is 'whom', not 'who'.",
+    explanation:
+      "After the preposition 'for', the correct objective pronoun is 'whom', not 'who'.",
   },
   {
     id: 4,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "The Parkers were not fond of following the crowd; none of them hesitated to be _______.",
+    sentence:
+      "The Parkers were not fond of following the crowd; none of them hesitated to be _______.",
     options: [
       { key: "A", text: "unique" },
       { key: "B", text: "ordinary" },
@@ -778,7 +943,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "mediocre" },
     ],
     correctAnswer: "A",
-    explanation: "Since they did not like following the crowd, they preferred to be 'unique'.",
+    explanation:
+      "Since they did not like following the crowd, they preferred to be 'unique'.",
   },
   {
     id: 5,
@@ -798,7 +964,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     id: 6,
     section: "Grammar & Vocabulary",
     question: "Choose the correct articles:",
-    sentence: "In a world where dreams could become reality, _______ idea could become _______ art.",
+    sentence:
+      "In a world where dreams could become reality, _______ idea could become _______ art.",
     options: [
       { key: "A", text: "no article, an" },
       { key: "B", text: "an, no article" },
@@ -806,13 +973,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "an, an" },
     ],
     correctAnswer: "B",
-    explanation: "We say 'an idea' (vowel sound) and 'become art' (art is an uncountable noun here).",
+    explanation:
+      "We say 'an idea' (vowel sound) and 'become art' (art is an uncountable noun here).",
   },
   {
     id: 7,
     section: "Grammar & Vocabulary",
     question: "Fill in the blanks:",
-    sentence: "It was good fortune that Emily _______ a seatbelt when her car collided last month; she _______ serious injury in that accident.",
+    sentence:
+      "It was good fortune that Emily _______ a seatbelt when her car collided last month; she _______ serious injury in that accident.",
     options: [
       { key: "A", text: "wore, escaped" },
       { key: "B", text: "was wearing, escaped" },
@@ -820,13 +989,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "wears, escaped" },
     ],
     correctAnswer: "B",
-    explanation: "The collision occurred while Emily 'was wearing' a seatbelt (past continuous). The second action is simple past ('escaped').",
+    explanation:
+      "The collision occurred while Emily 'was wearing' a seatbelt (past continuous). The second action is simple past ('escaped').",
   },
   {
     id: 8,
     section: "Grammar & Vocabulary",
     question: "Rearrange the phrases to form a complete sentence:",
-    sentence: "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
+    sentence:
+      "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
     options: [
       { key: "A", text: "CAEBFD" },
       { key: "B", text: "CAEFDB" },
@@ -834,13 +1005,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "CAEDBF" },
     ],
     correctAnswer: "A",
-    explanation: "Correct logical sequence is CAEBFD:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(B) they were widely explored and exploited\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n\nComplete Sentence: \"Inhospitable as the deserts might have been, they were not impenetrable; evidence shows that they were widely explored and exploited in ancient times for a wide range of materials, from metal ores to building stones.\"",
+    explanation:
+      'Correct logical sequence is CAEBFD:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(B) they were widely explored and exploited\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n\nComplete Sentence: "Inhospitable as the deserts might have been, they were not impenetrable; evidence shows that they were widely explored and exploited in ancient times for a wide range of materials, from metal ores to building stones."',
   },
   {
     id: 9,
     section: "Grammar & Vocabulary",
     question: "Subject-Verb Agreement:",
-    sentence: "The best two things about the party _______ the food and the music.",
+    sentence:
+      "The best two things about the party _______ the food and the music.",
     options: [
       { key: "A", text: "was" },
       { key: "B", text: "were" },
@@ -848,13 +1021,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "has been" },
     ],
     correctAnswer: "B",
-    explanation: "The subject 'two things' is plural, so the correct past tense verb is 'were'.",
+    explanation:
+      "The subject 'two things' is plural, so the correct past tense verb is 'were'.",
   },
   {
     id: 10,
     section: "Grammar & Vocabulary",
     question: "Sentence Correction:",
-    sentence: "The speaker had been left the stage before the awards were handed out.",
+    sentence:
+      "The speaker had been left the stage before the awards were handed out.",
     options: [
       { key: "A", text: "had been leaving" },
       { key: "B", text: "was left" },
@@ -863,13 +1038,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "No error" },
     ],
     correctAnswer: "C",
-    explanation: "'The speaker left the stage before the awards were handed out.' 'Had been left' is passive/grammatically incorrect here.",
+    explanation:
+      "'The speaker left the stage before the awards were handed out.' 'Had been left' is passive/grammatically incorrect here.",
   },
   {
     id: 11,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "Though these two cups are _______, they are not the perfect match for my tea set.",
+    sentence:
+      "Though these two cups are _______, they are not the perfect match for my tea set.",
     options: [
       { key: "A", text: "compatible" },
       { key: "B", text: "comparable" },
@@ -877,7 +1054,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "similar" },
     ],
     correctAnswer: "D",
-    explanation: "'Similar' means alike in appearance but not an exact or perfect match.",
+    explanation:
+      "'Similar' means alike in appearance but not an exact or perfect match.",
   },
   {
     id: 12,
@@ -891,7 +1069,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "by" },
     ],
     correctAnswer: "A",
-    explanation: "The sentence is in the past tense ('were devastated'), so 'we hear' should be 'we heard'.",
+    explanation:
+      "The sentence is in the past tense ('were devastated'), so 'we hear' should be 'we heard'.",
   },
   {
     id: 13,
@@ -911,7 +1090,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     id: 14,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "The mansion was decorated in a/an _______ manner, with gold-plated fixtures and extravagant artwork.",
+    sentence:
+      "The mansion was decorated in a/an _______ manner, with gold-plated fixtures and extravagant artwork.",
     options: [
       { key: "A", text: "ostentatious" },
       { key: "B", text: "prudent" },
@@ -919,7 +1099,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "penurious" },
     ],
     correctAnswer: "A",
-    explanation: "'Ostentatious' means showy, luxurious, or intended to impress.",
+    explanation:
+      "'Ostentatious' means showy, luxurious, or intended to impress.",
   },
   {
     id: 15,
@@ -938,7 +1119,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     id: 16,
     section: "Grammar & Vocabulary",
     question: "Choose the correct articles:",
-    sentence: "She had prepared diligently for her _______ exams and was delighted to have achieved _______ excellent grades.",
+    sentence:
+      "She had prepared diligently for her _______ exams and was delighted to have achieved _______ excellent grades.",
     options: [
       { key: "A", text: "no article, the" },
       { key: "B", text: "the, no article" },
@@ -946,13 +1128,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "no article, no article" },
     ],
     correctAnswer: "D",
-    explanation: "Possessive pronoun 'her' precedes exams, and 'excellent grades' is plural indefinite, so no articles are required.",
+    explanation:
+      "Possessive pronoun 'her' precedes exams, and 'excellent grades' is plural indefinite, so no articles are required.",
   },
   {
     id: 17,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "I _______ enough money to go on my dream vacation by next winter.",
+    sentence:
+      "I _______ enough money to go on my dream vacation by next winter.",
     options: [
       { key: "A", text: "will be saved" },
       { key: "B", text: "will have saved" },
@@ -960,12 +1144,14 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "am saved" },
     ],
     correctAnswer: "B",
-    explanation: "'By next winter' signals future completion, which requires the Future Perfect tense ('will have saved').",
+    explanation:
+      "'By next winter' signals future completion, which requires the Future Perfect tense ('will have saved').",
   },
   {
     id: 18,
     section: "Grammar & Vocabulary",
-    question: "Rearrange the phrases to form a complete sentence: Fixed: 'No sooner had I' (A) join in for a delightful visit (B) than the guest came. (C) arrived at the house, (D) knocking at the door, excited to",
+    question:
+      "Rearrange the phrases to form a complete sentence: Fixed: 'No sooner had I' (A) join in for a delightful visit (B) than the guest came. (C) arrived at the house, (D) knocking at the door, excited to",
     options: [
       { key: "A", text: "A B C D" },
       { key: "B", text: "B C D A" },
@@ -973,7 +1159,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "D A B C" },
     ],
     correctAnswer: "C",
-    explanation: "Correct order is C D A B: 'No sooner had I arrived at the house, knocking at the door, excited to join in for a delightful visit, than the guest came.'",
+    explanation:
+      "Correct order is C D A B: 'No sooner had I arrived at the house, knocking at the door, excited to join in for a delightful visit, than the guest came.'",
   },
   {
     id: 19,
@@ -987,7 +1174,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "at" },
     ],
     correctAnswer: "A",
-    explanation: "The standard English prepositional phrase is 'grieve over' a loss or tragedy.",
+    explanation:
+      "The standard English prepositional phrase is 'grieve over' a loss or tragedy.",
   },
   {
     id: 20,
@@ -1001,13 +1189,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "had been visiting" },
     ],
     correctAnswer: "C",
-    explanation: "'Visited' indicates a completed action among the given options.",
+    explanation:
+      "'Visited' indicates a completed action among the given options.",
   },
   {
     id: 21,
     section: "Grammar & Vocabulary",
     question: "Sentence Correction:",
-    sentence: "The person \"to whom I sold\" the cottage is very happy with the price.",
+    sentence:
+      'The person "to whom I sold" the cottage is very happy with the price.',
     options: [
       { key: "A", text: "to whom I will have to sold" },
       { key: "B", text: "No error" },
@@ -1016,7 +1206,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "to who I sell" },
     ],
     correctAnswer: "B",
-    explanation: "The relative clause 'to whom I sold' is grammatically correct. No error.",
+    explanation:
+      "The relative clause 'to whom I sold' is grammatically correct. No error.",
   },
   {
     id: 22,
@@ -1042,13 +1233,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Daze" },
     ],
     correctAnswer: "B",
-    explanation: "'Apprehend' can mean to grasp mentally or imagine among the given options.",
+    explanation:
+      "'Apprehend' can mean to grasp mentally or imagine among the given options.",
   },
   {
     id: 24,
     section: "Grammar & Vocabulary",
     question: "Correct the sentence:",
-    sentence: "In order to enhancing the reputation, they would have to accept a very non-lucrative ______ deal.",
+    sentence:
+      "In order to enhancing the reputation, they would have to accept a very non-lucrative ______ deal.",
     options: [
       { key: "A", text: "to having enhanced their" },
       { key: "B", text: "to enhancing them" },
@@ -1057,7 +1250,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "No error" },
     ],
     correctAnswer: "C",
-    explanation: "After 'In order to', the base form of the verb ('to enhance their') must be used.",
+    explanation:
+      "After 'In order to', the base form of the verb ('to enhance their') must be used.",
   },
   {
     id: 25,
@@ -1072,7 +1266,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "go there" },
     ],
     correctAnswer: "D",
-    explanation: "'Theirs' is a possessive pronoun. The correct adverb of place is 'there?'.",
+    explanation:
+      "'Theirs' is a possessive pronoun. The correct adverb of place is 'there?'.",
   },
   {
     id: 26,
@@ -1092,7 +1287,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     id: 27,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "If the taxi had come on time, we ______ before the recital ended.",
+    sentence:
+      "If the taxi had come on time, we ______ before the recital ended.",
     options: [
       { key: "A", text: "Should have arrived" },
       { key: "B", text: "Would arrive" },
@@ -1100,7 +1296,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Had arrived" },
     ],
     correctAnswer: "C",
-    explanation: "Third conditional structure: 'If + past perfect ..., would have + past participle'.",
+    explanation:
+      "Third conditional structure: 'If + past perfect ..., would have + past participle'.",
   },
   {
     id: 28,
@@ -1114,7 +1311,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Had opened" },
     ],
     correctAnswer: "A",
-    explanation: "Simple past tense 'opened' is required to match parallel action 'entered'.",
+    explanation:
+      "Simple past tense 'opened' is required to match parallel action 'entered'.",
   },
   {
     id: 29,
@@ -1127,7 +1325,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Empty" },
     ],
     correctAnswer: "B",
-    explanation: "'Abundant' means existing in large quantities, synonymous with 'Plenty'.",
+    explanation:
+      "'Abundant' means existing in large quantities, synonymous with 'Plenty'.",
   },
   {
     id: 30,
@@ -1140,7 +1339,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Breakable" },
     ],
     correctAnswer: "C",
-    explanation: "'Fragile' means easily broken or delicate. Its opposite is 'Strong'.",
+    explanation:
+      "'Fragile' means easily broken or delicate. Its opposite is 'Strong'.",
   },
   {
     id: 31,
@@ -1153,7 +1353,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "She not like coffee." },
     ],
     correctAnswer: "C",
-    explanation: "Subject-verb agreement: 'She doesn't like coffee.' (doesn't + base verb like).",
+    explanation:
+      "Subject-verb agreement: 'She doesn't like coffee.' (doesn't + base verb like).",
   },
   {
     id: 32,
@@ -1180,7 +1381,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "Accommadation" },
     ],
     correctAnswer: "B",
-    explanation: "The correct spelling is 'Accommodation' (double c, double m).",
+    explanation:
+      "The correct spelling is 'Accommodation' (double c, double m).",
   },
   {
     id: 34,
@@ -1195,7 +1397,8 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "Heavily" },
     ],
     correctAnswer: "A",
-    explanation: "Subject 'I' takes singular past auxiliary 'wasn't' instead of 'weren't'.",
+    explanation:
+      "Subject 'I' takes singular past auxiliary 'wasn't' instead of 'weren't'.",
   },
   {
     id: 35,
@@ -1210,13 +1413,15 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "E", text: "No error" },
     ],
     correctAnswer: "D",
-    explanation: "Relative pronoun 'who' should be 'with whom' (e.g. 'with whom I work in the factory').",
+    explanation:
+      "Relative pronoun 'who' should be 'with whom' (e.g. 'with whom I work in the factory').",
   },
   {
     id: 36,
     section: "Grammar & Vocabulary",
     question: "Fill in the blank:",
-    sentence: "Last week, while I ______ a walk in the garden, I came across an advertisement.",
+    sentence:
+      "Last week, while I ______ a walk in the garden, I came across an advertisement.",
     options: [
       { key: "A", text: "took" },
       { key: "B", text: "take" },
@@ -1224,12 +1429,14 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "have taken" },
     ],
     correctAnswer: "A",
-    explanation: "Past tense 'took' completes the phrase 'take a walk' in simple past.",
+    explanation:
+      "Past tense 'took' completes the phrase 'take a walk' in simple past.",
   },
   {
     id: 37,
     section: "Grammar & Vocabulary",
-    question: "Rearrange the given phrases to form a complete, meaningful sentence:\n\n1. There were quite\n(A) to choose from but\n(B) a lot of options\n(C) on the speckled giraffe and\n(D) in the end she settled\n6. the grey elephant",
+    question:
+      "Rearrange the given phrases to form a complete, meaningful sentence:\n\n1. There were quite\n(A) to choose from but\n(B) a lot of options\n(C) on the speckled giraffe and\n(D) in the end she settled\n6. the grey elephant",
     options: [
       { key: "A", text: "BACD" },
       { key: "B", text: "BCDA" },
@@ -1237,6 +1444,7 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
       { key: "D", text: "ADBC" },
     ],
     correctAnswer: "C",
-    explanation: "Logical sequence is B - A - D - C (BADC):\n\n1. There were quite\n(B) a lot of options\n(A) to choose from but\n(D) in the end she settled\n(C) on the speckled giraffe and\n6. the grey elephant\n\nComplete Sentence: \"There were quite a lot of options to choose from but in the end she settled on the speckled giraffe and the grey elephant.\"",
+    explanation:
+      'Logical sequence is B - A - D - C (BADC):\n\n1. There were quite\n(B) a lot of options\n(A) to choose from but\n(D) in the end she settled\n(C) on the speckled giraffe and\n6. the grey elephant\n\nComplete Sentence: "There were quite a lot of options to choose from but in the end she settled on the speckled giraffe and the grey elephant."',
   },
 ];

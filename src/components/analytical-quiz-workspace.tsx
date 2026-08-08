@@ -2,7 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CheckCircle2, XCircle, RefreshCw, Trophy, ArrowLeft, Brain } from "lucide-react";
+import {
+  CheckCircle2,
+  XCircle,
+  RefreshCw,
+  Trophy,
+  ArrowLeft,
+  Brain,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +19,9 @@ const STORAGE_KEY_ANSWERS = "virtusa_analytical_answers";
 const STORAGE_KEY_SUBMITTED = "virtusa_analytical_submitted";
 
 export function AnalyticalQuizWorkspace() {
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<number, string>
+  >({});
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
@@ -87,7 +96,10 @@ export function AnalyticalQuizWorkspace() {
         {/* Navigation & Header */}
         <div className="flex items-center justify-between gap-4 border-b border-zinc-800 pb-4">
           <Link href="/">
-            <Button variant="ghost" className="gap-2 text-zinc-300 hover:text-zinc-100">
+            <Button
+              variant="ghost"
+              className="gap-2 text-zinc-300 hover:text-zinc-100"
+            >
               <ArrowLeft className="h-4 w-4" />
               Back to Dashboard
             </Button>
@@ -102,7 +114,10 @@ export function AnalyticalQuizWorkspace() {
             Section 8: Analytical Ability Assessment
           </h1>
           <p className="text-sm text-zinc-400">
-            Practice analytical reasoning questions on seating arrangements, letter & word coding-decoding, blood relations, order & ranking queues, and logical syllogisms. Select an option for immediate feedback.
+            Practice analytical reasoning questions on seating arrangements,
+            letter & word coding-decoding, blood relations, order & ranking
+            queues, and logical syllogisms. Select an option for immediate
+            feedback.
           </p>
         </div>
 
@@ -146,7 +161,10 @@ export function AnalyticalQuizWorkspace() {
             const userSelection = selectedAnswers[q.id];
 
             return (
-              <Card key={q.id} className="border-zinc-800 bg-zinc-900/70 backdrop-blur">
+              <Card
+                key={q.id}
+                className="border-zinc-800 bg-zinc-900/70 backdrop-blur"
+              >
                 <CardHeader className="pb-3">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-2">
@@ -165,7 +183,9 @@ export function AnalyticalQuizWorkspace() {
                             : "bg-rose-500/20 text-rose-300 border-rose-500/30"
                         }
                       >
-                        {userSelection === q.correctAnswer ? "Correct" : "Incorrect"}
+                        {userSelection === q.correctAnswer
+                          ? "Correct"
+                          : "Incorrect"}
                       </Badge>
                     )}
                   </div>
@@ -183,17 +203,21 @@ export function AnalyticalQuizWorkspace() {
                       const isSelected = userSelection === opt.key;
                       const isCorrect = opt.key === q.correctAnswer;
 
-                      let btnStyle = "border-zinc-800 bg-zinc-900/90 text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800";
+                      let btnStyle =
+                        "border-zinc-800 bg-zinc-900/90 text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800";
 
                       if (userSelection) {
                         if (isSelected) {
                           if (isCorrect) {
-                            btnStyle = "border-emerald-500/60 bg-emerald-950/40 text-emerald-200 font-semibold ring-1 ring-emerald-500/50";
+                            btnStyle =
+                              "border-emerald-500/60 bg-emerald-950/40 text-emerald-200 font-semibold ring-1 ring-emerald-500/50";
                           } else {
-                            btnStyle = "border-rose-500/60 bg-rose-950/40 text-rose-200 font-semibold ring-1 ring-rose-500/50";
+                            btnStyle =
+                              "border-rose-500/60 bg-rose-950/40 text-rose-200 font-semibold ring-1 ring-rose-500/50";
                           }
                         } else if (isCorrect) {
-                          btnStyle = "border-emerald-500/40 bg-emerald-950/20 text-emerald-300 border-dashed";
+                          btnStyle =
+                            "border-emerald-500/40 bg-emerald-950/20 text-emerald-300 border-dashed";
                         }
                       }
 
