@@ -877,13 +877,6 @@ end for`,
     id: 56,
     topic: "SQL / DBMS - GROUP BY with HAVING",
     question: "Which query returns highest transaction, total transactions, and average transaction amount per user, excluding users with only 1 transaction?",
-    codeSnippet: `SELECT user_id,
-       MAX(amount) AS highest_transaction,
-       COUNT(*) AS total_transactions,
-       AVG(amount) AS avg_transaction
-FROM transactions
-GROUP BY user_id
-HAVING COUNT(*) > 1;`,
     options: [
       { key: "A", text: "SELECT user_id, MAX(amount), COUNT(*), AVG(amount) FROM transactions GROUP BY user_id HAVING COUNT(*) > 1;" },
       { key: "B", text: "SELECT user_id, MAX(amount) FROM transactions WHERE COUNT(*) > 1;" },
@@ -936,9 +929,6 @@ HAVING COUNT(*) > 1;`,
     id: 60,
     topic: "SQL / DBMS - UNION Operator",
     question: "Which query combines all unique student names from Undergraduate_Students and Graduate_Students tables?",
-    codeSnippet: `SELECT name FROM Undergraduate_Students
-UNION
-SELECT name FROM Graduate_Students;`,
     options: [
       { key: "A", text: "SELECT name FROM Undergraduate_Students UNION SELECT name FROM Graduate_Students;" },
       { key: "B", text: "SELECT name FROM Undergraduate_Students UNION ALL SELECT name FROM Graduate_Students;" },
