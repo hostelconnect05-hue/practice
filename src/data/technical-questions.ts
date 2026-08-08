@@ -132,10 +132,10 @@ public:
     int getID(){ return 1; }
 };`,
     options: [
-      { key: "A", text: "class Employee : protected Base { public: int fetchID(){ return code; } };" },
-      { key: "B", text: "class Employee : protected Base { public: int showLevel(){ return level; } int fetchID(){ return getID(); } };" },
-      { key: "C", text: "class Employee : public Base { public: int showLevel(){ return level; } };" },
-      { key: "D", text: "class Employee : protected Base { public: int fetchID(){ return level; } int showID(){ return code; } };" },
+      { key: "A", text: "class Employee : protected Base {\npublic:\n    int fetchID() { return code; }\n};" },
+      { key: "B", text: "class Employee : protected Base {\npublic:\n    int showLevel() { return level; }\n    int fetchID() { return getID(); }\n};" },
+      { key: "C", text: "class Employee : public Base {\npublic:\n    int showLevel() { return level; }\n};" },
+      { key: "D", text: "class Employee : protected Base {\npublic:\n    int fetchID() { return level; }\n    int showID() { return code; }\n};" },
     ],
     correctAnswer: "B",
     explanation: "'code' is private so it cannot be accessed in Employee. 'level' is protected so it is accessible. Under protected inheritance, 'getID()' becomes protected inside Employee and can be called via a public member function like fetchID().",

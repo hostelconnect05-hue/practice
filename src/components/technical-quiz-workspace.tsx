@@ -165,16 +165,18 @@ export function TechnicalQuizWorkspace() {
                         <button
                           key={opt.key}
                           onClick={() => handleSelectOption(q.id, opt.key)}
-                          className={`flex items-center justify-between rounded-lg border p-3 text-left text-sm transition ${btnStyle}`}
+                          className={`flex items-start justify-between rounded-lg border p-3 text-left text-sm transition ${btnStyle}`}
                         >
-                          <div className="flex items-center gap-3">
-                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-zinc-800/80 text-xs font-bold text-zinc-300">
+                          <div className="flex items-start gap-3 min-w-0 flex-1">
+                            <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-zinc-800/80 text-xs font-bold text-zinc-300 mt-0.5">
                               {opt.key}
                             </span>
-                            <span>{opt.text}</span>
+                            <span className="break-words whitespace-pre-wrap font-mono text-xs leading-relaxed text-zinc-200">
+                              {opt.text}
+                            </span>
                           </div>
                           {userSelection && isSelected && (
-                            <span>
+                            <span className="shrink-0 ml-2 mt-0.5">
                               {isCorrect ? (
                                 <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                               ) : (
