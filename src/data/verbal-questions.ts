@@ -1229,14 +1229,14 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
   {
     id: 37,
     section: "Grammar & Vocabulary",
-    question: "Rearrange the phrases to form a complete sentence:\nFixed Start (1): There were quite\n(A) to choose from but\n(B) a lot of options\n(C) on the speckled giraffe and\n(D) in the end she settled\nFixed End (6): the grey elephant",
+    question: "Rearrange the given phrases to form a complete, meaningful sentence:\n\n1. There were quite\n(A) to choose from but\n(B) a lot of options\n(C) on the speckled giraffe and\n(D) in the end she settled\n6. the grey elephant",
     options: [
-      { key: "A", text: "BAADC" },
-      { key: "B", text: "BADAC" },
+      { key: "A", text: "BACD" },
+      { key: "B", text: "BCDA" },
       { key: "C", text: "BADC" },
-      { key: "D", text: "ABDAC" },
+      { key: "D", text: "ADBC" },
     ],
     correctAnswer: "C",
-    explanation: "Logical sequence is B - A - D - C (BADC):\n(1) There were quite\n(B) a lot of options\n(A) to choose from but\n(D) in the end she settled\n(C) on the speckled giraffe and\n(6) the grey elephant\n\nComplete Sentence: \"There were quite a lot of options to choose from but in the end she settled on the speckled giraffe and the grey elephant.\"",
+    explanation: "Logical sequence is B - A - D - C (BADC):\n\n1. There were quite\n(B) a lot of options\n(A) to choose from but\n(D) in the end she settled\n(C) on the speckled giraffe and\n6. the grey elephant\n\nComplete Sentence: \"There were quite a lot of options to choose from but in the end she settled on the speckled giraffe and the grey elephant.\"",
   },
 ];
