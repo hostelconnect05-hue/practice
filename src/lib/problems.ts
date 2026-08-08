@@ -26,6 +26,7 @@ const problemOrder = [
   "vowel-consonant-rearrange",
   "river-current",
   "decimal-point",
+  "flip-div-game",
 ];
 
 async function loadJson<T>(filePath: string): Promise<T> {

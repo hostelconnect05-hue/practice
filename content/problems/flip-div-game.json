@@ -1,0 +1,33 @@
+{
+  "slug": "flip-div-game",
+  "title": "Flip Div Game",
+  "difficulty": "Medium",
+  "topics": ["Bit Manipulation", "Math"],
+  "acceptance": "82.4%",
+  "statement": "Andy is playing the Flip Div Game.\n\nHe is given two integers:\n- N – the initial number.\n- K – the divisor.\n\nInitially, N is guaranteed not to be divisible by K.\n\nAndy must flip exactly one bit in the 32-bit binary representation of N. Flipping a bit means:\n- 0 -> 1\n- 1 -> 0\n\nAfter flipping exactly one bit, determine the smallest bit position (1-based from the right) such that the resulting number is divisible by K.\n\nIf no single-bit flip makes the number divisible by K, return -1.\n\n### Bit Numbering\nTreat N as a 32-bit integer:\n- The rightmost bit is at position 1.\n- The next bit to the left is position 2.\n- ...\n- The leftmost bit is at position 32.\n\nInput Format:\n- input1: An integer N.\n- input2: An integer K.\n\nOutput Format:\n- Print a single integer representing the minimum bit position that should be flipped so that the resulting number becomes divisible by K. If no such bit exists, return -1.",
+  "examples": [
+    {
+      "input": "3\n5",
+      "output": "6",
+      "explanation": "Binary representation of 3: 00...0011.\nFlipping bit 1 -> 2 (not div by 5)\nFlipping bit 2 -> 1 (not div by 5)\nFlipping bit 3 -> 7 (not div by 5)\nFlipping bit 4 -> 11 (not div by 5)\nFlipping bit 5 -> 19 (not div by 5)\nFlipping bit 6 -> 35 (35 % 5 == 0 -> YES!)\nMinimum bit position = 6."
+    },
+    {
+      "input": "3\n10",
+      "output": "-1",
+      "explanation": "Flipping any one of the 32 bits of 3 never produces a number divisible by 10. Return -1."
+    }
+  ],
+  "constraints": [
+    "1 <= N <= 2^31 - 1",
+    "1 <= K <= 10^9",
+    "N is initially not divisible by K."
+  ],
+  "hints": [
+    "Iterate bit position i from 1 to 32.",
+    "Flip bit i using bitwise XOR: flipped = N ^ (1LL << (i - 1)).",
+    "Check if flipped >= 0 and flipped % K == 0.",
+    "Return the first bit position i that satisfies the condition, or -1 if none found."
+  ],
+  "relatedProblems": ["river-current", "decimal-point"],
+  "discussion": "Bitwise XOR and modulo checking across 32 bit positions in O(32) = O(1) time."
+}

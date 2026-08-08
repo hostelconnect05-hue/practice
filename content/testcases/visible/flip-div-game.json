@@ -1,0 +1,22 @@
+[
+  {
+    "input": "3\n5\n",
+    "expectedOutput": "6"
+  },
+  {
+    "input": "3\n10\n",
+    "expectedOutput": "-1"
+  },
+  {
+    "input": "7\n3\n",
+    "expectedOutput": "1"
+  },
+  {
+    "input": "10\n4\n",
+    "expectedOutput": "2"
+  },
+  {
+    "input": "2147483647\n5\n",
+    "expectedOutput": "2"
+  }
+]
