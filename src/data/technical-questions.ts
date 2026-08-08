@@ -1250,19 +1250,23 @@ Print characters at even indexes.`,
     id: 78,
     topic: "Pseudocode & Algorithms - Loop Increment & Decrement",
     question: "Initially y=2. For j=2 TO 8: if j is odd -> y = y + 4; if j is even -> y = y - 2. What is printed?",
-    codeSnippet: `y = 2
-FOR j = 2 TO 8
-    IF j is odd -> y = y + 4
-    ELSE -> y = y - 2
-PRINT y`,
+    codeSnippet: `integer y = 2
+for j = 2 to 8
+    if j is odd then
+        y = y + 4
+    else
+        y = y - 2
+    end if
+end for
+print y`,
     options: [
       { key: "A", text: "6" },
       { key: "B", text: "5" },
       { key: "C", text: "4" },
       { key: "D", text: "3" },
     ],
-    correctAnswer: "D",
-    explanation: "Tracing j=2..8: j=2(0), j=3(4), j=4(2), j=5(6), j=6(4), j=7(8), j=8(6). Preserving source key D.",
+    correctAnswer: "A",
+    explanation: "Step-by-step trace starting with y = 2:\n- j = 2 (even): y = 2 - 2 = 0\n- j = 3 (odd): y = 0 + 4 = 4\n- j = 4 (even): y = 4 - 2 = 2\n- j = 5 (odd): y = 2 + 4 = 6\n- j = 6 (even): y = 6 - 2 = 4\n- j = 7 (odd): y = 4 + 4 = 8\n- j = 8 (even): y = 8 - 2 = 6\n\nFinal value of y = 6.",
   },
   {
     id: 79,
