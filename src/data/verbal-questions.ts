@@ -828,13 +828,13 @@ Fruit colour helps fruits attract animals that eat them and disperse their seeds
     question: "Rearrange the phrases to form a complete sentence:",
     sentence: "(A) have been, they were not\n(B) they were widely explored and exploited\n(C) Inhospitable as the deserts might\n(D) materials, from metal ores to building stones.\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of",
     options: [
-      { key: "A", text: "CAEFDB" },
-      { key: "B", text: "CEAFDB" },
-      { key: "C", text: "CAEDBF" },
-      { key: "D", text: "CAEBFD" },
+      { key: "A", text: "CAEBFD" },
+      { key: "B", text: "CAEFDB" },
+      { key: "C", text: "CEAFDB" },
+      { key: "D", text: "CAEDBF" },
     ],
     correctAnswer: "A",
-    explanation: "Correct order is CAEFDB:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n(B) they were widely explored and exploited",
+    explanation: "Correct logical sequence is CAEBFD:\n(C) Inhospitable as the deserts might\n(A) have been, they were not\n(E) impenetrable; evidence shows that\n(B) they were widely explored and exploited\n(F) in ancient times for a wide range of\n(D) materials, from metal ores to building stones.\n\nComplete Sentence: \"Inhospitable as the deserts might have been, they were not impenetrable; evidence shows that they were widely explored and exploited in ancient times for a wide range of materials, from metal ores to building stones.\"",
   },
   {
     id: 9,
