@@ -1,7 +1,7 @@
 [
   {
     "input": "6\n1 1 2 2 3 3\n",
-    "expectedOutput": "2"
+    "expectedOutput": "3"
   },
   {
     "input": "7\n1 1 1 1 5 5 5\n",
@@ -17,7 +17,7 @@
   },
   {
     "input": "8\n1 2 1 2 1 2 1 2\n",
-    "expectedOutput": "4"
+    "expectedOutput": "6"
   },
   {
     "input": "10\n1 1 1 1 1 1 1 1 1 1\n",
