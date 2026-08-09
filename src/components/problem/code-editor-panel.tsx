@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Editor from "@monaco-editor/react";
+import Editor, { loader } from "@monaco-editor/react";
 import { Maximize2, Minimize2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { LanguageKey } from "@/types/problem";
