@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${headingFont.variable} ${monoFont.variable} h-full antialiased`}
+      className={`dark ${headingFont.variable} ${monoFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100">
         <ThemeProvider>{children}</ThemeProvider>
